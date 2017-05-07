@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "name": "United States of America",
+      "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
+      "birth-date": "June 14, 1946",
+      "leader-title": "President",
+      "leader": "Donald Trump",
+      "elections": {
+          "2018": {
+              "date": "November 2018"
+          },
+          "2020": {
+              "date": "November 2020"
+        }
+      },
+      "party": "Republican Party",
+      "previous-leader": "Barack Obama",
+      "previous-leader-party": "Democratic Party",
+      "term-start": "January 20, 2017",
+      "win-percentage": "47%"
+    },
+    {
+      "id": 1,
+      "name": "United Kingdom",
+      "image": "url",
+      "birth-date": "October 1, 1956",
+      "leader-title": "Prime Minister",
+      "leader": "Theresa May",
+      "elections": {
+          "2018": {
+              "date": "November 6, 2018"
+          },
+          "2020": {
+              "date": "November 3, 2020"
+          }
+      },
+      "party": "Conservative Party",
+      "previous-leader": "David Cameron",
+      "previous-leader-party": "Conservative Party",
+      "term-start": "May XX, 2016",
+      "win-percentage": "50%"
+    },
+    {
+      "id": 2,
+      "name": "Mexico",
+      "image": "url",
+      "birth-date": "October 1, 1956",
+      "leader-title": "President",
+      "leader": "Pena Nieto",
+      "elections": {
+          "2018": {
+              "date": "November 6, 2018"
+          },
+          "2020": {
+              "date": "November 3, 2020"
+          }
+      },
+      "party": "Conservative Party",
+      "previous-leader": "David Cameron",
+      "previous-leader-party": "Conservative Party",
+      "term-start": "May XX, 2016",
+      "win-percentage": "50%"
+    }
+  ]
+}
