@@ -24,7 +24,7 @@
     {
       "id": 1,
       "name": "United Kingdom",
-      "image": "url",
+      "image": "https://www.eda.admin.ch/content/dam/dea/Images/dienstleistungen-und-publikationen/Suisseurope/2017-2/Theresa_May_296322385_C_Keystone_web.jpg/_jcr_content/renditions/cq5dam.thumbnail.180.270.png",
       "birth-date": "October 1, 1956",
       "leader-title": "Prime Minister",
       "leader": "Theresa May",
@@ -49,6 +49,27 @@
       "birth-date": "October 1, 1956",
       "leader-title": "President",
       "leader": "Pena Nieto",
+      "elections": {
+          "2018": {
+              "date": "November 6, 2018"
+          },
+          "2020": {
+              "date": "November 3, 2020"
+          }
+      },
+      "party": "Conservative Party",
+      "previous-leader": "David Cameron",
+      "previous-leader-party": "Conservative Party",
+      "term-start": "May XX, 2016",
+      "win-percentage": "50%"
+    },
+    {
+      "id": 3,
+      "name": "France",
+      "image": "url",
+      "birth-date": "October 1, 1956",
+      "leader-title": "President",
+      "leader": "Emmanuel Macron",
       "elections": {
           "2018": {
               "date": "November 6, 2018"

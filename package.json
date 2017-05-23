@@ -2,6 +2,7 @@
   "name": "retracker",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://brainy-act.surge.sh/",
   "dependencies": {
     "axios": "^0.15.3",
     "react": "^15.4.2",

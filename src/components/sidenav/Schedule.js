@@ -11,19 +11,19 @@ class Schedule extends Component {
                 <th colSpan="2" className="data-country">Upcoming Schedule</th>
               </tr>
               <tr>
-                <td>April</td>
-                <td>Data</td>
-              </tr>
-              <tr>
-                <td>May</td>
-                <td>Data</td>
-              </tr>
-              <tr>
                 <td>June</td>
                 <td>Data</td>
               </tr>
               <tr>
                 <td>July</td>
+                <td>Data</td>
+              </tr>
+              <tr>
+                <td>August</td>
+                <td>Data</td>
+              </tr>
+              <tr>
+                <td>September</td>
                 <td>Data</td>
               </tr>
             </tbody>

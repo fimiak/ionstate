@@ -19,12 +19,12 @@ const routes = (
       <IndexRedirect to="/" />
       <Route path="/" component={Home} />
       <Route component={Sidenav}>
-        <Route path="sidenav/news" component={News} />
+        <Route path="sidenav/news/:country" component={News} />
         <Route path="sidenav/datasheets/:country" component={DataSheets} />
-        <Route path="sidenav/about" component={About} />
-        <Route path="sidenav/maps" component={Maps} />
-        <Route path="sidenav/schedule" component={Schedule} />
-        <Route path="sidenav/more" component={More} />
+        <Route path="sidenav/about/:country" component={About} />
+        <Route path="sidenav/maps/:country" component={Maps} />
+        <Route path="sidenav/schedule/:country" component={Schedule} />
+        <Route path="sidenav/more/:country" component={More} />
       </Route>
       <Route path="*" component={NotFound} />
     </Route>
