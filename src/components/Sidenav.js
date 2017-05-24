@@ -19,11 +19,11 @@ class Sidenav extends Component {
             </div>
           </div>
           <div className="content-box-links">
-            <NavLink to={"/sidenav/news/"+this.props.params.country}>News</NavLink>
-            <NavLink to={"/sidenav/datasheets/"+this.props.params.country}>Data Sheet </NavLink>
-            <NavLink to={"/sidenav/maps/"+this.props.params.country}>Maps</NavLink>
-            <NavLink to={"/sidenav/schedule/"+this.props.params.country}>Schedule</NavLink>
-            <NavLink to={"/sidenav/more/"+this.props.params.country}>More</NavLink>
+            <NavLink to={"/"+this.props.params.country+"/news"}>News</NavLink>
+            <NavLink to={"/"+this.props.params.country+"/datasheets"}>Data Sheet </NavLink>
+            <NavLink to={"/"+this.props.params.country+"/maps"}>Maps</NavLink>
+            <NavLink to={"/"+this.props.params.country+"/schedule"}>Schedule</NavLink>
+            <NavLink to={"/"+this.props.params.country+"/more"}>More</NavLink>
           </div>
         </div>
         <div className="content">

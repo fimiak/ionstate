@@ -13,7 +13,7 @@ class Home extends Component {
             <li>O - Picture on sidebar sets state for president highlighted</li>
             <li>O - When state is set, highlight picture & set data</li>
             <li>X - Data on the right will change based on state</li>
-            <li>X - Changing left image does not change right screen -- unless home/about is highlighted</li>
+            <li>0 - Changing left image does not change right screen -- unless home/about is highlighted</li>
             <li>X - Set animation when a left image is clicked until data is loaded - Promises</li>
           </ul>
         </div>

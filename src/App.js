@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 //import counter from './components/api/reducers';
 import axios from 'axios';
 import NavLink from './components/NavLink';
-import logo from './Logo2.svg';
+import logo from './world.svg';
 import data from './data/data';
 //import SidenavList from './components/SidenavList';
 //import Sidenav from './components/Sidenav';
@@ -111,18 +111,19 @@ class App extends Component {
         <div className="App-header">
           <div className="inner-header">
             <div className="logo-wrap">
-              <img src={logo} className="App-logo" alt="logo" />
+              <h4 className="title">ReTrk</h4>
             </div>
             <div className="nav-sidenav">
               <ul>
-                <li><NavLink to="/sidenav/datasheets/usa" onClick={() => this.setNation(usa)}><img src="https://qph.ec.quoracdn.net/main-thumb-t-28717-50-qylrwevlxgcnoddancubpsnfajpuqoba.jpeg" alt="Donald Trump" /><div className="copy" id="copy">{usa.leader}</div></NavLink></li>
-                <li><NavLink to="/sidenav/datasheets/germany" onClick={() => this.setNation(germany)}><img src="https://d2m2lkhawsaq1u.cloudfront.net/uploads/trial/size50by50/Angela_Merkel_(August_2012)_cropped_1393309849.jpg" alt="Angela Merkel" /><div className="copy">Angela Merkel</div></NavLink></li>
-                <li><NavLink to="/sidenav/datasheets/russia" onClick={() => this.setNation(russia)}><img src="https://i2.wp.com/i.forbesimg.com/media/lists/people/vladimir-putin_50x50.jpg" alt="Vladimir Putin" /><div className="copy">Vladimir Putin</div></NavLink></li>
-                <li><NavLink to="/sidenav/datasheets/canada" onClick={() => this.setNation(canada)}><img src="https://qph.ec.quoracdn.net/main-thumb-2395782-50-injemmlgfuvhqtrreyfvjrtqsrgkcomp.jpeg" alt="Justin Trudeau" /><div className="copy">Justin Trudeau</div></NavLink></li>
-                <li><NavLink to="/sidenav/datasheets/mexico" onClick={() => this.setNation(mexico)}><img src="http://tmj.mx/wp-content/uploads/2017/01/Captura-de-pantalla-2017-01-26-a-las-1.18.33-p.m.-50x50.png" alt="Pena Nieto" /><div className="copy">{mexico.leader}</div></NavLink></li>
-                <li><NavLink to="/sidenav/datasheets/uk" onClick={() => this.setNation(uk)}><img src="https://www.thejc.com/image/policy:1.429392:1481817425/20160713172905!Theresa_May_UK_Home_Office_(cropped).jpg?f=1x1&w=50&$p$f$w=8a40945" alt="Theresa May" /><div className="copy">{uk.leader}</div></NavLink></li>
+                <li><NavLink to="/usa/datasheets" onClick={() => this.setNation(usa)}><img src="https://qph.ec.quoracdn.net/main-thumb-t-28717-50-qylrwevlxgcnoddancubpsnfajpuqoba.jpeg" alt="Donald Trump" /><div className="copy" id="copy">{usa.leader}</div></NavLink></li>
+                <li><NavLink to="/germany/datasheets" onClick={() => this.setNation(germany)}><img src="https://d2m2lkhawsaq1u.cloudfront.net/uploads/trial/size50by50/Angela_Merkel_(August_2012)_cropped_1393309849.jpg" alt="Angela Merkel" /><div className="copy">Angela Merkel</div></NavLink></li>
+                <li><NavLink to="/russia/datasheets" onClick={() => this.setNation(russia)}><img src="https://i2.wp.com/i.forbesimg.com/media/lists/people/vladimir-putin_50x50.jpg" alt="Vladimir Putin" /><div className="copy">Vladimir Putin</div></NavLink></li>
+                <li><NavLink to="/canada/datasheets" onClick={() => this.setNation(canada)}><img src="https://qph.ec.quoracdn.net/main-thumb-2395782-50-injemmlgfuvhqtrreyfvjrtqsrgkcomp.jpeg" alt="Justin Trudeau" /><div className="copy">Justin Trudeau</div></NavLink></li>
+                <li><NavLink to="/mexico/datasheets" onClick={() => this.setNation(mexico)}><img src="http://tmj.mx/wp-content/uploads/2017/01/Captura-de-pantalla-2017-01-26-a-las-1.18.33-p.m.-50x50.png" alt="Pena Nieto" /><div className="copy">{mexico.leader}</div></NavLink></li>
+                <li><NavLink to="/uk/datasheets" onClick={() => this.setNation(uk)}><img src="https://www.thejc.com/image/policy:1.429392:1481817425/20160713172905!Theresa_May_UK_Home_Office_(cropped).jpg?f=1x1&w=50&$p$f$w=8a40945" alt="Theresa May" /><div className="copy">{uk.leader}</div></NavLink></li>
               </ul>
-              <NavLink to="/" className="about" activeClassName="active">More Info</NavLink>
+              <NavLink to="/" className="about" activeClassName="active">Info</NavLink>
+              <img src={logo} className="App-logo" alt="logo" />
             </div>
           </div>
         </div>
@@ -135,5 +136,3 @@ class App extends Component {
 }
 
 export default App;
-
-//line 75:      <Sidenav nation={this.state.selection.leader} />
