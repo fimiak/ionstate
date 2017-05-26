@@ -2,11 +2,14 @@
   "data": [
     {
       "id": 0,
-      "name": "United States of America",
+      "name": "The United States of America",
       "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
       "birth-date": "June 14, 1946",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Flag_of_the_United_States_%283-2_aspect_ratio%29.svg/320px-Flag_of_the_United_States_%283-2_aspect_ratio%29.svg.png",
       "leader-title": "President",
       "leader": "Donald Trump",
+      "deputy-title": "Vice President",
+      "deputy-leader": "Mike Pence",
       "elections": {
           "2018": {
               "date": "November 2018"
@@ -19,11 +22,12 @@
       "previous-leader": "Barack Obama",
       "previous-leader-party": "Democratic Party",
       "term-start": "January 20, 2017",
+      "term-end": "January 20, 2021",
       "win-percentage": "47%"
     },
     {
       "id": 1,
-      "name": "United Kingdom",
+      "name": "The United Kingdom",
       "image": "https://www.eda.admin.ch/content/dam/dea/Images/dienstleistungen-und-publikationen/Suisseurope/2017-2/Theresa_May_296322385_C_Keystone_web.jpg/_jcr_content/renditions/cq5dam.thumbnail.180.270.png",
       "birth-date": "October 1, 1956",
       "leader-title": "Prime Minister",
@@ -83,6 +87,69 @@
       "previous-leader-party": "Conservative Party",
       "term-start": "May XX, 2016",
       "win-percentage": "50%"
+    },
+    {
+      "id": 4,
+      "name": "Germany",
+      "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
+      "birth-date": "June 14, 1946",
+      "leader-title": "Chancellor",
+      "leader": "Angela Merkel",
+      "elections": {
+          "2018": {
+              "date": "November 2018"
+          },
+          "2020": {
+              "date": "November 2020"
+        }
+      },
+      "party": "Republican Party",
+      "previous-leader": "Barack Obama",
+      "previous-leader-party": "Democratic Party",
+      "term-start": "January 20, 2017",
+      "win-percentage": "47%"
+    },
+    {
+      "id": 5,
+      "name": "Canada",
+      "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
+      "birth-date": "June 14, 1946",
+      "leader-title": "President",
+      "leader": "Donald Trump",
+      "elections": {
+          "2018": {
+              "date": "November 2018"
+          },
+          "2020": {
+              "date": "November 2020"
+        }
+      },
+      "party": "Republican Party",
+      "previous-leader": "Barack Obama",
+      "previous-leader-party": "Democratic Party",
+      "term-start": "January 20, 2017",
+      "win-percentage": "47%"
+    },
+    {
+      "id": 6,
+      "name": "Russia",
+      "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
+      "birth-date": "June 14, 1946",
+      "leader-title": "President",
+      "leader": "Donald Trump",
+      "elections": {
+          "2018": {
+              "date": "November 2018"
+          },
+          "2020": {
+              "date": "November 2020"
+        }
+      },
+      "party": "Republican Party",
+      "previous-leader": "Barack Obama",
+      "previous-leader-party": "Democratic Party",
+      "term-start": "January 20, 2017",
+      "win-percentage": "47%"
     }
   ]
 }

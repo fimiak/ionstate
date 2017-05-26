@@ -39,6 +39,10 @@ hr {
   color: #000;
 }
 
+.title-link {
+  text-decoration: none;
+}
+
 .App-logo {
   height: 30px;
   padding: 10px 5px;
