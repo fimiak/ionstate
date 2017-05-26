@@ -1,24 +1,22 @@
 import React, {Component} from 'react';
 import NavLink from './NavLink';
 import Footer from './Footer';
-import Datasheets from './sidenav/DataSheets';
 import data from '.././data/data';
 
 let sel = [];
 
 class Sidenav extends Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      news: [],
       data: data,
       loading: true
     };
   }
 
   render() {
-    switch (this.props.selection) {
+    switch (this.props.params.country) {
       case 'usa':
         sel = data.data[0];
         break;
@@ -58,16 +56,15 @@ class Sidenav extends Component {
             </div>
           </div>
           <div className="content-box-links">
-            <NavLink to={"/"+this.props.selection+"/news"}>News</NavLink>
-            <NavLink to={"/"+this.props.selection+"/datasheets"}>Data Sheet </NavLink>
-            <NavLink to={"/"+this.props.selection+"/maps"}>Maps</NavLink>
-            <NavLink to={"/"+this.props.selection+"/schedule"}>Schedule</NavLink>
-            <NavLink to={"/"+this.props.selection+"/more"}>More</NavLink>
+            <NavLink to={"/"+this.props.params.country+"/news"}>News</NavLink>
+            <NavLink to={"/"+this.props.params.country+"/datasheets"}>Data Sheet </NavLink>
+            <NavLink to={"/"+this.props.params.country+"/maps"}>Maps</NavLink>
+            <NavLink to={"/"+this.props.params.country+"/schedule"}>Schedule</NavLink>
+            <NavLink to={"/"+this.props.params.country+"/more"}>More</NavLink>
           </div>
         </div>
         <div className="content">
           <div className="inner-content">
-            <Datasheets selection={this.props.selection} />
             {this.props.children}
           </div>
         </div>

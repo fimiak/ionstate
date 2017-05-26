@@ -20,7 +20,7 @@ const routes = (
       <Route path="/" component={Home} />
       <Route component={Sidenav}>
         <Route path="/:country/news" component={News} />
-        <Route path="/:country/datasheets" component={DataSheets} selection="usa" />
+        <Route path="/:country/datasheets" component={DataSheets} />
         <Route path="/:country/about" component={About} />
         <Route path="/:country/maps" component={Maps} />
         <Route path="/:country/schedule" component={Schedule} />

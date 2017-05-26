@@ -5,8 +5,8 @@ class More extends Component {
     return (
       <div>
       <div className="inner-more">
-        <span className="box">
-          More
+        <span className="more">
+          More features to come.
         </span>
       </div>
 

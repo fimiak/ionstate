@@ -30,126 +30,140 @@
       "name": "The United Kingdom",
       "image": "https://www.eda.admin.ch/content/dam/dea/Images/dienstleistungen-und-publikationen/Suisseurope/2017-2/Theresa_May_296322385_C_Keystone_web.jpg/_jcr_content/renditions/cq5dam.thumbnail.180.270.png",
       "birth-date": "October 1, 1956",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1280px-Flag_of_the_United_Kingdom.svg.png",
       "leader-title": "Prime Minister",
       "leader": "Theresa May",
+      "deputy-title": "Chancellor of the Exchequer",
+      "deputy-leader": "Philip Hammand",
       "elections": {
           "2018": {
-              "date": "November 6, 2018"
+              "date": "N/A"
           },
           "2020": {
-              "date": "November 3, 2020"
+              "date": "N/A"
           }
       },
       "party": "Conservative Party",
       "previous-leader": "David Cameron",
       "previous-leader-party": "Conservative Party",
-      "term-start": "May XX, 2016",
-      "win-percentage": "50%"
+      "term-start": "July 13, 2016",
+      "term-end": "",
+      "win-percentage": ""
     },
     {
       "id": 2,
       "name": "Mexico",
-      "image": "url",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Presidente_Enrique_Pe%C3%B1a_Nieto._Fotograf%C3%ADa_oficial.jpg/220px-Presidente_Enrique_Pe%C3%B1a_Nieto._Fotograf%C3%ADa_oficial.jpg",
       "birth-date": "October 1, 1956",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1280px-Flag_of_Mexico.svg.png",
       "leader-title": "President",
-      "leader": "Pena Nieto",
+      "leader": "Enrique Peña Nieto",
       "elections": {
           "2018": {
-              "date": "November 6, 2018"
+              "date": "December 1, 2018"
           },
           "2020": {
-              "date": "November 3, 2020"
+              "date": "November 3, 2024"
           }
       },
-      "party": "Conservative Party",
-      "previous-leader": "David Cameron",
-      "previous-leader-party": "Conservative Party",
-      "term-start": "May XX, 2016",
-      "win-percentage": "50%"
+      "party": "Institutional Revolutionary",
+      "previous-leader": "Felipe Calderon",
+      "previous-leader-party": "National Action",
+      "term-start": "December 1, 2012",
+      "term-end": "November 30, 2018",
+      "win-percentage": ""
     },
     {
       "id": 3,
       "name": "France",
-      "image": "url",
-      "birth-date": "October 1, 1956",
+      "image": "http://viewpointnigeria.com/wp-content/uploads/2017/04/macron2.jpg",
+      "birth-date": "December 21, 1977",
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Civil_and_Naval_Ensign_of_France.svg/2000px-Civil_and_Naval_Ensign_of_France.svg.png",
       "leader-title": "President",
       "leader": "Emmanuel Macron",
       "elections": {
           "2018": {
-              "date": "November 6, 2018"
+              "date": "May, 2021"
           },
           "2020": {
-              "date": "November 3, 2020"
+              "date": "May, 2026"
           }
       },
-      "party": "Conservative Party",
-      "previous-leader": "David Cameron",
-      "previous-leader-party": "Conservative Party",
-      "term-start": "May XX, 2016",
-      "win-percentage": "50%"
+      "party": "En Marche!",
+      "previous-leader": "Francois Hollande",
+      "previous-leader-party": "Socialist Party",
+      "term-start": "May 14, 2017",
+      "win-percentage": ""
     },
     {
       "id": 4,
       "name": "Germany",
-      "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
-      "birth-date": "June 14, 1946",
+      "image": "http://www.fourfreedoms.nl/dynamisch/bibliotheek/cache/256_300_3_3494_0_nl_merkel_1000x1500.jpg",
+      "birth-date": "July 17, 1954",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/220px-Flag_of_Germany.svg.png",
       "leader-title": "Chancellor",
       "leader": "Angela Merkel",
       "elections": {
           "2018": {
-              "date": "November 2018"
+              "date": "September 24, 2017"
           },
           "2020": {
-              "date": "November 2020"
+              "date": "September, 2021"
         }
       },
-      "party": "Republican Party",
-      "previous-leader": "Barack Obama",
-      "previous-leader-party": "Democratic Party",
-      "term-start": "January 20, 2017",
-      "win-percentage": "47%"
+      "party": "Christian Democratic Union",
+      "previous-leader": "Gerhard Schroder",
+      "previous-leader-party": "Social Democratic Party",
+      "term-start": "November 22, 2005",
+      "win-percentage": ""
     },
     {
       "id": 5,
       "name": "Canada",
-      "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
-      "birth-date": "June 14, 1946",
-      "leader-title": "President",
-      "leader": "Donald Trump",
+      "image": "https://cdn.americanprogress.org/wp-content/uploads/2016/03/03105039/Trudeau-headshot.jpg",
+      "birth-date": "December 25, 1971",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Canada.svg/1280px-Flag_of_Canada.svg.png",
+      "leader-title": "Prime Minister",
+      "leader": "Justin Trudeau",
       "elections": {
           "2018": {
-              "date": "November 2018"
+              "date": "October, 2019"
           },
           "2020": {
-              "date": "November 2020"
+              "date": "October, 2023"
         }
       },
-      "party": "Republican Party",
-      "previous-leader": "Barack Obama",
-      "previous-leader-party": "Democratic Party",
-      "term-start": "January 20, 2017",
-      "win-percentage": "47%"
+      "party": "Liberal",
+      "previous-leader": "Stephen Harper",
+      "previous-leader-party": "Conservative",
+      "term-start": "November 4, 2015",
+      "term-end": "November 3, 2019",
+      "win-percentage": "39%"
     },
     {
       "id": 6,
-      "name": "Russia",
-      "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
-      "birth-date": "June 14, 1946",
+      "name": "Russian Federation",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Putin_with_flag_of_Russia.jpg/220px-Putin_with_flag_of_Russia.jpg",
+      "birth-date": "October 7, 1952",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/archive/f/f3/20120812153730%21Flag_of_Russia.svg",
       "leader-title": "President",
-      "leader": "Donald Trump",
+      "leader": "Vladimir Putin",
+      "deputy-title": "Prime Minister",
+      "deputy-leader": "Dmitry Medvedev",
       "elections": {
           "2018": {
-              "date": "November 2018"
+              "date": "March 11, 2018"
           },
           "2020": {
-              "date": "November 2020"
+              "date": "March 11, 2024"
         }
       },
-      "party": "Republican Party",
-      "previous-leader": "Barack Obama",
+      "party": "United Russia",
+      "previous-leader": "Dmitry Medvedev",
       "previous-leader-party": "Democratic Party",
-      "term-start": "January 20, 2017",
-      "win-percentage": "47%"
+      "term-start": "May 7, 2012",
+      "term-end": "May 6, 2018",
+      "win-percentage": "79.6%"
     }
   ]
 }
