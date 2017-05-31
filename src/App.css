@@ -82,7 +82,7 @@ hr {
 .App-header:hover {
   flex: 1;
   transition: .1s;
-  max-width: 232.23px;
+  max-width: 202.42px;
   transition-delay: .2s;
 }
 
@@ -133,7 +133,6 @@ hr {
 
 .App-header li a {
   text-decoration: none;
-  text-transform: uppercase;
   font-size: 14px;
   display: flex;
   justify-content: left;
@@ -387,8 +386,8 @@ hr {
 
 .maps {
   border: 0;
-  width: 525px;
-  height: 400px;
+  width: 577.5px;
+  height: 440px;
 }
 
 .more {
