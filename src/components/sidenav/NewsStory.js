@@ -15,7 +15,6 @@ class NewsStory extends Component {
                         <a className="article-link-headline" href={this.props.news.url}>
                             <span className="headline">{this.props.news.title}</span>
                         </a>
-
                         <div className="article-author-date">
                             <span className="author">By {this.props.news.author}</span>
                             <span className="time">{this.props.news.publishedAt}</span>

@@ -46,7 +46,7 @@ class Sidenav extends Component {
       <div className="contentBox">
         <div className="top-nav">
           <div className="site-banner">
-            <h2 className="banner-text">{sel.name}</h2>
+            <h2 className="banner-text">ReTrk</h2>
           </div>
           <div className="top-banner">
             <div className="top-icon"><img className="top-leader" alt="" src={sel.image}></img></div>

@@ -18,7 +18,6 @@ class App extends Component {
     };
   }
 
-
   setNation = (nation) => {
     this.setState({
       selection: nation

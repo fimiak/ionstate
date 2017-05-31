@@ -8,7 +8,7 @@ class Footer extends Component {
           <div className="inner-footer">
               <div className="footer-column">
                 <a href="/">Link</a>
-                <a href="/">My Github</a>
+                <a href="https://github.com/fimiak/retracker">My Github</a>
                 <a href="/">Link</a>
               </div>
               <div className="footer-column">
