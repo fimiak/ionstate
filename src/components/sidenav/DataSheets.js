@@ -27,6 +27,9 @@ class DataSheets extends Component {
       case 'russia':
         sel = data.data[6];
         break;
+      case 'china':
+        sel= data.data[7];
+        break;
       default:
         sel = data.data[0];
         break;

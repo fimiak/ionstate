@@ -41,6 +41,7 @@ class App extends Component {
                 <li><NavLink to="/canada/datasheets" onClick={() => this.setNation(data.data[5])}><img src="https://qph.ec.quoracdn.net/main-thumb-2395782-50-injemmlgfuvhqtrreyfvjrtqsrgkcomp.jpeg" alt="Justin Trudeau" /><div className="copy">{data.data[5].leader}</div></NavLink></li>
                 <li><NavLink to="/mexico/datasheets" onClick={() => this.setNation(data.data[2])}><img src="http://tmj.mx/wp-content/uploads/2017/01/Captura-de-pantalla-2017-01-26-a-las-1.18.33-p.m.-50x50.png" alt="Pena Nieto" /><div className="copy">{data.data[2].leader}</div></NavLink></li>
                 <li><NavLink to="/uk/datasheets" onClick={() => this.setNation(data.data[1])}><img src="https://www.thejc.com/image/policy:1.429392:1481817425/20160713172905!Theresa_May_UK_Home_Office_(cropped).jpg?f=1x1&w=50&$p$f$w=8a40945" alt="Theresa May" /><div className="copy">{data.data[1].leader}</div></NavLink></li>
+                <li><NavLink to="/china/datasheets" onClick={() => this.setNation(data.data[7])}><img src="https://cdn.meme.am/cache/images/folder361/50x50/11439361.jpg" alt="Xi Jinping" /><div className="copy">{data.data[7].leader}</div></NavLink></li>
               </ul>
               <NavLink to="/" className="about" activeClassName="active">Info</NavLink>
               <img src={logo} className="App-logo" alt="logo" />

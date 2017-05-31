@@ -38,6 +38,9 @@ class Sidenav extends Component {
       case 'russia':
         sel = data.data[6];
         break;
+      case 'china':
+        sel = data.data[7];
+        break;
       default:
         sel = data.data[0];
         break;
@@ -46,7 +49,7 @@ class Sidenav extends Component {
       <div className="contentBox">
         <div className="top-nav">
           <div className="site-banner">
-            <h2 className="banner-text">ReTrk</h2>
+            <h2 className="banner-text">ReTrk | Tracking Global Figures</h2>
           </div>
           <div className="top-banner">
             <div className="top-icon"><img className="top-leader" alt="" src={sel.image}></img></div>

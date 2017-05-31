@@ -7,13 +7,13 @@ class Footer extends Component {
         <div className="">
           <div className="inner-footer">
               <div className="footer-column">
-                <a href="/">Link</a>
+                <a href="https://facebook.github.io/react/">ReactJS</a>
                 <a href="https://github.com/fimiak/retracker">My Github</a>
-                <a href="/">Link</a>
+                <a href="https://newsapi.org/">News API</a>
               </div>
               <div className="footer-column">
                 <h3>API Links</h3>
-                <a href="https://newsapi.org/">News API</a>
+                <a href="https://developer.nytimes.com/">NYTimes API</a>
                 <a href="https://developers.google.com/maps/">Google Maps</a>
               </div>
               <div className="footer-column footer-last">
@@ -21,7 +21,7 @@ class Footer extends Component {
                   <input className="input-email" placeholder="Email"></input>
                   <button className="button-submit">Submit</button>
                 </div>
-                <p>The Global Tracker is intended to be used for academic purposes only. All data is sourced from open source APIs. Copyright 2017.</p>
+                <p>The Global Tracker is intended to be used for academic purposes. All data is sourced from open source APIs. Copyright 2017.</p>
               </div>
           </div>
         </div>

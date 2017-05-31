@@ -164,6 +164,31 @@
       "term-start": "May 7, 2012",
       "term-end": "May 6, 2018",
       "win-percentage": "79.6%"
+    },
+    {
+      "id": 7,
+      "name": "China",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Xi_Jinping_October_2013_%28cropped%29.jpg",
+      "birth-date": "June 15, 1953",
+      "flag": "http://www.china-family-adventure.com/image-files/china-flag.jpg",
+      "leader-title": "President",
+      "leader": "Xi Jinping",
+      "deputy-title": "Premier",
+      "deputy-leader": "Li Keqiang",
+      "elections": {
+          "2018": {
+              "date": "March, 2017"
+          },
+          "2020": {
+              "date": "March 11, 2022"
+        }
+      },
+      "party": "Communist Party of China",
+      "previous-leader": "Hu Jintao",
+      "previous-leader-party": "Communist Party of China",
+      "term-start": "November 15, 2012",
+      "term-end": "November 14, 2017",
+      "win-percentage": "N/A"
     }
   ]
 }
