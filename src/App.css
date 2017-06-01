@@ -164,6 +164,12 @@ hr {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  transition: .3s;
+}
+
+.button-menu {
+  border: 0;
+  display: none;
 }
 
 .App-intro {
@@ -184,6 +190,12 @@ hr {
   background: #555;
   color: #fff;
 }
+
+.img-size {
+    min-width: 30px;
+    max-height: 30px;
+    padding: 10px;
+  }
 
 .top-nav .active {
   background: rgba(0,0,0,1);
@@ -228,7 +240,7 @@ hr {
 }
 
 .site-banner {
-  background: #fff;
+  background: #eee;
   border-bottom: 1px solid #000;
 }
 
@@ -290,6 +302,7 @@ hr {
 .content {
   align-items: center;
   background: #fff;
+  border: 1px solid #000;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -331,7 +344,6 @@ hr {
   padding: 10px 0;
   margin-top: 5px;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .about:hover {
@@ -589,7 +601,8 @@ hr {
   text-align: left;
 }
 
-@media (max-width: 600px) {
+/****** Mobile CSS ******/
+@media (max-width: 900px) {
 
   body {
     height: auto;
@@ -609,9 +622,22 @@ hr {
   }
 
   .logo-wrap {
-    line-height: inherit;
-    border-bottom: 1px solid #000;
-    margin-bottom: 5px;
+    line-height: 10px;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .show {
+    transition: .5s;
+    overflow: hidden;
+    max-height: 270px;
+  }
+
+  .hidden {
+    transition: .5s;
+    overflow: hidden;
+    max-height: 0;
   }
 
   .App-header {
@@ -620,7 +646,12 @@ hr {
     flex: 1;
     max-width: 100%;
     width: 100%;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #c54;
+    border-right: 0;
+  }
+
+  .App-header a {
+    color: #fff;
   }
 
   .App-header:hover {
@@ -629,12 +660,19 @@ hr {
   }
 
   .App-header li {
+    background: #222;
+    border: 1px solid #000;
     width: 50%;
   }
 
   .App-header li a {
     line-height: 18px;
     padding: 0;
+  }
+
+  .App-header li a:hover {
+    background: #222;
+    color: #fff;
   }
 
   .App-header .copy {
@@ -644,19 +682,43 @@ hr {
     text-align: left;
   }
 
+  .button-menu {
+    background: #eee;
+    border: 1px solid #000;
+    display: block;
+  }
+
+  .img-size {
+    background: #eee;
+  }
+
+  .about {
+    line-height: 18px;
+    margin: 0;
+  }
+
+  .about:hover {
+    background: #222;
+  }
+
   .active,
   .App-header .active {
     color: #fff;
-    background: #333;
+    background: #444;
   }
 
   .App-header .active:hover {
-    background: #333;
+    background: #444;
     color: #fff;
   }
 
   .nav-sidenav {
-    margin: 0 5px;
+    padding: 5px;
+    background: #000;
+  }
+
+  .none {
+    display: none;
   }
 
   .top-nav {
@@ -676,12 +738,13 @@ hr {
   }
 
   .top-flag {
-    width: 50px;
-    height: 35px;
-    left: auto;
-    margin: 0 auto;
-    top: auto;
-    border: none;
+    width: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border-left: 1px solid #000;
   }
 
   .top-flag img {
@@ -710,10 +773,6 @@ hr {
     margin-bottom: 10px;
   }
 
-  .about {
-    width: 50%;
-  }
-
   .data-image {
     width: 100px;
     height: 150px;
@@ -738,13 +797,18 @@ hr {
   }
 
   .inner-footer {
-    width: 90%;
-    margin: 10px auto;
     flex-direction: column;
+    height: 350px;
+    margin: 0 auto;
+    width: 90%;
   }
 
   .inner-home {
     width: 96%;
+  }
+
+  .App-header .full-width {
+    width: 100%;
   }
 
   .news-story {

@@ -15,10 +15,7 @@ class News extends Component {
             'article-3': '',
             'article-4': '',
             'article-5': '',
-            'article-6': '',
-            'article-7': '',
-            'article-8': '',
-            'article-9': ''
+            'article-6': ''
         };
     }
 
@@ -76,9 +73,6 @@ class News extends Component {
                     'article-4': response.data.response.docs[4],
                     'article-5': response.data.response.docs[5],
                     'article-6': response.data.response.docs[6],
-                    'article-7': response.data.response.docs[7],
-                    'article-8': response.data.response.docs[8],
-                    'article-9': response.data.response.docs[9],
                     loading: false
                 });
             })
@@ -97,10 +91,7 @@ class News extends Component {
         <NewsStory news={this.state['article-4']} />
         <NewsStory news={this.state['article-5']} />
         <NewsStory news={this.state['article-6']} />
-        <NewsStory news={this.state['article-7']} />
-        <NewsStory news={this.state['article-8']} />
-        <NewsStory news={this.state['article-9']} />
-        <h4>Articles Presented by <a href="https://www.nytimes.com/" alt="The New York Times">The New York Times.</a></h4>
+        <h4>Articles Presented by <a href="https://www.nytimes.com/" alt="The New York Times">The New York Times API</a></h4>
       </div>
     )
   }

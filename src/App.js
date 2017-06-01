@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 //import { createStore } from 'redux'; // Not using Redux currently
 import NavLink from './components/NavLink';
 import logo from './world.svg';
+import closeIcon from './icons/x.svg';
+import infoIcon from './icons/info.svg';
+import menuIcon from './icons/menu.svg';
+import moreIcon from './icons/more-horizontal.svg';
 import data from './data/data';
 import './App.css';
 
@@ -14,14 +18,26 @@ class App extends Component {
       news: [],
       data: data,
       selection: data.data[0],
-      loading: true
+      loading: true,
+      menu: true,
+      menuState: 'show'
     };
+
+    this.showMenu = this.showMenu.bind(this);
   }
 
   setNation = (nation) => {
     this.setState({
       selection: nation
     })
+  }
+
+  showMenu() {
+    const showHide = (this.state.menu === false) ? 'show' : 'hidden';
+    this.setState(prevState => ({
+      menu: !prevState.menu,
+      menuState: showHide
+    }));
   }
 
   render() {
@@ -31,8 +47,9 @@ class App extends Component {
           <div className="inner-header">
             <div className="logo-wrap">
               <a className="title-link" href="/"><h4 className="title">ReTrk</h4></a>
+              <button className="button-menu" onClick={this.showMenu}>{(this.state.menu === false) ? <img src={menuIcon} /> : <img src={closeIcon} /> }</button>
             </div>
-            <div className="nav-sidenav">
+            <div className={'nav-sidebar ' + this.state.menuState}>
               <ul>
                 <li><NavLink to="/usa/datasheets" onClick={() => this.setNation(data.data[0])}><img src="https://qph.ec.quoracdn.net/main-thumb-t-28717-50-qylrwevlxgcnoddancubpsnfajpuqoba.jpeg" alt="Donald Trump" /><div className="copy" id="copy">{data.data[0].leader}</div></NavLink></li>
                 <li><NavLink to="/germany/datasheets" onClick={() => this.setNation(data.data[4])}><img src="https://d2m2lkhawsaq1u.cloudfront.net/uploads/trial/size50by50/Angela_Merkel_(August_2012)_cropped_1393309849.jpg" alt="Angela Merkel" /><div className="copy">{data.data[4].leader}</div></NavLink></li>
@@ -42,8 +59,8 @@ class App extends Component {
                 <li><NavLink to="/mexico/datasheets" onClick={() => this.setNation(data.data[2])}><img src="http://tmj.mx/wp-content/uploads/2017/01/Captura-de-pantalla-2017-01-26-a-las-1.18.33-p.m.-50x50.png" alt="Pena Nieto" /><div className="copy">{data.data[2].leader}</div></NavLink></li>
                 <li><NavLink to="/uk/datasheets" onClick={() => this.setNation(data.data[1])}><img src="https://www.thejc.com/image/policy:1.429392:1481817425/20160713172905!Theresa_May_UK_Home_Office_(cropped).jpg?f=1x1&w=50&$p$f$w=8a40945" alt="Theresa May" /><div className="copy">{data.data[1].leader}</div></NavLink></li>
                 <li><NavLink to="/china/datasheets" onClick={() => this.setNation(data.data[7])}><img src="https://cdn.meme.am/cache/images/folder361/50x50/11439361.jpg" alt="Xi Jinping" /><div className="copy">{data.data[7].leader}</div></NavLink></li>
+                <li className="full-width"><NavLink to="/" className="about" activeClassName="active"><img className="img-size" src={infoIcon} /><div className="copy">Info</div></NavLink></li>
               </ul>
-              <NavLink to="/" className="about" activeClassName="active">Info</NavLink>
               <img src={logo} className="App-logo" alt="logo" />
             </div>
           </div>
