@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 class Maps extends Component {
   render() {
     let place = '';
-    let data = '';
     switch (this.props.params.country) {
       case 'usa':
         place = 'White+House,Washington,USA';

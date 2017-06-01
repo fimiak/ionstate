@@ -63,7 +63,6 @@ hr {
 }
 
 .App-header {
-  background-color: #247;
   background-color: #fff;
   border-right: 1px solid #000;
   display: flex;
@@ -194,19 +193,19 @@ hr {
 .top-nav {
   background: #fff;
   border: 1px solid #000;
-  margin: 20px 0 10px;
   color: #333;
   display: flex;
   flex-direction: column;
+  margin: 20px 0 10px;
 }
 
 .top-nav a {
   color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
   display: block;
   height: 40px;
   padding: 0px 28px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .top-nav a:hover {
@@ -238,20 +237,20 @@ hr {
 }
 
 .top-title {
-  position: relative;
-  font-size: 20px;
-  white-space: nowrap;
-  padding: 20px;
-  text-transform: uppercase;
   box-sizing: border-box;
+  font-size: 20px;
+  padding: 20px;
+  position: relative;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .top-flag {
-  width: 150px;
   background: #fff;
   border-left: 1px solid #000;
   height: 100px;
   position: relative;
+  width: 150px;
 }
 
 .top-flag img {
@@ -260,14 +259,14 @@ hr {
 }
 
 .top-banner {
+  align-items: center;
   border: 1px solid #000;
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
+  height: 100px;
   justify-content: space-between;
   margin: 5px;
-  height: 100px;
-  flex-grow: 1;
-  align-items: center;
 }
 
 .contentBox {
@@ -289,11 +288,11 @@ hr {
 }
 
 .content {
+  align-items: center;
   background: #fff;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
 }
 
 .inner-content {
@@ -310,6 +309,7 @@ hr {
 }
 
 .inner-home p {
+  background: #eee;
   border: 1px solid #000;
   color: #000;
   margin: 0 auto;
@@ -590,24 +590,77 @@ hr {
 }
 
 @media (max-width: 600px) {
+
+  body {
+    height: auto;
+    overflow: auto;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
   .App {
     flex-direction: column;
   }
 
-  .App-header {
-    height: auto;
+  .App-logo {
+    display: none;
   }
 
-  .App-header:hover .nav-sidenav {
-    display: block;
+  .logo-wrap {
+    line-height: inherit;
+    border-bottom: 1px solid #000;
+    margin-bottom: 5px;
+  }
+
+  .App-header {
+    height: auto;
+    flex-direction: column;
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+    border-bottom: 1px solid #000;
+  }
+
+  .App-header:hover {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .App-header li {
+    width: 50%;
   }
 
   .App-header li a {
-    line-height: 20px;
+    line-height: 18px;
+    padding: 0;
+  }
+
+  .App-header .copy {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    text-align: left;
+  }
+
+  .active,
+  .App-header .active {
+    color: #fff;
+    background: #333;
+  }
+
+  .App-header .active:hover {
+    background: #333;
+    color: #fff;
+  }
+
+  .nav-sidenav {
+    margin: 0 5px;
   }
 
   .top-nav {
-    width: 100%;
+    width: 90%;
     height: auto;
     flex-direction: column;
   }
@@ -623,16 +676,22 @@ hr {
   }
 
   .top-flag {
-    width: 75px;
-    height: 50px;
+    width: 50px;
+    height: 35px;
     left: auto;
-    margin: 10px auto;
+    margin: 0 auto;
     top: auto;
+    border: none;
   }
 
   .top-flag img {
-    height: 50px;
-    width: 75px;
+    height: 35px;
+    width: 50px;
+  }
+
+  .top-leader {
+    height: 90px;
+    padding: 5px;
   }
 
   .top-title {
@@ -641,20 +700,67 @@ hr {
     border: 0;
     font-size: 14px;
     height: auto;
+    padding: 5px;
     left: auto;
     line-height: 2em;
   }
 
-  .inner-content {
+  .content {
     width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .about {
+    width: 50%;
+  }
+
+  .data-image {
+    width: 100px;
+    height: 150px;
+  }
+
+  .data-pic {
+    width: auto;
+  }
+
+  .inner-content {
+    width: 96%;
+    margin: 10px 0;
+  }
+
+  .inner-datasheets {
+    width: auto;
+  }
+
+  .inner-datasheets td {
+    padding: 5px 2px;
+    font-size: 14px;
   }
 
   .inner-footer {
-    width: 100%;
+    width: 90%;
+    margin: 10px auto;
+    flex-direction: column;
   }
 
-  .nav-sidenav {
-    display: none;
+  .inner-home {
+    width: 96%;
+  }
+
+  .news-story {
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .article-author-date {
+    font-size: 11px;
+  }
+
+  .article-link-headline {
+    background: #bbb;
+    font-size: 13px;
+    margin-top: 5px;
   }
 
   .content-box-links {
@@ -666,5 +772,13 @@ hr {
   .maps {
     width: 100%;
     height: auto;
+  }
+
+  .footer {
+    height: auto;
+  }
+
+  .footer a {
+    font-size: 14px;
   }
 }
