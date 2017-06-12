@@ -1,0 +1,782 @@
+input,
+button 
+  outline: none
+  color: #fff
+
+*::-webkit-input-placeholder
+  color: #fff
+
+html, body, #root
+  margin: 0
+  height: 100%
+  width: 100%
+  padding: 0
+
+
+body
+  background: #eee
+  overflow: hidden /* Scrolling added to sidebar/content */
+  display: flex
+
+
+.hide
+  display: none
+
+
+hr
+  border: 0
+  background: #000
+  background-image: linear-gradient(to right, #ccc, #222, #ccc)
+  height: 1px
+
+
+.App
+  text-align: center
+  display: flex
+  flex-direction: row
+  height: 100%
+
+
+.title
+  color: #000
+
+
+.title-link
+  text-decoration: none
+
+
+.App-logo
+  height: 30px
+  padding: 10px 5px
+  transition-delay: 0.2s
+  transition: .2s
+
+
+.logo-wrap
+  line-height: 50px
+  display: flex
+  flex-shrink: 0
+  align-items: center
+  justify-content: center
+
+
+.App-header
+  background-color: #fff
+  border-right: 1px solid #000
+  display: flex
+  flex-direction: column
+  color: #ffa14e
+  flex: 0
+  max-width: 70px
+  transition: .1s
+  height: 100%
+  a
+    color: #000
+  &:hover
+    flex: 1
+    transition: .1s
+    max-width: 202.42px
+    transition-delay: .2s
+  .copy
+    transition: 0.2s
+    padding: 16px 0px 16px 10px
+    white-space: nowrap
+    width: 0
+    overflow: hidden
+    visibility: hidden
+    opacity: 0
+
+
+.App-header:hover .copy
+  transition: 0.2s
+  width: 100%
+  visibility: visible
+  opacity: 1
+
+
+.fadeIn
+  display: block
+  background: #0f0
+
+
+.App-header:hover ~ .App-intro
+  flex: 9
+
+
+.App-header ul
+  padding: 0
+  margin: 0
+  list-style: none
+  li
+    float: left
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    width: 100%
+    box-sizing: border-box
+    display: block
+    a
+      text-decoration: none
+      font-size: 14px
+      display: flex
+      justify-content: left
+      padding: 0 10px
+      align-items: center
+      img
+        height: 50px
+      &:hover
+        background: #ddd
+        color: #000
+
+
+.App-header:hover li .sidelink-text
+  visibility: visible
+  transition-delay: .25s
+  display: inline-block
+
+
+.sidelink-text
+  visibility: hidden
+  display: none
+  transition: .5s
+
+
+.nav-sidenav
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+  transition: .3s
+
+
+.button-menu
+  border: 0
+  display: none
+
+
+.App-intro
+  flex: 1
+  height: 100%
+  transition: 0.2s /* Must match App-header */
+  overflow-y: auto
+  transition-delay: 0.4s /* Must match App-header */
+
+
+.active,
+.App-header .active
+  color: #fff
+  background: #333
+
+
+.App-header .active:hover
+  background: #555
+  color: #fff
+
+
+.img-size
+  min-width: 30px
+  max-height: 30px
+  padding: 10px
+ 
+
+.top-nav
+  background: #fff
+  border: 1px solid #000
+  color: #333
+  display: flex
+  flex-direction: column
+  margin: 20px 0 10px
+  .active
+    background: rgba(0,0,0,1)
+    color: #fff
+  a
+    color: #000
+    display: block
+    height: 40px
+    padding: 0px 28px
+    text-decoration: none
+    text-transform: uppercase
+    &:hover
+      background: rgba(0,0,0,.1)
+      color: #ffa500
+
+
+.top-nav .active:hover
+  background: #000
+  color: #ffa500
+
+
+.top-icon
+  border-right: 1px solid #000
+  height: 100px
+
+
+.top-leader
+  height: 100px
+
+
+.site-banner
+  background: #eee
+  border-bottom: 1px solid #000
+
+
+.banner-text
+  color: #000
+
+
+.top-title
+  box-sizing: border-box
+  font-size: 20px
+  padding: 20px
+  position: relative
+  text-transform: uppercase
+  white-space: nowrap
+
+
+.top-flag
+  background: #fff
+  border-left: 1px solid #000
+  height: 100px
+  position: relative
+  width: 150px
+  img
+    width: 150px
+    height: 100px
+
+
+.top-banner
+  align-items: center
+  border: 1px solid #000
+  display: flex
+  flex-direction: row
+  flex-grow: 1
+  height: 100px
+  justify-content: space-between
+  margin: 5px
+
+
+.contentBox
+  align-items: center
+  display: flex
+  flex-direction: column
+
+
+.content-box-links
+  background: #fff
+  border-top: 1px solid #000
+  display: flex
+  flex-grow: 0
+  flex-wrap: nowrap
+  font-size: 12px
+  justify-content: space-between
+  line-height: 40px
+  overflow-x: auto
+
+
+.content
+  align-items: center
+  background: #fff
+  border: 1px solid #000
+  display: flex
+  flex-direction: column
+  width: 100%
+
+
+.inner-content
+  height: auto
+  margin: 30px 0 60px
+  box-sizing: border-box
+
+
+.inner-home
+  background: #fff
+  border: 1px solid #000
+  margin: 50px auto
+  width: 800px
+  p
+    background: #eee
+    border: 1px solid #000
+    color: #000
+    margin: 0 auto
+    max-width: 50%
+    padding: 10px
+    text-align: left
+  ul
+    list-style: square
+    li
+      text-align: left
+      padding: 10px 0
+
+
+.about
+  padding: 10px 0
+  margin-top: 5px
+  text-decoration: none
+  &:hover
+    background: #e1e1e1
+
+
+.inner-datasheets
+  width: 800px
+  display: flex
+  justify-content: space-between
+  td
+    border: 1px solid #000
+    padding: 10px 5px
+
+
+.inner-more
+  height: 500px
+
+
+.inner-schedule
+  height: 500px
+
+
+.data-country
+  border: 1px solid #000
+  flex-grow: 1
+  font-size: 18px
+  font-weight: 400
+  background: #eee
+  padding: 10px
+  width: 800px
+
+
+.data-info
+  border: 1px solid #ddd
+  margin: 5px
+  flex-grow: 1
+
+
+.data-image
+  width: 180px
+  height: 270px
+  padding: 0 5px
+
+
+.data-pic
+  width: 200px
+  box-sizing: border-box
+
+
+.maps
+  border: 0
+  width: 577.5px
+  height: 440px
+
+
+.more
+  color: #000
+
+
+.inner-news
+  height: auto
+
+
+.footer
+  background: #333
+  width: 100%
+  box-sizing: border-box
+  display: flex
+  border: 1px solid #000
+  border-left: 0
+  align-items: center
+  justify-content: center
+  color: #fff
+  height: 200px
+  a
+    color: #fff
+    padding: 5px 0
+    margin: 1px 0
+    width: 50%
+    text-align: left
+    transition: .25s
+    text-decoration: none
+    &:hover
+      border-radius: 5px
+      color: #f0f898
+  h3
+    color: #fb9
+    font-weight: 100
+    margin: 5px 0
+    text-decoration: underline
+    padding: 0
+    cursor: default
+    text-transform: uppercase
+    width: 50%
+    text-align: left
+    font-size: 14px
+
+
+.inner-footer
+  display: flex
+  width: 90%
+  max-width: 800px
+  justify-content: space-between
+  flex-direction: row
+  flex-grow: 1
+
+
+.input-email
+  background: #c54
+  border: 1px solid #c87
+  border-radius: 2px
+  color: #fff
+  padding: 5px
+  transition: .25s
+  &:focus
+    border: 1px solid #d98
+    background: #b43
+
+
+.button-submit
+  background: #c54
+  border: 1px solid #c87
+  margin: 5px
+  padding: 5px
+  border-radius: 2px
+  transition: .25s
+  &:active
+    border: 1px solid #faa
+    transition: 0s
+  &:hover
+    background: #c76
+
+
+.news-story
+  background: #ddd
+  border: 1px solid #ddd
+  max-width: 800px
+  padding: 5px
+  box-sizing: border-box
+  margin: 10px 0
+  display: flex
+  &:hover
+    border: 1px solid #000
+
+
+.news-img-container
+  height: auto
+  width: 200px
+  overflow: hidden
+
+
+.news-info-container
+  max-height: 250px
+  width: 100%
+  margin-left: 5px
+
+
+.article
+  font-size: 14px
+  text-align: left
+
+
+.article-image
+  width: 100%
+  max-width: 200px
+  height: auto
+
+
+.article-link
+  display: grid
+
+
+.article-link-headline
+  width: 100%
+  text-decoration: none
+  padding: 3px
+  box-sizing: border-box
+  overflow: hidden
+  display: block
+
+
+.article-link-go
+  background: #333
+  color: #fff
+  display: flex
+  align-items: center
+  transition: .1s
+  padding: 5px 10px
+  margin: 0 5px
+  box-sizing: border-box
+  height: auto
+  border: 1px solid #333
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+    background: #fff
+    color: #000
+
+
+.headline
+  color: #000
+  text-transform: uppercase
+
+
+.article-author-date
+  background: #c54
+  font-size: 12px
+  padding: 3px 6px
+  display: flex
+  justify-content: space-between
+
+
+.article-text
+  overflow: hidden
+  justify-content: space-between
+  display: flex
+  padding: 3px
+  box-sizing: border-box
+  align-items: center
+
+
+.article
+  color: #000
+
+
+.footer-column
+  flex-basis: 25%
+  flex-direction: column
+  display: flex
+
+
+.footer-last
+  flex-grow: 2
+  font-size: 12px
+  color: #fff
+  text-align: left
+
+
+/****** Mobile CSS ******/
+@media (max-width: 900px)
+
+  body
+    height: auto
+    overflow: auto
+ 
+
+  h2
+    font-size: 1.1em
+ 
+
+  .App
+    flex-direction: column
+ 
+
+  .App-logo
+    display: none
+ 
+
+  .logo-wrap
+    line-height: 10px
+    justify-content: space-between
+    margin: 0 auto
+    width: 90%
+ 
+
+  .show
+    transition: .5s
+    overflow: hidden
+    max-height: 270px
+ 
+
+  .hidden
+    transition: .5s
+    overflow: hidden
+    max-height: 0
+ 
+
+  .App-header
+    height: auto
+    flex-direction: column
+    flex: 1
+    max-width: 100%
+    width: 100%
+    border-bottom: 1px solid #c54
+    border-right: 0
+    a
+      color: #fff
+    &:hover
+      width: 100%
+      max-width: 100%
+    li
+      background: #222
+      border: 1px solid #000
+      width: 50%
+      a
+        line-height: 18px
+        padding: 0
+        &:hover
+          background: #222
+          color: #fff
+    .copy
+      visibility: visible
+      opacity: 1
+      width: 100%
+      text-align: left
+ 
+
+  .button-menu
+    background: #eee
+    border: 1px solid #000
+    display: block
+ 
+
+  .img-size
+    background: #eee
+ 
+
+  .about
+    line-height: 18px
+    margin: 0
+ 
+
+  .about:hover
+    background: #222
+ 
+
+  .active,
+  .App-header .active
+    color: #fff
+    background: #444
+ 
+
+  .App-header .active:hover
+    background: #444
+    color: #fff
+ 
+
+  .nav-sidenav
+    padding: 5px
+    background: #000
+ 
+
+  .none
+    display: none
+ 
+
+  .top-nav
+    width: 90%
+    height: auto
+    flex-direction: column
+ 
+
+  .top-nav a
+    height: auto
+    padding: 0 5px
+ 
+
+  .top-banner
+    align-items: center
+    flex-direction: row
+ 
+
+  .top-flag
+    width: auto
+    display: flex
+    align-items: center
+    height: 100%
+    box-sizing: border-box
+    padding: 5px
+    border-left: 1px solid #000
+ 
+
+  .top-flag img
+    height: 35px
+    width: 50px
+ 
+
+  .top-leader
+    height: 90px
+    padding: 5px
+ 
+
+  .top-title
+    width: auto
+    top: auto
+    border: 0
+    font-size: 14px
+    height: auto
+    padding: 5px
+    left: auto
+    line-height: 2em
+ 
+
+  .content
+    width: 90%
+    margin-bottom: 10px
+ 
+
+  .data-image
+    width: 100px
+    height: 150px
+ 
+
+  .data-pic
+    width: auto
+ 
+
+  .inner-content
+    width: 96%
+    margin: 10px 0
+ 
+
+  .inner-datasheets
+    width: auto
+ 
+
+  .inner-datasheets td
+    padding: 5px 2px
+    font-size: 14px
+ 
+
+  .inner-footer
+    flex-direction: column
+    height: 350px
+    margin: 0 auto
+    width: 90%
+ 
+
+  .inner-home
+    width: 96%
+ 
+
+  .App-header .full-width
+    width: 100%
+ 
+
+  .news-story
+    align-items: center
+    flex-direction: column
+    overflow: hidden
+ 
+
+  .article-author-date
+    font-size: 11px
+ 
+
+  .article-link-headline
+    background: #bbb
+    font-size: 13px
+    margin-top: 5px
+ 
+
+  .content-box-links
+    width: 100%
+    position: relative
+    top: auto
+ 
+
+  .maps
+    width: 100%
+    height: auto
+ 
+
+  .footer
+    height: auto
+ 
+
+  .footer a
+    font-size: 14px
+ 
