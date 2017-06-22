@@ -13,7 +13,7 @@ html, body, #root {
   padding: 0; }
 
 body {
-  background: #eee;
+  background: #fff;
   overflow: hidden;
   display: flex; }
 
@@ -29,11 +29,16 @@ hr {
 .App {
   text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100%; }
 
+.top-logo {
+  width: 30px;
+  height: 30px; }
+
 .title {
-  color: #000; }
+  color: #000;
+  margin: 5px; }
 
 .title-link {
   text-decoration: none; }
@@ -44,81 +49,106 @@ hr {
   transition-delay: 0.2s;
   transition: 0.2s; }
 
-.logo-wrap {
-  line-height: 50px;
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center; }
-
 .App-header {
-  background-color: #fff;
-  border-right: 1px solid #000;
   display: flex;
   flex-direction: column;
   color: #ffa14e;
-  flex: 0;
-  max-width: 70px;
+  min-height: 50px;
+  width: 100%;
   transition: 0.1s;
-  height: 100%; }
+  overflow: hidden; }
   .App-header a {
     color: #000; }
-  .App-header:hover {
-    flex: 1;
-    transition: 0.1s;
-    max-width: 202.42px;
-    transition-delay: 0.2s; }
   .App-header .copy {
-    transition: 0.2s;
-    padding: 16px 0px 16px 10px;
-    white-space: nowrap;
-    width: 0;
-    overflow: hidden;
-    visibility: hidden;
-    opacity: 0; }
+    padding: 16px 0;
+    width: 100%;
+    font-size: 13px;
+    margin: 0 auto;
+    min-width: 140px;
+    color: #fff; }
+  .App-header .logo-wrap {
+    border-bottom: 1px solid #666;
+    display: flex;
+    flex-shrink: 0;
+    line-height: 50px;
+    padding: 0 15px;
+    align-items: center;
+    justify-content: space-between; }
+  .App-header .nav-wrap {
+    background: #222;
+    transition: 0.25s; }
+    .App-header .nav-wrap .inner-header {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex; }
+      .App-header .nav-wrap .inner-header .nav-links ul {
+        display: flex;
+        width: 190px; }
+        .App-header .nav-wrap .inner-header .nav-links ul li {
+          min-width: 190px;
+          background: #bbb;
+          justify-content: left; }
+          .App-header .nav-wrap .inner-header .nav-links ul li a {
+            color: #000;
+            width: 100%; }
+            .App-header .nav-wrap .inner-header .nav-links ul li a:hover {
+              background: #999; }
+  .App-header ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    list-style: none; }
+    .App-header ul li {
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-sizing: border-box;
+      background: #555;
+      display: flex; }
+      .App-header ul li a {
+        text-decoration: none;
+        font-size: 14px;
+        display: flex;
+        justify-content: left;
+        padding: 0;
+        align-items: center; }
+        .App-header ul li a img {
+          max-height: 50px; }
+        .App-header ul li a:hover {
+          background: #333; }
+  .App-header:hover {
+    transition: 0.1s;
+    transition-delay: 0.2s; }
+    .App-header:hover .copy {
+      transition: 0.2s; }
+    .App-header:hover li .sidelink-text {
+      transition-delay: 0.25s; }
 
-.App-header:hover .copy {
-  transition: 0.2s;
-  width: 100%;
-  visibility: visible;
-  opacity: 1; }
+.active,
+.App-header .active {
+  color: #fff;
+  background: #333; }
+
+.App-header .active:hover {
+  background: #222;
+  color: #fff; }
+
+.show {
+  display: block;
+  opacity: 1;
+  height: 151px;
+  visibility: visible; }
+
+.hidden {
+  opacity: 0;
+  height: 0;
+  visibility: hidden; }
 
 .fadeIn {
   display: block;
   background: #0f0; }
-
-.App-header:hover ~ .App-intro {
-  flex: 9; }
-
-.App-header ul {
-  padding: 0;
-  margin: 0;
-  list-style: none; }
-  .App-header ul li {
-    float: left;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    width: 100%;
-    box-sizing: border-box;
-    display: block; }
-    .App-header ul li a {
-      text-decoration: none;
-      font-size: 14px;
-      display: flex;
-      justify-content: left;
-      padding: 0 10px;
-      align-items: center; }
-      .App-header ul li a img {
-        height: 50px; }
-      .App-header ul li a:hover {
-        background: #ddd;
-        color: #000; }
-
-.App-header:hover li .sidelink-text {
-  visibility: visible;
-  transition-delay: 0.25s;
-  display: inline-block; }
 
 .sidelink-text {
   visibility: hidden;
@@ -128,12 +158,25 @@ hr {
 .nav-sidenav {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   transition: 0.3s; }
 
 .button-menu {
+  background: #fff;
   border: 0;
-  display: none; }
+  display: block;
+  padding: 0; }
+
+.open-menu {
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 2px;
+  padding: 3px 5px 2px; }
+
+.close-menu {
+  background: #ddd;
+  border: 1px solid #000;
+  border-radius: 2px;
+  padding: 3px 5px 2px; }
 
 .App-intro {
   flex: 1;
@@ -142,27 +185,18 @@ hr {
   overflow-y: auto;
   transition-delay: 0.4s; }
 
-.active,
-.App-header .active {
-  color: #fff;
-  background: #333; }
-
-.App-header .active:hover {
-  background: #555;
-  color: #fff; }
-
 .img-size {
-  min-width: 30px;
-  max-height: 30px;
-  padding: 10px; }
+  width: 15px;
+  height: 15px;
+  padding: 5px; }
 
 .top-nav {
-  background: #fff;
   border: 1px solid #000;
   color: #333;
   display: flex;
   flex-direction: column;
-  margin: 20px 0 10px; }
+  margin: 20px auto;
+  max-width: 800px; }
   .top-nav .active {
     background: black;
     color: #fff; }
@@ -172,40 +206,47 @@ hr {
     height: 40px;
     padding: 0px 28px;
     text-decoration: none;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 160px; }
     .top-nav a:hover {
       background: rgba(0, 0, 0, 0.1);
       color: #ffa500; }
-
-.top-nav .active:hover {
-  background: #000;
-  color: #ffa500; }
+  .top-nav .active:hover {
+    background: #000;
+    color: #ffa500; }
 
 .top-icon {
-  border-right: 1px solid #000;
-  height: 100px; }
+  height: 100px;
+  width: 150px;
+  margin-left: 33.33px; }
 
 .top-leader {
   height: 100px; }
 
 .site-banner {
-  background: #eee;
+  background: #fff;
   border-bottom: 1px solid #000; }
 
 .banner-text {
-  color: #000; }
+  color: #000;
+  font-size: 16px;
+  line-height: 40px;
+  margin: 0;
+  align-text: center; }
 
 .top-title {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   box-sizing: border-box;
   font-size: 20px;
-  padding: 20px;
+  margin-right: 33.33px;
+  padding: 15px;
   position: relative;
   text-transform: uppercase;
   white-space: nowrap; }
 
 .top-flag {
   background: #fff;
-  border-left: 1px solid #000;
   height: 100px;
   position: relative;
   width: 150px; }
@@ -213,15 +254,20 @@ hr {
     width: 150px;
     height: 100px; }
 
+.top-content {
+  background: #eee;
+  width: 100%; }
+
 .top-banner {
   align-items: center;
-  border: 1px solid #000;
+  background: #fff;
+  border-top: 1px solid #000;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   height: 100px;
-  justify-content: space-between;
-  margin: 5px; }
+  justify-content: center;
+  padding: 5px; }
 
 .contentBox {
   align-items: center;
@@ -230,12 +276,11 @@ hr {
 
 .content-box-links {
   background: #fff;
-  border-top: 1px solid #000;
   display: flex;
   flex-grow: 0;
   flex-wrap: nowrap;
   font-size: 12px;
-  justify-content: space-between;
+  justify-content: center;
   line-height: 40px;
   overflow-x: auto; }
 
@@ -249,7 +294,11 @@ hr {
 
 .inner-content {
   height: auto;
+  background: #eee;
+  border: 1px solid #000;
+  border-radius: 5px;
   margin: 30px 0 60px;
+  padding: 10px 20px;
   box-sizing: border-box; }
 
 .inner-home {
@@ -271,26 +320,28 @@ hr {
       text-align: left;
       padding: 10px 0; }
 
-.about {
-  padding: 10px 0;
-  margin-top: 5px;
-  text-decoration: none; }
-  .about:hover {
-    background: #e1e1e1; }
-
 .inner-datasheets {
-  width: 800px;
+  width: auto;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  padding: 20px 0; }
   .inner-datasheets td {
     border: 1px solid #000;
     padding: 10px 5px; }
 
+.inner-maps {
+  border-top: 1px solid #000;
+  padding: 20px 0; }
+
 .inner-more {
-  height: 500px; }
+  height: auto;
+  border-top: 1px solid #000;
+  padding: 20px 0; }
 
 .inner-schedule {
-  height: 500px; }
+  border-top: 1px solid #000;
+  padding: 20px 0;
+  height: auto; }
 
 .data-country {
   border: 1px solid #000;
@@ -324,7 +375,9 @@ hr {
   color: #000; }
 
 .inner-news {
-  height: auto; }
+  border-top: 1px solid #000;
+  height: auto;
+  padding: 20px 0; }
 
 .footer {
   background: #333;
@@ -483,7 +536,11 @@ hr {
   color: #fff;
   text-align: left; }
 
-/****** Mobile CSS ***** */
+/************************ */
+/************************ */
+/****** Mobile SASS ***** */
+/************************ */
+/************************ */
 @media (max-width: 900px) {
   body {
     height: auto;
@@ -495,44 +552,36 @@ hr {
   .App {
     flex-direction: column; }
 
-  .App-logo {
-    display: none; }
-
   .logo-wrap {
-    line-height: 10px;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 90%; }
-
-  .show {
-    transition: 0.5s;
-    overflow: hidden;
-    max-height: 270px; }
-
-  .hidden {
-    transition: 0.5s;
-    overflow: hidden;
-    max-height: 0; }
+    line-height: 10px; }
 
   .App-header {
     height: auto;
     flex-direction: column;
     flex: 1;
     max-width: 100%;
-    width: 100%;
-    border-bottom: 1px solid #c54;
-    border-right: 0; }
+    width: 100%; }
+    .App-header .copy {
+      font-size: 11px;
+      min-width: auto; }
+    .App-header .nav-wrap .inner-header .nav-links ul {
+      width: 100%; }
+      .App-header .nav-wrap .inner-header .nav-links ul li {
+        min-width: 0; }
     .App-header a {
-      color: #fff; }
+      color: #fff;
+      width: 100%; }
     .App-header:hover {
       width: 100%;
       max-width: 100%; }
+    .App-header ul li a {
+      font-size: 11px; }
     .App-header li {
       background: #222;
       border: 1px solid #000;
       width: 50%; }
       .App-header li a {
-        line-height: 18px;
+        line-height: 8px;
         padding: 0; }
         .App-header li a:hover {
           background: #222;
@@ -540,13 +589,18 @@ hr {
     .App-header .copy {
       visibility: visible;
       opacity: 1;
+      padding: 0 10px;
       width: 100%;
       text-align: left; }
 
-  .button-menu {
-    background: #eee;
-    border: 1px solid #000;
-    display: block; }
+  .inner-header {
+    flex-direction: column; }
+
+  .show {
+    display: block;
+    opacity: 1;
+    height: 342px;
+    visibility: visible; }
 
   .img-size {
     background: #eee; }
@@ -566,10 +620,6 @@ hr {
   .App-header .active:hover {
     background: #444;
     color: #fff; }
-
-  .nav-sidenav {
-    padding: 5px;
-    background: #000; }
 
   .none {
     display: none; }
@@ -595,10 +645,9 @@ hr {
     box-sizing: border-box;
     padding: 5px;
     border-left: 1px solid #000; }
-
-  .top-flag img {
-    height: 35px;
-    width: 50px; }
+    .top-flag img {
+      height: 35px;
+      width: 50px; }
 
   .top-leader {
     height: 90px;
@@ -631,10 +680,9 @@ hr {
 
   .inner-datasheets {
     width: auto; }
-
-  .inner-datasheets td {
-    padding: 5px 2px;
-    font-size: 14px; }
+    .inner-datasheets td {
+      padding: 5px 2px;
+      font-size: 14px; }
 
   .inner-footer {
     flex-direction: column;
@@ -644,9 +692,6 @@ hr {
 
   .inner-home {
     width: 96%; }
-
-  .App-header .full-width {
-    width: 100%; }
 
   .news-story {
     align-items: center;
@@ -676,4 +721,4 @@ hr {
   .footer a {
     font-size: 14px; } }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=App.css.map */

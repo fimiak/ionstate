@@ -1,14 +1,48 @@
 import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
-//import { createStore } from 'redux'; // Not using Redux currently
+import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
 import NavLink from './components/NavLink';
 import logo from './world.svg';
 import closeIcon from './icons/x.svg';
 import infoIcon from './icons/info.svg';
 import menuIcon from './icons/menu.svg';
-import moreIcon from './icons/more-horizontal.svg';
+import clearIcon from './icons/x-circle.svg';
+import forwardIcon from './icons/arrow-right.svg';
+import backIcon from './icons/arrow-left.svg';
+import barIcon from './icons/bar-chart.svg';
+import usersIcon from './icons/users.svg';
+import trendIcon from './icons/trending-up.svg';
 import data from './data/data';
 import './App.css';
+//import { load } from './actions';
+
+
+var album = {
+  title: 'a',
+  artist: 'M',
+  year: 1961
+}
+
+var store = createStore(reducer, {}, applyMiddleware(thunk));
+
+var state = store.getState();
+
+function reducer (state, action) {
+  switch (action.type) {
+    case 'PUBLISH':
+      return { ...state, published: true }
+    default:
+      return;
+  }
+}
+
+console.log(store.getState());
+store.dispatch({ type: 'PUBLISH' })
+console.log(store.getState());
+
+//store.dispatch(load);
+
 
 class App extends Component {
 
@@ -19,11 +53,12 @@ class App extends Component {
       data: data,
       selection: data.data[0],
       loading: true,
-      menu: true,
-      menuState: 'show'
+      menu: false,
+      menuState: 'hidden'
     };
 
     this.showMenu = this.showMenu.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   }
 
   setNation = (nation) => {
@@ -40,32 +75,50 @@ class App extends Component {
     }));
   }
 
+  closeMenu() {
+    this.setState({
+      menu: false,
+      menuState: 'hidden'
+    });
+  }
+
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <div className="inner-header">
-            <div className="logo-wrap">
-              <a className="title-link" href="/"><h4 className="title">ReTrk</h4></a>
-              <button className="button-menu" onClick={this.showMenu}>{(this.state.menu === false) ? <img src={menuIcon} /> : <img src={closeIcon} /> }</button>
-            </div>
-            <div className={'nav-sidebar ' + this.state.menuState}>
-              <ul>
-                <li><NavLink to="/usa/datasheets" onClick={() => this.setNation(data.data[0])}><img src="https://qph.ec.quoracdn.net/main-thumb-t-28717-50-qylrwevlxgcnoddancubpsnfajpuqoba.jpeg" alt="Donald Trump" /><div className="copy" id="copy">{data.data[0].leader}</div></NavLink></li>
-                <li><NavLink to="/germany/datasheets" onClick={() => this.setNation(data.data[4])}><img src="https://d2m2lkhawsaq1u.cloudfront.net/uploads/trial/size50by50/Angela_Merkel_(August_2012)_cropped_1393309849.jpg" alt="Angela Merkel" /><div className="copy">{data.data[4].leader}</div></NavLink></li>
-                <li><NavLink to="/france/datasheets" onClick={() => this.setNation(data.data[3])}><img src="http://s3.amazonaws.com/memoriabg/wp-content/uploads/2017/02/afp-emmanuel-macron-emmanuel-macron-ni-de-gauche-ni-de-droite-l-homme-multidirectionnel-50x50.jpg" alt="Emmanuel Macron" /><div className="copy">{data.data[3].leader}</div></NavLink></li>
-                <li><NavLink to="/russia/datasheets" onClick={() => this.setNation(data.data[6])}><img src="https://i2.wp.com/i.forbesimg.com/media/lists/people/vladimir-putin_50x50.jpg" alt="Vladimir Putin" /><div className="copy">{data.data[6].leader}</div></NavLink></li>
-                <li><NavLink to="/canada/datasheets" onClick={() => this.setNation(data.data[5])}><img src="https://qph.ec.quoracdn.net/main-thumb-2395782-50-injemmlgfuvhqtrreyfvjrtqsrgkcomp.jpeg" alt="Justin Trudeau" /><div className="copy">{data.data[5].leader}</div></NavLink></li>
-                <li><NavLink to="/mexico/datasheets" onClick={() => this.setNation(data.data[2])}><img src="http://tmj.mx/wp-content/uploads/2017/01/Captura-de-pantalla-2017-01-26-a-las-1.18.33-p.m.-50x50.png" alt="Pena Nieto" /><div className="copy">{data.data[2].leader}</div></NavLink></li>
-                <li><NavLink to="/uk/datasheets" onClick={() => this.setNation(data.data[1])}><img src="https://www.thejc.com/image/policy:1.429392:1481817425/20160713172905!Theresa_May_UK_Home_Office_(cropped).jpg?f=1x1&w=50&$p$f$w=8a40945" alt="Theresa May" /><div className="copy">{data.data[1].leader}</div></NavLink></li>
-                <li><NavLink to="/china/datasheets" onClick={() => this.setNation(data.data[7])}><img src="https://cdn.meme.am/cache/images/folder361/50x50/11439361.jpg" alt="Xi Jinping" /><div className="copy">{data.data[7].leader}</div></NavLink></li>
-                <li className="full-width"><NavLink to="/" className="about" activeClassName="active"><img className="img-size" src={infoIcon} /><div className="copy">Info</div></NavLink></li>
-              </ul>
-              <img src={logo} className="App-logo" alt="logo" />
+          <div className="logo-wrap">
+            <a className="title-link" href="/"><h4 className="title"><img className="top-logo" src={logo} alt="world" /> ReTrack</h4></a>
+            <button className="button-menu" onClick={this.showMenu}>{(this.state.menu === false) ? <img className="open-menu" src={menuIcon} alt="open" /> : <img className="close-menu" src={closeIcon} alt="close" /> }</button>
+          </div>
+          <div className={"nav-wrap " + this.state.menuState }>
+            <div className="inner-header">
+              <div className="nav-sidenav">
+                <ul>
+                  <li><NavLink to="/usa" onClick={() => this.setNation(data.data[0])}><img src={data.data[0].thumb} alt="Donald Trump" /><div className="copy" id="copy">{data.data[0].leader}</div></NavLink></li>
+                  <li><NavLink to="/germany" onClick={() => this.setNation(data.data[4])}><img src={data.data[4].thumb} alt="Angela Merkel" /><div className="copy">{data.data[4].leader}</div></NavLink></li>
+                  <li><NavLink to="/france" onClick={() => this.setNation(data.data[3])}><img src={data.data[3].thumb} alt="Emmanuel Macron" /><div className="copy">{data.data[3].leader}</div></NavLink></li>
+                  <li><NavLink to="/russia" onClick={() => this.setNation(data.data[6])}><img src={data.data[6].thumb} alt="Vladimir Putin" /><div className="copy">{data.data[6].leader}</div></NavLink></li>
+                  <li><NavLink to="/canada" onClick={() => this.setNation(data.data[5])}><img src={data.data[5].thumb} alt="Justin Trudeau" /><div className="copy">{data.data[5].leader}</div></NavLink></li>
+                  <li><NavLink to="/mexico" onClick={() => this.setNation(data.data[2])}><img src={data.data[2].thumb} alt="Pena Nieto" /><div className="copy">{data.data[2].leader}</div></NavLink></li>
+                  <li><NavLink to="/uk" onClick={() => this.setNation(data.data[1])}><img src={data.data[1].thumb} alt="Theresa May" /><div className="copy">{data.data[1].leader}</div></NavLink></li>
+                  <li><NavLink to="/china" onClick={() => this.setNation(data.data[7])}><img src={data.data[7].thumb} alt="Xi Jinping" /><div className="copy">{data.data[7].leader}</div></NavLink></li>
+                  <li><NavLink to="/japan" onClick={() => this.setNation(data.data[8])}><img src={data.data[8].thumb} alt="Shinzo Abe" /><div className="copy">{data.data[8].leader}</div></NavLink></li>
+                </ul>
+              </div>
+              <div className="nav-links">
+                <ul>
+                  <li><NavLink activeClassName="active"><img className="img-size" src={barIcon} alt="gdp" />Filter By GDP</NavLink></li>
+                  <li><NavLink activeClassName="active"><img className="img-size" src={usersIcon} alt="population" />Filter By Population</NavLink></li>
+                  <li><NavLink activeClassName="active"><img className="img-size" src={trendIcon} alt="growth" />Filter By Growth</NavLink></li>
+                  <li><NavLink activeClassName="active"><img className="img-size" src={clearIcon} alt="page number" />Page 1 of 1</NavLink></li>                  
+                  <li><NavLink activeClassName="active"><img className="img-size" src={forwardIcon} alt="next" />Next Page</NavLink></li>
+                  <li><NavLink activeClassName="active"><img className="img-size" src={backIcon} alt="back" />Previous Page</NavLink></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <div className="App-intro">
+        <div className="App-intro" onClick={this.closeMenu}>
           {this.props.children}
         </div>
       </div>

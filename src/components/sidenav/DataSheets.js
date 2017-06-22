@@ -5,7 +5,7 @@ let sel = [];
 
 class DataSheets extends Component {
   render() {
-    switch (this.props.params.country) {
+    switch (this.props.props.country) {
       case 'usa':
         sel = data.data[0];
         break;
@@ -29,6 +29,9 @@ class DataSheets extends Component {
         break;
       case 'china':
         sel= data.data[7];
+        break;
+      case 'japan':
+        sel= data.data[8];
         break;
       default:
         sel = data.data[0];

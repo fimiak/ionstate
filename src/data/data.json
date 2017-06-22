@@ -4,6 +4,7 @@
       "id": 0,
       "name": "The United States of America",
       "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
+      "thumb":"https://qph.ec.quoracdn.net/main-thumb-t-28717-50-qylrwevlxgcnoddancubpsnfajpuqoba.jpeg",
       "birth-date": "June 14, 1946",
       "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Flag_of_the_United_States_%283-2_aspect_ratio%29.svg/320px-Flag_of_the_United_States_%283-2_aspect_ratio%29.svg.png",
       "leader-title": "President",
@@ -29,6 +30,7 @@
       "id": 1,
       "name": "The United Kingdom",
       "image": "https://www.eda.admin.ch/content/dam/dea/Images/dienstleistungen-und-publikationen/Suisseurope/2017-2/Theresa_May_296322385_C_Keystone_web.jpg/_jcr_content/renditions/cq5dam.thumbnail.180.270.png",
+      "thumb": "https://www.thejc.com/image/policy:1.429392:1481817425/20160713172905!Theresa_May_UK_Home_Office_(cropped).jpg?f=1x1&w=50&$p$f$w=8a40945",
       "birth-date": "October 1, 1956",
       "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1280px-Flag_of_the_United_Kingdom.svg.png",
       "leader-title": "Prime Minister",
@@ -54,6 +56,7 @@
       "id": 2,
       "name": "Mexico",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Presidente_Enrique_Pe%C3%B1a_Nieto._Fotograf%C3%ADa_oficial.jpg/220px-Presidente_Enrique_Pe%C3%B1a_Nieto._Fotograf%C3%ADa_oficial.jpg",
+      "thumb": "http://tmj.mx/wp-content/uploads/2017/01/Captura-de-pantalla-2017-01-26-a-las-1.18.33-p.m.-50x50.png",
       "birth-date": "October 1, 1956",
       "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1280px-Flag_of_Mexico.svg.png",
       "leader-title": "President",
@@ -77,6 +80,7 @@
       "id": 3,
       "name": "France",
       "image": "http://viewpointnigeria.com/wp-content/uploads/2017/04/macron2.jpg",
+      "thumb": "http://s3.amazonaws.com/memoriabg/wp-content/uploads/2017/02/afp-emmanuel-macron-emmanuel-macron-ni-de-gauche-ni-de-droite-l-homme-multidirectionnel-50x50.jpg",
       "birth-date": "December 21, 1977",
       "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Civil_and_Naval_Ensign_of_France.svg/2000px-Civil_and_Naval_Ensign_of_France.svg.png",
       "leader-title": "President",
@@ -99,6 +103,7 @@
       "id": 4,
       "name": "Germany",
       "image": "http://www.fourfreedoms.nl/dynamisch/bibliotheek/cache/256_300_3_3494_0_nl_merkel_1000x1500.jpg",
+      "thumb": "https://d2m2lkhawsaq1u.cloudfront.net/uploads/trial/size50by50/Angela_Merkel_(August_2012)_cropped_1393309849.jpg",
       "birth-date": "July 17, 1954",
       "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/220px-Flag_of_Germany.svg.png",
       "leader-title": "Chancellor",
@@ -121,6 +126,7 @@
       "id": 5,
       "name": "Canada",
       "image": "https://cdn.americanprogress.org/wp-content/uploads/2016/03/03105039/Trudeau-headshot.jpg",
+      "thumb": "https://qph.ec.quoracdn.net/main-thumb-2395782-50-injemmlgfuvhqtrreyfvjrtqsrgkcomp.jpeg",
       "birth-date": "December 25, 1971",
       "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Canada.svg/1280px-Flag_of_Canada.svg.png",
       "leader-title": "Prime Minister",
@@ -144,6 +150,7 @@
       "id": 6,
       "name": "Russian Federation",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Putin_with_flag_of_Russia.jpg/220px-Putin_with_flag_of_Russia.jpg",
+      "thumb": "https://i2.wp.com/i.forbesimg.com/media/lists/people/vladimir-putin_50x50.jpg",
       "birth-date": "October 7, 1952",
       "flag": "https://upload.wikimedia.org/wikipedia/en/archive/f/f3/20120812153730%21Flag_of_Russia.svg",
       "leader-title": "President",
@@ -169,6 +176,7 @@
       "id": 7,
       "name": "China",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Xi_Jinping_October_2013_%28cropped%29.jpg",
+      "thumb": "https://cdn.meme.am/cache/images/folder361/50x50/11439361.jpg",
       "birth-date": "June 15, 1953",
       "flag": "http://www.china-family-adventure.com/image-files/china-flag.jpg",
       "leader-title": "President",
@@ -188,6 +196,32 @@
       "previous-leader-party": "Communist Party of China",
       "term-start": "November 15, 2012",
       "term-end": "November 14, 2017",
+      "win-percentage": "N/A"
+    },
+    {
+      "id": 8,
+      "name": "Japan",
+      "image": "http://i.dailymail.co.uk/i/pix/2016/11/17/19/3A761CEB00000578-3945672-image-a-14_1479410362968.jpg",
+      "thumb": "http://15130-presscdn-0-89.pagely.netdna-cdn.com/wp-content/uploads/2015/04/shinzo-abe-50x50.jpg",
+      "birth-date": "September 21, 1954",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1280px-Flag_of_Japan.svg.png",
+      "leader-title": "Prime Minister",
+      "leader": "Shinzo Abe",
+      "deputy-title": "Deputy Prime Minister",
+      "deputy-leader": "Taro Aso",
+      "elections": {
+          "2018": {
+              "date": "March, 2017"
+          },
+          "2020": {
+              "date": "March 11, 2022"
+        }
+      },
+      "party": "Liberal Democratic Party",
+      "previous-leader": "Yoshihiko Noda",
+      "previous-leader-party": "Liberal Democratic Party",
+      "term-start": "December 26, 2012",
+      "term-end": "N/A",
       "win-percentage": "N/A"
     }
   ]

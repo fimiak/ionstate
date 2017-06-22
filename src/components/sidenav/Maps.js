@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 
+
 class Maps extends Component {
   render() {
     let place = '';
-    switch (this.props.params.country) {
+    switch (this.props.props.country) {
       case 'usa':
         place = 'White+House,Washington,USA';
         break;
@@ -28,13 +29,16 @@ class Maps extends Component {
       case 'china':
         place = 'zhongnanhai,Beijing,China';
         break;
+      case 'japan':
+        place = 'Kantei, Tokyo, Japan';
+        break;
       default:
         place = 'The+World';
         break;
     }
     return (
-      <div>
-        <h4>Map {this.props.sel}</h4>
+      <div className="inner-maps">
+        <h4>Leader Map {this.props.props.country}</h4>
         <div>
           <iframe
             className="maps"

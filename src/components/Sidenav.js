@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import NavLink from './NavLink';
 import Footer from './Footer';
 import data from '.././data/data';
+import DataSheets from './sidenav/DataSheets';
+import Maps from './sidenav/Maps';
+import More from './sidenav/More';
+import News from './sidenav/News';
+import Schedule from './sidenav/Schedule';
 
 let sel = [];
 
@@ -41,34 +46,53 @@ class Sidenav extends Component {
       case 'china':
         sel = data.data[7];
         break;
+      case 'japan':
+        sel = data.data[8];
+        break;
       default:
         sel = data.data[0];
         break;
     }
     return (
       <div className="contentBox">
-        <div className="top-nav">
-          <div className="site-banner">
-            <h2 className="banner-text">ReTrk | Tracking Global Figures</h2>
-          </div>
-          <div className="top-banner">
-            <div className="top-icon"><img className="top-leader" alt="" src={sel.image}></img></div>
-            <div className="top-title">{sel.leader}</div>
-            <div className='top-flag'>
-              <img src={sel.flag} alt={sel.name} />
+        <div className="top-content">
+          <div className="top-nav">
+            <div className="site-banner">
+              <h3 className="banner-text">ReTrack | Tracking Global Figures</h3>
             </div>
-          </div>
-          <div className="content-box-links">
-            <NavLink to={"/"+this.props.params.country+"/news"}>News</NavLink>
-            <NavLink to={"/"+this.props.params.country+"/datasheets"}>Data Sheet </NavLink>
-            <NavLink to={"/"+this.props.params.country+"/maps"}>Maps</NavLink>
-            <NavLink to={"/"+this.props.params.country+"/schedule"}>Schedule</NavLink>
-            <NavLink to={"/"+this.props.params.country+"/more"}>More</NavLink>
+            <div className="content-box-links">
+              <NavLink to={"/"+this.props.params.country+"#datasheets"}>Data Sheet </NavLink>
+              <NavLink to={"/"+this.props.params.country+"#news"}>News</NavLink>
+              <NavLink to={"/"+this.props.params.country+"#maps"}>Maps</NavLink>
+              <NavLink to={"/"+this.props.params.country+"#schedule"}>Schedule</NavLink>
+              <NavLink to={"/"+this.props.params.country+"#more"}>More</NavLink>
+            </div>
+            <div className="top-banner">
+              <div className="top-icon"><img className="top-leader" alt="" src={sel.image}></img></div>
+              <div className="top-title">{sel.leader}</div>
+              <div className='top-flag'>
+                <img src={sel.flag} alt={sel.name} />
+              </div>
+            </div>
           </div>
         </div>
         <div className="content">
           <div className="inner-content">
-            {this.props.children}
+            <div id="datasheets">
+              <DataSheets props={this.props.params} />
+            </div>
+            <div id="news">
+              <News props={this.props.params} />
+            </div>
+            <div id="schedule">
+              <Schedule props={this.props.params} />
+            </div>
+            <div name="maps" id="maps">
+              <Maps props={this.props.params} />
+            </div>
+            <div id="more">
+              <More props={this.props.params} />
+            </div>
           </div>
         </div>
         <div className="footer">

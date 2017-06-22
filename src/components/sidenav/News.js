@@ -33,7 +33,7 @@ class News extends Component {
         let trudeau = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trudeau, justin&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
         let jinping = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=jinping, xi&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
         let pick = '';
-        switch (this.props.params.country) {
+        switch (this.props.props.country) {
             case 'usa':
                 pick = trump;
                 break;
@@ -83,15 +83,17 @@ class News extends Component {
 
   render() {
     return (
-      <div className="inner-news">
-        <NewsStory news={this.state['article-0']} />
-        <NewsStory news={this.state['article-1']} />
-        <NewsStory news={this.state['article-2']} />
-        <NewsStory news={this.state['article-3']} />
-        <NewsStory news={this.state['article-4']} />
-        <NewsStory news={this.state['article-5']} />
-        <NewsStory news={this.state['article-6']} />
-        <h4>Articles Presented by <a href="https://www.nytimes.com/" alt="The New York Times">The New York Times API</a></h4>
+        <div>
+            <div className="inner-news">
+                <NewsStory news={this.state['article-0']} />
+                <NewsStory news={this.state['article-1']} />
+                <NewsStory news={this.state['article-2']} />
+                <NewsStory news={this.state['article-3']} />
+                <NewsStory news={this.state['article-4']} />
+                <NewsStory news={this.state['article-5']} />
+                <NewsStory news={this.state['article-6']} />
+                <h4>Articles Presented by <a href="https://www.nytimes.com/" alt="The New York Times">The New York Times API</a></h4>
+            </div>
       </div>
     )
   }

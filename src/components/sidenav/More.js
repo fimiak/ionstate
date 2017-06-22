@@ -4,12 +4,11 @@ class More extends Component {
   render() {
     return (
       <div>
-      <div className="inner-more">
-        <span className="more">
-          More features to come.
-        </span>
-      </div>
-
+        <div className="inner-more">
+          <span className="more">
+            More features to come.
+          </span>
+        </div>
       </div>
     )
   }
