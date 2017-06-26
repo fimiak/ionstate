@@ -75,7 +75,7 @@ hr
     align-items: center
     justify-content: space-between
   .nav-wrap
-    background: #222
+    background: #333
     transition: .25s
     .inner-header
       max-width: 760px
@@ -117,6 +117,7 @@ hr
         align-items: center
         img
           max-height: 50px
+          width: 50px
         &:hover
           background: #333
   &:hover
@@ -190,7 +191,7 @@ hr
 .img-size
   width: 15px
   height: 15px
-  padding: 5px
+  padding: 5px 0
  
 .top-nav
   border: 1px solid #000
@@ -234,7 +235,6 @@ hr
   color: #000
   font-size: 16px
   line-height: 40px
-
   margin: 0
   align-text: center
 
@@ -244,6 +244,7 @@ hr
   box-sizing: border-box
   font-size: 20px
   margin-right: 33.33px
+  min-width: 220px
   padding: 15px
   position: relative
   text-transform: uppercase
@@ -259,7 +260,7 @@ hr
     height: 100px
 
 .top-content 
-  background: #eee
+  background: #f3f3f3
   width: 100%
 
 .top-banner
@@ -291,17 +292,17 @@ hr
 .content
   align-items: center
   background: #fff
-  border: 1px solid #000
   display: flex
   flex-direction: column
   width: 100%
 
 .inner-content
   height: auto
-  background: #eee
+  background: #f3f3f3
   border: 1px solid #000
   border-radius: 5px
   margin: 30px 0 60px
+  max-width: 1200px
   padding: 10px 20px
   box-sizing: border-box
 
@@ -330,6 +331,8 @@ hr
   display: flex
   justify-content: space-between
   padding: 20px 0
+  tbody
+    margin: 0 auto
   td
     border: 1px solid #000
     padding: 10px 5px
@@ -373,14 +376,17 @@ hr
 
 .maps
   border: 0
-  width: 577.5px
+  max-width: 1000px
   height: 440px
+  width: 100%
 
 .more
   color: #000
 
 .inner-news
   border-top: 1px solid #000
+  display: flex
+  flex-wrap: wrap
   height: auto
   padding: 20px 0
 
@@ -451,17 +457,15 @@ hr
   &:hover
     background: #c76
 
+.news-box
+  width: 50%
 
 .news-story
-  background: #ddd
-  border: 1px solid #ddd
-  max-width: 800px
-  padding: 5px
+  border-bottom: 1px solid #ccc
+  padding: 0 0 10px 0
   box-sizing: border-box
-  margin: 10px 0
+  margin: 0 10px 10px 10px
   display: flex
-  &:hover
-    border: 1px solid #000
 
 .news-img-container
   height: auto
@@ -476,11 +480,11 @@ hr
 .article
   font-size: 14px
   text-align: left
+  max-height: 48px
 
 .article-image
-  width: 100%
-  max-width: 200px
-  height: auto
+  max-width: 150px
+  height: 125px
 
 .article-link
   display: grid
@@ -514,6 +518,8 @@ hr
 .headline
   color: #000
   text-transform: uppercase
+  &:hover
+    color: #666
 
 .article-author-date
   background: #c54
@@ -526,12 +532,17 @@ hr
   overflow: hidden
   justify-content: space-between
   display: flex
-  padding: 3px
+  margin: 3px
   box-sizing: border-box
   align-items: center
 
 .article
   color: #000
+
+.time
+  max-width: 61px
+  white-space: nowrap
+  overflow: hidden
 
 .footer-column
   flex-basis: 25%
@@ -681,7 +692,6 @@ hr
  
 
   .content
-    width: 90%
     margin-bottom: 10px
  
   .data-image
@@ -714,14 +724,23 @@ hr
     align-items: center
     flex-direction: column
     overflow: hidden
+
+  .article
+    font-size: 10px
  
+  .article-image
+    margin: 0 auto
+
   .article-author-date
-    font-size: 11px
+    font-size: 10px
  
   .article-link-headline
     background: #bbb
-    font-size: 13px
+    font-size: 10px
     margin-top: 5px
+
+  .time
+    display: none
  
   .content-box-links
     width: 100%
@@ -730,7 +749,7 @@ hr
  
   .maps
     width: 100%
-    height: auto
+    height: 220px
  
   .footer
     height: auto

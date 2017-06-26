@@ -1,16 +1,8 @@
 import React from 'react';
 import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
-
-// components
 import App from './App';
-import About from './components/About';
-import DataSheets from './components/sidenav/DataSheets';
 import Home from './components/Home';
-import Maps from './components/sidenav/Maps';
-import More from './components/sidenav/More';
-import News from './components/sidenav/News';
 import NotFound from './components/NotFound';
-import Schedule from './components/sidenav/Schedule';
 import Sidenav from './components/Sidenav';
 
 const routes = (

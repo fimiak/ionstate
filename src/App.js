@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import NavLink from './components/NavLink';
-import logo from './world.svg';
 import closeIcon from './icons/x.svg';
-import infoIcon from './icons/info.svg';
+// import infoIcon from './icons/info.svg';
 import menuIcon from './icons/menu.svg';
 import clearIcon from './icons/x-circle.svg';
 import forwardIcon from './icons/arrow-right.svg';
@@ -37,9 +36,9 @@ function reducer (state, action) {
   }
 }
 
-console.log(store.getState());
+//console.log(store.getState());
 store.dispatch({ type: 'PUBLISH' })
-console.log(store.getState());
+//console.log(store.getState());
 
 //store.dispatch(load);
 
@@ -87,7 +86,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <div className="logo-wrap">
-            <a className="title-link" href="/"><h4 className="title"><img className="top-logo" src={logo} alt="world" /> ReTrack</h4></a>
+            <a className="title-link" href="/"><h4 className="title">Rtk | Retracker</h4></a>
             <button className="button-menu" onClick={this.showMenu}>{(this.state.menu === false) ? <img className="open-menu" src={menuIcon} alt="open" /> : <img className="close-menu" src={closeIcon} alt="close" /> }</button>
           </div>
           <div className={"nav-wrap " + this.state.menuState }>

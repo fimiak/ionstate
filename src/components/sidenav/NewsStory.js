@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class NewsStory extends Component {
     render() {
         return (
-            <div>
+            <div className="news-box">
                 <div className="news-story">
                     <div className="news-img-container">
                         <a className="article-link" href={this.props.news['web_url']}>
@@ -20,7 +20,6 @@ class NewsStory extends Component {
                         </div>
                         <div className="article-text">
                             <span className="article">{this.props.news['lead_paragraph']}</span>
-                            <a className="article-link-go" href={this.props.news['web_url']}>Go</a>
                         </div>
                     </div>
                 </div>

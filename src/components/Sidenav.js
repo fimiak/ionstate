@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import NavLink from './NavLink';
 import Footer from './Footer';
 import data from '.././data/data';
 import DataSheets from './sidenav/DataSheets';
@@ -61,11 +60,11 @@ class Sidenav extends Component {
               <h3 className="banner-text">ReTrack | Tracking Global Figures</h3>
             </div>
             <div className="content-box-links">
-              <NavLink to={"/"+this.props.params.country+"#datasheets"}>Data Sheet </NavLink>
-              <NavLink to={"/"+this.props.params.country+"#news"}>News</NavLink>
-              <NavLink to={"/"+this.props.params.country+"#maps"}>Maps</NavLink>
-              <NavLink to={"/"+this.props.params.country+"#schedule"}>Schedule</NavLink>
-              <NavLink to={"/"+this.props.params.country+"#more"}>More</NavLink>
+              <a href="#datasheets">Data Sheet</a>
+              <a href="#news">News</a>
+              <a href="#maps">Maps</a>
+              <a href="#schedule">Schedule</a>
+              <a href="#more">More</a>
             </div>
             <div className="top-banner">
               <div className="top-icon"><img className="top-leader" alt="" src={sel.image}></img></div>

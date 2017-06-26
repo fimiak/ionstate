@@ -45,7 +45,7 @@ class DataSheets extends Component {
               <th colSpan="3" className="data-country">{sel.name}</th>
             </tr>
             <tr className="data-info">
-              <td rowSpan="6" className="data-pic"><img className="data-image" src={sel['image']} alt={sel.leader} /></td>
+              <td rowSpan="5" className="data-pic"><img className="data-image" src={sel['image']} alt={sel.leader} /></td>
               <td>{sel['leader-title']}</td>
               <td>{sel.leader}</td>
             </tr>
@@ -56,10 +56,6 @@ class DataSheets extends Component {
             <tr className="data-info">
               <td>Party</td>
               <td>{sel['party']}</td>
-            </tr>
-            <tr className="data-info">
-              <td>Popular Vote</td>
-              <td>{sel['win-percentage']}</td>
             </tr>
             <tr className="data-info">
               <td>Term Start</td>
