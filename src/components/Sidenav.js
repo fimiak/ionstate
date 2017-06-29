@@ -19,6 +19,20 @@ class Sidenav extends Component {
     };
   }
 
+  componentDidMount() {
+    let appWindow = document.getElementsByClassName('App-intro')[0];
+    appWindow.addEventListener('scroll', function() { 
+        if (appWindow.scrollTop >= 455) {
+          document.getElementById('top-content').setAttribute('style', 'position: fixed; top: 61px; border-top: 0; z-index: 2; max-width: 1200px');
+          document.getElementById('news').setAttribute('style', 'margin-top: 60px');
+      } else {
+          document.getElementById('top-content').setAttribute('style', 'position: relative; top: auto; border-top: 1px solid #eee; z-index: 0; max-width: auto');
+          document.getElementById('news').setAttribute('style', 'margin-top: 0');
+        }
+      }
+    );
+  }
+
   render() {
     switch (this.props.params.country) {
       case 'usa':
@@ -52,33 +66,32 @@ class Sidenav extends Component {
         sel = data.data[0];
         break;
     }
+
     return (
       <div className="contentBox">
-        <div className="top-content">
-          <div className="top-nav">
-            <div className="site-banner">
-              <h3 className="banner-text">ReTrack | Tracking Global Figures</h3>
-            </div>
-            <div className="content-box-links">
-              <a href="#datasheets">Data Sheet</a>
-              <a href="#news">News</a>
-              <a href="#maps">Maps</a>
-              <a href="#schedule">Schedule</a>
-              <a href="#more">More</a>
-            </div>
-            <div className="top-banner">
-              <div className="top-icon"><img className="top-leader" alt="" src={sel.image}></img></div>
-              <div className="top-title">{sel.leader}</div>
-              <div className='top-flag'>
-                <img src={sel.flag} alt={sel.name} />
-              </div>
-            </div>
-          </div>
-        </div>
+        
         <div className="content">
           <div className="inner-content">
             <div id="datasheets">
               <DataSheets props={this.props.params} />
+            </div>
+            <div id="top-content" className="top-content">
+              <div className="top-nav">
+                <div className="top-banner">
+                  <div className="top-title">{sel.leader}</div>
+                  <div className="top-icon"><img className="top-leader" alt="" src={sel.image}></img></div>
+                </div>
+                <div className="content-box-links">
+                  <a href="#datasheets">Datasheet</a>
+                  <a href="#news">News</a>
+                  <a href="#maps">Maps</a>
+                  <a href="#schedule">Schedule</a>
+                  <a href="#more">More</a>
+                </div>
+                <div className='top-flag'>
+                  <img src={sel.flag} alt={sel.name} />
+                </div>
+              </div>
             </div>
             <div id="news">
               <News props={this.props.params} />
@@ -95,9 +108,7 @@ class Sidenav extends Component {
           </div>
         </div>
         <div className="footer">
-          <div className="inner-footer">
-            <Footer />
-          </div>
+          <Footer />
         </div>
       </div>
     )

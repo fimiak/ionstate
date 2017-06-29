@@ -99,23 +99,4 @@ class News extends Component {
   }
 }
 
-/*
-  render() {
-    return (
-        <div>
-            <div className="inner-news">
-                <NewsStory news={this.state['article-0']} />
-                <NewsStory news={this.state['article-1']} />
-                <NewsStory news={this.state['article-2']} />
-                <NewsStory news={this.state['article-3']} />
-                <NewsStory news={this.state['article-4']} />
-                <NewsStory news={this.state['article-5']} />
-                <NewsStory news={this.state['article-6']} />
-                <h4>News by <a href="https://www.nytimes.com/" alt="The New York Times">The New York Times API</a></h4>
-            </div>
-      </div>
-    )
-  }
-*/
-
 export default News;

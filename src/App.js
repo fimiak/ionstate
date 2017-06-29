@@ -81,6 +81,10 @@ class App extends Component {
     });
   }
 
+  scrollTop() {
+    document.getElementsByClassName('App-intro')[0].scrollTop = 0;
+  }
+
   render() {
     return (
       <div className="App">
@@ -91,8 +95,8 @@ class App extends Component {
           </div>
           <div className={"nav-wrap " + this.state.menuState }>
             <div className="inner-header">
-              <div className="nav-sidenav">
-                <ul>
+              <div className="nav-sidenav" onClick={this.closeMenu}>
+                <ul onClick={this.scrollTop}>
                   <li><NavLink to="/usa" onClick={() => this.setNation(data.data[0])}><img src={data.data[0].thumb} alt="Donald Trump" /><div className="copy" id="copy">{data.data[0].leader}</div></NavLink></li>
                   <li><NavLink to="/germany" onClick={() => this.setNation(data.data[4])}><img src={data.data[4].thumb} alt="Angela Merkel" /><div className="copy">{data.data[4].leader}</div></NavLink></li>
                   <li><NavLink to="/france" onClick={() => this.setNation(data.data[3])}><img src={data.data[3].thumb} alt="Emmanuel Macron" /><div className="copy">{data.data[3].leader}</div></NavLink></li>

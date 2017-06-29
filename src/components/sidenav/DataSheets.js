@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import data from '../../data/data';
+import DataBox from './DataBox';
+import DataItem from './DataItem';
 
 let sel = [];
 
@@ -38,53 +40,24 @@ class DataSheets extends Component {
         break;
     }
     return (
-      <div>
-        <table className="inner-datasheets">
-          <tbody>
-            <tr>
-              <th colSpan="3" className="data-country">{sel.name}</th>
-            </tr>
-            <tr className="data-info">
-              <td rowSpan="5" className="data-pic"><img className="data-image" src={sel['image']} alt={sel.leader} /></td>
-              <td>{sel['leader-title']}</td>
-              <td>{sel.leader}</td>
-            </tr>
-            <tr>
-              <td>{sel['deputy-title']}</td>
-              <td>{sel['deputy-leader']}</td>
-            </tr>
-            <tr className="data-info">
-              <td>Party</td>
-              <td>{sel['party']}</td>
-            </tr>
-            <tr className="data-info">
-              <td>Term Start</td>
-              <td>{sel['term-start']}</td>
-            </tr>
-            <tr className="data-info">
-              <td>Term End</td>
-              <td>{sel['term-end']}</td>
-            </tr>
-            <tr className="data-info">
-              <td rowSpan="4"></td>
-              <td>Birth Date</td>
-              <td>{sel['birth-date']}</td>
-            </tr>
-            <tr>
-              <td>Upcoming Elections</td>
-              <td>{sel['elections']['2018']['date']}<hr />
-                  {sel['elections']['2020']['date']}</td>
-            </tr>
-            <tr className="data-info">
-              <td>Previous Leader</td>
-              <td>{sel['previous-leader']}</td>
-            </tr>
-            <tr className="data-info">
-              <td>Previous Leader Party</td>
-              <td>{sel['previous-leader-party']}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="data-sheets">
+        <div className="data-image">
+          <DataBox props={sel} />
+        </div>
+        <div className="data-container">
+          <DataItem item={sel['leader-title']} value={sel.leader} />
+          <DataItem item='Governing' value={sel.name} />
+          <DataItem item='Party' value={sel['party']} />
+          <DataItem item={sel['deputy-title']} value={sel['deputy-leader']} />
+          <DataItem item='Term Start' value={sel['term-start']} />
+          <DataItem item='Term End' value={sel['term-end']} />
+          <DataItem item="Birthdate" value={sel['birth-date']} />
+          <DataItem item='Previous Leader' value={sel['previous-leader']} />
+          <DataItem item="Age" value={sel.age} />
+          <DataItem item='Previous Party' value={sel['previous-leader-party']} />
+          <DataItem item="Official Webpage" value={sel.webpage} />
+          <DataItem item="Wikipedia" value={sel.wikipedia} />
+        </div>
       </div>
     )
   }
