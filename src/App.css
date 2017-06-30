@@ -364,7 +364,6 @@ hr {
     padding: 10px 5px; }
 
 .inner-maps {
-  border-top: 1px solid #000;
   padding: 20px 0; }
 
 .inner-more {
@@ -373,9 +372,51 @@ hr {
   padding: 20px 0; }
 
 .inner-schedule {
+  background: #fff;
   border-top: 1px solid #000;
+  display: flex;
+  flex-direction: column;
   padding: 20px 0;
   height: auto; }
+  .inner-schedule .scheduleHeader {
+    background: #f6f6f6;
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; }
+    .inner-schedule .scheduleHeader div {
+      line-height: 40px;
+      padding: 0 10px;
+      cursor: pointer; }
+      .inner-schedule .scheduleHeader div:hover {
+        background: #eee; }
+    .inner-schedule .scheduleHeader .monthBox:hover {
+      background: #f6f6f6;
+      cursor: auto; }
+  .inner-schedule .scheduleBox {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .inner-schedule .scheduleBox .dayBox {
+      display: flex;
+      flex-basis: 50%;
+      flex-direction: row;
+      width: 100%; }
+      .inner-schedule .scheduleBox .dayBox .dateBox {
+        border: 1px solid #000;
+        align-items: center;
+        margin: 5px 0;
+        justify-content: center;
+        display: flex;
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+        font-weight: 200; }
+      .inner-schedule .scheduleBox .dayBox .eventBox ul {
+        list-style: none; }
 
 .data-sheets {
   display: flex;
@@ -691,11 +732,11 @@ hr {
   .top-banner {
     align-items: center;
     flex-direction: row;
-    height: 50px;
+    height: 40px;
     justify-content: center; }
 
   .top-icon {
-    height: 50px; }
+    height: 32px; }
 
   .top-flag {
     width: auto;
@@ -717,9 +758,9 @@ hr {
     width: auto;
     top: auto;
     min-width: auto;
-    font-size: 14px;
+    font-size: 12px;
     height: auto;
-    padding: 5px;
+    padding: 0;
     left: auto;
     line-height: 2em; }
 
@@ -751,6 +792,17 @@ hr {
     .inner-datasheets td {
       padding: 5px 2px;
       font-size: 14px; }
+
+  .inner-schedule {
+    font-size: 12px; }
+    .inner-schedule .scheduleBox {
+      font-size: 11px;
+      padding: 0 5px;
+      margin: 0 auto; }
+      .inner-schedule .scheduleBox .dayBox .dateBox {
+        width: 50px;
+        height: 50px;
+        font-size: 20px; }
 
   .inner-home {
     width: 96%; }
@@ -808,7 +860,7 @@ hr {
 
   .content-box-links {
     width: 100%;
-    line-height: 40px;
+    line-height: 32px;
     position: relative;
     top: auto; }
 
@@ -828,7 +880,7 @@ hr {
 
   .footer {
     height: auto; }
-    .footer h3 {
+    .footer .footer-middle h3 {
       text-align: right; }
 
   .footer a {
@@ -845,7 +897,7 @@ hr {
 
   .footer-last {
     align-self: flex-start;
-    text-align: left;
+    text-align: center;
     flex-basis: 100%; } }
 
 /*# sourceMappingURL=App.css.map */

@@ -5,29 +5,59 @@ class Schedule extends Component {
     return (
       <div>
         <div className="inner-schedule">
-          <table className="inner-datasheets">
-            <tbody>
-              <tr>
-                <th colSpan="2" className="data-country">Upcoming Schedule</th>
-              </tr>
-              <tr>
-                <td>June</td>
-                <td>Data</td>
-              </tr>
-              <tr>
-                <td>July</td>
-                <td>Data</td>
-              </tr>
-              <tr>
-                <td>August</td>
-                <td>Data</td>
-              </tr>
-              <tr>
-                <td>September</td>
-                <td>Data</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="scheduleHeader">
+            <div className="prevMonth">
+              &#9664; July
+            </div>
+            <div className="monthBox">
+              August
+            </div>
+            <div className="nextMonth">
+              September &#9654;
+            </div>
+          </div>
+          <div className="scheduleBox">
+
+            <div className="dayBox">
+              <div className="dateBox">
+                30
+              </div>
+              <div className="eventBox">
+                <ul>
+                  <li>
+                    First event.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="dayBox">
+              <div className="dateBox">
+                31
+              </div>
+              <div className="eventBox">
+                <ul>
+                  <li>
+                    Second event.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="dayBox">
+              <div className="dateBox">
+                31
+              </div>
+              <div className="eventBox">
+                <ul>
+                  <li>
+                    Third event.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     )

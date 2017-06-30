@@ -51,12 +51,12 @@ class DataSheets extends Component {
           <DataItem item={sel['deputy-title']} value={sel['deputy-leader']} />
           <DataItem item='Term Start' value={sel['term-start']} />
           <DataItem item='Term End' value={sel['term-end']} />
-          <DataItem item="Birthdate" value={sel['birth-date']} />
+          <DataItem item='Birthdate' value={sel['birth-date']} />
           <DataItem item='Previous Leader' value={sel['previous-leader']} />
-          <DataItem item="Age" value={sel.age} />
+          <DataItem item='Age' value={sel.age} />
           <DataItem item='Previous Party' value={sel['previous-leader-party']} />
-          <DataItem item="Official Webpage" value={sel.webpage} />
-          <DataItem item="Wikipedia" value={sel.wikipedia} />
+          <DataItem item='Official Webpage' value={<a href={sel.webpage}>{sel.leader}</a>} />
+          <DataItem item='Wikipedia' value={<a href={sel.wikipedia}>Go to Link</a>} />
         </div>
       </div>
     )
