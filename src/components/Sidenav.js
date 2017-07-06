@@ -22,12 +22,21 @@ class Sidenav extends Component {
   componentDidMount() {
     let appWindow = document.getElementsByClassName('App-intro')[0];
     appWindow.addEventListener('scroll', function() { 
-        if (appWindow.scrollTop >= 455) {
-          document.getElementById('top-content').setAttribute('style', 'position: fixed; top: 61px; border-top: 0; z-index: 2; max-width: 1200px');
-          document.getElementById('news').setAttribute('style', 'margin-top: 60px');
+        if (appWindow.scrollTop >= 33) {
+          document.getElementById('top-content').setAttribute('style', 'position: fixed; height: 40px; top: 43px; z-index: 2; max-width: 1200px');
+          document.getElementById('datasheets').setAttribute('style', 'margin-top: 42px');
+          document.getElementsByClassName('logo-wrap')[0].setAttribute('style', 'line-height: 32px;');
+          document.getElementsByClassName('top-icon')[0].setAttribute('style', 'height: 40px;');
+          document.getElementsByClassName('top-leader')[0].setAttribute('style', 'height: 40px');
+          document.getElementsByClassName('top-flag')[0].setAttribute('style', 'height: 40px');
+
       } else {
-          document.getElementById('top-content').setAttribute('style', 'position: relative; top: auto; border-top: 1px solid #eee; z-index: 0; max-width: auto');
-          document.getElementById('news').setAttribute('style', 'margin-top: 0');
+          document.getElementById('top-content').setAttribute('style', 'position: relative; top: auto; z-index: 0; max-width: auto');
+          document.getElementById('datasheets').setAttribute('style', 'margin-top: 0');
+          document.getElementsByClassName('logo-wrap')[0].setAttribute('style', 'line-height: 48px;');
+          document.getElementsByClassName('top-icon')[0].setAttribute('style', 'height: 100%;');
+          document.getElementsByClassName('top-leader')[0].setAttribute('style', 'height: 100%');
+          document.getElementsByClassName('top-flag')[0].setAttribute('style', 'height: 60px');
         }
       }
     );
@@ -69,17 +78,13 @@ class Sidenav extends Component {
 
     return (
       <div className="contentBox">
-        
         <div className="content">
           <div className="inner-content">
-            <div id="datasheets">
-              <DataSheets props={this.props.params} />
-            </div>
             <div id="top-content" className="top-content">
               <div className="top-nav">
                 <div className="top-banner">
+                  <div className="top-icon"><img className="top-leader" alt="{sel.leader}" src={sel.image}></img></div>
                   <div className="top-title">{sel.leader}</div>
-                  <div className="top-icon"><img className="top-leader" alt="" src={sel.image}></img></div>
                 </div>
                 <div className="content-box-links">
                   <a href="#datasheets">Datasheet</a>
@@ -88,10 +93,13 @@ class Sidenav extends Component {
                   <a href="#schedule">Schedule</a>
                   <a href="#more">More</a>
                 </div>
-                <div className='top-flag'>
+                <div className="top-flag">
                   <img src={sel.flag} alt={sel.name} />
                 </div>
               </div>
+            </div>
+            <div id="datasheets">
+              <DataSheets props={this.props.params} />
             </div>
             <div id="news">
               <News props={this.props.params} />

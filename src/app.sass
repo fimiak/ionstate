@@ -53,7 +53,7 @@ hr
   display: flex
   flex-direction: column
   color: #ffa14e
-  min-height: 50px
+  min-height: 42px
   width: 100%
   transition: .1s
   overflow: hidden
@@ -70,7 +70,7 @@ hr
     border-bottom: 1px solid #666
     display: flex
     flex-shrink: 0
-    line-height: 50px
+    line-height: 48px
     padding: 0 15px
     align-items: center
     justify-content: space-between
@@ -177,7 +177,7 @@ hr
   padding: 3px 5px 2px
 
 .close-menu
-  background: #ddd
+  background: #e3e3e3
   border: 1px solid #000
   border-radius: 2px
   padding: 3px 5px 2px
@@ -207,7 +207,6 @@ hr
   a
     color: #000
     display: block
-    height: 60px
     padding: 0px 28px
     text-decoration: none
     text-transform: uppercase
@@ -225,6 +224,7 @@ hr
 
 .top-leader
   height: 60px
+  max-height: 60px
 
 .banner-text
   color: #000
@@ -234,10 +234,10 @@ hr
   align-text: center
 
 .top-title
-  border-top: 1px solid #ccc
-  border-bottom: 1px solid #ccc
+  border-top: 1px solid #ddd
+  border-bottom: 1px solid #ddd
   box-sizing: border-box
-  font-size: 15px
+  font-size: 12px
   min-width: 280px
   padding: 5px
   margin: 0 25px
@@ -252,12 +252,11 @@ hr
   width: 120px
   img
     width: 90px
-    height: 60px
+    height: 100%
 
-.top-content 
+.top-content
   background: #f3f3f3
-  border-top: 1px solid #eee
-  border-bottom: 1px solid #eee
+  border-bottom: 1px solid #ddd
   position: relative
   width: 100%
 
@@ -267,7 +266,6 @@ hr
   display: flex
   flex-direction: row
   flex-grow: 1
-  height: 60px
 
 .contentBox
   align-items: center
@@ -280,9 +278,10 @@ hr
   display: flex
   flex-grow: 0
   flex-wrap: nowrap
+  font-family: sans-serif
   font-size: 12px
   justify-content: center
-  line-height: 60px
+  line-height: 40px
   overflow-x: auto
 
 .content
@@ -485,7 +484,7 @@ hr
   display: flex
   flex-wrap: wrap
   height: auto
-  padding: 50px 0 20px
+  padding: 20px 0
   h4
     align-self: center
     margin: 0 auto
@@ -737,15 +736,24 @@ hr
  
   .none
     display: none
- 
+
+  .title
+    font-size: 14px
+
+  .open-menu
+    height: 16px
+
+  .close-menu
+    height: 16px
+
   .top-nav
     height: auto
-    flex-direction: column
- 
-  .top-nav a
-    height: auto
-    padding: 0 5px
-    width: 100%
+    flex-direction: row
+    a
+      height: auto
+      font-size: 9px
+      padding: 0 1px
+      width: 100%
  
   .top-banner
     align-items: center
@@ -754,7 +762,8 @@ hr
     justify-content: center
  
   .top-icon
-    height: 32px
+    height: 40px
+    width: 100%
 
   .top-flag
     width: auto
@@ -776,8 +785,9 @@ hr
     width: auto
     top: auto
     min-width: auto
-    font-size: 12px
+    font-size: 9px
     height: auto
+    margin: 0 5px
     padding: 0
     left: auto
     line-height: 2em
@@ -803,7 +813,7 @@ hr
  
   .inner-content
     width: 100%
-    margin: 10px 0
+    margin: 0 0 20px
  
   .inner-datasheets
     width: auto
@@ -879,7 +889,7 @@ hr
  
   .content-box-links
     width: 100%
-    line-height: 32px
+    line-height: 40px
     position: relative
     top: auto
 

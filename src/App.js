@@ -4,7 +4,6 @@ import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import NavLink from './components/NavLink';
 import closeIcon from './icons/x.svg';
-// import infoIcon from './icons/info.svg';
 import menuIcon from './icons/menu.svg';
 import clearIcon from './icons/x-circle.svg';
 import forwardIcon from './icons/arrow-right.svg';
@@ -17,15 +16,15 @@ import './App.css';
 //import { load } from './actions';
 
 
-var album = {
+let album = {
   title: 'a',
   artist: 'M',
   year: 1961
 }
 
-var store = createStore(reducer, {}, applyMiddleware(thunk));
+let store = createStore(reducer, {}, applyMiddleware(thunk));
 
-var state = store.getState();
+let state = store.getState();
 
 function reducer (state, action) {
   switch (action.type) {
@@ -89,9 +88,9 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <div className="logo-wrap">
+          <div className="logo-wrap" onClick={this.showMenu}>
             <a className="title-link" href="/"><h4 className="title">Rtk | Retracker</h4></a>
-            <button className="button-menu" onClick={this.showMenu}>{(this.state.menu === false) ? <img className="open-menu" src={menuIcon} alt="open" /> : <img className="close-menu" src={closeIcon} alt="close" /> }</button>
+            <button className="button-menu" >{(this.state.menu === false) ? <img className="open-menu" src={menuIcon} alt="open" /> : <img className="close-menu" src={closeIcon} alt="close" /> }</button>
           </div>
           <div className={"nav-wrap " + this.state.menuState }>
             <div className="inner-header">
@@ -113,7 +112,7 @@ class App extends Component {
                   <li><NavLink activeClassName="active"><img className="img-size" src={barIcon} alt="gdp" />Filter By GDP</NavLink></li>
                   <li><NavLink activeClassName="active"><img className="img-size" src={usersIcon} alt="population" />Filter By Population</NavLink></li>
                   <li><NavLink activeClassName="active"><img className="img-size" src={trendIcon} alt="growth" />Filter By Growth</NavLink></li>
-                  <li><NavLink activeClassName="active"><img className="img-size" src={clearIcon} alt="page number" />Page 1 of 1</NavLink></li>                  
+                  <li><NavLink to='/' activeClassName="active"><img className="img-size" src={clearIcon} alt="about" />About</NavLink></li>                  
                   <li><NavLink activeClassName="active"><img className="img-size" src={forwardIcon} alt="next" />Next Page</NavLink></li>
                   <li><NavLink activeClassName="active"><img className="img-size" src={backIcon} alt="back" />Previous Page</NavLink></li>
                 </ul>
