@@ -15,7 +15,10 @@ class News extends Component {
             'article-3': '',
             'article-4': '',
             'article-5': '',
-            'article-6': ''
+            'article-6': '',
+            'article-7': '',
+            'article-8': '',
+            'article-9': ''
         };
     }
 
@@ -24,14 +27,14 @@ class News extends Component {
     }
 
     performSearch = () => {
-        let trump = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trump, donald&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let may = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=may, theresa&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let macron = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=macron, emmanuel&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let merkel = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=merkel, angela&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let nieto = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=nieto, pena&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let putin = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=putin, vladimir&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let trudeau = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trudeau, justin&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let jinping = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=jinping, xi&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        let trump = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trump, donald&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        let may = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=may, theresa&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        let macron = '//http://api.nytimes.com/svc/search/v2/articlesearch.json?q=macron, emmanuel&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        let merkel = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=merkel, angela&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        let nieto = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=nieto, pena&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        let putin = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=putin, vladimir&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        let trudeau = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trudeau, justin&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        let jinping = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=jinping, xi&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
         let pick = '';
         switch (this.props.props.country) {
             case 'usa':
@@ -62,6 +65,7 @@ class News extends Component {
                 pick = trump;
                 break;
         }
+        
         axios.get(pick)
             .then(response => {
                 this.setState({
@@ -73,6 +77,9 @@ class News extends Component {
                     'article-4': response.data.response.docs[4],
                     'article-5': response.data.response.docs[5],
                     'article-6': response.data.response.docs[6],
+                    'article-7': response.data.response.docs[7],
+                    'article-8': response.data.response.docs[8],
+                    'article-9': response.data.response.docs[9],
                     loading: false
                 });
             })
@@ -92,7 +99,9 @@ class News extends Component {
                 <NewsStory news={this.state['article-4']} />
                 <NewsStory news={this.state['article-5']} />
                 <NewsStory news={this.state['article-6']} />
-                <h4>News by <a href="https://www.nytimes.com/" alt="The New York Times">The New York Times API</a></h4>
+                <NewsStory news={this.state['article-7']} />
+                <NewsStory news={this.state['article-8']} />
+                <NewsStory news={this.state['article-9']} />
             </div>
       </div>
     )

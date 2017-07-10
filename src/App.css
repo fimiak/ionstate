@@ -1,3 +1,11 @@
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"); }
+* {
+  font-family: system, sans-serif; }
+
 input,
 button {
   outline: none;
@@ -55,7 +63,6 @@ hr {
   color: #ffa14e;
   min-height: 42px;
   width: 100%;
-  transition: 0.1s;
   overflow: hidden; }
   .App-header a {
     color: #000; }
@@ -67,13 +74,13 @@ hr {
     min-width: 140px;
     color: #fff; }
   .App-header .logo-wrap {
+    align-items: center;
     border-bottom: 1px solid #666;
     display: flex;
     flex-shrink: 0;
+    justify-content: space-between;
     line-height: 48px;
-    padding: 0 15px;
-    align-items: center;
-    justify-content: space-between; }
+    padding: 0 15px; }
   .App-header .nav-wrap {
     background: #333;
     transition: 0.4s;
@@ -185,6 +192,7 @@ hr {
   height: 100%;
   transition: 0.2s;
   overflow-y: auto;
+  padding-top: 30px;
   position: relative;
   transition-delay: 0.4s; }
 
@@ -195,6 +203,9 @@ hr {
 
 .top-nav {
   color: #333;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, #eee, #000);
+  border-image-slice: 1;
   display: flex;
   flex-direction: row;
   margin: 0px auto;
@@ -205,6 +216,7 @@ hr {
   .top-nav a {
     color: #000;
     display: block;
+    line-height: 60px;
     padding: 0px 28px;
     text-decoration: none;
     text-transform: uppercase;
@@ -253,7 +265,6 @@ hr {
 
 .top-content {
   background: #f3f3f3;
-  border-bottom: 1px solid #ddd;
   position: relative;
   width: 100%; }
 
@@ -291,7 +302,7 @@ hr {
 .inner-content {
   height: auto;
   background: #f6f6f6;
-  margin: 30px 20px 60px;
+  margin: 0px 20px 40px;
   max-width: 1200px;
   box-sizing: border-box; }
 
@@ -391,7 +402,7 @@ hr {
         background: #eee; }
     .inner-schedule .scheduleHeader .monthBox:hover {
       background: #f6f6f6;
-      cursor: auto; }
+      cursor: default; }
   .inner-schedule .scheduleBox {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
@@ -417,9 +428,17 @@ hr {
       .inner-schedule .scheduleBox .dayBox .eventBox ul {
         list-style: none; }
 
+.top-split {
+  display: flex; }
+
+#international {
+  margin-top: 20px; }
+
 .data-sheets {
   display: flex;
-  padding: 0 0 30px; }
+  flex-direction: column;
+  padding: 0 0 30px;
+  max-width: 400px; }
 
 .data-point {
   background: #fff;
@@ -438,7 +457,7 @@ hr {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: center;
+  font-size: 14px;
   justify-content: center; }
 
 .data-country {
@@ -456,8 +475,9 @@ hr {
   flex-grow: 1; }
 
 .data-image {
-  padding: 0 5px;
-  flex-basis: 400px; }
+  display: flex;
+  justify-content: center;
+  padding: 0 5px; }
 
 .data-pic {
   width: 200px;
@@ -566,6 +586,12 @@ hr {
   width: 100%;
   margin-left: 5px; }
 
+.international-news img {
+  height: 100%;
+  max-height: 212px;
+  max-width: 850px;
+  width: 100%; }
+
 .article {
   font-size: 14px;
   text-align: left;
@@ -573,7 +599,8 @@ hr {
 
 .article-image {
   max-width: 150px;
-  height: 125px; }
+  height: 125px;
+  width: 100%; }
 
 .article-link {
   display: grid; }
@@ -605,14 +632,15 @@ hr {
 
 .headline {
   color: #000;
+  font-size: 13px;
   text-transform: uppercase; }
   .headline:hover {
     color: #666; }
 
 .article-author-date {
-  background: #c54;
-  font-size: 12px;
-  padding: 3px 6px;
+  background: #ccc;
+  font-size: 11px;
+  padding: 3px 5px;
   display: flex;
   justify-content: space-between; }
 
@@ -631,6 +659,31 @@ hr {
   max-width: 61px;
   white-space: nowrap;
   overflow: hidden; }
+
+.others {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+  .others img {
+    height: 100%; }
+  .others div {
+    box-sizing: border-box;
+    border-bottom: 5px solid #f6f6f6;
+    border-left: 5px solid #f6f6f6;
+    display: flex;
+    height: 40px;
+    width: auto;
+    transition: 0.2s; }
+    .others div a {
+      display: flex;
+      max-height: 40px;
+      width: 100%;
+      max-width: 80px; }
+    .others div:hover {
+      opacity: 0.6; }
+    .others div:last-child {
+      justify-content: flex-end;
+      border-right: 5px solid #f6f6f6; }
 
 .footer-column {
   flex: 1;
@@ -784,8 +837,7 @@ hr {
     font-size: 12px; }
 
   .data-image {
-    width: auto;
-    height: 150px; }
+    width: auto; }
 
   .img-highlight {
     margin: 0 auto; }
@@ -870,9 +922,11 @@ hr {
 
   .content-box-links {
     width: 100%;
-    line-height: 40px;
     position: relative;
     top: auto; }
+
+  .top-split {
+    flex-direction: column; }
 
   .data-country {
     width: auto; }

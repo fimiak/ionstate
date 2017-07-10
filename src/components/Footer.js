@@ -21,7 +21,7 @@ class Footer extends Component {
               <input className="input-email" placeholder="Email"></input>
               <button className="button-submit">Submit</button>
             </div>
-            <p>Retracker is intended to be used for academic purposes. <br /> Data is sourced from open-source APIs and Wikipedia. <br /> Copyright 2017.</p>
+            <p>Retracker intended for non-profit & academic purposes<br /> Data sourced from open-source APIs and Wikipedia<br/> Images sourced through Google and are not property of Retracker<br /> Copyright 2017</p>
           </div>
       </div>
     )

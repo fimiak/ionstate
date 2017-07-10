@@ -5,9 +5,11 @@
       "name": "The United States of America",
       "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
       "thumb":"https://qph.ec.quoracdn.net/main-thumb-t-28717-50-qylrwevlxgcnoddancubpsnfajpuqoba.jpeg",
+      "banner": "merkel-int.jpg",
       "birth-date": "June 14, 1946",
       "age": "71",
       "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Flag_of_the_United_States_%283-2_aspect_ratio%29.svg/320px-Flag_of_the_United_States_%283-2_aspect_ratio%29.svg.png",
+      "flag-colors": "#BB133E, #FFF, #002664",
       "leader-title": "President",
       "leader": "Donald Trump",
       "deputy-title": "Vice President",
@@ -25,7 +27,6 @@
       "previous-leader-party": "Democratic Party",
       "term-start": "January 20, 2017",
       "term-end": "January 20, 2021",
-      "win-percentage": "47%",
       "webpage": "https://www.donaldjtrump.com/",
       "wikipedia": "https://en.wikipedia.org/wiki/Donald_Trump"
     },
@@ -34,9 +35,11 @@
       "name": "The United Kingdom",
       "image": "https://www.eda.admin.ch/content/dam/dea/Images/dienstleistungen-und-publikationen/Suisseurope/2017-2/Theresa_May_296322385_C_Keystone_web.jpg/_jcr_content/renditions/cq5dam.thumbnail.180.270.png",
       "thumb": "https://www.thejc.com/image/policy:1.429392:1481817425/20160713172905!Theresa_May_UK_Home_Office_(cropped).jpg?f=1x1&w=50&$p$f$w=8a40945",
+      "banner": "may-int.jpg",
       "birth-date": "October 1, 1956",
       "age": "60",
       "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1280px-Flag_of_the_United_Kingdom.svg.png",
+      "flag-colors": "#00247D, #CF142B, #FFFFFF",
       "leader-title": "Prime Minister",
       "leader": "Theresa May",
       "deputy-title": "Chancellor of the Exchequer",
@@ -54,7 +57,6 @@
       "previous-leader-party": "Conservative Party",
       "term-start": "July 13, 2016",
       "term-end": "",
-      "win-percentage": "",
       "webpage": "http://www.tmay.co.uk/",
       "wikipedia": "https://en.wikipedia.org/wiki/Theresa_May"
     },
@@ -63,9 +65,11 @@
       "name": "Mexico",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Presidente_Enrique_Pe%C3%B1a_Nieto._Fotograf%C3%ADa_oficial.jpg/220px-Presidente_Enrique_Pe%C3%B1a_Nieto._Fotograf%C3%ADa_oficial.jpg",
       "thumb": "http://tmj.mx/wp-content/uploads/2017/01/Captura-de-pantalla-2017-01-26-a-las-1.18.33-p.m.-50x50.png",
+      "banner": "nieto-int.jpg",
       "birth-date": "October 1, 1956",
       "age": "50",
       "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1280px-Flag_of_Mexico.svg.png",
+      "flag-colors": "#006847, #FFF, #CE1126",
       "leader-title": "President",
       "leader": "Enrique Peña Nieto",
       "elections": {
@@ -81,7 +85,6 @@
       "previous-leader-party": "National Action",
       "term-start": "December 1, 2012",
       "term-end": "November 30, 2018",
-      "win-percentage": "",
       "webpage": "http://en.presidencia.gob.mx/",
       "wikipedia": "https://en.wikipedia.org/wiki/Enrique_Pe%C3%B1a_Nieto"
     },
@@ -90,9 +93,11 @@
       "name": "France",
       "image": "http://viewpointnigeria.com/wp-content/uploads/2017/04/macron2.jpg",
       "thumb": "http://s3.amazonaws.com/memoriabg/wp-content/uploads/2017/02/afp-emmanuel-macron-emmanuel-macron-ni-de-gauche-ni-de-droite-l-homme-multidirectionnel-50x50.jpg",
+      "banner": "macron-int.jpg",
       "birth-date": "December 21, 1977",
       "age": "39",
       "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Civil_and_Naval_Ensign_of_France.svg/2000px-Civil_and_Naval_Ensign_of_France.svg.png",
+      "flag-colors": "#002395, #FFF, #ED2939",
       "leader-title": "President",
       "leader": "Emmanuel Macron",
       "elections": {
@@ -107,7 +112,6 @@
       "previous-leader": "Francois Hollande",
       "previous-leader-party": "Socialist Party",
       "term-start": "May 14, 2017",
-      "win-percentage": "",
       "webpage": "https://en-marche.fr/emmanuel-macron",
       "wikipedia": "https://en.wikipedia.org/wiki/Emmanuel_Macron"
     },
@@ -116,9 +120,11 @@
       "name": "Germany",
       "image": "http://www.fourfreedoms.nl/dynamisch/bibliotheek/cache/256_300_3_3494_0_nl_merkel_1000x1500.jpg",
       "thumb": "https://d2m2lkhawsaq1u.cloudfront.net/uploads/trial/size50by50/Angela_Merkel_(August_2012)_cropped_1393309849.jpg",
+      "banner": "merkel-int.jpg",
       "birth-date": "July 17, 1954",
       "age": "62",
       "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/220px-Flag_of_Germany.svg.png",
+      "flag-colors": "#000, #DD0000, #FFCE00",
       "leader-title": "Chancellor",
       "leader": "Angela Merkel",
       "elections": {
@@ -133,7 +139,6 @@
       "previous-leader": "Gerhard Schroder",
       "previous-leader-party": "Social Democratic Party",
       "term-start": "November 22, 2005",
-      "win-percentage": "",
       "webpage": "https://www.bundeskanzlerin.de/Webs/BKin/EN/AngelaMerkel/angela_merkel_node.html",
       "wikipedia": "https://en.wikipedia.org/wiki/Angela_Merkel"
     },
@@ -142,9 +147,11 @@
       "name": "Canada",
       "image": "https://cdn.americanprogress.org/wp-content/uploads/2016/03/03105039/Trudeau-headshot.jpg",
       "thumb": "https://qph.ec.quoracdn.net/main-thumb-2395782-50-injemmlgfuvhqtrreyfvjrtqsrgkcomp.jpeg",
+      "banner": "merkel-int.jpg",
       "birth-date": "December 25, 1971",
       "age": "45",
       "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Canada.svg/1280px-Flag_of_Canada.svg.png",
+      "flag-colors": "#FF0000, #FFF, #FFF, #FF0000",
       "leader-title": "Prime Minister",
       "leader": "Justin Trudeau",
       "elections": {
@@ -160,7 +167,6 @@
       "previous-leader-party": "Conservative",
       "term-start": "November 4, 2015",
       "term-end": "November 3, 2019",
-      "win-percentage": "39%",
       "webpage": "http://pm.gc.ca/eng",
       "wikipedia": "https://en.wikipedia.org/wiki/Justin_Trudeau"
     },
@@ -169,9 +175,11 @@
       "name": "Russian Federation",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Putin_with_flag_of_Russia.jpg/220px-Putin_with_flag_of_Russia.jpg",
       "thumb": "https://i2.wp.com/i.forbesimg.com/media/lists/people/vladimir-putin_50x50.jpg",
+      "banner": "merkel-int.jpg",
       "birth-date": "October 7, 1952",
       "age": "64",
       "flag": "https://upload.wikimedia.org/wikipedia/en/archive/f/f3/20120812153730%21Flag_of_Russia.svg",
+      "flag-colors": "#FFF 20%, #0000FF 50%, #FF0000 80%",
       "leader-title": "President",
       "leader": "Vladimir Putin",
       "deputy-title": "Prime Minister",
@@ -189,7 +197,6 @@
       "previous-leader-party": "Democratic Party",
       "term-start": "May 7, 2012",
       "term-end": "May 6, 2018",
-      "win-percentage": "79.6%",
       "webpage": "http://en.kremlin.ru/",
       "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Putin"
     },
@@ -198,9 +205,11 @@
       "name": "China",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Xi_Jinping_October_2013_%28cropped%29.jpg",
       "thumb": "https://cdn.meme.am/cache/images/folder361/50x50/11439361.jpg",
+      "banner": "merkel-int.jpg",
       "birth-date": "June 15, 1953",
       "age": "64",
       "flag": "http://www.china-family-adventure.com/image-files/china-flag.jpg",
+      "flag-colors": "#DE2810, #FFDE00, #DE2810",
       "leader-title": "President",
       "leader": "Xi Jinping",
       "deputy-title": "Premier",
@@ -218,7 +227,6 @@
       "previous-leader-party": "Communist Party of China",
       "term-start": "November 15, 2012",
       "term-end": "November 14, 2017",
-      "win-percentage": "N/A",
       "webpage": "http://english1.english.gov.cn/leaders/xijinping.htm",
       "wikipedia": "https://en.wikipedia.org/wiki/Xi_Jinping"
     },
@@ -227,9 +235,11 @@
       "name": "Japan",
       "image": "http://i.dailymail.co.uk/i/pix/2016/11/17/19/3A761CEB00000578-3945672-image-a-14_1479410362968.jpg",
       "thumb": "http://15130-presscdn-0-89.pagely.netdna-cdn.com/wp-content/uploads/2015/04/shinzo-abe-50x50.jpg",
+      "banner": "merkel-int.jpg",
       "birth-date": "September 21, 1954",
       "age": "62",
       "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1280px-Flag_of_Japan.svg.png",
+      "flag-colors": "#fff 25%, #BC002D 50%, #fff 75%",
       "leader-title": "Prime Minister",
       "leader": "Shinzo Abe",
       "deputy-title": "Deputy Prime Minister",
@@ -247,9 +257,68 @@
       "previous-leader-party": "Liberal Democratic Party",
       "term-start": "December 26, 2012",
       "term-end": "N/A",
-      "win-percentage": "N/A",
       "webpage": "http://japan.kantei.go.jp/",
       "wikipedia": "https://en.wikipedia.org/wiki/Shinz%C5%8D_Abe"
+    },
+    {
+      "id": 9,
+      "name": "Brazil",
+      "image": "http://i.dailymail.co.uk/i/pix/2016/11/17/19/3A761CEB00000578-3945672-image-a-14_1479410362968.jpg",
+      "thumb": "http://15130-presscdn-0-89.pagely.netdna-cdn.com/wp-content/uploads/2015/04/shinzo-abe-50x50.jpg",
+      "banner": "temer-int.jpg",
+      "birth-date": "September 23, 1940",
+      "age": "76",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png",
+      "flag-colors": "#009B3A, #FEDF00, #002776", 
+      "leader-title": "President",
+      "leader": "Michel Temer",
+      "deputy-title": "Vice President",
+      "deputy-leader": "None",
+      "elections": {
+          "2018": {
+              "date": "August, 2020"
+          },
+          "2020": {
+              "date": "August, 2024"
+        }
+      },
+      "party": "Brazilian Democratic Movement",
+      "previous-leader": "Dilma Rousseff",
+      "previous-leader-party": "Democratic Labour Party",
+      "term-start": "August 31, 2016",
+      "term-end": "N/A",
+      "webpage": "http://micheltemer.com.br/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Michel_Temer"
+    },
+    {
+      "id": 10,
+      "name": "India",
+      "image": "http://images.mid-day.com/2013/feb/Narendra-Modi_1.jpg",
+      "thumb": "http://15130-presscdn-0-89.pagely.netdna-cdn.com/wp-content/uploads/2015/04/shinzo-abe-50x50.jpg",
+      "banner": "merkel-int.jpg",
+      "birth-date": "September 17, 1950",
+      "age": "66",
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1350px-Flag_of_India.svg.png",
+      "flag-colors": "#FF9933, #FFF, #128807",
+      "leader-title": "Prime Minister",
+      "leader": "Narendra Modi",
+      "deputy-title": "President",
+      "deputy-leader": "Pranab Mukherjee",
+      "elections": {
+          "2018": {
+              "date": "August, 2020"
+          },
+          "2020": {
+              "date": "August, 2024"
+        }
+      },
+      "party": "Bharatiya Janata Party",
+      "previous-leader": "Manmohan Singh",
+      "previous-leader-party": "Indian National Congress",
+      "term-start": "May 26, 2014",
+      "term-end": "N/A",
+      "webpage": "http://www.narendramodi.in/",
+      "wikipedia": "https://en.wikipedia.org/wiki/Narendra_Modi"
     }
   ]
 }
