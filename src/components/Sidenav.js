@@ -23,25 +23,33 @@ class Sidenav extends Component {
 
   componentDidMount() {
     const appWindow = document.getElementsByClassName('App-intro')[0];
-    
+    const topContent = document.getElementById('top-content');
+    const datasheets = document.getElementById('datasheets');
+    const logoWrap = document.getElementsByClassName('logo-wrap')[0];
+    const topIcon = document.getElementsByClassName('top-icon')[0];
+    const topLeader = document.getElementsByClassName('top-leader')[0];
+    const topFlag = document.getElementsByClassName('top-flag')[0];
+    const contentBoxLinks = document.getElementsByClassName('content-box-links')[0];
+
     topnavColor();
+
     appWindow.addEventListener('scroll', function() { 
         if (appWindow.scrollTop >= 24) {
-          document.getElementById('top-content').setAttribute('style', 'position: fixed; height: 40px; top: 43px; z-index: 2; max-width: 1200px');
-          document.getElementById('datasheets').setAttribute('style', 'margin-top: 42px');
-          document.getElementsByClassName('logo-wrap')[0].setAttribute('style', 'line-height: 32px;');
-          document.getElementsByClassName('top-icon')[0].setAttribute('style', 'height: 40px;');
-          document.getElementsByClassName('top-leader')[0].setAttribute('style', 'height: 40px');
-          document.getElementsByClassName('top-flag')[0].setAttribute('style', 'height: 40px');
-          document.getElementsByClassName('content-box-links')[0].setAttribute('style', 'line-height: 40px;');
+          topContent.setAttribute('style', 'position: fixed; height: 40px; top: 43px; z-index: 2; max-width: 1200px;');
+          datasheets.setAttribute('style', 'margin-top: 42px');
+          logoWrap.setAttribute('style', 'line-height: 32px;');
+          topIcon.setAttribute('style', 'height: 40px;');
+          topLeader.setAttribute('style', 'height: 40px');
+          topFlag.setAttribute('style', 'height: 40px');
+          contentBoxLinks.setAttribute('style', 'line-height: 40px;');
       } else {
-          document.getElementById('top-content').setAttribute('style', 'position: relative; top: auto; z-index: 0; max-width: none');
-          document.getElementById('datasheets').setAttribute('style', 'margin-top: 0');
-          document.getElementsByClassName('logo-wrap')[0].setAttribute('style', 'line-height: 48px;');
-          document.getElementsByClassName('top-icon')[0].setAttribute('style', 'height: auto; max-height: 60px');
-          document.getElementsByClassName('top-leader')[0].setAttribute('style', 'height: 100%');
-          document.getElementsByClassName('top-flag')[0].setAttribute('style', 'height: 60px');
-          document.getElementsByClassName('content-box-links')[0].setAttribute('style', 'line-height: 60px;');
+          topContent.setAttribute('style', 'position: relative; top: auto; z-index: 0; max-width: none');
+          datasheets.setAttribute('style', 'margin-top: 0');
+          logoWrap.setAttribute('style', 'line-height: 48px;');
+          topIcon.setAttribute('style', 'height: auto; max-height: 60px');
+          topLeader.setAttribute('style', 'height: 100%');
+          topFlag.setAttribute('style', 'height: 60px');
+          contentBoxLinks.setAttribute('style', 'line-height: 60px;');
         }
       }
     );
@@ -52,7 +60,7 @@ class Sidenav extends Component {
   }
 
   render() {
-    let nationList = { 
+    const nationList = { 
           usa: data.data[0],
           uk: data.data[1],
           mexico: data.data[2],
@@ -63,9 +71,16 @@ class Sidenav extends Component {
           china: data.data[7],
           japan: data.data[8],
           brazil: data.data[9],
-          india: data.data[10]
+          india: data.data[10],
+          australia: data.data[11],
+          europeanunion: data.data[12],
+          argentina: data.data[13],
+          indonesia: data.data[14],
+          italy: data.data[15],
+          southkorea: data.data[16],
+          saudiarabia: data.data[17]
           };
-    let nation = this.props.params.country;
+    const nation = this.props.params.country;
     selected = nationList[nation];
     return (
       <div className="contentBox">
@@ -91,14 +106,13 @@ class Sidenav extends Component {
             </div>
             <div className="top-split">
               <div id="datasheets">
-                <DataSheets props={this.props.params} />
+                <DataSheets props={this.props.params} nationList={nationList} selected={selected} />
               </div>
               <div id="international">
                 <div className="international-news">
                   <img src={require('.././images/' + selected.banner)} alt={selected.leader} />
                 </div>
-                <h4>International News</h4>
-                <News props={this.props.params} />
+                <h4>Top News</h4>
               </div>
             </div>
             <div id="domestic">

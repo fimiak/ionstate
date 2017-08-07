@@ -3,25 +3,10 @@ import data from '../../data/data';
 import DataBox from './DataBox';
 import DataItem from './DataItem';
 
-let selected = [];
-
 class DataSheets extends Component {
   render() {
-    let nationList = { 
-          usa: data.data[0],
-          uk: data.data[1],
-          mexico: data.data[2],
-          france: data.data[3],
-          germany: data.data[4],
-          canada: data.data[5],
-          russia: data.data[6],
-          china: data.data[7],
-          japan: data.data[8],
-          brazil: data.data[9],
-          india: data.data[10]
-          };
     let nation = this.props.props.country;
-    selected = nationList[nation];
+    let selected = this.props.selected;
     return (
       <div className="data-sheets">
         <div className="data-image">
