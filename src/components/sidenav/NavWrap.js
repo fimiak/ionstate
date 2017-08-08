@@ -28,7 +28,6 @@ const southkorea = data.data[16];
 const saudiarabia = data.data[17];
 
 
-
 class NavWrap extends Component {
     constructor(props) {
         super(props);
