@@ -42,7 +42,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <div className="logo-wrap" onClick={this.showMenu}>
-            <a className="title-link" href="/"><h4 className="title">Rtk | Retracker</h4></a>
+            <a className="title-link" href="/"><h4 className="title"><img className="globeIcon" src="globe.ico" alt="Prime Watch" /> | Prime Watch</h4></a>
             <button className="button-menu" >{(this.state.menu === false) ? <img className="open-menu" src={menuIcon} alt="open" /> : <img className="close-menu" src={closeIcon} alt="close" /> }</button>
           </div>
           <NavWrap menu={this.state.menu} menuState={this.state.menuState} />

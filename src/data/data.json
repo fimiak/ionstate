@@ -2,6 +2,7 @@
   "data": [
     {
       "id": 0,
+      "country": "usa",
       "name": "The United States of America",
       "image": "https://teleburst.files.wordpress.com/2009/06/hb-donald_trump_83257h.jpg?w=630",
       "thumb":"https://qph.ec.quoracdn.net/main-thumb-t-28717-50-qylrwevlxgcnoddancubpsnfajpuqoba.jpeg",
@@ -32,6 +33,7 @@
     },
     {
       "id": 1,
+      "country": "uk",
       "name": "The United Kingdom",
       "image": "https://www.eda.admin.ch/content/dam/dea/Images/dienstleistungen-und-publikationen/Suisseurope/2017-2/Theresa_May_296322385_C_Keystone_web.jpg/_jcr_content/renditions/cq5dam.thumbnail.180.270.png",
       "thumb": "https://www.thejc.com/image/policy:1.429392:1481817425/20160713172905!Theresa_May_UK_Home_Office_(cropped).jpg?f=1x1&w=50&$p$f$w=8a40945",
@@ -62,6 +64,7 @@
     },
     {
       "id": 2,
+      "country": "mexico",
       "name": "Mexico",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Presidente_Enrique_Pe%C3%B1a_Nieto._Fotograf%C3%ADa_oficial.jpg/220px-Presidente_Enrique_Pe%C3%B1a_Nieto._Fotograf%C3%ADa_oficial.jpg",
       "thumb": "http://tmj.mx/wp-content/uploads/2017/01/Captura-de-pantalla-2017-01-26-a-las-1.18.33-p.m.-50x50.png",
@@ -90,6 +93,7 @@
     },
     {
       "id": 3,
+      "country": "france",
       "name": "France",
       "image": "http://viewpointnigeria.com/wp-content/uploads/2017/04/macron2.jpg",
       "thumb": "http://s3.amazonaws.com/memoriabg/wp-content/uploads/2017/02/afp-emmanuel-macron-emmanuel-macron-ni-de-gauche-ni-de-droite-l-homme-multidirectionnel-50x50.jpg",
@@ -117,6 +121,7 @@
     },
     {
       "id": 4,
+      "country": "germany",
       "name": "Germany",
       "image": "http://www.fourfreedoms.nl/dynamisch/bibliotheek/cache/256_300_3_3494_0_nl_merkel_1000x1500.jpg",
       "thumb": "https://d2m2lkhawsaq1u.cloudfront.net/uploads/trial/size50by50/Angela_Merkel_(August_2012)_cropped_1393309849.jpg",
@@ -144,6 +149,7 @@
     },
     {
       "id": 5,
+      "country": "canada",
       "name": "Canada",
       "image": "https://cdn.americanprogress.org/wp-content/uploads/2016/03/03105039/Trudeau-headshot.jpg",
       "thumb": "https://qph.ec.quoracdn.net/main-thumb-2395782-50-injemmlgfuvhqtrreyfvjrtqsrgkcomp.jpeg",
@@ -151,7 +157,7 @@
       "birth-date": "December 25, 1971",
       "age": "45",
       "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Canada.svg/1280px-Flag_of_Canada.svg.png",
-      "flag-colors": "#FF0000, #FFF, #FFF, #FF0000",
+      "flag-colors": "#FF0000, #FAFAFA, #FAFAFA, #FF0000",
       "leader-title": "Prime Minister",
       "leader": "Justin Trudeau",
       "elections": {
@@ -172,6 +178,7 @@
     },
     {
       "id": 6,
+      "country": "russia",
       "name": "Russian Federation",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Putin_with_flag_of_Russia.jpg/220px-Putin_with_flag_of_Russia.jpg",
       "thumb": "https://i2.wp.com/i.forbesimg.com/media/lists/people/vladimir-putin_50x50.jpg",
@@ -179,7 +186,7 @@
       "birth-date": "October 7, 1952",
       "age": "64",
       "flag": "https://upload.wikimedia.org/wikipedia/en/archive/f/f3/20120812153730%21Flag_of_Russia.svg",
-      "flag-colors": "#FFF 20%, #0000FF 50%, #FF0000 80%",
+      "flag-colors": "#FAFAFA 20%, #0000FF 50%, #FF0000 80%",
       "leader-title": "President",
       "leader": "Vladimir Putin",
       "deputy-title": "Prime Minister",
@@ -202,6 +209,7 @@
     },
     {
       "id": 7,
+      "country": "china",
       "name": "China",
       "image": "https://upload.wikimedia.org/wikipedia/commons/7/72/Xi_Jinping_October_2013_%28cropped%29.jpg",
       "thumb": "https://cdn.meme.am/cache/images/folder361/50x50/11439361.jpg",
@@ -232,6 +240,7 @@
     },
     {
       "id": 8,
+      "country": "japan",
       "name": "Japan",
       "image": "http://i.dailymail.co.uk/i/pix/2016/11/17/19/3A761CEB00000578-3945672-image-a-14_1479410362968.jpg",
       "thumb": "http://15130-presscdn-0-89.pagely.netdna-cdn.com/wp-content/uploads/2015/04/shinzo-abe-50x50.jpg",
@@ -239,7 +248,7 @@
       "birth-date": "September 21, 1954",
       "age": "62",
       "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1280px-Flag_of_Japan.svg.png",
-      "flag-colors": "#fff 25%, #BC002D 50%, #fff 75%",
+      "flag-colors": "#FAFAFA 25%, #BC002D 50%, #FAFAFA 75%",
       "leader-title": "Prime Minister",
       "leader": "Shinzo Abe",
       "deputy-title": "Deputy Prime Minister",
@@ -262,6 +271,7 @@
     },
     {
       "id": 9,
+      "country": "brazil",
       "name": "Brazil",
       "image": "http://i.dailymail.co.uk/i/pix/2016/11/17/19/3A761CEB00000578-3945672-image-a-14_1479410362968.jpg",
       "thumb": "http://15130-presscdn-0-89.pagely.netdna-cdn.com/wp-content/uploads/2015/04/shinzo-abe-50x50.jpg",
@@ -292,6 +302,7 @@
     },
     {
       "id": 10,
+      "country": "india",
       "name": "India",
       "image": "http://images.mid-day.com/2013/feb/Narendra-Modi_1.jpg",
       "thumb": "http://15130-presscdn-0-89.pagely.netdna-cdn.com/wp-content/uploads/2015/04/shinzo-abe-50x50.jpg",
@@ -322,6 +333,7 @@
     },
     {
       "id": 11,
+      "country": "australia",
       "name": "Australia",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -341,6 +353,7 @@
     },
     {
       "id": 12,
+      "country": "europeanunion",
       "name": "European Union",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -360,6 +373,7 @@
     },
     {
       "id": 13,
+      "country": "argentina",
       "name": "Argentina",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -379,6 +393,7 @@
     },
     {
       "id": 14,
+      "country": "indonesia",
       "name": "Indonesia",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -398,6 +413,7 @@
     },
     {
       "id": 15,
+      "country": "italy",
       "name": "Italy",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -417,6 +433,7 @@
     },
     {
       "id": 16,
+      "country": "southkorea",
       "name": "South Korea",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -436,6 +453,7 @@
     },    
     {
       "id": 17,
+      "country": "saudiarabia",
       "name": "Saudi Arabia",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -455,6 +473,7 @@
     },    
     {
       "id": 18,
+      "country": "turkey",
       "name": "Turkey",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -464,16 +483,17 @@
       "flag": "may-int.jpg",
       "flag-colors": "#FF0000,#FFFFFF,#0000FF",
       "leader-title": "Prime Minister",
-      "leader": "Malcolm Turnbull",
+      "leader": "Recep Erdogan",
       "party": "",
       "previous-leader": "",
       "previous-leader-party": "",
       "term-start": "",
       "webpage": "",
-      "wikipedia": "https://en.wikipedia.org/wiki/Malcolm_Turnbull"
+      "wikipedia": "https://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan"
     },    
     {
       "id": 19,
+      "country": "southafrica",
       "name": "South Africa",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -482,8 +502,8 @@
       "age": "",
       "flag": "may-int.jpg",
       "flag-colors": "#FF0000,#FFFFFF,#0000FF",
-      "leader-title": "Prime Minister",
-      "leader": "Malcolm Turnbull",
+      "leader-title": "President",
+      "leader": "Jacob Zuma",
       "party": "",
       "previous-leader": "",
       "previous-leader-party": "",
@@ -493,6 +513,7 @@
     },
     {
       "id": 20,
+      "country": "unitedarabemirates",
       "name": "United Arab Emirates",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -501,8 +522,8 @@
       "age": "",
       "flag": "may-int.jpg",
       "flag-colors": "#FF0000,#FFFFFF,#0000FF",
-      "leader-title": "Prime Minister",
-      "leader": "Malcolm Turnbull",
+      "leader-title": "President",
+      "leader": "Khalifa Al Nahyan",
       "party": "",
       "previous-leader": "",
       "previous-leader-party": "",
@@ -512,6 +533,7 @@
     },
     {
       "id": 21,
+      "country": "egypt",
       "name": "Egypt",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -520,8 +542,8 @@
       "age": "",
       "flag": "may-int.jpg",
       "flag-colors": "#FF0000,#FFFFFF,#0000FF",
-      "leader-title": "Prime Minister",
-      "leader": "Malcolm Turnbull",
+      "leader-title": "President",
+      "leader": "Abdel Fattah el-Sisi",
       "party": "",
       "previous-leader": "",
       "previous-leader-party": "",
@@ -530,7 +552,8 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Malcolm_Turnbull"
     },
     {
-      "id": 21,
+      "id": 22,
+      "country": "vietnam",
       "name": "Vietnam",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -539,8 +562,8 @@
       "age": "",
       "flag": "may-int.jpg",
       "flag-colors": "#FF0000,#FFFFFF,#0000FF",
-      "leader-title": "Prime Minister",
-      "leader": "Malcolm Turnbull",
+      "leader-title": "President",
+      "leader": "Trần Đại Quang",
       "party": "",
       "previous-leader": "",
       "previous-leader-party": "",
@@ -549,7 +572,8 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Malcolm_Turnbull"
     },
     {
-      "id": 21,
+      "id": 23,
+      "country": "iran",
       "name": "Iran",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -558,8 +582,8 @@
       "age": "",
       "flag": "may-int.jpg",
       "flag-colors": "#FF0000,#FFFFFF,#0000FF",
-      "leader-title": "Prime Minister",
-      "leader": "Malcolm Turnbull",
+      "leader-title": "President",
+      "leader": "Hassan Rouhani",
       "party": "",
       "previous-leader": "",
       "previous-leader-party": "",
@@ -568,7 +592,8 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Malcolm_Turnbull"
     },
     {
-      "id": 21,
+      "id": 24,
+      "country": "nigeria",
       "name": "Nigeria",
       "image": "macron-int.jpg",
       "thumb": "may-int.jpg",
@@ -577,14 +602,54 @@
       "age": "",
       "flag": "may-int.jpg",
       "flag-colors": "#FF0000,#FFFFFF,#0000FF",
-      "leader-title": "Prime Minister",
-      "leader": "Malcolm Turnbull",
+      "leader-title": "President",
+      "leader": "Muhammadu Buhari",
       "party": "",
       "previous-leader": "",
       "previous-leader-party": "",
       "term-start": "",
       "webpage": "",
       "wikipedia": "https://en.wikipedia.org/wiki/Malcolm_Turnbull"
+    },
+    {
+      "id": 25,
+      "country": "pakistan",
+      "name": "Pakistan",
+      "image": "macron-int.jpg",
+      "thumb": "may-int.jpg",
+      "banner": "may-int.jpg",
+      "birth-date": "",
+      "age": "",
+      "flag": "may-int.jpg",
+      "flag-colors": "#FF0000,#FFFFFF,#0000FF",
+      "leader-title": "President",
+      "leader": "Mamnoon Hussain",
+      "party": "",
+      "previous-leader": "",
+      "previous-leader-party": "",
+      "term-start": "",
+      "webpage": "",
+      "wikipedia": "https://en.wikipedia.org/wiki/Malcolm_Turnbull"
+    },
+    {
+      "id": 26,
+      "country": "Thailand",
+      "name": "Thailand",
+      "image": "macron-int.jpg",
+      "thumb": "may-int.jpg",
+      "banner": "may-int.jpg",
+      "birth-date": "",
+      "age": "",
+      "flag": "may-int.jpg",
+      "flag-colors": "#FF0000,#FFFFFF,#0000FF",
+      "leader-title": "Prime Minister",
+      "leader": "Prayut Chan-o-cha",
+      "party": "",
+      "previous-leader": "",
+      "previous-leader-party": "",
+      "term-start": "",
+      "webpage": "",
+      "wikipedia": "https://en.wikipedia.org/wiki/Prayut_Chan-o-cha"
     }
   ]
 }

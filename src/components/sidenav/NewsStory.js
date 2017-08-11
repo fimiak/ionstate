@@ -19,7 +19,7 @@ class NewsStory extends Component {
                             <span className="time">{ this.props.news.length >= 0 ? '' : this.props.news['pub_date']}</span>
                         </div>
                         <div className="article-text">
-                            <span className="article">{this.props.news['lead_paragraph']}</span>
+                            <span className="article">{this.props.news['snippet']}</span>
                         </div>
                     </div>
                 </div>

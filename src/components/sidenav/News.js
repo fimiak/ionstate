@@ -27,14 +27,14 @@ class News extends Component {
     }
 
     performSearch = () => {
-        let trump = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trump, donald&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let may = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=may, theresa&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let macron = '//http://api.nytimes.com/svc/search/v2/articlesearch.json?q=macron, emmanuel&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let merkel = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=merkel, angela&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let nieto = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=nieto, pena&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let putin = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=putin, vladimir&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let trudeau = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trudeau, justin&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let jinping = '/http://api.nytimes.com/svc/search/v2/articlesearch.json?q=jinping, xi&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        const trump = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trump, donald&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        const may = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=may, theresa&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        const macron = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=macron, emmanuel&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        const merkel = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=merkel, angela&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        const nieto = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=nieto, pena&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        const putin = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=putin, vladimir&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        const trudeau = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trudeau, justin&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
+        const jinping = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=jinping, xi&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
         let pick = '';
         switch (this.props.props.country) {
             case 'usa':

@@ -3,63 +3,58 @@ import React, {Component} from 'react';
 class Schedule extends Component {
   render() {
     return (
-      <div>
         <div className="inner-schedule">
           <div className="scheduleHeader">
             <div className="prevMonth">
-              &#9664; July
+              &#8592; July
             </div>
             <div className="monthBox">
               August
             </div>
             <div className="nextMonth">
-              September &#9654;
+              September &#8594;
             </div>
           </div>
           <div className="scheduleBox">
 
             <div className="dayBox">
               <div className="dateBox">
-                30
+                1
               </div>
               <div className="eventBox">
-                <ul>
-                  <li>
-                    First event.
-                  </li>
-                </ul>
               </div>
             </div>
 
             <div className="dayBox">
               <div className="dateBox">
-                31
+                2
               </div>
               <div className="eventBox">
-                <ul>
-                  <li>
-                    Second event.
-                  </li>
-                </ul>
               </div>
             </div>
-
             <div className="dayBox">
               <div className="dateBox">
-                31
+                3
               </div>
               <div className="eventBox">
-                <ul>
-                  <li>
-                    Third event.
-                  </li>
-                </ul>
               </div>
             </div>
-
+            <div className="dayBox">
+              <div className="dateBox">
+                4
+              </div>
+              <div className="eventBox">
+              </div>
+            </div>
+            <div className="dayBox">
+              <div className="dateBox">
+                5
+              </div>
+              <div className="eventBox">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
     )
   }
 }

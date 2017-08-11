@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
-import data from '../../data/data';
 import DataBox from './DataBox';
 import DataItem from './DataItem';
 
 class DataSheets extends Component {
   render() {
-    let nation = this.props.props.country;
     let selected = this.props.selected;
     return (
-      <div className="data-sheets">
+      <div className="datasheetsInner">
         <div className="data-image">
           <DataBox props={selected} />
         </div>

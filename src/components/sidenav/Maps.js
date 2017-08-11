@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 
-
 class Maps extends Component {
+  componentDidMount() {
+  }
+
+  clearOverlay = () => {
+    document.getElementById("overlay").setAttribute('style', 'opacity: 0;');
+  }
+
   render() {
     let place = '';
     switch (this.props.props.country) {
@@ -38,13 +44,14 @@ class Maps extends Component {
     }
     return (
       <div className="inner-maps">
-        <h4>Leader Map {this.props.props.country}</h4>
+        <div id="overlay" onClick={this.clearOverlay} >
+        </div>
         <div>
           <iframe
             className="maps"
             frameBorder="0"
             src={"https://www.google.com/maps/embed/v1/place?key=AIzaSyBEERsCbyJvSuyQFpq2IcnunlrO-m-qhc0&q=" + place} allowFullScreen>
-</iframe>
+          </iframe>
         </div>
       </div>
     )

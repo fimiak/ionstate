@@ -41,13 +41,21 @@ hr
   flex-direction: column
   height: 100%
 
+.globeIcon
+  height: 30px
+  width: 30px
+
 .top-logo 
   width: 30px
   height: 30px
 
 .title
+  align-content: center
   color: #000
-  margin: 5px
+  display: flex
+  align-items: center
+  margin: 0
+  padding: 5px
 
 .title-link
   text-decoration: none
@@ -76,12 +84,13 @@ hr
     color: #fff
   .logo-wrap
     align-items: center
-    border-bottom: 1px solid #666
+    border-bottom: 1px solid #eee
     display: flex
     flex-shrink: 0
     justify-content: space-between
     line-height: 48px
     padding: 0 15px
+    transition: .05s
   .nav-wrap
     background: #333
     transition: .4s
@@ -177,17 +186,12 @@ hr
   border: 0
   display: block
   padding: 0
+  cursor: pointer
 
 .open-menu
-  background: #fff
-  border: 1px solid #000
-  border-radius: 2px
   padding: 3px 5px 2px
 
 .close-menu
-  background: #e3e3e3
-  border: 1px solid #000
-  border-radius: 2px
   padding: 3px 5px 2px
 
 .App-intro
@@ -206,9 +210,7 @@ hr
  
 .top-nav
   color: #333
-  border-bottom: 1px solid transparent
-  border-image: linear-gradient(to right, #eee, #000)
-  border-image-slice: 1
+  border-bottom: 1px solid #ddd
   display: flex
   flex-direction: row
   margin: 00px auto
@@ -219,7 +221,6 @@ hr
   a
     color: #000
     display: block
-    line-height: 60px
     padding: 0px 28px
     text-decoration: none
     text-transform: uppercase
@@ -229,7 +230,6 @@ hr
   .active:hover
     background: #000
     color: #ffa500
-
 
 .top-icon
   height: 60px
@@ -246,9 +246,22 @@ hr
   margin: 0
   align-text: center
 
+.top-flag
+  background: #fff
+  height: 60px
+  position: relative
+  max-width: 120px
+  img
+    border: 1px solid #eee
+    border-bottom: 0
+    box-sizing: border-box
+    float: right
+    height: 100%
+    width: 120px
+
 .top-title
-  border-top: 1px solid #ddd
-  border-bottom: 1px solid #ddd
+  border-top: 2px solid #ddd
+  border-bottom: 2px solid #ddd
   box-sizing: border-box
   font-size: 12px
   min-width: 280px
@@ -257,15 +270,6 @@ hr
   position: relative
   text-transform: uppercase
   white-space: nowrap
-
-.top-flag
-  background: #fff
-  height: 60px
-  position: relative
-  width: 120px
-  img
-    width: 90px
-    height: 100%
 
 .top-content
   background: #f3f3f3
@@ -366,8 +370,6 @@ hr
       text-align: left
       padding: 10px 0
 
-
-
 .inner-datasheets
   width: auto
   display: flex
@@ -379,63 +381,74 @@ hr
     border: 1px solid #000
     padding: 10px 5px
 
-
 .inner-maps
-  padding: 20px 0
+  margin: 0 auto
+  width: 66%
+  position: relative
 
 .inner-more
   height: auto
   border-top: 1px solid #000
   padding: 20px 0
 
+#schedule
+  display: flex
+  justify-content: space-between
+
 .inner-schedule
-  background: #fff
-  border-top: 1px solid #000
   display: flex
   flex-direction: column
-  padding: 20px 0
   height: auto
+  margin: 0 5px
+  width: 375px
   .scheduleHeader
     background: #f6f6f6
-    border-top: 1px solid #000
-    display: flex
-    justify-content: space-between
-    margin-top: 20px
+    border: 1px solid #000
+    border-bottom: 0
+    .nextMonth
+      text-align: right
+      float: right
+    .prevMonth
+      text-align: left
+      float: left
     div
       line-height: 40px
-      padding: 0 10px
+      padding: 0 5px
+      display: inline-block
       cursor: pointer
+      min-width: 100px
       &:hover
         background: #eee
     .monthBox
       &:hover
-        background: #f6f6f6
+        background: none
         cursor: default
   .scheduleBox
-    border-top: 1px solid #000
-    border-bottom: 1px solid #000
-    padding: 10px 0
+    background: #FFF
+    border: 1px solid #000
+    padding: 5px
     display: flex
     flex-direction: row
     flex-wrap: wrap
     .dayBox
       display: flex
-      flex-basis: 50%
       flex-direction: row
       width: 100%
       .dateBox
+        background: #fafafa
         border: 1px solid #000
         align-items: center
         margin: 5px 0
         justify-content: center
         display: flex
-        width: 100px
-        height: 100px
-        font-size: 30px
+        width: 60px
+        height: 60px
+        font-size: 26px
         font-weight: 200
       .eventBox
-        ul
-          list-style: none
+        border: 1px solid #EEE
+        margin: 5px
+        width: 100%
 
 .top-split
   display: flex
@@ -443,10 +456,10 @@ hr
 #international
   margin-top: 20px
 
-.data-sheets
+.datasheetsInner
   display: flex
   flex-direction: column
-  padding: 0 0 30px
+  padding: 0 0 5px
   max-width: 400px
 
 .data-point
@@ -498,6 +511,13 @@ hr
   height: 440px
   width: 100%
 
+#overlay
+  width: 100%
+  height: 100%
+  background: rgba(224,224,224,.6)
+  position: absolute
+  transition: .25s
+
 .more
   color: #000
 
@@ -505,7 +525,7 @@ hr
   display: flex
   flex-wrap: wrap
   height: auto
-  padding: 20px 0
+  padding: 38px 0 10px
   h4
     align-self: center
     margin: 0 auto
@@ -531,18 +551,18 @@ hr
     text-decoration: none
     &:hover
       border-radius: 5px
-      color: #f0f898
+      color: #FAA
   h3
-    color: #fb9
-    font-weight: 100
+    color: #777
+    font-weight: 900
+    font-family: arial, sans-serif
     margin: 5px 0
-    text-decoration: underline
     padding: 0
     cursor: default
     text-transform: uppercase
     width: 50%
     text-align: left
-    font-size: 12px
+    font-size: 13px
 
 
 .inner-footer
@@ -553,37 +573,42 @@ hr
   flex-direction: row
 
 .input-email
-  background: #c54
-  border: 1px solid #c87
+  background: #333
+  border: 1px solid #CCC
   border-radius: 2px
   color: #fff
   padding: 5px
   transition: .25s
   &:focus
-    border: 1px solid #d98
-    background: #b43
+    border: 1px solid #C87
+    background: #222
 
 .button-submit
-  background: #c54
-  border: 1px solid #c87
+  background: #333
+  border: 1px solid #CCC
   margin: 5px
   padding: 5px
   border-radius: 2px
   transition: .25s
   &:active
-    border: 1px solid #faa
+    border: 1px solid #FAA
+    background: #000
+    color: #FAA
     transition: 0s
   &:hover
-    background: #c76
+    background: #333
 
 .news-box
   width: 50%
 
+.topNews
+  margin: 10px 0
+
 .news-story
   border-bottom: 1px solid #ccc
-  padding: 0 0 10px 0
+  padding: 0 0 5px 0
   box-sizing: border-box
-  margin: 0 10px 10px 10px
+  margin: 0 5px 10px 5px
   display: flex
 
 .news-img-container
@@ -604,9 +629,9 @@ hr
     width: 100%
 
 .article
-  font-size: 14px
+  font-size: 12px
   text-align: left
-  max-height: 48px
+  height: 60px
 
 .article-image
   max-width: 150px
@@ -620,6 +645,7 @@ hr
   width: 100%
   text-decoration: none
   padding: 3px
+  min-height: 42px
   box-sizing: border-box
   overflow: hidden
   display: block
@@ -644,7 +670,7 @@ hr
 
 .headline
   color: #000
-  font-size: 13px
+  font-size: 12px
   text-transform: uppercase
   &:hover
     color: #666
@@ -652,7 +678,7 @@ hr
 .article-author-date
   background: #ccc
   font-size: 11px
-  padding: 3px 5px
+  padding: 5px
   display: flex
   justify-content: space-between
 
@@ -673,30 +699,33 @@ hr
   overflow: hidden
 
 .others
+  border-top: 1px solid #000
   display: flex
+  margin-top: 10px
   justify-content: space-between
   width: 100%
   img
     height: 100%
+    max-width: 60px
+    width: auto
   div
     box-sizing: border-box
-    border-bottom: 5px solid #f6f6f6
-    border-left: 5px solid #f6f6f6
     display: flex
-    height: 40px
-    width: auto
+    padding: 20px
+    padding-left: 10px
     transition: .2s
+    width: auto
     a
       display: flex
       max-height: 40px
       width: 100%
-      max-width: 80px
+      width: 84px
     &:hover
-      opacity: .6
+      background: #DDD
     &:last-child
       justify-content: flex-end
-      border-right: 5px solid #f6f6f6
-
+      padding-left: 20px
+      padding-right: 10px
 
 .footer-column
   flex: 1
@@ -848,9 +877,6 @@ hr
     left: auto
     line-height: 2em
  
-  .content
-    margin-bottom: 10px
- 
   .data-sheets
     flex-direction: column
 
@@ -868,7 +894,7 @@ hr
  
   .inner-content
     width: 100%
-    margin: 0 0 20px
+    margin: 0
  
   .inner-datasheets
     width: auto
@@ -876,8 +902,19 @@ hr
       padding: 5px 2px
       font-size: 14px
 
+  #schedule
+    flex-direction: column
+
+  .inner-maps
+    width: 100%
+
   .inner-schedule
     font-size: 12px
+    margin: 0 auto 10px
+    width: auto
+    .scheduleHeader
+      div
+        min-width: 90px
     .scheduleBox
       font-size: 11px
       padding: 0 5px
@@ -936,8 +973,8 @@ hr
     font-size: 10px
  
   .article-link-headline
-    padding: 9px 3px
     font-size: 12px
+    padding: 9px 3px
 
   .time
     display: none
@@ -955,7 +992,7 @@ hr
  
   .maps
     height: 220px
-    width: 90%
+    width: 94%
  
   .inner-footer
     flex-direction: row

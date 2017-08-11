@@ -26,6 +26,15 @@ const indonesia = data.data[14];
 const italy = data.data[15];
 const southkorea = data.data[16];
 const saudiarabia = data.data[17];
+const turkey = data.data[18];
+const southafrica = data.data[19];
+const unitedarabemirates = data.data[20];
+const egypt = data.data[21];
+const vietnam = data.data[22];
+const iran = data.data[23];
+const nigeria = data.data[24];
+const pakistan = data.data[25];
+const thailand = data.data[26];
 
 
 class NavWrap extends Component {
@@ -46,11 +55,12 @@ class NavWrap extends Component {
     }
 
     componentDidMount() {
-        document.getElementById('page-one').setAttribute('style', 'display: flex;');
-        document.getElementById('page-two').setAttribute('style', 'display: none;');
+        document.getElementById('page1').setAttribute('style', 'display: flex;');
+        document.getElementById('page2').setAttribute('style', 'display: none;');
+        document.getElementById('page3').setAttribute('style', 'display: none;');
     }
 
-    setNation = (nation) => {
+    setNation(nation) {
         this.setState({
         selection: nation
         })
@@ -77,18 +87,28 @@ class NavWrap extends Component {
     }
 
     changePage() {
-        const flipPage = (this.state.page === 1 ) ? 2 : 1;
-        if (this.state.page === 1) {
-            document.getElementById('page-one').setAttribute('style', 'display: none;');
-            document.getElementById('page-two').setAttribute('style', 'display: flex;');
+        if (this.state.page === 1 ) {
+            document.getElementById('page1').setAttribute('style', 'display: none;');
+            document.getElementById('page2').setAttribute('style', 'display: flex;');
+            this.setState(prevState => ({
+                page: 2
+                })
+            );
+        } else if (this.state.page === 2) {
+            document.getElementById('page2').setAttribute('style', 'display: none;');
+            document.getElementById('page3').setAttribute('style', 'display: flex;');
+            this.setState(prevState => ({
+                page: 3
+                })
+            );
         } else {
-            document.getElementById('page-one').setAttribute('style', 'display: flex;');
-            document.getElementById('page-two').setAttribute('style', 'display: none;');
+            document.getElementById('page3').setAttribute('style', 'display: none;');
+            document.getElementById('page1').setAttribute('style', 'display: flex;');
+            this.setState(prevState => ({
+                page: 1
+                })
+            );
         }
-        this.setState(prevState => ({
-            page: flipPage
-            })
-        );
     }
 
     render() {
@@ -96,7 +116,7 @@ class NavWrap extends Component {
           <div id="nav-wrap" className={"nav-wrap " + this.props.menuState }>
             <div className="inner-header">
               <div className="nav-sidenav" onClick={this.closeMenu } >
-                <ul id="page-one" onClick={this.scrollTop}>
+                <ul id="page1" onClick={this.scrollTop}>
                   <li><NavLink to="/usa" onClick={() => this.setNation(usa)}><img src={usa.thumb} alt={usa.leader} /><div className="copy" id="copy">{usa.leader}</div></NavLink></li>
                   <li><NavLink to="/germany" onClick={() => this.setNation(germany)}><img src={germany.thumb} alt={germany.leader} /><div className="copy">{germany.leader}</div></NavLink></li>
                   <li><NavLink to="/france" onClick={() => this.setNation(france)}><img src={france.thumb} alt={france.leader} /><div className="copy">{france.leader}</div></NavLink></li>
@@ -107,7 +127,7 @@ class NavWrap extends Component {
                   <li><NavLink to="/china" onClick={() => this.setNation(china)}><img src={china.thumb} alt={china.leader} /><div className="copy">{china.leader}</div></NavLink></li>
                   <li><NavLink to="/japan" onClick={() => this.setNation(japan)}><img src={japan.thumb} alt={japan.leader} /><div className="copy">{japan.leader}</div></NavLink></li>
                 </ul>
-                <ul id="page-two" onClick={this.scrollTop}>
+                <ul id="page2" onClick={this.scrollTop}>
                   <li><NavLink to="/brazil" onClick={() => this.setNation(brazil)}><img src={brazil.thumb} alt={brazil.leader} /><div className="copy">{brazil.leader}</div></NavLink></li>
                   <li><NavLink to="/india" onClick={() => this.setNation(india)}><img src={india.thumb} alt={india.leader} /><div className="copy">{india.leader}</div></NavLink></li>
                   <li><NavLink to="/australia" onClick={() => this.setNation(australia)}><img src={australia.thumb} alt={australia.leader} /><div className="copy">{australia.leader}</div></NavLink></li>
@@ -117,6 +137,17 @@ class NavWrap extends Component {
                   <li><NavLink to="/italy" onClick={() => this.setNation(italy)}><img src={italy.thumb} alt={italy.leader} /><div className="copy">{italy.leader}</div></NavLink></li>
                   <li><NavLink to="/southkorea" onClick={() => this.setNation(southkorea)}><img src={southkorea.thumb} alt={southkorea.leader} /><div className="copy">{southkorea.leader}</div></NavLink></li>
                   <li><NavLink to="/saudiarabia" onClick={() => this.setNation(saudiarabia)}><img src={saudiarabia.thumb} alt={saudiarabia.leader} /><div className="copy">{saudiarabia.leader}</div></NavLink></li>
+                </ul>
+                <ul id="page3" onClick={this.scrollTop}>
+                    <li><NavLink to="/turkey" onClick={() => this.setNation(turkey)}><img src={turkey.thumb} alt={turkey.leader} /><div className="copy">{turkey.leader}</div></NavLink></li>
+                    <li><NavLink to="/southafrica" onClick={() => this.setNation(southafrica)}><img src={southafrica.thumb} alt={southafrica.leader} /><div className="copy">{southafrica.leader}</div></NavLink></li>
+                    <li><NavLink to="/unitedarabemirates" onClick={() => this.setNation(unitedarabemirates)}><img src={unitedarabemirates.thumb} alt={unitedarabemirates.leader} /><div className="copy">{unitedarabemirates.leader}</div></NavLink></li>
+                    <li><NavLink to="/egypt" onClick={() => this.setNation(egypt)}><img src={egypt.thumb} alt={egypt.leader} /><div className="copy">{egypt.leader}</div></NavLink></li>
+                    <li><NavLink to="/vietnam" onClick={() => this.setNation(vietnam)}><img src={vietnam.thumb} alt={vietnam.leader} /><div className="copy">{vietnam.leader}</div></NavLink></li>
+                    <li><NavLink to="/iran" onClick={() => this.setNation(iran)}><img src={iran.thumb} alt={iran.leader} /><div className="copy">{iran.leader}</div></NavLink></li>
+                    <li><NavLink to="/nigeria" onClick={() => this.setNation(nigeria)}><img src={nigeria.thumb} alt={nigeria.leader} /><div className="copy">{nigeria.leader}</div></NavLink></li>
+                    <li><NavLink to="/pakistan" onClick={() => this.setNation(pakistan)}><img src={pakistan.thumb} alt={pakistan.leader} /><div className="copy">{pakistan.leader}</div></NavLink></li>
+                    <li><NavLink to="/thailand" onClick={() => this.setNation(thailand)}><img src={thailand.thumb} alt={thailand.leader} /><div className="copy">{thailand.leader}</div></NavLink></li>
                 </ul>
               </div>
               <div className="nav-links">
