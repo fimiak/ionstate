@@ -3,7 +3,6 @@ import NewsStory from './NewsStory';
 import axios from 'axios';
 
 class News extends Component {
-
     constructor(props) {
         super(props);
         this.state = {

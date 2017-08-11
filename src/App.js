@@ -8,7 +8,6 @@ import './App.css';
 //import { load } from './actions';
 
 class App extends Component {
-
   constructor() {
     super();
     this.state = {
@@ -37,7 +36,8 @@ class App extends Component {
     );
   }
 
-  render() {
+  render() {    
+
     return (
       <div className="App">
         <div className="App-header">
@@ -45,7 +45,7 @@ class App extends Component {
             <a className="title-link" href="/"><h4 className="title"><img className="globeIcon" src="globe.ico" alt="Prime Watch" /> | Prime Watch</h4></a>
             <button className="button-menu" >{(this.state.menu === false) ? <img className="open-menu" src={menuIcon} alt="open" /> : <img className="close-menu" src={closeIcon} alt="close" /> }</button>
           </div>
-          <NavWrap menu={this.state.menu} menuState={this.state.menuState} />
+          <NavWrap menu={this.state.menu} menuState={this.state.menuState} closeMenu={this.closeMenu} />
         </div>
         <div className="App-intro" onClick={this.closeMenu}>
           {this.props.children}

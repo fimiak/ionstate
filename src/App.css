@@ -89,15 +89,17 @@ hr {
     justify-content: space-between;
     line-height: 48px;
     padding: 0 15px;
-    transition: 0.05s; }
+    transition: 0.15s; }
   .App-header .nav-wrap {
     background: #333;
-    transition: 0.4s;
-    z-index: 3; }
+    position: fixed;
+    width: 100%;
+    top: 59px;
+    z-index: 5; }
     .App-header .nav-wrap .inner-header {
+      display: flex;
       max-width: 760px;
-      margin: 0 auto;
-      display: flex; }
+      margin: 0 auto; }
       .App-header .nav-wrap .inner-header .nav-links ul {
         display: flex;
         width: 190px; }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class DataBox extends Component {
-
+    
     render() {
         return (
             <div className="img-highlight">

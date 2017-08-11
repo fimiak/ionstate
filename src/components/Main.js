@@ -12,7 +12,6 @@ let selected = [];
 let topnavColor = () => document.getElementsByClassName('top-title')[0].setAttribute('style', 'border-image: linear-gradient(to right, ' + selected['flag-colors'] + ');border-image-slice: 1;' );
 
 class Main extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -26,6 +25,7 @@ class Main extends Component {
     const topContent = document.getElementById('top-content');
     const datasheets = document.getElementById('datasheets');
     const logoWrap = document.getElementsByClassName('logo-wrap')[0];
+    const navWrap = document.getElementsByClassName('nav-wrap')[0];
     const topIcon = document.getElementsByClassName('top-icon')[0];
     const topLeader = document.getElementsByClassName('top-leader')[0];
     const topFlag = document.getElementsByClassName('top-flag')[0];
@@ -39,6 +39,7 @@ class Main extends Component {
           topContent.setAttribute('style', 'position: fixed; height: 40px; top: 43px; z-index: 2; max-width: 1200px;');
           datasheets.setAttribute('style', 'margin-top: 42px;');
           logoWrap.setAttribute('style', 'line-height: 32px;');
+          navWrap.setAttribute('style', 'top: 43px;');
           topIcon.setAttribute('style', 'height: 40px;');
           topLeader.setAttribute('style', 'height: 40px;');
           topFlag.setAttribute('style', 'height: 40px; width: 120px;');
@@ -48,6 +49,7 @@ class Main extends Component {
           topContent.setAttribute('style', 'position: relative; top: auto; z-index: 0; max-width: none;');
           datasheets.setAttribute('style', 'margin-top: 0;');
           logoWrap.setAttribute('style', 'line-height: 48px;');
+          navWrap.setAttribute('style', 'top: 59px;');
           topIcon.setAttribute('style', 'height: auto; max-height: 60px;');
           topLeader.setAttribute('style', 'height: 100%;');
           topFlag.setAttribute('style', 'height: 60px;');
