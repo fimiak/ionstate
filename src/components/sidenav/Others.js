@@ -5,9 +5,13 @@ import NavLink from '../NavLink';
 import data from '../.././data/data';
 
 class Others extends Component {
+    constructor(props) {
+        super(props);
+        this.scrollTop = this.scrollTop.bind(this);
+    }
 
-    ComponentDidMount() {
-
+    scrollTop() {
+        document.getElementsByClassName('App-intro')[0].scrollTop = 0;
     }
 
     render() {
@@ -18,16 +22,16 @@ class Others extends Component {
         return (
             <div className="others">
                 <div>
-                    <NavLink className="others-back" to={"/" + previous.country}>
+                    <NavLink className="others-back" to={"/" + previous.country} onClick={ this.scrollTop} >
                         <img className="othersArrow" src={backIcon} alt="back" />
                         <img src={previous.flag} alt={previous.name} />
                     </NavLink>
                 </div>
-                <h4>
+                <h2>
                     Discover more leaders.
-                </h4>
+                </h2>
                 <div>
-                    <NavLink className="others-forward" to={"/" + next.country}>
+                    <NavLink className="others-forward" to={"/" + next.country} onClick={ this.scrollTop }>
                         <img src={next.flag} alt={next.name} />
                         <img className="othersArrow" src={forwardIcon} alt="forward" />
                     </NavLink>

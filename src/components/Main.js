@@ -11,13 +11,24 @@ import Schedule from './sidenav/Schedule';
 let selected = [];
 let topnavColor = () => document.getElementsByClassName('top-title')[0].setAttribute('style', 'border-image: linear-gradient(to right, ' + selected['flag-colors'] + ');border-image-slice: 1;' );
 
+
 class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: data,
-      loading: true
+      loading: true,
+      map: 'Seattle, WA',
+      country: this.props.params.country
     };
+
+    this.setMap = this.setMap.bind(this);
+  }
+
+  setMap(place) {
+    this.setState({
+      map: place
+    });
   }
 
   componentDidMount() {
@@ -29,7 +40,6 @@ class Main extends Component {
     const topIcon = document.getElementsByClassName('top-icon')[0];
     const topLeader = document.getElementsByClassName('top-leader')[0];
     const topFlag = document.getElementsByClassName('top-flag')[0];
-    const flagImg = topFlag.getElementsByTagName('img')[0];
     const contentBoxLinks = document.getElementsByClassName('content-box-links')[0];
 
     topnavColor();
@@ -42,8 +52,7 @@ class Main extends Component {
           navWrap.setAttribute('style', 'top: 43px;');
           topIcon.setAttribute('style', 'height: 40px;');
           topLeader.setAttribute('style', 'height: 40px;');
-          topFlag.setAttribute('style', 'height: 40px; width: 120px;');
-          flagImg.setAttribute('style', 'width: 80px;');
+          topFlag.setAttribute('style', 'height: 40px;');
           contentBoxLinks.setAttribute('style', 'line-height: 40px;');
       } else {
           topContent.setAttribute('style', 'position: relative; top: auto; z-index: 0; max-width: none;');
@@ -53,7 +62,6 @@ class Main extends Component {
           topIcon.setAttribute('style', 'height: auto; max-height: 60px;');
           topLeader.setAttribute('style', 'height: 100%;');
           topFlag.setAttribute('style', 'height: 60px;');
-          flagImg.setAttribute('style', 'width: 120px;');
           contentBoxLinks.setAttribute('style', 'line-height: 60px;');
         }
       }
@@ -71,7 +79,7 @@ class Main extends Component {
       list[data.data[i]['country']] = data.data[i];
     } 
     selected = list[nation]; // The country that has been selected via URL param.
-
+    
     return (
       <div className="contentBox">
         <div className="content">
@@ -106,8 +114,8 @@ class Main extends Component {
               </div>
             </div>
             <div id="schedule">
-              <Schedule props={this.props.params} />
-              <Maps props={this.props.params} />
+              <Schedule props={this.props.params} map={this.state.map} selected={selected} setMap={this.setMap} />
+              <Maps props={this.props.params} map={this.state.map} selected={selected} />
             </div>
             <div id="more">
               <More props={this.props.params} />

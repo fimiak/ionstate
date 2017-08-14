@@ -91,6 +91,9 @@ hr
     line-height: 48px
     padding: 0 15px
     transition: .15s
+    &:hover
+      border-bottom: 1px solid #ccc
+      transition: .3s
   .nav-wrap
     background: #333
     position: fixed
@@ -101,6 +104,7 @@ hr
       display: flex
       max-width: 760px
       margin: 0 auto
+      transition: 0.15s ease-in
       .nav-links
         ul
           display: flex
@@ -166,7 +170,6 @@ hr
 
 .hidden
   opacity: 0
-  height: 0
   visibility: hidden
 
 .fadeIn
@@ -182,6 +185,10 @@ hr
   display: flex
   flex-direction: column
   transition: .3s
+  li
+    a
+      img
+        height: 50px
 
 .button-menu
   background: #fff
@@ -235,7 +242,8 @@ hr
 
 .top-icon
   height: 60px
-  width: auto
+  text-align: left
+  width: 50px
 
 .top-leader
   height: 60px
@@ -252,14 +260,14 @@ hr
   background: #fff
   height: 60px
   position: relative
-  max-width: 120px
+  width: 120px
   img
     border: 1px solid #eee
     border-bottom: 0
     box-sizing: border-box
     float: right
     height: 100%
-    width: 120px
+    max-width: 120px
 
 .top-title
   border-top: 2px solid #ddd
@@ -407,12 +415,6 @@ hr
     background: #f6f6f6
     border: 1px solid #000
     border-bottom: 0
-    .nextMonth
-      text-align: right
-      float: right
-    .prevMonth
-      text-align: left
-      float: left
     div
       line-height: 40px
       padding: 0 5px
@@ -432,25 +434,41 @@ hr
     display: flex
     flex-direction: row
     flex-wrap: wrap
-    .dayBox
-      display: flex
-      flex-direction: row
+    ul
+      margin: 0
+      list-style: none
+      padding: 0
       width: 100%
-      .dateBox
-        background: #fafafa
-        border: 1px solid #000
-        align-items: center
-        margin: 5px 0
-        justify-content: center
+      .dayBox
         display: flex
-        width: 60px
-        height: 60px
-        font-size: 26px
-        font-weight: 200
-      .eventBox
-        border: 1px solid #EEE
-        margin: 5px
+        flex-direction: row
         width: 100%
+        .dateBox
+          background: #fafafa
+          border: 1px solid #000
+          align-items: center
+          margin: 5px 0
+          justify-content: center
+          flex-direction: column
+          display: flex
+          width: 70px
+          height: 70px
+          font-size: 24px
+          font-weight: 200
+          .monthBox
+            font-size: 12px
+            margin-bottom: 4px
+        .eventBox
+          border: 1px solid #EEE
+          margin: 5px
+          padding: 5px
+          display: flex
+          align-items: center
+          flex-grow: 1
+          overflow: hidden
+          &:hover
+            background: #F3F3F3
+            cursor: pointer
 
 .top-split
   display: flex

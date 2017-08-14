@@ -1,0 +1,28 @@
+{
+    "schedule": [
+        {
+            "id": 0,
+            "month": "August",
+            "day": 15,
+            "title": "Test Event",
+            "link": "https://www.whitehouse.gov/live",
+            "place": "rome, IT"
+        },
+        {
+            "id": 1,
+            "month": "August",
+            "day": 16,
+            "title": "Test 2",
+            "link": "/",
+            "place": "Moscow, ru"
+        },
+        {
+            "id": 2,
+            "month": "August",
+            "day": 18,
+            "title": "Test 3",
+            "link": "/",
+            "place": "beijing, cn"
+        }
+    ]
+}

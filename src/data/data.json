@@ -28,6 +28,7 @@
       "previous-leader-party": "Democratic Party",
       "term-start": "January 20, 2017",
       "term-end": "January 20, 2021",
+      "capitol": "White+House,Washington,USA",
       "webpage": "https://www.donaldjtrump.com/",
       "wikipedia": "https://en.wikipedia.org/wiki/Donald_Trump"
     },
@@ -59,6 +60,7 @@
       "previous-leader-party": "Conservative Party",
       "term-start": "July 13, 2016",
       "term-end": "",
+      "capitol": "10+downing+street,London,UK",
       "webpage": "http://www.tmay.co.uk/",
       "wikipedia": "https://en.wikipedia.org/wiki/Theresa_May"
     },
@@ -88,6 +90,7 @@
       "previous-leader-party": "National Action",
       "term-start": "December 1, 2012",
       "term-end": "November 30, 2018",
+      "capitol": "los+pinos,ciudad+de+mexico,distrito+federal",
       "webpage": "http://en.presidencia.gob.mx/",
       "wikipedia": "https://en.wikipedia.org/wiki/Enrique_Pe%C3%B1a_Nieto"
     },
@@ -116,6 +119,7 @@
       "previous-leader": "Francois Hollande",
       "previous-leader-party": "Socialist Party",
       "term-start": "May 14, 2017",
+      "capitol": "Elysee+Palace,Paris,France",
       "webpage": "https://en-marche.fr/emmanuel-macron",
       "wikipedia": "https://en.wikipedia.org/wiki/Emmanuel_Macron"
     },
@@ -144,6 +148,7 @@
       "previous-leader": "Gerhard Schroder",
       "previous-leader-party": "Social Democratic Party",
       "term-start": "November 22, 2005",
+      "capitol": "Reichstag+Building,Berlin,Germany",
       "webpage": "https://www.bundeskanzlerin.de/Webs/BKin/EN/AngelaMerkel/angela_merkel_node.html",
       "wikipedia": "https://en.wikipedia.org/wiki/Angela_Merkel"
     },
@@ -173,6 +178,7 @@
       "previous-leader-party": "Conservative",
       "term-start": "November 4, 2015",
       "term-end": "November 3, 2019",
+      "capitol": "24+sussex+drive,ottawa,canada",
       "webpage": "http://pm.gc.ca/eng",
       "wikipedia": "https://en.wikipedia.org/wiki/Justin_Trudeau"
     },
@@ -204,6 +210,7 @@
       "previous-leader-party": "Democratic Party",
       "term-start": "May 7, 2012",
       "term-end": "May 6, 2018",
+      "capitol": "The+Kremlin,Moscow+Russia",
       "webpage": "http://en.kremlin.ru/",
       "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Putin"
     },
@@ -235,6 +242,7 @@
       "previous-leader-party": "Communist Party of China",
       "term-start": "November 15, 2012",
       "term-end": "November 14, 2017",
+      "capitol": "zhongnanhai,Beijing,China",
       "webpage": "http://english1.english.gov.cn/leaders/xijinping.htm",
       "wikipedia": "https://en.wikipedia.org/wiki/Xi_Jinping"
     },
@@ -266,6 +274,7 @@
       "previous-leader-party": "Liberal Democratic Party",
       "term-start": "December 26, 2012",
       "term-end": "N/A",
+      "capitol": "Kantei, Tokyo, Japan",
       "webpage": "http://japan.kantei.go.jp/",
       "wikipedia": "https://en.wikipedia.org/wiki/Shinz%C5%8D_Abe"
     },

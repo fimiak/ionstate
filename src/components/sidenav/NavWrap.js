@@ -81,10 +81,9 @@ class NavWrap extends Component {
     }
 
     render() {
-
         return (
           <div id="nav-wrap" className={"nav-wrap " + this.props.menuState}>
-            <div className="inner-header" >
+            <div className="inner-header">
               <div className="nav-sidenav" onClick={this.props.closeMenu}>
                 <ul id="page1" onClick={this.scrollTop}>
                     <PageMenu country={country} page={1} />
