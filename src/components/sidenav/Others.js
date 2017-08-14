@@ -27,9 +27,9 @@ class Others extends Component {
                         <img src={previous.flag} alt={previous.name} />
                     </NavLink>
                 </div>
-                <h2>
+                <h3>
                     Discover more leaders.
-                </h2>
+                </h3>
                 <div>
                     <NavLink className="others-forward" to={"/" + next.country} onClick={ this.scrollTop }>
                         <img src={next.flag} alt={next.name} />

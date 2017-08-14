@@ -29,6 +29,7 @@
       "term-start": "January 20, 2017",
       "term-end": "January 20, 2021",
       "capitol": "White+House,Washington,USA",
+      "search": "trump, donald",
       "webpage": "https://www.donaldjtrump.com/",
       "wikipedia": "https://en.wikipedia.org/wiki/Donald_Trump"
     },
@@ -61,6 +62,7 @@
       "term-start": "July 13, 2016",
       "term-end": "",
       "capitol": "10+downing+street,London,UK",
+      "search": "may, theresa",
       "webpage": "http://www.tmay.co.uk/",
       "wikipedia": "https://en.wikipedia.org/wiki/Theresa_May"
     },
@@ -91,6 +93,7 @@
       "term-start": "December 1, 2012",
       "term-end": "November 30, 2018",
       "capitol": "los+pinos,ciudad+de+mexico,distrito+federal",
+      "search": "nieto, pena",      
       "webpage": "http://en.presidencia.gob.mx/",
       "wikipedia": "https://en.wikipedia.org/wiki/Enrique_Pe%C3%B1a_Nieto"
     },
@@ -120,6 +123,7 @@
       "previous-leader-party": "Socialist Party",
       "term-start": "May 14, 2017",
       "capitol": "Elysee+Palace,Paris,France",
+      "search": "macron, emmanuel",      
       "webpage": "https://en-marche.fr/emmanuel-macron",
       "wikipedia": "https://en.wikipedia.org/wiki/Emmanuel_Macron"
     },
@@ -149,6 +153,7 @@
       "previous-leader-party": "Social Democratic Party",
       "term-start": "November 22, 2005",
       "capitol": "Reichstag+Building,Berlin,Germany",
+      "search": "merkel, angela",      
       "webpage": "https://www.bundeskanzlerin.de/Webs/BKin/EN/AngelaMerkel/angela_merkel_node.html",
       "wikipedia": "https://en.wikipedia.org/wiki/Angela_Merkel"
     },
@@ -179,6 +184,7 @@
       "term-start": "November 4, 2015",
       "term-end": "November 3, 2019",
       "capitol": "24+sussex+drive,ottawa,canada",
+      "search": "trudeau, justin",      
       "webpage": "http://pm.gc.ca/eng",
       "wikipedia": "https://en.wikipedia.org/wiki/Justin_Trudeau"
     },
@@ -211,6 +217,7 @@
       "term-start": "May 7, 2012",
       "term-end": "May 6, 2018",
       "capitol": "The+Kremlin,Moscow+Russia",
+      "search": "putin, vladimir",      
       "webpage": "http://en.kremlin.ru/",
       "wikipedia": "https://en.wikipedia.org/wiki/Vladimir_Putin"
     },
@@ -243,6 +250,7 @@
       "term-start": "November 15, 2012",
       "term-end": "November 14, 2017",
       "capitol": "zhongnanhai,Beijing,China",
+      "search": "jinping, xi",
       "webpage": "http://english1.english.gov.cn/leaders/xijinping.htm",
       "wikipedia": "https://en.wikipedia.org/wiki/Xi_Jinping"
     },
@@ -275,6 +283,7 @@
       "term-start": "December 26, 2012",
       "term-end": "N/A",
       "capitol": "Kantei, Tokyo, Japan",
+      "search": "abe, shinzo",      
       "webpage": "http://japan.kantei.go.jp/",
       "wikipedia": "https://en.wikipedia.org/wiki/Shinz%C5%8D_Abe"
     },
@@ -306,6 +315,7 @@
       "previous-leader-party": "Democratic Labour Party",
       "term-start": "August 31, 2016",
       "term-end": "N/A",
+      "search": "trump, donald",      
       "webpage": "http://micheltemer.com.br/",
       "wikipedia": "https://en.wikipedia.org/wiki/Michel_Temer"
     },
@@ -337,6 +347,7 @@
       "previous-leader-party": "Indian National Congress",
       "term-start": "May 26, 2014",
       "term-end": "N/A",
+      "search": "trump, donald",      
       "webpage": "http://www.narendramodi.in/",
       "wikipedia": "https://en.wikipedia.org/wiki/Narendra_Modi"
     },

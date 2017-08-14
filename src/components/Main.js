@@ -11,7 +11,6 @@ import Schedule from './sidenav/Schedule';
 let selected = [];
 let topnavColor = () => document.getElementsByClassName('top-title')[0].setAttribute('style', 'border-image: linear-gradient(to right, ' + selected['flag-colors'] + ');border-image-slice: 1;' );
 
-
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -79,7 +78,6 @@ class Main extends Component {
       list[data.data[i]['country']] = data.data[i];
     } 
     selected = list[nation]; // The country that has been selected via URL param.
-    
     return (
       <div className="contentBox">
         <div className="content">
@@ -91,9 +89,9 @@ class Main extends Component {
                   <div className="top-title">{selected.leader}</div>
                 </div>
                 <div className="content-box-links">
-                  <a href="#international">International</a>
-                  <a href="#maps">Maps</a>
+                  <a href="#news">News</a>
                   <a href="#schedule">Schedule</a>
+                  <a href="#polls">Polls</a>
                   <a href="#more">More</a>
                 </div>
                 <div className="top-flag">
@@ -105,19 +103,19 @@ class Main extends Component {
               <div id="datasheets">
                 <DataSheets props={this.props.params} nationList={list} selected={selected} />
               </div>
-              <div id="international">
+              <div id="news">
                 <div className="international-news">
                   <img src={require('.././images/' + selected.banner)} alt={selected.leader} />
                 </div>
                 <h4 className="topNews">Top News</h4>
-                <News props={this.props.params} />
+                <News props={this.props.params} selected={selected} />
               </div>
             </div>
             <div id="schedule">
               <Schedule props={this.props.params} map={this.state.map} selected={selected} setMap={this.setMap} />
               <Maps props={this.props.params} map={this.state.map} selected={selected} />
             </div>
-            <div id="more">
+            <div id="polls">
               <More props={this.props.params} />
             </div>
             <div id="others">

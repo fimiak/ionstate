@@ -8,6 +8,8 @@ class News extends Component {
         this.state = {
             news: [],
             loading: true,
+            selected: this.props.selected,
+            search: this.props.selected.search,
             'article-0': '',
             'article-1': '',
             'article-2': '',
@@ -26,46 +28,9 @@ class News extends Component {
     }
 
     performSearch = () => {
-        const trump = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trump, donald&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        const may = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=may, theresa&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        const macron = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=macron, emmanuel&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        const merkel = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=merkel, angela&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        const nieto = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=nieto, pena&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        const putin = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=putin, vladimir&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        const trudeau = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=trudeau, justin&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        const jinping = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=jinping, xi&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        let pick = '';
-        switch (this.props.props.country) {
-            case 'usa':
-                pick = trump;
-                break;
-            case 'germany':
-                pick = merkel;
-                break;
-            case 'uk':
-                pick = may;
-                break;
-            case 'russia':
-                pick = putin;
-                break;
-            case 'france':
-                pick = macron;
-                break;
-            case 'canada':
-                pick = trudeau;
-                break;
-            case 'mexico':
-                pick = nieto;
-                break;
-            case 'china':
-                pick = jinping;
-                break;
-            default:
-                pick = trump;
-                break;
-        }
+        let nytimes = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + this.state.search + '&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
         
-        axios.get(pick)
+        axios.get(nytimes)
             .then(response => {
                 this.setState({
                     news: response.data.response,
