@@ -45,23 +45,13 @@ class Main extends Component {
 
     appWindow.addEventListener('scroll', function() { 
         if (appWindow.scrollTop >= 24) {
-          topContent.setAttribute('style', 'position: fixed; height: 40px; top: 43px; z-index: 2; max-width: 1200px;');
-          datasheets.setAttribute('style', 'margin-top: 42px;');
+          topContent.setAttribute('style', 'max-width: 1200px;');
           logoWrap.setAttribute('style', 'line-height: 32px;');
           navWrap.setAttribute('style', 'top: 43px;');
-          topIcon.setAttribute('style', 'height: 40px;');
-          topLeader.setAttribute('style', 'height: 40px;');
-          topFlag.setAttribute('style', 'height: 40px;');
-          contentBoxLinks.setAttribute('style', 'line-height: 40px;');
       } else {
-          topContent.setAttribute('style', 'position: relative; top: auto; z-index: 0; max-width: none;');
-          datasheets.setAttribute('style', 'margin-top: 0;');
+          topContent.setAttribute('style', 'max-width: none;');
           logoWrap.setAttribute('style', 'line-height: 48px;');
           navWrap.setAttribute('style', 'top: 59px;');
-          topIcon.setAttribute('style', 'height: auto; max-height: 60px;');
-          topLeader.setAttribute('style', 'height: 100%;');
-          topFlag.setAttribute('style', 'height: 60px;');
-          contentBoxLinks.setAttribute('style', 'line-height: 60px;');
         }
       }
     );

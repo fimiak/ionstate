@@ -70,7 +70,7 @@ hr
   display: flex
   flex-direction: column
   color: #ffa14e
-  min-height: 42px
+  min-height: 33px
   width: 100%
   overflow: hidden
   a
@@ -96,7 +96,6 @@ hr
       transition: .3s
   .nav-wrap
     background: #333
-    position: fixed
     width: 100%
     top: 59px
     z-index: 5
@@ -169,6 +168,7 @@ hr
   visibility: visible
 
 .hidden
+  display: none
   opacity: 0
   visibility: hidden
 
@@ -307,7 +307,7 @@ hr
   font-family: sans-serif
   font-size: 12px
   justify-content: center
-  line-height: 40px
+  line-height: 60px
   overflow-x: auto
 
 .content
@@ -764,6 +764,9 @@ hr
 /****** Mobile SASS ******/
 /*************************/
 /*************************/
+/*************************/
+/*************************/
+
 
 @media (max-width: 1200px)
 
@@ -775,6 +778,9 @@ hr
  
   .logo-wrap
     line-height: 10px
+
+  .App-intro
+    padding-top: 0
 
   .App-header
     .copy
@@ -845,6 +851,10 @@ hr
 
   .title
     font-size: 14px
+    padding: 0
+
+  .content-box-links
+    height: 40px
 
   .open-menu
     height: 16px
@@ -886,6 +896,7 @@ hr
   .top-leader
     height: 100%
     padding: 0
+    max-height: 40px
  
   .top-title
     width: auto
@@ -901,14 +912,24 @@ hr
   .data-sheets
     flex-direction: column
 
-  .data-point span
-    font-size: 12px
+  .data-point
+    padding: 5px 10px
+    margin: 1px 5px
+    span
+      font-size: 12px
 
   .data-image
     width: auto
  
   .img-highlight
     margin: 0 auto
+    padding-bottom: 5px
+    .img-highlight-text 
+      p
+        font-size: 14px
+
+  .img-highlight-image
+    max-height: 188px
 
   .data-pic
     width: auto
@@ -932,22 +953,32 @@ hr
   .inner-schedule
     font-size: 12px
     margin: 0 auto 10px
-    width: auto
+    width: 100%
     .scheduleHeader
-      div
-        min-width: 90px
+      margin: 0 auto
+      width: 90%
     .scheduleBox
       font-size: 11px
-      padding: 0 5px
+      padding: 0
       margin: 0 auto
-      .dayBox
-        .dateBox
-          width: 50px
-          height: 50px
-          font-size: 20px
+      width: 90%
+      ul
+        .dayBox
+          .dateBox
+            box-sizing: border-box
+            width: 50px
+            height: 50px
+            font-size: 16px
+            margin-left: 5px
+            .monthBox
+              font-size: 11px
+              margin-bottom: 3px
 
   .inner-home
     width: 96%
+
+  .inner-news
+    padding: 18px 0 10px
  
   .news-box
     width: 100%
