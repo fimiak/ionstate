@@ -9,7 +9,7 @@ function PageMenu(country, page) {
     const listItems = country.country.map((country) =>
         <li key={country.id.toString()}>
             <NavLink to={country['country']}>
-                <img src={country.thumb} alt={country.leader} />
+                <img src={require('../.././images/thumbs/' + country.thumb)} alt={country.leader} />
                 <div className="copy">{country.leader}</div>
             </NavLink>
         </li>

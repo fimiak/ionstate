@@ -85,7 +85,7 @@ class Main extends Component {
             <div id="top-content" className="top-content">
               <div className="top-nav">
                 <div className="top-banner">
-                  <div className="top-icon"><img className="top-leader" alt="{selected.leader}" src={selected.image}></img></div>
+                  <div className="top-icon"><img className="top-leader" alt={selected.leader} src={require('.././images/thumbs/' + selected.thumb)} alt={selected.name}></img></div>
                   <div className="top-title">{selected.leader}</div>
                 </div>
                 <div className="content-box-links">
@@ -95,7 +95,7 @@ class Main extends Component {
                   <a href="#more">More</a>
                 </div>
                 <div className="top-flag">
-                  <img src={selected.flag} alt={selected.name} />
+                  <img src={require('.././images/flags/' + selected.flag)} alt={selected.name} />
                 </div>
               </div>
             </div>

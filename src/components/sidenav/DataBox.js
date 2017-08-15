@@ -6,7 +6,7 @@ class DataBox extends Component {
         return (
             <div className="img-highlight">
                 <div className="img-highlight-leader">
-                    <img className="img-highlight-image" src={this.props.props['image']} alt={this.props.props.leader} />
+                    <img className="img-highlight-image" src={require('../.././images/bio/' + this.props.props['image'])} alt={this.props.props.leader} />
                 </div>
                 <div className="img-highlight-text">
                     <p>{this.props.props.leader}</p>
