@@ -1,0 +1,611 @@
+{
+    "status": "OK",
+    "copyright": "Copyright (c) 2017 The New York Times Company. All Rights Reserved.",
+    "response": {
+      "docs": [
+        {
+          "web_url": "https://www.nytimes.com/2017/08/13/world/europe/belarus-russia-aleksandr-lukashenko.html",
+          "snippet": "President Aleksandr G. Lukashenko has long walked a tightrope between Russia and the West. But with a new Cold War looming, he may have to pick a side.",
+          "print_page": "8",
+          "blog": {},
+          "source": "The New York Times",
+          "multimedia": [
+            {
+              "type": "image",
+              "subtype": "xlarge",
+              "url": "test1.jpg",
+              "height": 400,
+              "width": 600,
+              "rank": 0,
+              "legacy": {
+                "xlargewidth": 600,
+                "xlarge": "images/2017/08/10/world/10Belarus1/10Belarus1-articleLarge.jpg",
+                "xlargeheight": 400
+              }
+            },
+            {
+              "type": "image",
+              "subtype": "wide",
+              "url": "test1.jpg",
+              "height": 126,
+              "width": 190,
+              "rank": 0,
+              "legacy": {
+                "wide": "images/2017/08/10/world/10Belarus1/10Belarus1-thumbWide.jpg",
+                "widewidth": 190,
+                "wideheight": 126
+              }
+            },
+            {
+              "type": "image",
+              "subtype": "thumbnail",
+              "url": "images/2017/08/10/world/10Belarus1/10Belarus1-thumbStandard.jpg",
+              "height": 75,
+              "width": 75,
+              "rank": 0,
+              "legacy": {
+                "thumbnailheight": 75,
+                "thumbnail": "images/2017/08/10/world/10Belarus1/10Belarus1-thumbStandard.jpg",
+                "thumbnailwidth": 75
+              }
+            }
+          ],
+          "headline": {
+            "main": "Russia-West Balancing Act Grows Ever More Wobbly in Belarus",
+            "print_headline": "Russia-West Balancing Act Is Growing Ever More Wobbly in Belarus"
+          },
+          "keywords": [
+            {
+              "isMajor": "N",
+              "rank": 1,
+              "name": "glocations",
+              "value": "Belarus"
+            },
+            {
+              "isMajor": "N",
+              "rank": 2,
+              "name": "glocations",
+              "value": "Russia"
+            },
+            {
+              "isMajor": "N",
+              "rank": 3,
+              "name": "subject",
+              "value": "International Relations"
+            },
+            {
+              "isMajor": "N",
+              "rank": 4,
+              "name": "subject",
+              "value": "Defense and Military Forces"
+            },
+            {
+              "isMajor": "N",
+              "rank": 5,
+              "name": "persons",
+              "value": "Lukashenko, Aleksandr G"
+            }
+          ],
+          "pub_date": "2017-08-13T09:00:42+0000",
+          "document_type": "article",
+          "new_desk": "Foreign",
+          "section_name": "Europe",
+          "byline": {
+            "original": "By IVAN NECHEPURENKO"
+          },
+          "type_of_material": "News",
+          "_id": "5990154395d0e0246f1ff7d0",
+          "word_count": 1330,
+          "score": 0.18551649,
+          "uri": "nyt://article/3101a347-6368-5ea0-a844-dd78349863d7"
+        },
+        {
+          "web_url": "https://www.nytimes.com/reuters/2017/08/12/business/12reuters-russia-rosneft-board.html",
+          "snippet": "Russia has nominated former German chancellor Gerhard Schroeder to the board of its biggest oil producer Rosneft as an independent director, according to a government decree published late on Friday.",
+          "blog": {},
+          "source": "Reuters",
+          "multimedia": {
+            "url": "images/2017/08/10/world/10Belarus1/10Belarus1-articleLarge.jpg"
+          },
+          "headline": {
+            "main": "Russia Nominates German Ex-Chancellor Schroeder to Rosneft Board",
+            "print_headline": "Russia Nominates German Ex-Chancellor Schroeder to Rosneft Board"
+          },
+          "keywords": [],
+          "pub_date": "2017-08-12T12:21:27+0000",
+          "document_type": "article",
+          "new_desk": "None",
+          "byline": {
+            "original": "By REUTERS"
+          },
+          "type_of_material": "News",
+          "_id": "598ef2d195d0e0246f1ff66e",
+          "word_count": 137,
+          "score": 0.45253083,
+          "uri": "nyt://article/ce0aec3e-1ff5-5aa0-94d9-703988dfb251"
+        },
+        {
+          "web_url": "https://www.nytimes.com/reuters/2017/08/12/world/europe/12reuters-usa-trump-russia-diplomats-sarcasm.html",
+          "snippet": "President Donald Trump said on Friday he was being sarcastic when he thanked Russian President Vladimir Putin for saving the United States money by ordering cuts in U.S. diplomatic staff in Russia.",
+          "blog": {},
+          "source": "Reuters",
+          "multimedia": {
+            "url": "images/2017/08/10/world/10Belarus1/10Belarus1-articleLarge.jpg"
+          },
+          "headline": {
+            "main": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts",
+            "print_headline": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts"
+          },
+          "keywords": [],
+          "pub_date": "2017-08-12T10:09:28+0000",
+          "document_type": "article",
+          "new_desk": "None",
+          "section_name": "Europe",
+          "byline": {
+            "original": "By REUTERS"
+          },
+          "type_of_material": "News",
+          "_id": "598ed3de95d0e0246f1ff648",
+          "word_count": 452,
+          "score": 1.119189,
+          "uri": "nyt://article/82fc7a93-85a3-5e96-92c6-7b4c76790137"
+        },
+        {
+          "web_url": "https://www.nytimes.com/2017/08/11/opinion/trump-tweets-tough.html",
+          "snippet": "Let’s just pray that Trump’s current bellicosity is all hot air and no balloon.",
+          "print_page": "19",
+          "blog": {},
+          "source": "The New York Times",
+          "multimedia": [
+            {
+              "type": "image",
+              "subtype": "xlarge",
+              "url": "../images/testdata/test1.jpg",
+              "height": 400,
+              "width": 600,
+              "rank": 0,
+              "legacy": {
+                "xlargewidth": 600,
+                "xlarge": "images/2017/08/12/opinion/contributors/12collins-web/merlin-to-scoop-125822561-752667-articleLarge.jpg",
+                "xlargeheight": 400
+              }
+            },
+            {
+              "type": "image",
+              "subtype": "wide",
+              "url": "images/2017/08/12/opinion/contributors/12collins-web/merlin-to-scoop-125822561-752667-thumbWide.jpg",
+              "height": 126,
+              "width": 190,
+              "rank": 0,
+              "legacy": {
+                "wide": "images/2017/08/12/opinion/contributors/12collins-web/merlin-to-scoop-125822561-752667-thumbWide.jpg",
+                "widewidth": 190,
+                "wideheight": 126
+              }
+            },
+            {
+              "type": "image",
+              "subtype": "thumbnail",
+              "url": "images/2017/08/12/opinion/contributors/12collins-web/12collins-web-thumbStandard.jpg",
+              "height": 75,
+              "width": 75,
+              "rank": 0,
+              "legacy": {
+                "thumbnailheight": 75,
+                "thumbnail": "images/2017/08/12/opinion/contributors/12collins-web/12collins-web-thumbStandard.jpg",
+                "thumbnailwidth": 75
+              }
+            }
+          ],
+          "headline": {
+            "main": "Trump Tweets Tough",
+            "kicker": "Op-Ed Columnist",
+            "print_headline": "Trump  Tweets  Tough"
+          },
+          "keywords": [
+            {
+              "isMajor": "N",
+              "rank": 1,
+              "name": "persons",
+              "value": "Trump, Donald J"
+            },
+            {
+              "isMajor": "N",
+              "rank": 2,
+              "name": "subject",
+              "value": "United States Politics and Government"
+            },
+            {
+              "isMajor": "N",
+              "rank": 3,
+              "name": "subject",
+              "value": "United States International Relations"
+            },
+            {
+              "isMajor": "N",
+              "rank": 4,
+              "name": "glocations",
+              "value": "North Korea"
+            },
+            {
+              "isMajor": "N",
+              "rank": 5,
+              "name": "persons",
+              "value": "Kim Jong-un"
+            }
+          ],
+          "pub_date": "2017-08-12T01:09:52+0000",
+          "document_type": "article",
+          "new_desk": "OpEd",
+          "byline": {
+            "original": "By GAIL COLLINS"
+          },
+          "type_of_material": "Op-Ed",
+          "_id": "598e556c95d0e0246f1ff5c6",
+          "word_count": 842,
+          "score": 0.29409364,
+          "uri": "nyt://article/f26e11b6-eb20-58d5-8d49-6ab88dbb9e6e"
+        },
+        {
+          "web_url": "https://www.nytimes.com/aponline/2017/08/11/us/ap-us-trump-putin.html",
+          "snippet": "President Donald Trump said he was not being serious when he thanked Russian President Vladimir Putin for ordering a drastic reduction in the number of U.S. diplomatic employees and saving the U.S. significant cash.",
+          "blog": {},
+          "source": "AP",
+          "multimedia": [],
+          "headline": {
+            "main": "Trump Says He Wasn't Being Serious in Remarks About Putin",
+            "print_headline": "Trump Says He Wasn't Being Serious in Remarks About Putin"
+          },
+          "keywords": [],
+          "pub_date": "2017-08-11T19:39:56+0000",
+          "document_type": "article",
+          "new_desk": "None",
+          "byline": {
+            "original": "By THE ASSOCIATED PRESS"
+          },
+          "type_of_material": "News",
+          "_id": "598e081595d0e0246f1ff518",
+          "word_count": 166,
+          "score": 1.4074683,
+          "uri": "nyt://article/1246b0d1-158c-5d87-a0d3-59194d57532b"
+        },
+        {
+          "web_url": "https://www.nytimes.com/reuters/2017/08/11/world/asia/11reuters-usa-trump-russia-diplomats-sarcasm.html",
+          "snippet": "President Donald Trump said on Friday he was being sarcastic when he thanked Russian President Vladimir Putin for saving the United States money by ordering cuts in U.S. diplomatic staff in Russia.",
+          "blog": {},
+          "source": "Reuters",
+          "multimedia": [],
+          "headline": {
+            "main": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts",
+            "print_headline": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts"
+          },
+          "keywords": [],
+          "pub_date": "2017-08-11T19:21:36+0000",
+          "document_type": "article",
+          "new_desk": "None",
+          "section_name": "Asia Pacific",
+          "byline": {
+            "original": "By REUTERS"
+          },
+          "type_of_material": "News",
+          "_id": "598e03c895d0e0246f1ff508",
+          "word_count": 452,
+          "score": 1.1472999,
+          "uri": "nyt://article/9ae28b9c-e6ff-5634-bc05-4ef7460b4f5c"
+        },
+        {
+          "web_url": "https://www.nytimes.com/reuters/2017/08/11/world/asia/11reuters-usa-trump-russia-diplomats.html",
+          "snippet": "President Donald Trump said on Friday he was being sarcastic when he thanked Russian President Vladimir Putin for saving the United States money by ordering cuts in U.S. diplomatic staff in Russia.",
+          "blog": {},
+          "source": "Reuters",
+          "multimedia": [],
+          "headline": {
+            "main": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts",
+            "print_headline": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts"
+          },
+          "keywords": [],
+          "pub_date": "2017-08-11T19:21:30+0000",
+          "document_type": "article",
+          "new_desk": "None",
+          "section_name": "Asia Pacific",
+          "byline": {
+            "original": "By REUTERS"
+          },
+          "type_of_material": "News",
+          "_id": "598e03bf95d0e0246f1ff507",
+          "word_count": 452,
+          "score": 1.1051567,
+          "uri": "nyt://article/92d24443-9f54-5e2c-b6e5-6fd7d3e0e09d"
+        },
+        {
+          "web_url": "https://www.nytimes.com/2017/08/11/us/politics/combative-trump-pulls-his-punches-for-one-man-putin.html",
+          "snippet": "The Russian leader ordered the United States to cut its staff in the country, and President Trump thanked him.",
+          "print_page": "10",
+          "blog": {},
+          "source": "The New York Times",
+          "multimedia": [
+            {
+              "type": "image",
+              "subtype": "xlarge",
+              "url": "../images/testdata/test1.jpg",
+              "height": 400,
+              "width": 600,
+              "rank": 0,
+              "legacy": {
+                "xlargewidth": 600,
+                "xlarge": "images/2017/08/12/us/12dc-assess/12dc-assess-articleLarge.jpg",
+                "xlargeheight": 400
+              }
+            },
+            {
+              "type": "image",
+              "subtype": "wide",
+              "url": "images/2017/08/12/us/12dc-assess/12dc-assess-thumbWide.jpg",
+              "height": 126,
+              "width": 190,
+              "rank": 0,
+              "legacy": {
+                "wide": "images/2017/08/12/us/12dc-assess/12dc-assess-thumbWide.jpg",
+                "widewidth": 190,
+                "wideheight": 126
+              }
+            },
+            {
+              "type": "image",
+              "subtype": "thumbnail",
+              "url": "images/2017/08/12/us/12dc-assess/12dc-assess-thumbStandard.jpg",
+              "height": 75,
+              "width": 75,
+              "rank": 0,
+              "legacy": {
+                "thumbnailheight": 75,
+                "thumbnail": "images/2017/08/12/us/12dc-assess/12dc-assess-thumbStandard.jpg",
+                "thumbnailwidth": 75
+              }
+            }
+          ],
+          "headline": {
+            "main": "Combative Trump Pulls His Punches for One Man: Putin",
+            "kicker": "News Analysis",
+            "print_headline": "A Normally Combative Trump Pulls His Punches for One Man: Putin"
+          },
+          "keywords": [
+            {
+              "isMajor": "N",
+              "rank": 1,
+              "name": "persons",
+              "value": "Trump, Donald J"
+            },
+            {
+              "isMajor": "N",
+              "rank": 2,
+              "name": "subject",
+              "value": "United States International Relations"
+            },
+            {
+              "isMajor": "N",
+              "rank": 3,
+              "name": "persons",
+              "value": "Putin, Vladimir V"
+            },
+            {
+              "isMajor": "N",
+              "rank": 4,
+              "name": "glocations",
+              "value": "Russia"
+            },
+            {
+              "isMajor": "N",
+              "rank": 5,
+              "name": "subject",
+              "value": "Russian Interference in 2016 US Elections and Ties to Trump Associates"
+            }
+          ],
+          "pub_date": "2017-08-11T17:23:11+0000",
+          "document_type": "article",
+          "new_desk": "National",
+          "section_name": "Europe",
+          "byline": {
+            "original": "By PETER BAKER"
+          },
+          "type_of_material": "News Analysis",
+          "_id": "598de80a95d0e0246f1ff4c4",
+          "word_count": 1211,
+          "score": 2.8368301,
+          "uri": "nyt://article/1b761727-c39d-5af2-881a-76b6d8a9ca38"
+        },
+        {
+          "web_url": "https://www.nytimes.com/2017/08/11/opinion/sunday/trump-hysteria-democracy-tyranny.html",
+          "snippet": "If we continue to act like tyranny is imminent, we will miss what needs fixing most in our society.",
+          "print_page": "2",
+          "blog": {},
+          "source": "The New York Times",
+          "multimedia": [
+            {
+              "type": "image",
+              "subtype": "xlarge",
+              "url": "images/2017/08/13/opinion/sunday/13moyn/13moyn-articleLarge.jpg",
+              "height": 561,
+              "width": 600,
+              "rank": 0,
+              "legacy": {
+                "xlargewidth": 600,
+                "xlarge": "images/2017/08/13/opinion/sunday/13moyn/13moyn-articleLarge.jpg",
+                "xlargeheight": 561
+              }
+            },
+            {
+              "type": "image",
+              "subtype": "wide",
+              "url": "images/2017/08/13/opinion/sunday/13moyn/13moyn-thumbWide.jpg",
+              "height": 126,
+              "width": 190,
+              "rank": 0,
+              "legacy": {
+                "wide": "images/2017/08/13/opinion/sunday/13moyn/13moyn-thumbWide.jpg",
+                "widewidth": 190,
+                "wideheight": 126
+              }
+            },
+            {
+              "type": "image",
+              "subtype": "thumbnail",
+              "url": "images/2017/08/13/opinion/sunday/13moyn/13moyn-thumbStandard.jpg",
+              "height": 75,
+              "width": 75,
+              "rank": 0,
+              "legacy": {
+                "thumbnailheight": 75,
+                "thumbnail": "images/2017/08/13/opinion/sunday/13moyn/13moyn-thumbStandard.jpg",
+                "thumbnailwidth": 75
+              }
+            }
+          ],
+          "headline": {
+            "main": "Trump Isn’t a Threat to Our Democracy. Hysteria Is.",
+            "kicker": "Opinion",
+            "print_headline": "A Problem Worse Than Tyranny"
+          },
+          "keywords": [
+            {
+              "isMajor": "N",
+              "rank": 1,
+              "name": "subject",
+              "value": "Politics and Government"
+            },
+            {
+              "isMajor": "N",
+              "rank": 2,
+              "name": "persons",
+              "value": "Trump, Donald J"
+            },
+            {
+              "isMajor": "N",
+              "rank": 3,
+              "name": "subject",
+              "value": "United States Politics and Government"
+            },
+            {
+              "isMajor": "N",
+              "rank": 4,
+              "name": "subject",
+              "value": "Russian Interference in 2016 US Elections and Ties to Trump Associates"
+            }
+          ],
+          "pub_date": "2017-08-11T14:53:43+0000",
+          "document_type": "article",
+          "new_desk": "OpEd",
+          "section_name": "Sunday Review",
+          "byline": {
+            "original": "By SAMUEL MOYN and DAVID PRIESTLAND"
+          },
+          "type_of_material": "Op-Ed",
+          "_id": "598dc4fd95d0e0246f1ff455",
+          "word_count": 1172,
+          "score": 0.15028256,
+          "uri": "nyt://article/ee83deda-4aa7-534d-afe5-00f7592e2f87"
+        },
+        {
+          "web_url": "https://www.nytimes.com/2017/08/11/opinion/cyberwar-cybersecurity-russia-us.html",
+          "snippet": "The world needs an enforceable agreement to prevent an electronic conflict from becoming a real one.",
+          "print_page": "19",
+          "blog": {},
+          "source": "The New York Times",
+          "multimedia": [
+            {
+              "type": "image",
+              "subtype": "xlarge",
+              "url": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-articleLarge.jpg",
+              "height": 399,
+              "width": 600,
+              "rank": 0,
+              "legacy": {
+                "xlargewidth": 600,
+                "xlarge": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-articleLarge.jpg",
+                "xlargeheight": 399
+              }
+            },
+            {
+              "type": "image",
+              "subtype": "wide",
+              "url": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-thumbWide.jpg",
+              "height": 126,
+              "width": 190,
+              "rank": 0,
+              "legacy": {
+                "wide": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-thumbWide.jpg",
+                "widewidth": 190,
+                "wideheight": 126
+              }
+            },
+            {
+              "type": "image",
+              "subtype": "thumbnail",
+              "url": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-thumbStandard.jpg",
+              "height": 75,
+              "width": 75,
+              "rank": 0,
+              "legacy": {
+                "thumbnailheight": 75,
+                "thumbnail": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-thumbStandard.jpg",
+                "thumbnailwidth": 75
+              }
+            }
+          ],
+          "headline": {
+            "main": "How to Prevent a Cyberwar",
+            "kicker": "Op-Ed Contributor",
+            "print_headline": "How to Prevent a Cyberwar"
+          },
+          "keywords": [
+            {
+              "isMajor": "N",
+              "rank": 1,
+              "name": "subject",
+              "value": "Cyberwarfare and Defense"
+            },
+            {
+              "isMajor": "N",
+              "rank": 2,
+              "name": "subject",
+              "value": "Russian Interference in 2016 US Elections and Ties to Trump Associates"
+            },
+            {
+              "isMajor": "N",
+              "rank": 3,
+              "name": "subject",
+              "value": "United States International Relations"
+            },
+            {
+              "isMajor": "N",
+              "rank": 4,
+              "name": "persons",
+              "value": "Putin, Vladimir V"
+            },
+            {
+              "isMajor": "N",
+              "rank": 5,
+              "name": "organizations",
+              "value": "North Atlantic Treaty Organization"
+            }
+          ],
+          "pub_date": "2017-08-11T14:45:13+0000",
+          "document_type": "article",
+          "new_desk": "OpEd",
+          "byline": {
+            "original": "By JARED COHEN"
+          },
+          "type_of_material": "Op-Ed",
+          "_id": "598dc30395d0e0246f1ff450",
+          "word_count": 720,
+          "score": 3.8328087,
+          "uri": "nyt://article/ea98f0b5-66c9-5485-89e1-57e4138b8a6b"
+        }
+      ],
+      "meta": {
+        "hits": 22891,
+        "offset": 10,
+        "time": 15
+      }
+    }
+  }

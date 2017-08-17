@@ -59,6 +59,7 @@ class NavWrap extends Component {
         if (this.state.page === 1 ) {
             document.getElementById('page1').setAttribute('style', 'display: none;');
             document.getElementById('page2').setAttribute('style', 'display: flex;');
+            document.getElementsByClassName('show')[0].setAttribute('style', 'height: 150px');
             this.setState(prevState => ({
                 page: 2
                 })
@@ -66,6 +67,7 @@ class NavWrap extends Component {
         } else if (this.state.page === 2) {
             document.getElementById('page2').setAttribute('style', 'display: none;');
             document.getElementById('page3').setAttribute('style', 'display: flex;');
+            document.getElementsByClassName('show')[0].setAttribute('style', 'height: 150px');
             this.setState(prevState => ({
                 page: 3
                 })
@@ -73,11 +75,19 @@ class NavWrap extends Component {
         } else {
             document.getElementById('page3').setAttribute('style', 'display: none;');
             document.getElementById('page1').setAttribute('style', 'display: flex;');
+            document.getElementsByClassName('show')[0].setAttribute('style', 'height: 150px');
             this.setState(prevState => ({
                 page: 1
                 })
             );
         }
+    }
+
+    showAll() {
+        document.getElementById('page1').setAttribute('style', 'display: flex');
+        document.getElementById('page2').setAttribute('style', 'display: flex');
+        document.getElementById('page3').setAttribute('style', 'display: flex');
+        document.getElementsByClassName('show')[0].setAttribute('style', 'height: auto');
     }
 
     render() {
@@ -97,17 +107,28 @@ class NavWrap extends Component {
               </div>
               <div className="nav-links">
                 <ul>
-                  <li><NavLink activeClassName="active">
-                      <img className="img-size" src={barIcon} alt="filter gdp" />Filter By GDP</NavLink></li>
-                  <li><NavLink activeClassName="active">
-                      <img className="img-size" src={usersIcon} alt="filter population" />Filter By Population</NavLink></li>
-                  <li><NavLink activeClassName="active">
-                      <img className="img-size" src={trendIcon} alt="filter growth" />Filter By Growth</NavLink></li>
-                  <li><NavLink to='/' activeClassName="active">
-                      <img className="img-size" src={clearIcon} alt="About" />About</NavLink></li>  
-                  <li><NavLink activeClassName="active" onClick={this.changePage}>
-                      <img className="img-size" src={forwardIcon} alt="Next Page" />Next Page</NavLink></li>
-                  <li><NavLink>
+                  <li>
+                      <NavLink activeClassName="active">
+                      <img className="img-size" src={barIcon} alt="order gdp" />Order By GDP</NavLink>
+                  </li>
+                  <li>
+                      <NavLink activeClassName="active">
+                      <img className="img-size" src={usersIcon} alt="order population" />Order By Population</NavLink>
+                  </li>
+                  <li>
+                      <NavLink activeClassName="active">
+                      <img className="img-size" src={trendIcon} alt="order growth" />Order By Growth</NavLink>
+                  </li>
+                  <li>
+                      <NavLink activeClassName="active" onClick={this.showAll}>
+                      <img className="img-size" src={clearIcon} alt="About" />Show All</NavLink>
+                  </li>
+                  <li>
+                      <NavLink activeClassName="active" onClick={this.changePage}>
+                      <img className="img-size" src={forwardIcon} alt="Next Page" />Next Page</NavLink>
+                  </li>
+                  <li>
+                      <NavLink>
                       <img className="img-size" src={alignLeft} alt="Page Number" />Page {this.state.page}</NavLink>
                   </li>
                 </ul>

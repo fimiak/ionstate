@@ -22,6 +22,7 @@ class Main extends Component {
     };
 
     this.setMap = this.setMap.bind(this);
+    this.hideNews = this.hideNews.bind(this);
   }
 
   setMap(place) {
@@ -33,24 +34,19 @@ class Main extends Component {
   componentDidMount() {
     const appWindow = document.getElementsByClassName('App-intro')[0];
     const topContent = document.getElementById('top-content');
-    const datasheets = document.getElementById('datasheets');
     const logoWrap = document.getElementsByClassName('logo-wrap')[0];
     const navWrap = document.getElementsByClassName('nav-wrap')[0];
-    const topIcon = document.getElementsByClassName('top-icon')[0];
-    const topLeader = document.getElementsByClassName('top-leader')[0];
-    const topFlag = document.getElementsByClassName('top-flag')[0];
-    const contentBoxLinks = document.getElementsByClassName('content-box-links')[0];
 
     topnavColor();
 
     appWindow.addEventListener('scroll', function() { 
         if (appWindow.scrollTop >= 24) {
           topContent.setAttribute('style', 'max-width: 1200px;');
-          logoWrap.setAttribute('style', 'line-height: 32px;');
+          logoWrap.setAttribute('style', 'line-height: 32px;border-bottom: 1px solid #EEE;');
           navWrap.setAttribute('style', 'top: 43px;');
       } else {
           topContent.setAttribute('style', 'max-width: none;');
-          logoWrap.setAttribute('style', 'line-height: 48px;');
+          logoWrap.setAttribute('style', 'line-height: 48px;border-bottom: 1px solid #FFF;');
           navWrap.setAttribute('style', 'top: 59px;');
         }
       }
@@ -59,6 +55,17 @@ class Main extends Component {
 
   componentDidUpdate() {
     topnavColor();
+    this.hideNews();    
+  }
+
+  showNews() {
+    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'opacity: 1;height: auto;');
+    document.getElementsByClassName('news-open')[0].setAttribute('style', 'display: none;');
+  }
+
+  hideNews() {
+    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'opacity: .3;height: 222px;');
+    document.getElementsByClassName('news-open')[0].setAttribute('style', 'display: block;');
   }
 
   render() {
@@ -97,8 +104,9 @@ class Main extends Component {
                 <div className="international-news">
                   <img src={require('.././images/' + selected.banner)} alt={selected.leader} />
                 </div>
-                <h4 className="topNews">Top News</h4>
+                <h4 className="topNews" >Top News</h4>
                 <News props={this.props.params} selected={selected} />
+                <div className="news-open" onClick={this.showNews}>More News</div>
               </div>
             </div>
             <div id="schedule">

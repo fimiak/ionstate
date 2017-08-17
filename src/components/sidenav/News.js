@@ -1,35 +1,52 @@
 import React, {Component} from 'react';
 import NewsStory from './NewsStory';
 import axios from 'axios';
-
+import testdata from '../../data/testdata';
 class News extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            news: [],
+            news: testdata,
+            test: testdata,            
             loading: true,
             selected: this.props.selected,
             search: this.props.selected.search,
-            'article-0': '',
-            'article-1': '',
-            'article-2': '',
-            'article-3': '',
-            'article-4': '',
-            'article-5': '',
-            'article-6': '',
-            'article-7': '',
-            'article-8': '',
-            'article-9': ''
+            'article-0': testdata.response.docs[0],
+            'article-1': testdata.response.docs[0],
+            'article-2': testdata.response.docs[0],
+            'article-3': testdata.response.docs[0],
+            'article-4': testdata.response.docs[0],
+            'article-5': testdata.response.docs[0],
+            'article-6': testdata.response.docs[0],
+            'article-7': testdata.response.docs[0],
+            'article-8': testdata.response.docs[0],
+            'article-9': testdata.response.docs[0]
         };
     }
 
     componentWillMount() {
-      this.performSearch();
+      //this.performSearch();
+      this.testSearch();
+    }
+
+    testSearch = () => {
+        this.setState({
+            'article-0': testdata.response.docs[0],
+            'article-1': testdata.response.docs[0],
+            'article-2': testdata.response.docs[0],
+            'article-3': testdata.response.docs[0],
+            'article-4': testdata.response.docs[0],
+            'article-5': testdata.response.docs[0],
+            'article-6': testdata.response.docs[0],
+            'article-7': testdata.response.docs[0],
+            'article-8': testdata.response.docs[0],
+            'article-9': testdata.response.docs[0],
+            loading: false
+        });
     }
 
     performSearch = () => {
-        let nytimes = '-http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + this.state.search + '&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
-        
+        let nytimes = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + this.state.search + '&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';
         axios.get(nytimes)
             .then(response => {
                 this.setState({
@@ -54,20 +71,18 @@ class News extends Component {
 
   render() {
     return (
-        <div>
-            <div className="inner-news">
-                <NewsStory news={this.state['article-0']} />
-                <NewsStory news={this.state['article-1']} />
-                <NewsStory news={this.state['article-2']} />
-                <NewsStory news={this.state['article-3']} />
-                <NewsStory news={this.state['article-4']} />
-                <NewsStory news={this.state['article-5']} />
-                <NewsStory news={this.state['article-6']} />
-                <NewsStory news={this.state['article-7']} />
-                <NewsStory news={this.state['article-8']} />
-                <NewsStory news={this.state['article-9']} />
-            </div>
-      </div>
+        <div className="inner-news">
+            <NewsStory news={this.state['article-0']} />
+            <NewsStory news={this.state['article-1']} />
+            <NewsStory news={this.state['article-2']} />
+            <NewsStory news={this.state['article-3']} />
+            <NewsStory news={this.state['article-4']} />
+            <NewsStory news={this.state['article-5']} />
+            <NewsStory news={this.state['article-6']} />
+            <NewsStory news={this.state['article-7']} />
+            <NewsStory news={this.state['article-8']} />
+            <NewsStory news={this.state['article-9']} />
+        </div>
     )
   }
 }
