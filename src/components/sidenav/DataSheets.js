@@ -22,7 +22,7 @@ class DataSheets extends Component {
           <DataItem item='Age' value={selected.age} />
           <DataItem item='Previous Party' value={selected['previous-leader-party']} />
           <DataItem item='Official Webpage' value={<a href={selected.webpage}>{selected.leader}</a>} />
-          <DataItem item='Wikipedia' value={<a href={selected.wikipedia}>Go to Link</a>} />
+          <DataItem item='Wikipedia' value={<a href={selected.wikipedia}>Wikipedia</a>} />
         </div>
       </div>
     )

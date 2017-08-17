@@ -413,10 +413,10 @@ hr {
   flex-direction: column;
   height: auto;
   margin: 0 5px;
-  width: 375px; }
+  width: 320px; }
   .inner-schedule .scheduleHeader {
     background: #f6f6f6;
-    border: 1px solid #000;
+    border: 1px solid #ddd;
     border-bottom: 0; }
     .inner-schedule .scheduleHeader div {
       line-height: 40px;
@@ -431,7 +431,7 @@ hr {
       cursor: default; }
   .inner-schedule .scheduleBox {
     background: #FFF;
-    border: 1px solid #000;
+    border: 1px solid #ddd;
     padding: 5px;
     display: flex;
     flex-direction: row;
@@ -462,12 +462,19 @@ hr {
             margin-bottom: 4px; }
         .inner-schedule .scheduleBox ul .dayBox .eventBox {
           border: 1px solid #EEE;
+          font-size: 12px;
+          flex-direction: column;
+          justify-content: space-between;
           margin: 5px;
-          padding: 5px;
           display: flex;
           align-items: center;
           flex-grow: 1;
           overflow: hidden; }
+          .inner-schedule .scheduleBox ul .dayBox .eventBox p {
+            padding: 5px; }
+          .inner-schedule .scheduleBox ul .dayBox .eventBox span {
+            background: #F6F6F6;
+            width: 100%; }
           .inner-schedule .scheduleBox ul .dayBox .eventBox:hover {
             background: #F3F3F3;
             cursor: pointer; }
@@ -743,31 +750,41 @@ hr {
   justify-content: space-between;
   width: 100%; }
   .others img {
-    max-width: 60px;
+    height: 37.5px;
+    max-width: 50px;
     width: auto; }
   .others div {
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    padding: 20px 0px 5px;
-    padding-left: 10px;
     transition: 0.2s;
     width: auto; }
     .others div span {
-      font-size: 12px;
+      font-size: 11px;
+      color: #000;
+      text-transform: uppercase;
       padding: 5px 0; }
     .others div a {
+      align-items: center;
       display: flex;
-      max-height: 40px;
-      width: 100%;
-      width: 84px; }
+      justify-content: space-between;
+      flex-direction: row;
+      text-decoration: none;
+      padding: 10px;
+      width: 100%; }
     .others div:hover {
       background: #DDD; }
     .others div:last-child {
       justify-content: flex-end; }
       .others div:last-child a {
-        padding-left: 20px;
+        padding-left: 10px;
         padding-right: 10px; }
+
+img.othersArrow {
+  align-self: center;
+  height: 100%; }
+
+img.othersFlag {
+  padding: 0 5px; }
 
 .footer-column {
   flex: 1;
@@ -1068,7 +1085,7 @@ hr {
       text-align: right; }
 
   .footer a {
-    font-size: 14px; }
+    font-size: 13px; }
 
   .footer-middle {
     align-items: flex-end; }

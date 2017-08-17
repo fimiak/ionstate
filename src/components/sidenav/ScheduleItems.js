@@ -23,7 +23,8 @@ class ScheduleItems extends Component {
                         <span>{data.day}</span>
                     </div>
                     <div className="eventBox" onClick={() => this.onSetMap(data.place)}>
-                        {data.title}
+                        <p>{data.title}</p>
+                        <span>{data.place}</span>
                     </div>
                 </div>
             </li>

@@ -24,20 +24,21 @@ class Others extends Component {
                 <div>
                     <NavLink className="others-back" to={"/" + previous.country} onClick={ this.scrollTop} >
                         <img className="othersArrow" src={backIcon} alt="back" />
-                        <img src={require('../.././images/flags/' + previous.flag)} alt={previous.name} />
+                        <img className="othersFlag" src={require('../.././images/flags/' + previous.flag)} alt={previous.name} />
+                        <div>
+                            <span>{previous.name}</span>
+                        </div>
                     </NavLink>
-                    <span>{previous.name}</span>
-
                 </div>
-                <h2>
-                    DISCOVER MORE
-                </h2>
+
                 <div>
                     <NavLink className="others-forward" to={"/" + next.country} onClick={ this.scrollTop }>
-                        <img src={require('../.././images/flags/' + next.flag)} alt={next.name} />
+                        <div>
+                            <span>{next.name}</span>
+                        </div>
+                        <img className="othersFlag" src={require('../.././images/flags/' + next.flag)} alt={next.name} />
                         <img className="othersArrow" src={forwardIcon} alt="forward" />
                     </NavLink>
-                    <span>{next.name}</span>
                 </div>
             </div>
         )

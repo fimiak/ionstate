@@ -13,6 +13,8 @@ class ScheduleItem extends Component {
                 </div>
                 <div className="eventBox">
                 {info}
+                    <div className="placeBox">
+                    </div>
                 </div>
             </div>
         )

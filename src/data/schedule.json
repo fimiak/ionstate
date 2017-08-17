@@ -4,25 +4,25 @@
             "id": 0,
             "month": "August",
             "day": 15,
-            "title": "Rome, Italy",
+            "title": "A trip to Rome.",
             "link": "https://www.whitehouse.gov/live",
-            "place": "rome, IT"
+            "place": "Rome, Italy"
         },
         {
             "id": 1,
             "month": "August",
             "day": 16,
-            "title": "Moscow, Russia",
+            "title": "A trip to Moscow.",
             "link": "/",
-            "place": "Moscow, ru"
+            "place": "Moscow, Russia"
         },
         {
             "id": 2,
             "month": "August",
             "day": 18,
-            "title": "Beijing, China",
+            "title": "A trip to Beijing.",
             "link": "/",
-            "place": "beijing, cn"
+            "place": "Beijing, China"
         }
     ]
 }

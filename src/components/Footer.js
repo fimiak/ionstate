@@ -14,6 +14,7 @@ class Footer extends Component {
           <div className="footer-column footer-middle">
             <h3>Links</h3>
             <a href="/">Home Page</a>
+            <a href="http://www.wikipedia.org">Wikipedia</a>
           </div>
           <div className="footer-column footer-last">
             <div className="footer-input">

@@ -3,13 +3,12 @@ import test from '../../images/testdata/test1.jpg';
 
 class NewsStory extends Component {
     render() {
-        console.log(this.props.news.multimedia[0].url)
         return (
             <div className="news-box">
                 <div className="news-story">
                     <div className="news-img-container">
                         <a className="article-link" href={this.props.news['web_url']}>
-                            <img className="article-image" alt="Article" src={(this.props.news.multimedia.length == 0) ? '' : test}></img>
+                            <img className="article-image" alt="Article" src={(this.props.news.multimedia.length === 0) ? '' : test}></img>
                         </a>
                         <a className="article-link-headline" href={this.props.news['web_url']}>
                             <span className="headline">{ this.props.news.length >= 0 ? '' : this.props.news['headline'].main}</span>
