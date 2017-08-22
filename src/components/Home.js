@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
+import data from '.././data/data';
 import Footer from './Footer';
+import Featured from './featured/Featured';
+import whitehouse from '.././images/whitehouse.svg';
+
 
 /********************************************************
  ********************************************************
@@ -18,13 +22,18 @@ import Footer from './Footer';
 
 class Home extends Component {
   render() {
+    function random() {
+      let x = Math.floor(Math.random() * 27);
+      return x
+    }
+    let selection = data.data[random()];
     return (
       <div className="home">
         <div className="inner-home">
-          <h1>Prime Watch</h1>
-          <h5>Daily Tracking of Global Figures</h5>
-          <p>Prime Watch is a daily tracking service of a selection of world leaders & their activities on a daily basis. Information is gathered from the New York Times News Archive API, public releases, news articles, and social media.</p>
+          <h1>PRESIDENTPRIME</h1>
+          <img className="home-image" src={whitehouse} alt='The White House' />
         </div>
+        <Featured selected={selection} />
         <div className="footer">
           <Footer />
         </div>

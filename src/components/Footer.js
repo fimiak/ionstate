@@ -21,7 +21,7 @@ class Footer extends Component {
               <input className="input-email" placeholder="Email"></input>
               <button className="button-submit">Submit</button>
             </div>
-            <p>Retracker intended for non-profit & academic purposes<br /> Data sourced from open-source APIs and Wikipedia<br/> Images sourced through Google and are not property of Retracker<br /> Copyright 2017</p>
+            <p>PRESIDENTPRIME is a public-API tracker of a selection of world leaders<br /> Data sourced from public News APIs, NGOs, and Wikipedia<br/>Images not property of PRESIDENTPRIME, sourced by Google<br /> Copyright 2017</p>
           </div>
       </div>
     )

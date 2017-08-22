@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import NewsStory from './NewsStory';
 import axios from 'axios';
 import testdata from '../../data/testdata';
+
 class News extends Component {
     constructor(props) {
         super(props);

@@ -53,6 +53,7 @@ hr
   align-content: center
   align-items: center
   color: #000
+  font-size: 14px
   display: flex
   margin: 0
   padding: 5px
@@ -105,6 +106,7 @@ hr
       transition: 0.15s ease-in
       .nav-links
         cursor: pointer
+        background: #BBB
         ul
           display: flex
           width: 190px
@@ -174,7 +176,6 @@ hr
   visibility: visible
 
 .hidden
-  display: none
   height: 0
   opacity: 0
   transition: .2s
@@ -301,6 +302,96 @@ hr
   flex-direction: row
   flex-grow: 1
 
+.featuredBox
+  border: 1px solid #000
+  box-sizing: border-box
+  margin: 10px auto 30px
+  max-width: 800px
+  width: 96%
+  h2
+    border-bottom: 1px solid #000
+    margin: 0
+    padding: 16px 0
+  .featuredEvents
+    display: flex
+    justify-content: space-between
+    padding: 5px
+    .featuredDetails
+      margin-right: 5px
+      width: 100%
+      display: flex
+      ul
+        background: #f6f6f6
+        list-style: none
+        display: flex
+        height: 100%
+        flex-direction: column
+        padding: 0px
+        margin: 0px
+        margin-left: 5px
+        h4
+          margin: 0
+          padding: 10px 0
+          border-bottom: 1px solid #ccc
+        li
+          text-align: left
+          padding: 5px
+          font-size: 14px
+          a
+            color: #000
+            &:hover
+              color: #777
+      .featuredTitle
+        background: #f6f6f6
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        margin: 0px
+        h3
+          font-size: 15px
+          margin: 5px 0
+      div
+        max-width: 200px
+        button
+          border: 1px solid #000000
+          background: #ddd
+          color: #000
+          font-size: 12px
+          margin: 10px auto
+          padding: 4px 2px
+          max-width: 90%
+          transition: .3s
+          &:hover
+            background: #ccc
+            cursor: pointer
+      .featuredStats
+        margin-left: 5px
+        background: #f6f6f6
+        h4
+          margin: 0
+          padding: 10px 0
+          border-bottom: 1px solid #ccc
+        ul
+          height: auto
+          padding: 0
+          margin: 0
+          li
+            text-align: center
+            &:nth-child(odd)
+              background: #FFF
+            &:last-child
+              border-bottom: 1px solid #ccc
+    img
+      max-width: 188px
+      min-height: 200px
+
+  .featuredMore
+    display: flex
+    justify-content: center
+    align-items: center
+
+
 .contentBox
   align-items: center
   display: flex
@@ -367,26 +458,19 @@ hr
   display: flex
   flex-direction: column
   height: 100%
+  margin-top: -30px
 
 .inner-home
   background: #fff
-  border: 1px solid #000
-  flex: 1
-  margin: 50px auto
+  margin: 0 auto
   width: 800px
-  p
-    background: #eee
-    border: 1px solid #000
-    color: #000
+  h1
+    margin: 5px 0
+    font-size: 38px
+    font-family: 'Nothing You Could Do', cursive
+  .home-image
     margin: 0 auto
-    max-width: 50%
-    padding: 10px
-    text-align: left
-  ul
-    list-style: square
-    li
-      text-align: left
-      padding: 10px 0
+    max-width: 360px
 
 .inner-datasheets
   width: auto
@@ -1022,8 +1106,25 @@ img.othersFlag
               font-size: 11px
               margin-bottom: 3px
 
+  .home
+    margin-top: 10px
+
   .inner-home
     width: 96%
+    h1
+      font-size: 24px
+    img
+      width: 75%
+
+  .featuredBox
+    h2
+      padding: 10px 0
+    .featuredEvents
+      flex-direction: column-reverse
+      align-items: center
+      img
+        width: 132px
+        min-height: auto
 
   .inner-news
     padding: 0 0 10px
