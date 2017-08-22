@@ -23,7 +23,8 @@ class NavWrap extends Component {
             selection: data.data[0],
             menu: this.props.menu,
             menuState: this.props.menuState,
-            page: 1
+            page: 1,
+            orderBy: 'gdp'
         };
 
         this.showMenu = this.showMenu.bind(this);

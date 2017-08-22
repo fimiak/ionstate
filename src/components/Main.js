@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import CountryData from './sidenav/CountryData';
 import data from '.././data/data';
 import DataSheets from './sidenav/DataSheets';
 import Footer from './Footer';
@@ -59,12 +60,12 @@ class Main extends Component {
   }
 
   showNews() {
-    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'opacity: 1;height: auto;');
+    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: auto;');
     document.getElementsByClassName('news-open')[0].setAttribute('style', 'display: none;');
   }
 
   hideNews() {
-    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'opacity: .3;height: 222px;');
+    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: 530px;');
     document.getElementsByClassName('news-open')[0].setAttribute('style', 'display: block;');
   }
 
@@ -88,8 +89,8 @@ class Main extends Component {
                 <div className="content-box-links">
                   <a href="#news">News</a>
                   <a href="#schedule">Schedule</a>
+                  <a href="#country-data">Country Data</a>
                   <a href="#polls">Polls</a>
-                  <a href="#more">More</a>
                 </div>
                 <div className="top-flag">
                   <img src={require('.././images/flags/' + selected.flag)} alt={selected.name} />
@@ -112,6 +113,9 @@ class Main extends Component {
             <div id="schedule">
               <Schedule props={this.props.params} map={this.state.map} selected={selected} setMap={this.setMap} />
               <Maps props={this.props.params} map={this.state.map} selected={selected} />
+            </div>
+            <div id="country-data">
+              <CountryData selected={selected} />
             </div>
             <div id="polls">
               <More props={this.props.params} />

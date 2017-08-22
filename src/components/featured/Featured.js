@@ -4,18 +4,13 @@ import testdata from '../../data/testdata';
 
 const test = testdata.response.docs;
 
-
 class Featured extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     scrollTop() {
         document.getElementsByClassName('App-intro')[0].scrollTop = 0;
     }
 
     render() {
-        console.log(this.props.selected);
         return (
             <div className="featuredBox">
                 <h2>Featured Leader</h2>

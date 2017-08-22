@@ -222,7 +222,8 @@ hr {
 
 .top-nav {
   color: #333;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #DDD;
+  border-top: 1px solid #DDD;
   display: flex;
   flex-direction: row;
   margin: 0px auto;
@@ -265,8 +266,8 @@ hr {
   position: relative;
   width: 120px; }
   .top-flag img {
-    border: 1px solid #eee;
-    border-bottom: 0;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
     box-sizing: border-box;
     float: right;
     height: 100%;
@@ -459,7 +460,7 @@ hr {
   .inner-home h1 {
     margin: 5px 0;
     font-size: 38px;
-    font-family: "Nothing You Could Do", cursive; }
+    font-family: "Bad Script", cursive; }
   .inner-home .home-image {
     margin: 0 auto;
     max-width: 360px; }
@@ -482,13 +483,14 @@ hr {
 
 .inner-more {
   height: auto;
-  border-top: 1px solid #000;
+  border-top: 1px solid #ddd;
   padding: 20px 0; }
 
 #schedule {
+  border-top: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px; }
+  padding: 10px 0; }
 
 .inner-schedule {
   display: flex;
@@ -635,9 +637,8 @@ hr {
 .inner-news {
   display: flex;
   flex-wrap: wrap;
-  height: 222px;
-  padding: 18px 0 5px;
-  opacity: 0.4;
+  height: 530px;
+  padding: 0 0 5px;
   overflow: hidden;
   transition: 0.2s; }
   .inner-news h4 {
@@ -712,6 +713,7 @@ hr {
   border: 1px solid #CCC;
   border-radius: 2px;
   margin: 5px;
+  margin-right: 0;
   padding: 5px;
   transition: 0.25s; }
   .button-submit:active {
@@ -733,7 +735,7 @@ hr {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin: 0 5px 10px 5px;
+  margin: 0 5px 5px 5px;
   padding: 0 0 5px 0; }
 
 .news-img-container {
@@ -824,9 +826,25 @@ hr {
   white-space: nowrap;
   overflow: hidden; }
 
+.country-detail h4 {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  padding: 5px 0;
+  margin: 15px 0 5px; }
+
+.country-data {
+  display: flex;
+  flex-direction: row; }
+  .country-data ul {
+    list-style: none;
+    flex-grow: 1;
+    text-align: right; }
+    .country-data ul:nth-child(even) {
+      text-align: left; }
+
 .others {
   align-items: center;
-  border-top: 1px solid #000;
+  border-top: 1px solid #DDD;
   display: flex;
   margin-top: 10px;
   justify-content: space-between;
@@ -875,9 +893,14 @@ img.othersFlag {
 
 .footer-last {
   flex-grow: 2;
+  align-items: flex-end;
   font-size: 12px;
   color: #fff;
   text-align: right; }
+  .footer-last h3 {
+    text-align: right; }
+  .footer-last p {
+    margin: 5px 0; }
 
 /************************ */
 /************************ */
