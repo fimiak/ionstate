@@ -5,9 +5,9 @@ function PageMenu(country, page) {
     let page1 = [];
     let page2 = [];
     let page3 = [];
-    
+
     const listItems = country.country.map((country) =>
-        <li key={country.id.toString()}>
+        <li key={country.order}>
             <NavLink to={country['country']}>
                 <img src={require('../.././images/thumbs/' + country.thumb)} alt={country.leader} />
                 <div className="copy">{country.leader}</div>
@@ -18,7 +18,7 @@ function PageMenu(country, page) {
     listItems.forEach(function(item) {
         if (item.key < 9) {
             page1.push(item);
-        } else if (item.key > 9 && item.key < 19) {
+        } else if (item.key >= 9 && item.key < 18) {
             page2.push(item);
         } else {
             page3.push(item);

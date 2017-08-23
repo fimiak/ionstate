@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-//import ReactDOM from 'react-dom';
-//import { createStore, applyMiddleware } from 'redux';
 import NavWrap from './components/sidenav/NavWrap';
 import closeIcon from './icons/x.svg';
 import menuIcon from './icons/menu.svg';
 import './App.css';
+//import ReactDOM from 'react-dom';
+//import { createStore, applyMiddleware } from 'redux';
 //import { load } from './actions';
 
 class App extends Component {
@@ -36,7 +36,7 @@ class App extends Component {
     );
   }
 
-  render() {    
+  render() {
 
     return (
       <div className="App">

@@ -118,10 +118,13 @@ hr {
               width: 100%; }
               .App-header .nav-wrap .inner-header .nav-links ul li a:hover {
                 background: #999; }
-            .App-header .nav-wrap .inner-header .nav-links ul li:last-child {
-              cursor: default; }
-              .App-header .nav-wrap .inner-header .nav-links ul li:last-child a:hover {
-                background: #BBB; }
+            .App-header .nav-wrap .inner-header .nav-links ul li:first-child {
+              background: #999;
+              border-bottom: 1px solid #333;
+              cursor: default;
+              height: 24px; }
+              .App-header .nav-wrap .inner-header .nav-links ul li:first-child a:hover {
+                background: #999; }
   .App-header ul {
     display: flex;
     padding: 0;
@@ -138,7 +141,7 @@ hr {
       display: flex; }
       .App-header ul li a {
         text-decoration: none;
-        font-size: 14px;
+        font-size: 13px;
         display: flex;
         justify-content: left;
         padding: 0;
@@ -167,14 +170,14 @@ hr {
 
 .show {
   opacity: 1;
-  height: 150px;
+  height: auto;
   transition: 0.4s;
   visibility: visible; }
 
 .hidden {
   height: 0;
   opacity: 0;
-  transition: 0.2s;
+  transition: 0.3s;
   visibility: hidden; }
 
 .fadeIn {
@@ -218,7 +221,7 @@ hr {
 .img-size {
   width: 15px;
   height: 15px;
-  padding: 5px 0; }
+  padding: 3px 0; }
 
 .top-nav {
   color: #333;
