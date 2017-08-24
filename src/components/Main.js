@@ -43,11 +43,11 @@ class Main extends Component {
     appWindow.addEventListener('scroll', function() { 
         if (appWindow.scrollTop >= 24) {
           topContent.setAttribute('style', 'max-width: 1200px;');
-          logoWrap.setAttribute('style', 'line-height: 32px;border-bottom: 1px solid #EEE;');
+          logoWrap.setAttribute('style', 'line-height: 32px;');
           navWrap.setAttribute('style', 'top: 43px;');
       } else {
           topContent.setAttribute('style', 'max-width: none;');
-          logoWrap.setAttribute('style', 'line-height: 48px;border-bottom: 1px solid #FFF;');
+          logoWrap.setAttribute('style', 'line-height: 48px;');
           navWrap.setAttribute('style', 'top: 59px;');
         }
       }
@@ -80,6 +80,9 @@ class Main extends Component {
       <div className="contentBox">
         <div className="content">
           <div className="inner-content">
+            <div className="international-news">
+              <img src={require('.././images/' + selected.banner)} alt={selected.leader} />
+            </div>
             <div id="top-content" className="top-content">
               <div className="top-nav">
                 <div className="top-banner">
@@ -89,7 +92,7 @@ class Main extends Component {
                 <div className="content-box-links">
                   <a href="#news">News</a>
                   <a href="#schedule">Schedule</a>
-                  <a href="#country-data">Country Data</a>
+                  <a href="#country-data">Data</a>
                   <a href="#polls">Polls</a>
                 </div>
                 <div className="top-flag">
@@ -101,16 +104,13 @@ class Main extends Component {
               <div id="datasheets">
                 <DataSheets props={this.props.params} nationList={list} selected={selected} />
               </div>
-              <div id="news">
-                <div className="international-news">
-                  <img src={require('.././images/' + selected.banner)} alt={selected.leader} />
-                </div>
-                <h4 className="topNews" >Top News</h4>
+              <div id="news" className="news">
+                <h1>Latest News</h1>
                 <News props={this.props.params} selected={selected} />
                 <div className="news-open" onClick={this.showNews}>More News</div>
               </div>
             </div>
-            <div id="schedule">
+            <div id="schedule" className="schedule">
               <Schedule props={this.props.params} map={this.state.map} selected={selected} setMap={this.setMap} />
               <Maps props={this.props.params} map={this.state.map} selected={selected} />
             </div>

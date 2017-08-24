@@ -1,9 +1,36 @@
+/*** FONT-FACE ***/
 @font-face
   font-family: system
   font-style: normal
   font-weight: 300
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma")
+/*** FONT-FACE ***/
 
+/*** KEYFRAMES ***/
+@keyframes fade-in-right 
+  from
+    opacity: 0
+    transform: translateX(-15px)
+  to
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes fade-in-top 
+  from
+    opacity: 0
+    transform: translateY(15px)
+  to
+    opacity: 1
+    transform: translateY(0)
+/*** KEYFRAMES ***/
+
+/*** VARIABLES ***/
+$ivory: #ECE8DD
+$ivory-dark: #D4D0C6
+$crimson: #C45C4F
+/*** VARIABLES ***/
+
+/** MAIN STYLES **/
 *
   font-family: system, sans-serif
 
@@ -22,7 +49,7 @@ html, body, #root
   width: 100%
 
 body
-  background: #fff
+  background: $ivory
   display: flex
   overflow: hidden /* Scrolling added to sidebar/content */
 
@@ -77,7 +104,7 @@ hr
   a
     color: #000
   .copy
-    color: #fff
+    color: #000000
     font-size: 13px
     margin: 0 auto
     min-width: 140px
@@ -85,29 +112,27 @@ hr
     width: 100%
   .logo-wrap
     align-items: center
-    border-bottom: 1px solid #FFF
     display: flex
     flex-shrink: 0
     justify-content: space-between
     line-height: 48px
     padding: 0 15px
     transition: .15s
-    &:hover
-      border-bottom: 1px solid #ccc
-      transition: .3s
   .nav-wrap
     background: #333
     top: 59px
     width: 100%
     .inner-header
+      border-top: 1px solid #333333
       display: flex
       margin: 0 auto
-      max-width: 760px
+      max-width: 761px
       transition: 0.15s ease-in
       .nav-links
         cursor: pointer
         background: #BBB
         ul
+          border-left: 1px solid #333333
           display: flex
           width: 190px
           li
@@ -120,7 +145,7 @@ hr
               &:hover
                 background: #999
             &:first-child
-              background: #999
+              background: #A9A69E
               border-bottom: 1px solid #333
               cursor: default
               height: 24px
@@ -140,7 +165,7 @@ hr
       align-items: center
       text-decoration: none
       box-sizing: border-box
-      background: #555
+      background: $ivory-dark
       display: flex
       a
         text-decoration: none
@@ -153,7 +178,7 @@ hr
           max-height: 50px
           width: 50px
         &:hover
-          background: #333
+          background: #A9A69E
   &:hover
     transition: .1s
     transition-delay: .2s
@@ -164,12 +189,19 @@ hr
 
 .active,
 .App-header .active
-  color: #fff
-  background: #888
+  background: #e2e2e2
 
 .App-header .active:hover
-  background: #222
-  color: #fff
+  background: #AAAAAA
+
+.international-news
+  animation: fade-in-top ease 0.4s forwards
+  animation-delay: 0s
+  max-height: 212px
+  img
+    min-height: 100%
+    max-width: 900px
+    width: 100%
 
 .show
   opacity: 1
@@ -202,7 +234,7 @@ hr
         height: 50px
 
 .button-menu
-  background: #fff
+  background: $ivory
   border: 0
   display: block
   padding: 0
@@ -215,11 +247,11 @@ hr
   padding: 3px 5px 2px
 
 .App-intro
+  background: #FFFFFF
   flex: 1
   height: 100%
   transition: 0.2s /* Must match App-header */
   overflow-y: auto
-  padding-top: 30px
   position: relative
   transition-delay: 0.4s /* Must match App-header */
 
@@ -230,8 +262,6 @@ hr
  
 .top-nav
   color: #333
-  border-bottom: 1px solid #DDD
-  border-top: 1px solid #DDD
   display: flex
   flex-direction: row
   margin: 00px auto
@@ -258,6 +288,9 @@ hr
   width: 50px
 
 .top-leader
+  animation: fade-in-right ease 0.4s forwards
+  animation-delay: 0.4s
+  opacity: 0
   height: 60px
   max-height: 60px
 
@@ -274,14 +307,20 @@ hr
   position: relative
   width: 120px
   img
-    border-left: 1px solid #eee
-    border-right: 1px solid #eee
+    animation: fade-in-right ease 0.4s forwards
+    animation-delay: .8s
+    opacity: 0
+    border-left: 1px solid #DDD
     box-sizing: border-box
     float: right
     height: 100%
     max-width: 120px
 
 .top-title
+  animation: fade-in-right 0.4s forwards
+  animation-delay: 0.4s
+  transform: scaleX(0)
+  transform-origin: left
   border-top: 2px solid #ddd
   border-bottom: 2px solid #ddd
   box-sizing: border-box
@@ -294,7 +333,7 @@ hr
   white-space: nowrap
 
 .top-content
-  background: #f3f3f3
+  background: #fff
   position: relative
   width: 100%
 
@@ -308,7 +347,7 @@ hr
 .featuredBox
   border: 1px solid #000
   box-sizing: border-box
-  margin: 10px auto 30px
+  margin: 30px auto
   max-width: 800px
   width: 96%
   h2
@@ -401,6 +440,9 @@ hr
   flex-direction: column
 
 .content-box-links
+  animation: fade-in-right ease 0.4s forwards
+  animation-delay: 0.6s
+  opacity: 0
   align-items: center
   background: #fff
   display: flex
@@ -421,9 +463,8 @@ hr
 
 .inner-content
   height: auto
-  background: #f6f6f6
   margin: 0px 20px 40px
-  max-width: 1200px
+  max-width: 900px
   box-sizing: border-box
 
 .img-highlight
@@ -461,19 +502,78 @@ hr
   display: flex
   flex-direction: column
   height: 100%
-  margin-top: -30px
 
 .inner-home
-  background: #fff
+  background: #ECE8DD
+  border-bottom: 1px solid #C45C4F
   margin: 0 auto
-  width: 800px
+  padding-bottom: 20px
+  width: 100%
   h1
-    margin: 5px 0
     font-size: 38px
     font-family: 'Arvo', cursive
+    margin: 5px 0
+  .home-action
+    max-width: 600px
+    margin: 0 auto 50px
+    h3
+      max-width: 450px
+      margin: 0 auto
   .home-image
     margin: 0 auto
     max-width: 360px
+  .week
+    margin: 0 auto
+    max-width: 790px
+    display: flex
+    flex-wrap: wrap
+    .week-box
+      align-items: center
+      border: 1px solid $ivory-dark
+      box-sizing: border-box
+      display: flex
+      height: 150px
+      flex-direction: column
+      overflow: hidden
+      width: 160px
+      margin: 5px auto
+      position: relative
+      .week-title
+        border-bottom: 1px solid $ivory-dark
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 100%
+        height: 45px
+        overflow: hidden
+        .week-day
+          align-items: center
+          display: flex
+          justify-content: center
+          flex-grow: 1
+        .week-date
+          background: $ivory-dark
+          border-bottom: 1px solid $ivory-dark
+          border-left: 1px solid $ivory-dark
+          color: #FFFFFF
+          display: flex
+          flex-direction: column
+          font-size: 20px
+          justify-content: space-around
+          width: 60px
+          span
+            font-size: 12px
+      .week-details
+        background: #e2e2e2
+        flex-grow: 1
+        padding: 5px
+        width: 100%
+    .week-header
+      border: 0
+      font-size: 28px
+      display: flex
+      justify-content: center
+
 
 .inner-datasheets
   width: auto
@@ -496,17 +596,17 @@ hr
   border-top: 1px solid #ddd
   padding: 20px 0
 
-#schedule
+.schedule
   border-top: 1px solid #ddd
   display: flex
   justify-content: space-between
-  padding: 10px 0
+  padding: 30px 0
 
 .inner-schedule
   display: flex
   flex-direction: column
   height: auto
-  margin: 0 5px
+  margin: 0 5px 0 0
   width: 320px
   .scheduleHeader
     background: #f6f6f6
@@ -575,10 +675,12 @@ hr
             cursor: pointer
 
 .top-split
+  background: #F6F6F6
+  border-top: 1px solid #DDD
   display: flex
-
-#news
-  margin-top: 20px
+  animation: fade-in-top ease 0.4s forwards
+  animation-delay: 1s
+  opacity: 0
 
 .datasheetsInner
   display: flex
@@ -586,25 +688,27 @@ hr
   padding: 0 0 5px
   max-width: 400px
 
-.data-point
-  background: #fff
-  border: 1px solid #F6F6F6
-  box-sizing: border-box
-  display: flex
-  justify-content: space-between
-  margin: 0 5px
-  padding: 10px
-  width: 100%
-  max-width: 350px
-  span
-    color: #222
-
 .data-container
   display: flex
   flex-direction: row
   flex-wrap: wrap
   font-size: 14px
   justify-content: center
+
+  .data-point
+    background: #FAFAFA
+    border: 1px solid #F6F6F6
+    box-sizing: border-box
+    display: flex
+    justify-content: space-between
+    margin: 0 5px
+    padding: 5px
+    width: 100%
+    max-width: 350px
+    &:nth-child(even)
+      background: #EEEEEE
+    span
+      color: #222
 
 .data-country
   border: 1px solid #000
@@ -632,7 +736,7 @@ hr
 .maps
   border: 0
   max-width: 1000px
-  height: 440px
+  height: 296px
   width: 100%
 
 #overlay
@@ -649,7 +753,6 @@ hr
   display: flex
   flex-wrap: wrap
   height: 530px
-  padding: 0 0 5px
   overflow: hidden
   transition: .2s
   h4
@@ -657,13 +760,19 @@ hr
     margin: 0 auto
   .more-loaded
     display: none
+  .news-box
+    &:nth-child(even)
+      .news-story
+        .news-img-container
+          flex-direction: row-reverse
 
 .news-open
   background: #eeeeee
   border: 1px solid #000
+  cursor: pointer
   padding: 10px 0
-  width: 50%
-  margin: 10px auto
+  width: 40%
+  margin: 20px auto
   &:hover
     background: #DDD
 
@@ -688,7 +797,7 @@ hr
     text-decoration: none
     &:hover
       border-radius: 5px
-      color: #FAA
+      color: $ivory-dark
   h3
     color: #777
     font-weight: 900
@@ -711,47 +820,48 @@ hr
 
 .input-email
   background: #333
-  border: 1px solid #CCC
+  border: 1px solid $ivory-dark
   border-radius: 2px
   color: #fff
   padding: 5px
-  transition: .25s
+  transition: .3s
   &:focus
-    border: 1px solid #C87
-    background: #222
+    background: $ivory-dark
+    color: #000000
 
 .button-submit
-  background: #333
-  border: 1px solid #CCC
+  background: $ivory-dark
+  border: 1px solid $ivory-dark
   border-radius: 2px
+  color: #000000
+  cursor: pointer
   margin: 5px
   margin-right: 0
   padding: 5px
   transition: .25s
-  &:active
-    background: #000
-    border: 1px solid #FAA
-    color: #FAA
-    transition: 0s
   &:hover
     background: #333
+    color: $ivory-dark
+  &:active
+    background: $ivory-dark
+    border: 1px solid $ivory-dark
+    color: #000000
+    transition: 0.2s
 
-.news-box
-  width: 50%
-
-.topNews
-  margin: 10px 0
+.news
+  h1
+    font-size: 24px
+    margin: 1.5em 0
 
 .news-story
-  border: 1px solid #ddd
   box-sizing: border-box
   display: flex
   flex-direction: column
-  margin: 0 5px 5px 5px
+  margin: 0 5px 10px 5px
   padding: 0 0 5px 0
 
 .news-img-container
-  background: #DDD
+  background: #E2E2E2
   display: flex
   flex-direction: row
   height: auto
@@ -762,17 +872,10 @@ hr
   max-height: 250px
   width: 100%
 
-.international-news
-  img
-    height: 100%
-    max-height: 212px
-    max-width: 850px
-    width: 100%
-
 .article
-  font-size: 12px
-  height: 60px
+  font-size: 14px
   text-align: left
+  color: #000
 
 .article-image
   height: 80px
@@ -811,7 +914,7 @@ hr
 
 .headline
   color: #000
-  font-size: 12px
+  font-size: 16px
   text-transform: uppercase
   &:hover
     color: #666
@@ -824,16 +927,14 @@ hr
   justify-content: space-between
 
 .article-text
-  overflow: hidden
-  justify-content: space-between
-  display: flex
-  padding: 3px
-  padding-left: 4px
-  box-sizing: border-box
   align-items: center
+  box-sizing: border-box
+  display: flex
+  justify-content: space-between
+  min-height: 60px
+  overflow: hidden
+  padding: 10px
 
-.article
-  color: #000
 
 .time
   max-width: 61px
@@ -842,10 +943,11 @@ hr
 
 .country-detail
   h4
+    background: #F6F6F6
     border-bottom: 1px solid #ddd
     border-top: 1px solid #ddd
-    padding: 5px 0
-    margin: 15px 0 5px
+    padding: 15px 0
+    margin: 0
 
 .country-data
   display: flex
@@ -859,7 +961,9 @@ hr
 
 .others
   align-items: center
+  background: #F6F6F6
   border-top: 1px solid #DDD
+  border-bottom: 1px solid #DDD
   display: flex
   margin-top: 10px
   justify-content: space-between
@@ -916,16 +1020,20 @@ img.othersFlag
     text-align: right
   p
     margin: 5px 0
-
-/*************************/
-/*************************/
-/****** Mobile SASS ******/
-/*************************/
-/*************************/
-/*************************/
-/*************************/
+/*** MAIN STYLES ***/
 
 
+/*****************************/
+
+
+
+/*****************************/
+/******** Mobile SASS ********/
+/*****************************/
+
+
+
+/*****************************/
 @media (max-width: 1200px)
 
   body
@@ -983,7 +1091,7 @@ img.othersFlag
   .show
     display: block
     opacity: 1
-    height: 342px
+    height: auto
     visibility: visible
 
   .img-size
@@ -1137,7 +1245,6 @@ img.othersFlag
     margin-top: 10px
 
   .inner-home
-    width: 96%
     h1
       font-size: 24px
     img
@@ -1248,3 +1355,4 @@ img.othersFlag
     align-self: flex-start
     text-align: center
     flex-basis: 100%
+/*** Mobile Sass ***/

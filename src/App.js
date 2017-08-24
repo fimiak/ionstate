@@ -7,6 +7,7 @@ import './App.css';
 //import { createStore, applyMiddleware } from 'redux';
 //import { load } from './actions';
 
+
 class App extends Component {
   constructor() {
     super();

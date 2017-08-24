@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import data from '.././data/data';
 import Footer from './Footer';
 import Featured from './featured/Featured';
+import Week from './featured/Week';
 import whitehouse from '.././images/whitehouse.svg';
 
 /********************************************************
@@ -30,8 +31,12 @@ class Home extends Component {
     return (
       <div className="home">
         <div className="inner-home">
-          <h1>PRESIDENTPRIME</h1>
+          <div className="home-action">
+            <h1>Tracking world leaders with Public Data</h1>
+            <h3>Public and free tracking of current world leaders. Using data from news outlets, non-profits, and government organizations.</h3>
+          </div>
           <img className="home-image" src={whitehouse} alt='The White House' />
+          <Week />
         </div>
         <Featured selected={selection} />
         <div className="footer">
