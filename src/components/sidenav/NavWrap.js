@@ -31,7 +31,6 @@ class NavWrap extends Component {
 
         order();
         
-
         this.showMenu = this.showMenu.bind(this);
         this.changePage = this.changePage.bind(this);
         this.showAll = this.showAll.bind(this);
@@ -44,8 +43,8 @@ class NavWrap extends Component {
 
     componentDidMount() {
         document.getElementById('page1').setAttribute('style', 'display: flex;');
-        document.getElementById('page2').setAttribute('style', 'display: none;');
-        document.getElementById('page3').setAttribute('style', 'display: none;');
+        document.getElementById('page2').setAttribute('style', 'visibility: hidden;max-height: 0;');
+        document.getElementById('page3').setAttribute('style', 'visibility: hidden;max-height: 0;');
     }
 
     setNation(nation) {
@@ -71,25 +70,26 @@ class NavWrap extends Component {
         this.setState(prevState => ({
             showAll: false
         }))
-        document.getElementsByClassName('show')[0].setAttribute('style', 'height: 150px');
         if (this.state.page === 1 ) {
-            document.getElementById('page1').setAttribute('style', 'display: none;');
-            document.getElementById('page2').setAttribute('style', 'display: flex;');
-
+            document.getElementById('page1').setAttribute('style', 'visibility: hidden;max-height: 0;');
+            document.getElementById('page2').setAttribute('style', 'visibility: visible;');
+            document.getElementById('page3').setAttribute('style', 'visibility: hidden;max-height: 0;');
             this.setState(prevState => ({
                 page: 2
                 })
             );
         } else if (this.state.page === 2) {
-            document.getElementById('page2').setAttribute('style', 'display: none;');
-            document.getElementById('page3').setAttribute('style', 'display: flex;');
+            document.getElementById('page1').setAttribute('style', 'visibility: hidden;max-height: 0;');
+            document.getElementById('page2').setAttribute('style', 'visibility: hidden;max-height: 0;');
+            document.getElementById('page3').setAttribute('style', 'visibility: visible;');
             this.setState(prevState => ({
                 page: 3
                 })
             );
         } else {
-            document.getElementById('page3').setAttribute('style', 'display: none;');
-            document.getElementById('page1').setAttribute('style', 'display: flex;');
+            document.getElementById('page1').setAttribute('style', 'visibility: visible;');
+            document.getElementById('page2').setAttribute('style', 'visibility: hidden;max-height: 0;');
+            document.getElementById('page3').setAttribute('style', 'visibility: hidden;max-height: 0;');
             this.setState(prevState => ({
                 page: 1
                 })
@@ -151,9 +151,9 @@ class NavWrap extends Component {
         this.setState(prevState => ({
             showAll: true
             }));
-        document.getElementById('page1').setAttribute('style', 'display: flex');
-        document.getElementById('page2').setAttribute('style', 'display: flex');
-        document.getElementById('page3').setAttribute('style', 'display: flex');
+        document.getElementById('page1').setAttribute('style', 'visibility: visible;');
+        document.getElementById('page2').setAttribute('style', 'visibility: visible;');
+        document.getElementById('page3').setAttribute('style', 'visibility: visible;');
     }
 
     hideAll() {
@@ -161,9 +161,13 @@ class NavWrap extends Component {
             showAll: false
             })
         );
-        document.getElementById('page1').setAttribute('style', 'display: flex');
-        document.getElementById('page2').setAttribute('style', 'display: none');
-        document.getElementById('page3').setAttribute('style', 'display: none');
+        document.getElementById('page1').setAttribute('style', 'visibility: visible;');
+        document.getElementById('page2').setAttribute('style', 'visibility: hidden;height: 0;');
+        document.getElementById('page3').setAttribute('style', 'visibility: hidden;height: 0;');
+        this.setState(prevState => ({
+            page: 1
+            })
+        );
     }
 
     render() {

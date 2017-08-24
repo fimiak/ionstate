@@ -21,14 +21,6 @@ class Featured extends Component {
                             <h3>{this.props.selected['leader-title']} {this.props.selected['leader']}</h3>
                             <h3>{this.props.selected['name']}</h3>
                         </div>
-                        <ul>
-                            <h4>News</h4>
-                            <li><a href={test[0].web_url}>{test[0].headline.main}</a></li>
-                            <li><a href={test[1].web_url}>{test[1].headline.main}</a></li>
-                            <li><a href={test[2].web_url}>{test[2].headline.main}</a></li>
-                            <li><a href={test[3].web_url}>{test[3].headline.main}</a></li>
-                            <li><a href={test[4].web_url}>{test[4].headline.main}</a></li>
-                        </ul>
                         <div className="featuredStats">
                             <h4>DETAILS</h4>
                             <ul>
@@ -43,6 +35,14 @@ class Featured extends Component {
                             </ul>
                             <NavLink to={this.props.selected.country} onClick={this.scrollTop}><button>View more of {this.props.selected.leader}</button></NavLink>
                         </div>
+                        <ul>
+                            <h4>News</h4>
+                            <li><a href={test[0].web_url}>{test[0].headline.main}</a></li>
+                            <li><a href={test[1].web_url}>{test[1].headline.main}</a></li>
+                            <li><a href={test[2].web_url}>{test[2].headline.main}</a></li>
+                            <li><a href={test[3].web_url}>{test[3].headline.main}</a></li>
+                            <li><a href={test[4].web_url}>{test[4].headline.main}</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

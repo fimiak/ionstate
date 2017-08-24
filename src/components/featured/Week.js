@@ -6,13 +6,13 @@ class Week extends Component {
         return(
             <div className="week">
                 <div className="week-box week-header">The Week Ahead</div>
-                <Weekday />
-                <Weekday />
-                <Weekday />
-                <Weekday />
-                <Weekday />
-                <Weekday />
-                <Weekday />
+                <Weekday day="Sunday" />
+                <Weekday day="Monday" />
+                <Weekday day="Tuesday" />
+                <Weekday day="Wednesday" />
+                <Weekday day="Thursday" />
+                <Weekday day="Friday" />
+                <Weekday day="Saturday" />
             </div>
         )
     }

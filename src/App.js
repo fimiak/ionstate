@@ -11,6 +11,7 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
+
     this.state = {
       news: [],
       menu: false,
@@ -26,6 +27,7 @@ class App extends Component {
         menu: false,
         menuState: 'hidden'
     });
+    
   }
 
   showMenu() {
@@ -38,7 +40,6 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <div className="App">
         <div className="App-header">

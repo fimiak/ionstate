@@ -6,7 +6,7 @@ class Weekday extends Component {
             <div className="week-box">
                 <div className="week-title">
                     <div className="week-day">
-                        Monday
+                        {this.props.day}
                     </div>
                     <div className="week-date">
                         <span>August</span>
