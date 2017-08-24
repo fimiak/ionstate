@@ -123,6 +123,7 @@ hr
     top: 59px
     width: 100%
     .inner-header
+      border-bottom: 1px solid #333333
       border-top: 1px solid #333333
       display: flex
       margin: 0 auto
@@ -594,7 +595,7 @@ hr
 .inner-more
   height: auto
   border-top: 1px solid #ddd
-  padding: 20px 0
+  padding: 100px 0
 
 .schedule
   border-top: 1px solid #ddd
@@ -685,6 +686,7 @@ hr
 .datasheetsInner
   display: flex
   flex-direction: column
+  margin: 0 auto
   padding: 0 0 5px
   max-width: 400px
 
@@ -761,6 +763,7 @@ hr
   .more-loaded
     display: none
   .news-box
+    width: 100%
     &:nth-child(even)
       .news-story
         .news-img-container
@@ -890,7 +893,9 @@ hr
   align-self: center
   box-sizing: border-box
   display: flex
-  min-height: 42px
+  justify-content: center
+  max-height: 54px
+  height: 100%
   overflow: hidden
   padding: 3px
   text-decoration: none
@@ -918,6 +923,7 @@ hr
   color: #000
   font-size: 16px
   text-transform: uppercase
+  vertical-align: middle
   &:hover
     color: #666
 
@@ -954,8 +960,25 @@ hr
 .country-data
   display: flex
   flex-direction: row
+
+.country-map
+  background: #C7D8EC
+  display: flex
+  flex-grow: 1
+  align-items: center
+  justify-content: center
+  padding: 10px 5px 10px 0
+  img
+    height: auto
+    max-height: 220px
+    max-width: 300px
+
+.country-list
+  display: flex
+  flex-grow: 2
   ul
     list-style: none
+    flex-basis: 50%
     flex-grow: 1
     text-align: right
     &:nth-child(even)
@@ -1217,7 +1240,7 @@ img.othersFlag
     flex-direction: column
 
   .inner-maps
-    width: 100%
+    width: 90%
 
   .inner-schedule
     font-size: 12px
@@ -1264,6 +1287,11 @@ img.othersFlag
 
   .inner-news
     padding: 0 0 10px
+
+  .news-open
+    font-size: 13px
+    padding: 7px 0
+    width: 30%
  
   .news-box
     width: 100%
@@ -1327,10 +1355,17 @@ img.othersFlag
 
   .data-country
     width: auto
+
+
+  .country-data
+    flex-direction: column
  
   .maps
     height: 220px
-    width: 94%
+    width: 100%
+
+  img.othersArrow
+    max-width: 15px
  
   .inner-footer
     flex-direction: row
@@ -1343,8 +1378,10 @@ img.othersFlag
     height: auto
     .footer-middle
       h3
-        text-align: right
- 
+        text-align: center
+    .footer-input
+      margin: 0 auto
+
   .footer a
     font-size: 13px
   
@@ -1357,4 +1394,9 @@ img.othersFlag
     align-self: flex-start
     text-align: center
     flex-basis: 100%
+    h3
+      text-align: center
+      width: 100%
+    p
+      margin: 0 auto
 /*** Mobile Sass ***/

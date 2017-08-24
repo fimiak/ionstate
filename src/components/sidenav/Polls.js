@@ -6,7 +6,7 @@ class More extends Component {
       <div>
         <div className="inner-more">
           <span className="more">
-            Opinion Polls.
+            Coming Soon: Opinion Polls.
           </span>
         </div>
       </div>

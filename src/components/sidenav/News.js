@@ -17,31 +17,23 @@ class News extends Component {
             'article-2': testdata.response.docs[0],
             'article-3': testdata.response.docs[0],
             'article-4': testdata.response.docs[0],
-            'article-5': testdata.response.docs[0],
-            'article-6': testdata.response.docs[0],
-            'article-7': testdata.response.docs[0],
-            'article-8': testdata.response.docs[0],
-            'article-9': testdata.response.docs[0]
+            'article-5': testdata.response.docs[0]
         };
     }
 
     componentWillMount() {
-      //this.performSearch();
-      this.testSearch();
+      this.performSearch();
+      //this.testSearch();
     }
 
     testSearch = () => {
         this.setState({
             'article-0': testdata.response.docs[0],
-            'article-1': testdata.response.docs[0],
-            'article-2': testdata.response.docs[0],
-            'article-3': testdata.response.docs[0],
-            'article-4': testdata.response.docs[0],
-            'article-5': testdata.response.docs[0],
-            'article-6': testdata.response.docs[0],
-            'article-7': testdata.response.docs[0],
-            'article-8': testdata.response.docs[0],
-            'article-9': testdata.response.docs[0],
+            'article-1': testdata.response.docs[1],
+            'article-2': testdata.response.docs[2],
+            'article-3': testdata.response.docs[3],
+            'article-4': testdata.response.docs[4],
+            'article-5': testdata.response.docs[5],
             loading: false
         });
     }
@@ -58,10 +50,6 @@ class News extends Component {
                     'article-3': response.data.response.docs[3],
                     'article-4': response.data.response.docs[4],
                     'article-5': response.data.response.docs[5],
-                    'article-6': response.data.response.docs[6],
-                    'article-7': response.data.response.docs[7],
-                    'article-8': response.data.response.docs[8],
-                    'article-9': response.data.response.docs[9],
                     loading: false
                 });
             })
@@ -79,10 +67,6 @@ class News extends Component {
             <NewsStory news={this.state['article-3']} />
             <NewsStory news={this.state['article-4']} />
             <NewsStory news={this.state['article-5']} />
-            <NewsStory news={this.state['article-6']} />
-            <NewsStory news={this.state['article-7']} />
-            <NewsStory news={this.state['article-8']} />
-            <NewsStory news={this.state['article-9']} />
         </div>
     )
   }

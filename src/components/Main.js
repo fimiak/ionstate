@@ -4,9 +4,9 @@ import data from '.././data/data';
 import DataSheets from './sidenav/DataSheets';
 import Footer from './Footer';
 import Maps from './sidenav/Maps';
-import More from './sidenav/More';
 import News from './sidenav/News';
 import Others from './sidenav/Others';
+import Polls from './sidenav/Polls';
 import Schedule from './sidenav/Schedule';
 
 let selected = [];
@@ -118,7 +118,7 @@ class Main extends Component {
               <CountryData selected={selected} />
             </div>
             <div id="polls">
-              <More props={this.props.params} />
+              <Polls props={this.props.params} />
             </div>
             <div id="others">
               <Others props={this.props.params} selected={selected.id} />
