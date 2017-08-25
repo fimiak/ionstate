@@ -43,9 +43,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <div className="logo-wrap" onClick={this.showMenu}>
+          <div className="logo-wrap" >
             <a className="title-link" href="/"><h4 className="title"><img className="globeIcon" src="globe.ico" alt="PRESIDENTPRIME" /> | PRESIDENTPRIME</h4></a>
-            <button className="button-menu" >{(this.state.menu === false) ? <img className="open-menu" src={menuIcon} alt="open" /> : <img className="close-menu" src={closeIcon} alt="close" /> }</button>
+            <div className="navbar" onClick={this.showMenu}>
+              <button className="button-menu" >{(this.state.menu === false) ? <img className="open-menu" src={menuIcon} alt="open" /> : <img className="close-menu" src={closeIcon} alt="close" /> }</button>
+            </div>
           </div>
           <NavWrap menu={this.state.menu} menuState={this.state.menuState} closeMenu={this.closeMenu} />
         </div>

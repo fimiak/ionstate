@@ -13,16 +13,17 @@ class Featured extends Component {
     render() {
         return (
             <div className="featuredBox">
-                <h2>Featured Leader</h2>
+                <div className="featured-nation">
+                    <h3>Featured Nation</h3>
+                    <h3>{this.props.selected.name}</h3>
+                </div>
                 <div className="featuredEvents">
                     <div className="featuredDetails">
                         <div className="featuredTitle">
                             <img src={require('../.././images/bio/' + this.props.selected['image'])} alt={this.props.selected['leader']} />
                             <h3>{this.props.selected['leader-title']} {this.props.selected['leader']}</h3>
-                            <h3>{this.props.selected['name']}</h3>
                         </div>
                         <div className="featuredStats">
-                            <h4>DETAILS</h4>
                             <ul>
                                 <li>Party</li>
                                 <li>{this.props.selected['party']}</li>

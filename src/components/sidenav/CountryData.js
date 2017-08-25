@@ -17,7 +17,7 @@ class CountryData extends Component {
                             <li>Urbanization Rate</li>
                             <li>Life Expectancy</li>
                             <li>Poverty Rate</li>
-                            <li>Gross Domestic Product ($ millions)</li>
+                            <li>GDP Nominal / $ millions</li>
                             <li>GDP in 2050</li>
                             <li>GDP Growth Rate</li>
                             <li>Renewable Energy</li>

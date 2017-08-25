@@ -71,10 +71,12 @@ class Main extends Component {
 
   render() {
     let nation = this.props.params.country;
-    let list = {};
+    let list = [];
+    let arr = {};
+    let name = "name";
     for (let i = 0; i < data.data.length; i++) { // Assign data.data[i] to 'country' key.
       list[data.data[i]['country']] = data.data[i];
-    } 
+    }
     selected = list[nation]; // The country that has been selected via URL param.
     return (
       <div className="contentBox">

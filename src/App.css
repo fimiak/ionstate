@@ -104,13 +104,18 @@ hr {
     padding: 16px 0;
     width: 100%; }
   .App-header .logo-wrap {
-    align-items: center;
+    align-items: stretch;
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
     line-height: 48px;
     padding: 0 15px;
     transition: 0.15s; }
+    .App-header .logo-wrap .navbar {
+      display: flex;
+      align-items: stretch;
+      flex-grow: 1;
+      justify-content: flex-end; }
   .App-header .nav-wrap {
     background: #333;
     top: 59px;
@@ -192,6 +197,7 @@ hr {
   animation-delay: 0s;
   max-height: 212px; }
   .international-news img {
+    display: block;
     min-height: 100%;
     max-width: 900px;
     width: 100%; }
@@ -229,7 +235,8 @@ hr {
   border: 0;
   display: block;
   padding: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: 0.5s; }
 
 .open-menu {
   padding: 3px 5px 2px; }
@@ -341,16 +348,20 @@ hr {
   margin: 30px auto;
   max-width: 800px;
   width: 96%; }
-  .featuredBox h2 {
+  .featuredBox .featured-nation {
     border-bottom: 1px solid #000;
-    margin: 0;
-    padding: 16px 0; }
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px; }
+    .featuredBox .featured-nation h3 {
+      margin: 0;
+      padding: 16px 0; }
   .featuredBox .featuredEvents {
     display: flex;
     justify-content: space-between;
     padding: 5px; }
     .featuredBox .featuredEvents .featuredDetails {
-      margin-right: 5px;
       width: 100%;
       display: flex; }
       .featuredBox .featuredEvents .featuredDetails ul {
@@ -411,7 +422,7 @@ hr {
           margin: 0; }
           .featuredBox .featuredEvents .featuredDetails .featuredStats ul li {
             text-align: center; }
-            .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:nth-child(odd) {
+            .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:nth-child(even) {
               background: #FFF; }
             .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:last-child {
               border-bottom: 1px solid #ccc; }
@@ -502,7 +513,8 @@ hr {
     margin: 5px 0; }
   .inner-home .home-action {
     max-width: 600px;
-    margin: 0 auto 50px; }
+    margin: 0 auto 50px;
+    width: 96%; }
     .inner-home .home-action h3 {
       max-width: 450px;
       margin: 0 auto; }
@@ -798,7 +810,7 @@ hr {
 .inner-footer {
   display: flex;
   width: 100%;
-  max-width: 1000px;
+  max-width: 900px;
   justify-content: space-between;
   flex-direction: row; }
 
@@ -1036,19 +1048,24 @@ img.othersFlag {
   h2 {
     font-size: 1.1em; }
 
-  .logo-wrap {
-    line-height: 10px; }
-
   .App-intro {
     padding-top: 0; }
 
   .App-header .copy {
     font-size: 11px;
     min-width: auto; }
-  .App-header .nav-wrap .inner-header .nav-links ul {
-    width: 100%; }
-    .App-header .nav-wrap .inner-header .nav-links ul li {
-      min-width: 0; }
+  .App-header .logo-wrap {
+    padding: 0 5px; }
+  .App-header .nav-wrap .inner-header {
+    max-width: 100%; }
+    .App-header .nav-wrap .inner-header .nav-links ul {
+      width: 100%; }
+      .App-header .nav-wrap .inner-header .nav-links ul li {
+        min-width: 0; }
+        .App-header .nav-wrap .inner-header .nav-links ul li:nth-child(3) {
+          display: none; }
+        .App-header .nav-wrap .inner-header .nav-links ul li:first-child {
+          background: #BBB; }
   .App-header:hover {
     width: 100%;
     max-width: 100%; }
@@ -1057,7 +1074,7 @@ img.othersFlag {
     width: 100%; }
   .App-header li {
     background: #222;
-    border: 1px solid #000;
+    border-bottom: 1px solid #000;
     width: 50%; }
     .App-header li a {
       line-height: 8px;
@@ -1081,24 +1098,12 @@ img.othersFlag {
     height: auto;
     visibility: visible; }
 
-  .img-size {
-    background: #eee; }
-
   .about {
     line-height: 18px;
     margin: 0; }
 
   .about:hover {
     background: #222; }
-
-  .active,
-  .App-header .active {
-    color: #fff;
-    background: #444; }
-
-  .App-header .active:hover {
-    background: #444;
-    color: #fff; }
 
   .none {
     display: none; }
@@ -1108,7 +1113,8 @@ img.othersFlag {
     padding: 0; }
 
   .content-box-links {
-    height: 40px; }
+    height: 40px;
+    line-height: 40px; }
 
   .open-menu {
     height: 16px; }
@@ -1158,7 +1164,7 @@ img.othersFlag {
     min-width: auto;
     font-size: 9px;
     height: auto;
-    margin: 0 5px;
+    margin: 0 3px;
     padding: 0;
     left: auto;
     line-height: 2em; }
@@ -1166,10 +1172,11 @@ img.othersFlag {
   .data-sheets {
     flex-direction: column; }
 
-  .data-point {
+  .data-container .data-point {
     padding: 5px 10px;
-    margin: 1px 5px; }
-    .data-point span {
+    margin: 1px 5px;
+    max-width: 100%; }
+    .data-container .data-point span {
       font-size: 12px; }
 
   .data-image {
@@ -1177,7 +1184,7 @@ img.othersFlag {
 
   .img-highlight {
     margin: 0 auto;
-    padding-bottom: 5px; }
+    padding: 10px 0; }
     .img-highlight .img-highlight-text p {
       font-size: 14px; }
 
@@ -1225,25 +1232,35 @@ img.othersFlag {
           font-size: 11px;
           margin-bottom: 3px; }
 
-  .home {
-    margin-top: 10px; }
-
   .inner-home h1 {
     font-size: 24px; }
   .inner-home img {
     width: 75%; }
 
-  .featuredBox h2 {
+  .featuredBox h3 {
     padding: 10px 0; }
   .featuredBox .featuredEvents {
-    flex-direction: column-reverse;
     align-items: center; }
+    .featuredBox .featuredEvents .featuredDetails {
+      flex-direction: column;
+      margin-right: 0; }
+      .featuredBox .featuredEvents .featuredDetails .featuredTitle {
+        max-width: 100%; }
+      .featuredBox .featuredEvents .featuredDetails .featuredStats {
+        margin-left: 0;
+        max-width: 100%; }
+      .featuredBox .featuredEvents .featuredDetails ul {
+        margin-left: 0; }
     .featuredBox .featuredEvents img {
       width: 132px;
       min-height: auto; }
 
   .inner-news {
     padding: 0 0 10px; }
+
+  .news h1 {
+    font-size: 18px;
+    margin: 1em 0 0.5em; }
 
   .news-open {
     font-size: 13px;
@@ -1291,20 +1308,21 @@ img.othersFlag {
     display: flex; }
 
   .article-link-headline {
-    font-size: 12px;
     padding: 2px 3px;
     min-height: auto; }
+    .article-link-headline .headline {
+      font-size: 11px; }
 
   .article-text {
     padding-left: 3px; }
-
-  .time {
-    display: none; }
 
   .content-box-links {
     width: 100%;
     position: relative;
     top: auto; }
+
+  .week {
+    width: 90%; }
 
   .top-split {
     flex-direction: column; }
@@ -1314,6 +1332,15 @@ img.othersFlag {
 
   .country-data {
     flex-direction: column; }
+
+  .country-list ul {
+    padding: 0 0 0 10px;
+    text-align: left; }
+    .country-list ul:last-child {
+      text-align: right;
+      padding: 0 10px 0 0; }
+    .country-list ul li {
+      font-size: 13px; }
 
   .maps {
     height: 220px;
@@ -1331,28 +1358,26 @@ img.othersFlag {
 
   .footer {
     height: auto; }
-    .footer .footer-middle h3 {
-      text-align: center; }
+    .footer a {
+      font-size: 13px;
+      width: auto; }
     .footer .footer-input {
       margin: 0 auto; }
-
-  .footer a {
-    font-size: 13px; }
-
-  .footer-middle {
-    align-items: flex-end; }
-    .footer-middle a {
-      text-align: right; }
-
-  .footer-last {
-    align-self: flex-start;
-    text-align: center;
-    flex-basis: 100%; }
-    .footer-last h3 {
+    .footer .footer-middle {
+      align-items: flex-end; }
+      .footer .footer-middle h3 {
+        text-align: right; }
+      .footer .footer-middle a {
+        text-align: right; }
+    .footer .footer-last {
+      align-self: flex-start;
       text-align: center;
-      width: 100%; }
-    .footer-last p {
-      margin: 0 auto; } }
+      flex-basis: 100%; }
+      .footer .footer-last h3 {
+        text-align: center;
+        width: 100%; }
+      .footer .footer-last p {
+        margin: 0 auto; } }
 /*** Mobile Sass ** */
 
 /*# sourceMappingURL=App.css.map */

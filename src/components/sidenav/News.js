@@ -22,8 +22,8 @@ class News extends Component {
     }
 
     componentWillMount() {
-      this.performSearch();
-      //this.testSearch();
+      //this.performSearch();
+      this.testSearch();
     }
 
     testSearch = () => {

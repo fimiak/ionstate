@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import test from '../../images/testdata/test1.jpg';
 
 class NewsStory extends Component {
+
     render() {
+        let dataDate = this.props.news['pub_date'];
+        let regx = /^(.*?)(?=T)/;
+        let regDate = dataDate.match(regx)[0]; // Regex article date out of raw data.
         return (
             <div className="news-box">
                 <div className="news-story">
@@ -17,7 +21,7 @@ class NewsStory extends Component {
                     <div className="news-info-container">
                         <div className="article-author-date">
                             <span className="author">{ this.props.news.length >= 0 ? '' : this.props.news.byline.original}</span>
-                            <span className="time">{ this.props.news.length >= 0 ? '' : this.props.news['pub_date']}</span>
+                            <span className="time">{ this.props.news.length >= 0 ? '' : regDate}</span>
                         </div>
                         <div className="article-text">
                             <span className="article">{this.props.news['snippet']}</span>
