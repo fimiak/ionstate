@@ -11,8 +11,8 @@ const routes = (
     <Route component={App}>
       <IndexRedirect to="/" />
       <Route path="/" component={Home} />
-      <Route path="/:country" component={Main} />
       <Route path="/contact" component={Contact} />
+      <Route path="/:country" component={Main} />
       <Route path="*" component={NotFound} />
     </Route>
   </Router>

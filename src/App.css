@@ -773,6 +773,12 @@ hr {
   .news-open:hover {
     background: #DDD; }
 
+.contact {
+  background: #ECE8DD;
+  height: 100%; }
+  .contact .contact-details {
+    padding: 200px 0 300px; }
+
 .footer {
   background: #2c2c2c;
   width: 100%;
