@@ -3,7 +3,7 @@
     {
       "id": 0,
       "country": "usa",
-      "name": "The United States of America",
+      "name": "United States of America",
       "image": "trump.jpg",
       "thumb":"trump.jpg",
       "banner": "trump-int.jpg",
@@ -49,7 +49,7 @@
     {
       "id": 1,
       "country": "uk",
-      "name": "The United Kingdom",
+      "name": "United Kingdom",
       "image": "may.jpg",
       "thumb": "may.jpg",
       "banner": "may-int.jpg",

@@ -182,6 +182,7 @@ hr {
         align-items: center; }
         .App-header ul li a img {
           max-height: 50px;
+          min-width: 50px;
           width: 50px; }
         .App-header ul li a:hover {
           background: #A9A69E; }
@@ -235,6 +236,8 @@ hr {
   display: flex;
   flex-direction: column;
   transition: 0.3s; }
+  .nav-sidenav ul div {
+    width: 100%; }
   .nav-sidenav li a img {
     height: 50px; }
 
@@ -543,9 +546,10 @@ hr {
     .inner-home .home-action h3 {
       max-width: 450px;
       margin: 0 auto; }
-  .inner-home .home-image {
-    margin: 0 auto;
-    max-width: 360px; }
+
+.home-image {
+  margin: 0 auto;
+  max-width: 240px; }
 
 .week {
   margin: 0 auto;
@@ -617,8 +621,7 @@ hr {
 
 .inner-more {
   height: auto;
-  border-top: 1px solid #ddd;
-  padding: 100px 0; }
+  padding: 0px 0; }
 
 .schedule {
   border-top: 1px solid #ddd;
@@ -791,7 +794,7 @@ hr {
 
 .news-open {
   background: #eeeeee;
-  border: 1px solid #000;
+  border: 1px solid #333;
   cursor: pointer;
   padding: 10px 0;
   width: 40%;
@@ -810,6 +813,7 @@ hr {
   width: 100%;
   box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   border-left: 0;
   align-items: center;
   justify-content: center;
@@ -996,7 +1000,7 @@ hr {
 
 .country-list {
   display: flex;
-  flex-grow: 2; }
+  flex-basis: 50%; }
   .country-list ul {
     list-style: none;
     flex-basis: 50%;
@@ -1011,7 +1015,6 @@ hr {
   border-top: 1px solid #DDD;
   border-bottom: 1px solid #DDD;
   display: flex;
-  margin-top: 10px;
   justify-content: space-between;
   width: 100%; }
   .others img {
@@ -1086,6 +1089,8 @@ img.othersFlag {
   .App-header .copy {
     font-size: 11px;
     min-width: auto; }
+    .App-header .copy span {
+      margin-top: 3px; }
   .App-header .logo-wrap {
     padding: 0 5px; }
   .App-header .nav-wrap .inner-header {
@@ -1098,6 +1103,8 @@ img.othersFlag {
           display: none; }
         .App-header .nav-wrap .inner-header .nav-links ul li:first-child {
           background: #BBB; }
+        .App-header .nav-wrap .inner-header .nav-links ul li:nth-child(1n + 1) {
+          border-right: 1px solid #333; }
   .App-header:hover {
     width: 100%;
     max-width: 100%; }
@@ -1106,7 +1113,7 @@ img.othersFlag {
     width: 100%; }
   .App-header li {
     background: #222;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #333;
     width: 50%; }
     .App-header li a {
       line-height: 8px;
@@ -1135,7 +1142,8 @@ img.othersFlag {
     display: none; }
 
   .title {
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 200;
     padding: 0; }
 
   .content-box-links {
@@ -1156,6 +1164,9 @@ img.othersFlag {
       font-size: 10px;
       padding: 0;
       width: 100%; }
+
+  .international-news {
+    max-height: 100px; }
 
   .top-banner {
     align-items: center;
@@ -1190,6 +1201,7 @@ img.othersFlag {
     min-width: auto;
     font-size: 11px;
     height: auto;
+    margin: 0 7px;
     padding: 0;
     left: auto;
     line-height: 2em; }
@@ -1198,7 +1210,7 @@ img.othersFlag {
     flex-direction: column; }
 
   .data-container .data-point {
-    padding: 5px 10px;
+    padding: 4px 10px;
     margin: 1px 5px;
     max-width: 100%; }
     .data-container .data-point span {
@@ -1221,7 +1233,11 @@ img.othersFlag {
 
   .inner-content {
     width: 100%;
-    margin: 0; }
+    margin-bottom: 20px; }
+
+  .home-image {
+    max-width: 120px;
+    margin-bottom: -1px; }
 
   .inner-datasheets {
     width: auto; }
@@ -1395,11 +1411,13 @@ img.othersFlag {
 
   .others img {
     height: 25px; }
-  .others div span {
-    font-size: 10px; }
+  .others div {
+    max-width: 50%; }
+    .others div span {
+      font-size: 10px; }
 
   .inner-footer {
-    flex-direction: row;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     height: auto;
     margin: 0 auto;
@@ -1412,21 +1430,25 @@ img.othersFlag {
       width: auto; }
     .footer .footer-input {
       margin: 0 auto; }
-    .footer .footer-middle {
-      align-items: flex-end; }
-      .footer .footer-middle h3 {
-        text-align: right; }
-      .footer .footer-middle a {
+    .footer .footer-column {
+      margin: 0 auto; }
+    .footer .footer-links {
+      flex-direction: row;
+      display: flex; }
+      .footer .footer-links .footer-middle h3 {
+        text-align: right;
+        align-self: flex-end; }
+      .footer .footer-links .footer-middle a {
         text-align: right; }
     .footer .footer-last {
-      align-self: flex-start;
       text-align: center;
+      margin: 20px auto;
       flex-basis: 100%; }
       .footer .footer-last h3 {
         text-align: center;
         width: 100%; }
       .footer .footer-last p {
-        margin: 0 auto; } }
+        text-align: center; } }
 /*** Mobile Sass ** */
 
 /*# sourceMappingURL=App.css.map */

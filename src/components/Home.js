@@ -31,7 +31,6 @@ class Home extends Component {
     return (
       <div className="home">
         <div className="inner-home">
-          <img className="home-image" src={whitehouse} alt='The White House' />
           <div className="home-action">
             <h1>Tracking world leaders with Public Data</h1>
             <h3>Public and free tracking of current world leaders. Using data from news outlets, non-profits, and government organizations.</h3>
@@ -39,9 +38,8 @@ class Home extends Component {
         </div>
         <Week />
         <Featured selected={selection} />
-        <div className="footer">
-          <Footer />
-        </div>
+        <img className="home-image" src={whitehouse} alt='The White House' />
+        <Footer />
       </div>
     )
   }

@@ -8,6 +8,7 @@ import News from './sidenav/News';
 import Others from './sidenav/Others';
 import Polls from './sidenav/Polls';
 import Schedule from './sidenav/Schedule';
+import whitehouse from '.././images/whitehouse.svg';
 
 let selected = [];
 let topnavColor = () => document.getElementsByClassName('top-title')[0].setAttribute('style', 'border-image: linear-gradient(to right, ' + selected['flag-colors'] + ');border-image-slice: 1;' );
@@ -125,9 +126,8 @@ class Main extends Component {
             </div>
           </div>
         </div>
-        <div className="footer">
-          <Footer />
-        </div>
+        <img className="home-image" src={whitehouse} alt='The White House' />
+        <Footer />
       </div>
     )
   }

@@ -191,6 +191,7 @@ hr
         align-items: center
         img
           max-height: 50px
+          min-width: 50px
           width: 50px
         &:hover
           background: #A9A69E
@@ -244,6 +245,9 @@ hr
   display: flex
   flex-direction: column
   transition: .3s
+  ul
+    div
+      width: 100%
   li
     a
       img
@@ -555,9 +559,10 @@ hr
     h3
       max-width: 450px
       margin: 0 auto
-  .home-image
-    margin: 0 auto
-    max-width: 360px
+
+.home-image
+  margin: 0 auto
+  max-width: 240px
   
 .week
   margin: 0 auto
@@ -630,8 +635,7 @@ hr
 
 .inner-more
   height: auto
-  border-top: 1px solid #ddd
-  padding: 100px 0
+  padding: 0px 0
 
 .schedule
   border-top: 1px solid #ddd
@@ -808,7 +812,7 @@ hr
 
 .news-open
   background: #eeeeee
-  border: 1px solid #000
+  border: 1px solid #333
   cursor: pointer
   padding: 10px 0
   width: 40%
@@ -827,6 +831,7 @@ hr
   width: 100%
   box-sizing: border-box
   display: flex
+  flex-direction: column
   border-left: 0
   align-items: center
   justify-content: center
@@ -1017,7 +1022,7 @@ hr
 
 .country-list
   display: flex
-  flex-grow: 2
+  flex-basis: 50%
   ul
     list-style: none
     flex-basis: 50%
@@ -1032,7 +1037,6 @@ hr
   border-top: 1px solid #DDD
   border-bottom: 1px solid #DDD
   display: flex
-  margin-top: 10px
   justify-content: space-between
   width: 100%
   img
@@ -1116,6 +1120,8 @@ img.othersFlag
     .copy
       font-size: 11px
       min-width: auto
+      span
+        margin-top: 3px
     .logo-wrap
       padding: 0 5px
     .nav-wrap
@@ -1130,6 +1136,8 @@ img.othersFlag
                 display: none
               &:first-child
                 background: #BBB
+              &:nth-child(1n + 1)
+                border-right: 1px solid #333
 
     &:hover
       width: 100%
@@ -1141,7 +1149,7 @@ img.othersFlag
           width: 100%
     li
       background: #222
-      border-bottom: 1px solid #000
+      border-bottom: 1px solid #333
       width: 50%
       a
         line-height: 8px
@@ -1170,7 +1178,8 @@ img.othersFlag
     display: none
 
   .title
-    font-size: 14px
+    font-size: 12px
+    font-weight: 200
     padding: 0
 
   .content-box-links
@@ -1191,6 +1200,9 @@ img.othersFlag
       font-size: 10px
       padding: 0
       width: 100%
+
+  .international-news
+    max-height: 100px
  
   .top-banner
     align-items: center
@@ -1225,6 +1237,7 @@ img.othersFlag
     min-width: auto
     font-size: 11px
     height: auto
+    margin: 0 7px
     padding: 0
     left: auto
     line-height: 2em
@@ -1234,7 +1247,7 @@ img.othersFlag
 
   .data-container
     .data-point
-      padding: 5px 10px
+      padding: 4px 10px
       margin: 1px 5px
       max-width: 100%
       span
@@ -1258,7 +1271,11 @@ img.othersFlag
  
   .inner-content
     width: 100%
-    margin: 0
+    margin-bottom: 20px
+
+  .home-image
+    max-width: 120px
+    margin-bottom: -1px
  
   .inner-datasheets
     width: auto
@@ -1441,11 +1458,12 @@ img.othersFlag
     img
       height: 25px
     div
+      max-width: 50%
       span
         font-size: 10px
  
   .inner-footer
-    flex-direction: row
+    flex-direction: column-reverse
     flex-wrap: wrap
     height: auto
     margin: 0 auto
@@ -1458,19 +1476,24 @@ img.othersFlag
       width: auto
     .footer-input
       margin: 0 auto
-    .footer-middle
-      align-items: flex-end
-      h3
-        text-align: right
-      a
-        text-align: right
+    .footer-column
+      margin: 0 auto
+    .footer-links
+      flex-direction: row
+      display: flex
+      .footer-middle
+        h3
+          text-align: right
+          align-self: flex-end
+        a
+          text-align: right
     .footer-last
-      align-self: flex-start
       text-align: center
+      margin: 20px auto
       flex-basis: 100%
       h3
         text-align: center
         width: 100%
       p
-        margin: 0 auto
+        text-align: center
 /*** Mobile Sass ***/
