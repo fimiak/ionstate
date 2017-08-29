@@ -105,11 +105,19 @@ hr
     color: #000
   .copy
     color: #000000
+    display: flex
+    flex-direction: column
     font-size: 13px
+    justify-content: center
     margin: 0 auto
     min-width: 140px
-    padding: 16px 0
+    height: 46px // Works with 2px padding
+    padding: 2px 0
     width: 100%
+    span
+      font-size: 10px
+      margin: 0 auto
+      max-width: 136px
   .logo-wrap
     align-items: stretch
     display: flex
@@ -351,19 +359,19 @@ hr
   background: #fff
   display: flex
   flex-direction: row
-  flex-grow: 1
+  flex-grow: 1fea
 
 .featuredBox
-  border: 1px solid #000
+  border: 1px solid $ivory-dark
   box-sizing: border-box
   margin: 30px auto
   max-width: 800px
   width: 96%
   .featured-nation
-    border-bottom: 1px solid #000
+    background: #f6f6f6
     flex-direction: row
     display: flex
-    justify-content: space-between
+    justify-content: center
     padding: 0 5px
     h3
       margin: 0
@@ -403,26 +411,43 @@ hr
         align-items: center
         justify-content: space-between
         margin: 0px
+        img
+          max-width: 168px
+          padding: 10px
         h3
+          display: flex
           font-size: 15px
           margin: 5px 0
+          flex-grow: 1
+          align-items: center
+          &:last-child
+            padding-bottom: 20px
       div
         max-width: 200px
-        button
-          border: 1px solid #000000
-          background: #ddd
-          color: #000
-          font-size: 12px
-          margin: 10px auto
-          padding: 4px 2px
-          max-width: 90%
-          transition: .3s
-          &:hover
-            background: #ccc
-            cursor: pointer
+        a
+          padding: 5px
+          button
+            border: 1px solid #aaa
+            background: $ivory
+            color: #000
+            font-size: 12px
+            margin: 10px auto
+            padding: 10px 15px
+            transition: .3s
+            &:hover
+              background: #ccc
+              cursor: pointer
       .featuredStats
         margin-left: 5px
         background: #f6f6f6
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .featured-flag
+          height: 75px
+          margin: 0 auto
+          max-width: 100px
+          min-height: auto
         h4
           margin: 0
           padding: 10px 0
@@ -440,7 +465,6 @@ hr
     img
       max-width: 188px
       min-height: 200px
-
   .featuredMore
     display: flex
     justify-content: center
@@ -652,10 +676,11 @@ hr
       .dayBox
         display: flex
         flex-direction: row
+        align-items: center
         width: 100%
         .dateBox
           background: #fafafa
-          border: 1px solid #000
+          border: 1px solid $ivory-dark
           align-items: center
           margin: 5px 0
           justify-content: center
@@ -1079,11 +1104,10 @@ img.othersFlag
 @media (max-width: 1200px)
 
   body
-    overflow: auto
+    overflow: auto // To help scrollbar
  
   h2
     font-size: 1.1em
- 
 
   .App-intro
     padding-top: 0
@@ -1125,12 +1149,6 @@ img.othersFlag
         &:hover
           background: #222
           color: #fff
-    .copy
-      visibility: visible
-      opacity: 1
-      padding: 0 10px
-      width: 100%
-      text-align: left
  
   .inner-header
     flex-direction: column
@@ -1170,8 +1188,8 @@ img.othersFlag
     flex-direction: row
     a
       height: auto
-      font-size: 9px
-      padding: 0 1px
+      font-size: 10px
+      padding: 0
       width: 100%
  
   .top-banner
@@ -1205,9 +1223,8 @@ img.othersFlag
     width: auto
     top: auto
     min-width: auto
-    font-size: 9px
+    font-size: 11px
     height: auto
-    margin: 0 3px
     padding: 0
     left: auto
     line-height: 2em
@@ -1286,18 +1303,38 @@ img.othersFlag
       width: 75%
 
   .featuredBox
-    h3
-      padding: 10px 0
     .featuredEvents
       align-items: center
       .featuredDetails
         flex-direction: column
         margin-right: 0
+        div
+          a
+            margin-top: 10px
         .featuredTitle
           max-width: 100%
+          h3
+            padding: 0
+            margin: 0
+            &:last-child
+              padding-bottom: 10px
         .featuredStats
           margin-left: 0
           max-width: 100%
+          .featured-flag
+            margin-bottom: 10px
+          ul
+            flex-direction: row
+            flex-wrap: wrap
+            li
+              padding: 0
+              width: 50%
+              &:nth-child(3n)
+                background: $ivory
+              &:nth-child(3n+1)
+                background: $ivory-dark
+              &:nth-child(3n+2)
+                background: #dcd9d1
         ul
           margin-left: 0
       img
@@ -1322,7 +1359,7 @@ img.othersFlag
 
   .news-story
     align-items: center
-    border: 1px solid #DDD
+    border: 1px solid #e6e6e6
     flex-direction: column
     margin: 3px auto
     max-width: 400px
@@ -1337,7 +1374,7 @@ img.othersFlag
       display: none
 
   .news-info-container
-    background: #ddd
+    background: #f2f2f2
     margin: 0
 
   .article
@@ -1358,10 +1395,10 @@ img.othersFlag
     display: flex
 
   .article-link-headline
-    padding: 2px 3px
+    padding: 1px 3px
     min-height: auto
     .headline
-      font-size: 11px
+      font-size: 13px
 
   .article-text
     padding-left: 3px
@@ -1399,6 +1436,13 @@ img.othersFlag
 
   img.othersArrow
     max-width: 15px
+
+  .others
+    img
+      height: 25px
+    div
+      span
+        font-size: 10px
  
   .inner-footer
     flex-direction: row

@@ -10,15 +10,15 @@ function PageMenu(country, page) {
         <li key={country.order}>
             <NavLink to={country['country']}>
                 <img src={require('../.././images/thumbs/' + country.thumb)} alt={country.leader} />
-                <div className="copy">{country.leader}</div>
+                <div className="copy">{country.leader}<span>{country.name}</span></div>
             </NavLink>
         </li>
     );
 
     listItems.forEach(function(item) {
-        if (item.key < 9) {
+        if (item.key < 12) {
             page1.push(item);
-        } else if (item.key >= 9 && item.key < 18) {
+        } else if (item.key >= 12 && item.key < 24) {
             page2.push(item);
         } else {
             page3.push(item);

@@ -72,8 +72,6 @@ class Main extends Component {
   render() {
     let nation = this.props.params.country;
     let list = [];
-    let arr = {};
-    let name = "name";
     for (let i = 0; i < data.data.length; i++) { // Assign data.data[i] to 'country' key.
       list[data.data[i]['country']] = data.data[i];
     }
@@ -88,7 +86,7 @@ class Main extends Component {
             <div id="top-content" className="top-content">
               <div className="top-nav">
                 <div className="top-banner">
-                  <div className="top-icon"><img className="top-leader" alt={selected.leader} src={require('.././images/thumbs/' + selected.thumb)} alt={selected.name}></img></div>
+                  <div className="top-icon"><img className="top-leader" alt={selected.leader} src={require('.././images/thumbs/' + selected.thumb)}></img></div>
                   <div className="top-title">{selected.leader}</div>
                 </div>
                 <div className="content-box-links">
