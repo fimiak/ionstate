@@ -20,6 +20,13 @@
   to {
     opacity: 1;
     transform: translateY(0); } }
+@keyframes fade-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(0); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 /*** KEYFRAMES ** */
 /*** VARIABLES ** */
 /*** VARIABLES ** */
@@ -224,7 +231,7 @@ hr {
   background: #AAAAAA; }
 
 .international-news {
-  animation: fade-in-top ease 0.4s forwards;
+  animation: fade-in-bottom ease 0.4s forwards;
   animation-delay: 0s;
   max-height: 212px; }
   .international-news img {
@@ -374,9 +381,12 @@ hr {
   background: #fff;
   display: flex;
   flex-direction: row;
-  flex-grow: 1fea; }
+  flex-grow: 1; }
 
 .featuredBox {
+  animation: fade-in-top 0.3s ease forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
   border: 1px solid #D4D0C6;
   box-sizing: border-box;
   margin: 30px auto;
@@ -513,10 +523,10 @@ hr {
   width: 100%; }
 
 .inner-content {
+  box-sizing: border-box;
   height: auto;
   margin: 0px 20px 40px;
-  max-width: 900px;
-  box-sizing: border-box; }
+  max-width: 900px; }
 
 .img-highlight {
   padding: 20px;
@@ -557,24 +567,34 @@ hr {
   background: #ECE8DD;
   border-bottom: 1px solid #D4D0C6;
   margin: 0 auto 30px;
+  padding: 50px 0;
   width: 100%; }
   .inner-home h1 {
     font-size: 38px;
     font-family: "Arvo", cursive;
     margin: 5px 0; }
   .inner-home .home-action {
+    animation: fade-in-top 0.3s ease forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
     max-width: 600px;
     margin: 0 auto 50px;
     width: 96%; }
     .inner-home .home-action h3 {
+      animation: fade-in-top 0.3s ease forwards;
+      animation-delay: 0.3s;
       max-width: 450px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      opacity: 0; }
 
 .home-image {
   margin: 0 auto;
   max-width: 240px; }
 
 .week {
+  animation: fade-in-top 0.3s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
   margin: 0 auto;
   max-width: 790px;
   display: flex;
@@ -805,7 +825,7 @@ hr {
   align-content: flex-start;
   height: 530px;
   overflow: hidden;
-  transition: 1s; }
+  transition: 0.3s; }
   .inner-news h4 {
     align-self: center;
     margin: 0 auto; }
@@ -822,6 +842,7 @@ hr {
   cursor: pointer;
   padding: 10px 0;
   width: 40%;
+  transition: 0.2s;
   margin: 20px auto; }
   .news-open:hover {
     background: #DDD; }

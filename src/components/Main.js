@@ -20,10 +20,12 @@ class Main extends Component {
       data: data,
       loading: true,
       map: 'Seattle, WA',
-      country: this.props.params.country
+      country: this.props.params.country,
+      newsToggle: true
     };
 
     this.setMap = this.setMap.bind(this);
+    this.showNews = this.showNews.bind(this);
     this.hideNews = this.hideNews.bind(this);
   }
 
@@ -55,19 +57,37 @@ class Main extends Component {
     );
   }
 
-  componentDidUpdate() {
-    topnavColor();
-    this.hideNews();    
+  componentWillReceiveProps() {
+    document.getElementsByClassName('international-news')[0].setAttribute('style', "animation: unset;opacity: 0;");
+    document.getElementsByClassName('top-leader')[0].setAttribute('style', "animation: unset;opacity: 0");
+    document.getElementsByClassName('top-title')[0].setAttribute('style', "animation: unset;opacity: 0;");
+    document.getElementsByClassName('top-flag')[0].getElementsByTagName('img')[0].setAttribute('style', "animation: unset; opacity: 0;");
+    document.getElementsByClassName('top-leader')[0].setAttribute('style', "animation: unset;opacity: 0;");
+    document.getElementsByClassName('content-box-links')[0].setAttribute('style', "animation: unset;opacity: 0;");
+    document.getElementsByClassName('top-split')[0].setAttribute('style', "animation: unset;opacity: 0;");
+    setTimeout(function() {
+      document.getElementsByClassName('international-news')[0].setAttribute('style', "animation: fade-in-bottom ease .4s forwards;animation-delay: 0s;");
+      document.getElementsByClassName('top-leader')[0].setAttribute('style', "animation: fade-in-right ease 0.4s forwards;animation-delay: 0.4s;");
+      document.getElementsByClassName('top-title')[0].setAttribute('style', "animation: fade-in-right ease 0.4s forwards;animation-delay: 0.4s;transform: scaleX(0);transform-origin: left;");
+      document.getElementsByClassName('top-flag')[0].getElementsByTagName('img')[0].setAttribute('style', "animation: fade-in-right ease 0.4s forwards;animation-delay: 0.8s;");
+      document.getElementsByClassName('content-box-links')[0].setAttribute('style', "animation: fade-in-right ease 0.4s forwards;animation-delay: 0.6s;");
+      document.getElementsByClassName('top-split')[0].setAttribute('style', "animation: fade-in-top ease 0.4s forwards;animation-delay: 1s;");
+      topnavColor();      
+    }, 200)
   }
 
   showNews() {
-    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: 1130px;');
-    document.getElementsByClassName('news-open')[0].setAttribute('style', 'display: none;');
+    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: 1106px;');
+    this.setState({
+      newsToggle: false
+    });
   }
 
   hideNews() {
     document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: 530px;');
-    document.getElementsByClassName('news-open')[0].setAttribute('style', 'display: block;');
+    this.setState({
+      newsToggle: true
+    });
   }
 
   render() {
@@ -108,7 +128,7 @@ class Main extends Component {
               <div id="news" className="news">
                 <h1>Latest News</h1>
                 <News props={this.props.params} selected={selected} />
-                <div className="news-open" onClick={this.showNews}>More News</div>
+                <div className="news-open" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>{this.state.newsToggle ? "More" : "Hide"} News</div>
               </div>
             </div>
             <div id="schedule" className="schedule">

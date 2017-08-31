@@ -3,8 +3,6 @@ import NavLink from '.././NavLink'
 import axios from 'axios';
 import testdata from '../../data/testdata';
 
-const test = testdata.response.docs;
-
 class Featured extends Component {
     constructor(props) {
         super(props);
@@ -66,7 +64,7 @@ class Featured extends Component {
                             <h3>{this.props.selected.name}</h3>
                         </div>
                         <div className="featuredStats">
-                            <img className="featured-flag" src={require('../.././images/flags/' + this.props.selected.flag)} />
+                            <img className="featured-flag" src={require('../.././images/flags/' + this.props.selected.flag)} alt="" />
                             <ul>
                                 <li>Party</li>
                                 <li>{this.props.selected['party']}</li>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import test from '../../images/testdata/test1.jpg';
 import testdata from '../../data/testdata';
 
 class NewsStory extends Component {
