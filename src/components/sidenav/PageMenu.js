@@ -16,29 +16,16 @@ function PageMenu(country, page) {
     );
 
     listItems.forEach(function(item) {
-        if (item.key < 12) {
-            page1.push(item);
-        } else if (item.key >= 12 && item.key < 24) {
-            page2.push(item);
-        } else {
-            page3.push(item);
-        }
+        if (item.key < 12) { page1.push(item); } 
+        else if (item.key >= 12 && item.key < 24) { page2.push(item); }
+        else { page3.push(item); }
     })
 
     return (
         <div>
-            {
-                country.page === 1 &&
-                <ul>{page1}</ul>
-            }
-            {
-                country.page === 2 &&
-                <ul>{page2}</ul>
-            }
-            {
-                country.page === 3 &&
-                <ul>{page3}</ul>
-            }
+            { country.page === 1 && <ul>{page1}</ul> }
+            { country.page === 2 && <ul>{page2}</ul> }
+            { country.page === 3 && <ul>{page3}</ul> }
         </div>
     )
 }

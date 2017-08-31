@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import test from '../../images/testdata/test1.jpg';
+import testdata from '../../data/testdata';
 
 class NewsStory extends Component {
 
     render() {
+        let testImage = testdata.response.docs[this.props.test].multimedia.url;
         let dataDate = this.props.news['pub_date'];
         let regx = /^(.*?)(?=T)/;
         let regDate = dataDate.match(regx)[0]; // Regex article date out of raw data.
@@ -12,7 +14,7 @@ class NewsStory extends Component {
                 <div className="news-story">
                     <div className="news-img-container">
                         <a className="article-link" href={this.props.news['web_url']}>
-                            <img className="article-image" alt="Article" src={(this.props.news.multimedia.length === 0) ? '' : test}></img>
+                            <img className="article-image" alt="Article" src={(this.props.news.multimedia.length === 0) ? '' : require('../../images/' + testImage)}></img>
                         </a>
                         <a className="article-link-headline" href={this.props.news['web_url']}>
                             <span className="headline">{ this.props.news.length >= 0 ? '' : this.props.news['headline'].main}</span>

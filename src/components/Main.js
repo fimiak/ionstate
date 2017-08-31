@@ -61,7 +61,7 @@ class Main extends Component {
   }
 
   showNews() {
-    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: auto;');
+    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: 1130px;');
     document.getElementsByClassName('news-open')[0].setAttribute('style', 'display: none;');
   }
 

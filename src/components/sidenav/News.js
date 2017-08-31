@@ -61,12 +61,12 @@ class News extends Component {
   render() {
     return (
         <div className="inner-news">
-            <NewsStory news={this.state['article-0']} />
-            <NewsStory news={this.state['article-1']} />
-            <NewsStory news={this.state['article-2']} />
-            <NewsStory news={this.state['article-3']} />
-            <NewsStory news={this.state['article-4']} />
-            <NewsStory news={this.state['article-5']} />
+            <NewsStory news={this.state['article-0']} test={0} />
+            <NewsStory news={this.state['article-1']} test={1} />
+            <NewsStory news={this.state['article-2']} test={2} />
+            <NewsStory news={this.state['article-3']} test={3} />
+            <NewsStory news={this.state['article-4']} test={4} />
+            <NewsStory news={this.state['article-5']} test={5} />
         </div>
     )
   }

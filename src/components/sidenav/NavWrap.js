@@ -80,7 +80,7 @@ class NavWrap extends Component {
             );
         } else if (this.state.page === 2) {
             document.getElementById('page1').setAttribute('style', 'visibility: hidden;max-height: 0;');
-            document.getElementById('page2').setAttribute('style', 'visibility: hidden;max-height: 0;');
+            document.getElementById('page2').setAttribute('style', 'visibility: hidden;max-height: 0;opacity: 0;');
             document.getElementById('page3').setAttribute('style', 'visibility: visible;');
             this.setState(prevState => ({
                 page: 3

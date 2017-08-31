@@ -9,47 +9,9 @@
           "print_page": "8",
           "blog": {},
           "source": "The New York Times",
-          "multimedia": [
-            {
-              "type": "image",
-              "subtype": "xlarge",
-              "url": "test1.jpg",
-              "height": 400,
-              "width": 600,
-              "rank": 0,
-              "legacy": {
-                "xlargewidth": 600,
-                "xlarge": "images/2017/08/10/world/10Belarus1/10Belarus1-articleLarge.jpg",
-                "xlargeheight": 400
-              }
-            },
-            {
-              "type": "image",
-              "subtype": "wide",
-              "url": "test1.jpg",
-              "height": 126,
-              "width": 190,
-              "rank": 0,
-              "legacy": {
-                "wide": "images/2017/08/10/world/10Belarus1/10Belarus1-thumbWide.jpg",
-                "widewidth": 190,
-                "wideheight": 126
-              }
-            },
-            {
-              "type": "image",
-              "subtype": "thumbnail",
-              "url": "images/2017/08/10/world/10Belarus1/10Belarus1-thumbStandard.jpg",
-              "height": 75,
-              "width": 75,
-              "rank": 0,
-              "legacy": {
-                "thumbnailheight": 75,
-                "thumbnail": "images/2017/08/10/world/10Belarus1/10Belarus1-thumbStandard.jpg",
-                "thumbnailwidth": 75
-              }
-            }
-          ],
+          "multimedia": {
+            "url": "testdata/test1.jpg"
+          },
           "headline": {
             "main": "Test News Data",
             "print_headline": "Russia-West Balancing Act Is Growing Ever More Wobbly in Belarus"
@@ -105,7 +67,7 @@
           "blog": {},
           "source": "Reuters",
           "multimedia": {
-            "url": "images/2017/08/10/world/10Belarus1/10Belarus1-articleLarge.jpg"
+            "url": "testdata/test2.jpg"
           },
           "headline": {
             "main": "Russia Nominates German Ex-Chancellor Schroeder to Rosneft Board",
@@ -130,7 +92,7 @@
           "blog": {},
           "source": "Reuters",
           "multimedia": {
-            "url": "images/2017/08/10/world/10Belarus1/10Belarus1-articleLarge.jpg"
+            "url": "testdata/test3.jpg"
           },
           "headline": {
             "main": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts",
@@ -156,47 +118,9 @@
           "print_page": "19",
           "blog": {},
           "source": "The New York Times",
-          "multimedia": [
-            {
-              "type": "image",
-              "subtype": "xlarge",
-              "url": "../images/testdata/test1.jpg",
-              "height": 400,
-              "width": 600,
-              "rank": 0,
-              "legacy": {
-                "xlargewidth": 600,
-                "xlarge": "images/2017/08/12/opinion/contributors/12collins-web/merlin-to-scoop-125822561-752667-articleLarge.jpg",
-                "xlargeheight": 400
-              }
-            },
-            {
-              "type": "image",
-              "subtype": "wide",
-              "url": "images/2017/08/12/opinion/contributors/12collins-web/merlin-to-scoop-125822561-752667-thumbWide.jpg",
-              "height": 126,
-              "width": 190,
-              "rank": 0,
-              "legacy": {
-                "wide": "images/2017/08/12/opinion/contributors/12collins-web/merlin-to-scoop-125822561-752667-thumbWide.jpg",
-                "widewidth": 190,
-                "wideheight": 126
-              }
-            },
-            {
-              "type": "image",
-              "subtype": "thumbnail",
-              "url": "images/2017/08/12/opinion/contributors/12collins-web/12collins-web-thumbStandard.jpg",
-              "height": 75,
-              "width": 75,
-              "rank": 0,
-              "legacy": {
-                "thumbnailheight": 75,
-                "thumbnail": "images/2017/08/12/opinion/contributors/12collins-web/12collins-web-thumbStandard.jpg",
-                "thumbnailwidth": 75
-              }
-            }
-          ],
+          "multimedia": {
+            "url": "testdata/test4.jpg"
+          },
           "headline": {
             "main": "Trump Tweets Tough",
             "kicker": "Op-Ed Columnist",
@@ -251,30 +175,9 @@
           "snippet": "President Donald Trump said he was not being serious when he thanked Russian President Vladimir Putin for ordering a drastic reduction in the number of U.S. diplomatic employees and saving the U.S. significant cash.",
           "blog": {},
           "source": "AP",
-          "multimedia": [],
-          "headline": {
-            "main": "Trump Says He Wasn't Being Serious in Remarks About Putin",
-            "print_headline": "Trump Says He Wasn't Being Serious in Remarks About Putin"
+          "multimedia": {
+            "url": "testdata/test5.jpg"
           },
-          "keywords": [],
-          "pub_date": "2017-08-11T19:39:56+0000",
-          "document_type": "article",
-          "new_desk": "None",
-          "byline": {
-            "original": "By THE ASSOCIATED PRESS"
-          },
-          "type_of_material": "News",
-          "_id": "598e081595d0e0246f1ff518",
-          "word_count": 166,
-          "score": 1.4074683,
-          "uri": "nyt://article/1246b0d1-158c-5d87-a0d3-59194d57532b"
-        },
-        {
-          "web_url": "https://www.nytimes.com/reuters/2017/08/11/world/asia/11reuters-usa-trump-russia-diplomats-sarcasm.html",
-          "snippet": "President Donald Trump said on Friday he was being sarcastic when he thanked Russian President Vladimir Putin for saving the United States money by ordering cuts in U.S. diplomatic staff in Russia.",
-          "blog": {},
-          "source": "Reuters",
-          "multimedia": [],
           "headline": {
             "main": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts",
             "print_headline": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts"
@@ -298,7 +201,9 @@
           "snippet": "President Donald Trump said on Friday he was being sarcastic when he thanked Russian President Vladimir Putin for saving the United States money by ordering cuts in U.S. diplomatic staff in Russia.",
           "blog": {},
           "source": "Reuters",
-          "multimedia": [],
+          "multimedia": {
+            "url": "testdata/test6.jpg"
+          },
           "headline": {
             "main": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts",
             "print_headline": "Trump Says Was Being 'Sarcastic' in Thanking Putin for Embassy Staff Cuts"
@@ -323,47 +228,9 @@
           "print_page": "10",
           "blog": {},
           "source": "The New York Times",
-          "multimedia": [
-            {
-              "type": "image",
-              "subtype": "xlarge",
-              "url": "../images/testdata/test1.jpg",
-              "height": 400,
-              "width": 600,
-              "rank": 0,
-              "legacy": {
-                "xlargewidth": 600,
-                "xlarge": "images/2017/08/12/us/12dc-assess/12dc-assess-articleLarge.jpg",
-                "xlargeheight": 400
-              }
-            },
-            {
-              "type": "image",
-              "subtype": "wide",
-              "url": "images/2017/08/12/us/12dc-assess/12dc-assess-thumbWide.jpg",
-              "height": 126,
-              "width": 190,
-              "rank": 0,
-              "legacy": {
-                "wide": "images/2017/08/12/us/12dc-assess/12dc-assess-thumbWide.jpg",
-                "widewidth": 190,
-                "wideheight": 126
-              }
-            },
-            {
-              "type": "image",
-              "subtype": "thumbnail",
-              "url": "images/2017/08/12/us/12dc-assess/12dc-assess-thumbStandard.jpg",
-              "height": 75,
-              "width": 75,
-              "rank": 0,
-              "legacy": {
-                "thumbnailheight": 75,
-                "thumbnail": "images/2017/08/12/us/12dc-assess/12dc-assess-thumbStandard.jpg",
-                "thumbnailwidth": 75
-              }
-            }
-          ],
+          "multimedia": {
+            "url": "testdata/test7.jpg"
+          },
           "headline": {
             "main": "Combative Trump Pulls His Punches for One Man: Putin",
             "kicker": "News Analysis",
@@ -420,47 +287,9 @@
           "print_page": "2",
           "blog": {},
           "source": "The New York Times",
-          "multimedia": [
-            {
-              "type": "image",
-              "subtype": "xlarge",
-              "url": "images/2017/08/13/opinion/sunday/13moyn/13moyn-articleLarge.jpg",
-              "height": 561,
-              "width": 600,
-              "rank": 0,
-              "legacy": {
-                "xlargewidth": 600,
-                "xlarge": "images/2017/08/13/opinion/sunday/13moyn/13moyn-articleLarge.jpg",
-                "xlargeheight": 561
-              }
-            },
-            {
-              "type": "image",
-              "subtype": "wide",
-              "url": "images/2017/08/13/opinion/sunday/13moyn/13moyn-thumbWide.jpg",
-              "height": 126,
-              "width": 190,
-              "rank": 0,
-              "legacy": {
-                "wide": "images/2017/08/13/opinion/sunday/13moyn/13moyn-thumbWide.jpg",
-                "widewidth": 190,
-                "wideheight": 126
-              }
-            },
-            {
-              "type": "image",
-              "subtype": "thumbnail",
-              "url": "images/2017/08/13/opinion/sunday/13moyn/13moyn-thumbStandard.jpg",
-              "height": 75,
-              "width": 75,
-              "rank": 0,
-              "legacy": {
-                "thumbnailheight": 75,
-                "thumbnail": "images/2017/08/13/opinion/sunday/13moyn/13moyn-thumbStandard.jpg",
-                "thumbnailwidth": 75
-              }
-            }
-          ],
+          "multimedia": {
+            "url": "testdata/test8.jpg"
+          },
           "headline": {
             "main": "Trump Isn’t a Threat to Our Democracy. Hysteria Is.",
             "kicker": "Opinion",
@@ -511,47 +340,9 @@
           "print_page": "19",
           "blog": {},
           "source": "The New York Times",
-          "multimedia": [
-            {
-              "type": "image",
-              "subtype": "xlarge",
-              "url": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-articleLarge.jpg",
-              "height": 399,
-              "width": 600,
-              "rank": 0,
-              "legacy": {
-                "xlargewidth": 600,
-                "xlarge": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-articleLarge.jpg",
-                "xlargeheight": 399
-              }
-            },
-            {
-              "type": "image",
-              "subtype": "wide",
-              "url": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-thumbWide.jpg",
-              "height": 126,
-              "width": 190,
-              "rank": 0,
-              "legacy": {
-                "wide": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-thumbWide.jpg",
-                "widewidth": 190,
-                "wideheight": 126
-              }
-            },
-            {
-              "type": "image",
-              "subtype": "thumbnail",
-              "url": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-thumbStandard.jpg",
-              "height": 75,
-              "width": 75,
-              "rank": 0,
-              "legacy": {
-                "thumbnailheight": 75,
-                "thumbnail": "images/2017/08/11/opinion/contributors/11cohen-web2/11cohen-web2-thumbStandard.jpg",
-                "thumbnailwidth": 75
-              }
-            }
-          ],
+          "multimedia": {
+            "url": "testdata/test9.jpg"
+          },
           "headline": {
             "main": "How to Prevent a Cyberwar",
             "kicker": "Op-Ed Contributor",
