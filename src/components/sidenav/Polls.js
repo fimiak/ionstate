@@ -4,9 +4,13 @@ class More extends Component {
   render() {
     return (
       <div>
-        <div className="inner-more">
-          <span className="more">
-          </span>
+        <div className="inner-polls">
+          <div>
+          </div>
+          <div>
+          </div>
+          <div>
+          </div>
         </div>
       </div>
     )

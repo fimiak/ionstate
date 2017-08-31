@@ -13,15 +13,15 @@ class News extends Component {
             selected: this.props.selected,
             search: this.props.selected.search,
             'article-0': testdata.response.docs[0],
-            'article-1': testdata.response.docs[0],
-            'article-2': testdata.response.docs[0],
-            'article-3': testdata.response.docs[0],
-            'article-4': testdata.response.docs[0],
-            'article-5': testdata.response.docs[0]
+            'article-1': testdata.response.docs[1],
+            'article-2': testdata.response.docs[2],
+            'article-3': testdata.response.docs[3],
+            'article-4': testdata.response.docs[4],
+            'article-5': testdata.response.docs[5]
         };
     }
 
-    componentWillMount() {
+    componentWillUpdate() {
       //this.performSearch();
       this.testSearch();
     }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import NavLink from '.././NavLink'
+import NavLink from '../.././NavLink'
 import axios from 'axios';
-import testdata from '../../data/testdata';
+import testdata from '../../../data/testdata';
 
 class Featured extends Component {
     constructor(props) {
@@ -58,13 +58,13 @@ class Featured extends Component {
                 <div className="featuredEvents">
                     <div className="featuredDetails">
                         <div className="featuredTitle">
-                            <img src={require('../.././images/bio/' + this.props.selected['image'])} alt={this.props.selected['leader']} />
+                            <img src={require('../../.././images/bio/' + this.props.selected['image'])} alt={this.props.selected['leader']} />
                             <h3>{this.props.selected['leader-title']}</h3>
                             <h3>{this.props.selected['leader']}</h3>
                             <h3>{this.props.selected.name}</h3>
                         </div>
                         <div className="featuredStats">
-                            <img className="featured-flag" src={require('../.././images/flags/' + this.props.selected.flag)} alt="" />
+                            <img className="featured-flag" src={require('../../.././images/flags/' + this.props.selected.flag)} alt="" />
                             <ul>
                                 <li>Party</li>
                                 <li>{this.props.selected['party']}</li>

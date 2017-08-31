@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import data from '.././data/data';
 import Footer from './Footer';
-import Featured from './featured/Featured';
-import Week from './featured/Week';
+import Featured from './home/featured/Featured';
+import Week from './home/featured/Week';
 import whitehouse from '.././images/whitehouse.svg';
 
 /********************************************************
