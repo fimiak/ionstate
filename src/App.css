@@ -1124,6 +1124,9 @@ img.othersFlag {
 /**************************** */
 /**************************** */
 @media (max-width: 1200px) {
+  html {
+    height: auto; }
+
   body {
     overflow: auto; }
 
@@ -1455,14 +1458,16 @@ img.othersFlag {
   .country-data {
     flex-direction: column; }
 
-  .country-list ul {
-    padding: 0 0 0 10px;
-    text-align: left; }
-    .country-list ul:last-child {
-      text-align: right;
-      padding: 0 10px 0 0; }
-    .country-list ul li {
-      font-size: 13px; }
+  .country-list {
+    flex-basis: 0; }
+    .country-list ul {
+      padding: 0 0 0 10px;
+      text-align: left; }
+      .country-list ul:last-child {
+        text-align: right;
+        padding: 0 10px 0 0; }
+      .country-list ul li {
+        font-size: 13px; }
 
   .maps {
     height: 220px;
@@ -1510,8 +1515,7 @@ img.othersFlag {
         text-align: right; }
     .footer .footer-last {
       text-align: center;
-      margin: 20px auto;
-      flex-basis: 100%; }
+      margin: 20px auto; }
       .footer .footer-last h3 {
         text-align: center;
         width: 100%; }
