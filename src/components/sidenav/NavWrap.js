@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import NavLink from '../NavLink';
-import PageMenu from './PageMenu';
 import data from '../../data/data';
-import forwardIcon from '../../icons/arrow-right.svg';
+import NavLink from '../NavLink';
+import LeaderList from './LeaderList';
 import alignLeft from '../../icons/align-left.svg';
 import barIcon from '../../icons/bar-chart.svg';
-import usersIcon from '../../icons/users.svg';
+import forwardIcon from '../../icons/arrow-right.svg';
 import trendIcon from '../../icons/trending-up.svg';
+import typeIcon from '../../icons/type.svg';
+import usersIcon from '../../icons/users.svg';
 
 let orderedList = data.data;
 function order() {
@@ -21,7 +22,7 @@ class NavWrap extends Component {
 
         this.state = {
             data: data,
-            selection: data.data[0],
+            selection: this.props.nation,
             menu: this.props.menu,
             menuState: this.props.menuState,
             orderBy: 'gdp',
@@ -42,15 +43,8 @@ class NavWrap extends Component {
     }
 
     componentDidMount() {
-        document.getElementById('page1').setAttribute('style', 'display: flex;');
         document.getElementById('page2').setAttribute('style', 'visibility: hidden;max-height: 0;');
         document.getElementById('page3').setAttribute('style', 'visibility: hidden;max-height: 0;');
-    }
-
-    setNation(nation) {
-        this.setState({
-            selection: nation
-        })
     }
 
     showMenu() {
@@ -176,13 +170,13 @@ class NavWrap extends Component {
             <div className="inner-header">
               <div className="nav-sidenav" onClick={this.props.closeMenu}>
                 <ul id="page1" onClick={this.scrollTop}>
-                    <PageMenu country={orderedList} page={1} />
+                    <LeaderList country={orderedList} page={1} setNation={this.props.setNation} />
                 </ul>
                 <ul id="page2" onClick={this.scrollTop}>
-                    <PageMenu country={orderedList} page={2} />
+                    <LeaderList country={orderedList} page={2} setNation={this.props.setNation}/>
                 </ul>
                 <ul id="page3" onClick={this.scrollTop}>
-                    <PageMenu country={orderedList} page={3} />
+                    <LeaderList country={orderedList} page={3} setNation={this.props.setNation} />
                 </ul>
               </div>
               <div className="nav-links">
@@ -197,23 +191,23 @@ class NavWrap extends Component {
                     </li>
                     <li>
                       <NavLink activeClassName="active" onClick={this.state.showAll === false ?this.showAll : this.hideAll}>
-                      <img className="img-size" src={alignLeft} alt="About" />{this.state.showAll === false ? "Show All" : "Hide All"}</NavLink>
+                      <img className="img-size" src={alignLeft} alt="" />{this.state.showAll === false ? "Show All" : "Hide All"}</NavLink>
                     </li>
                     <li>
                       <NavLink activeClassName="active" onClick={this.orderByName}>
-                      <img className="img-size" src={barIcon} alt="order a-z" />Order by Name</NavLink>
+                      <img className="img-size" src={typeIcon} alt="" />Order by Name</NavLink>
                   </li>
                   <li>
                       <NavLink activeClassName="active" onClick={this.orderByGdp}>
-                      <img className="img-size" src={barIcon} alt="order gdp" />Order by GDP</NavLink>
+                      <img className="img-size" src={barIcon} alt="" />Order by GDP</NavLink>
                   </li>
                   <li>
                       <NavLink activeClassName="active" onClick={this.orderByGrowth}>
-                      <img className="img-size" src={trendIcon} alt="order growth" />Order by GDP Growth</NavLink>
+                      <img className="img-size" src={trendIcon} alt="" />Order by GDP Growth</NavLink>
                   </li>
                   <li>
                       <NavLink activeClassName="active" onClick={this.orderByPop}>
-                      <img className="img-size" src={usersIcon} alt="order population" />Order by Population</NavLink>
+                      <img className="img-size" src={usersIcon} alt="Order population" />Order by Population</NavLink>
                   </li>
                 </ul>
               </div>

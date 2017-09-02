@@ -10,7 +10,6 @@ import whitehouse from '.././images/whitehouse.svg';
  ********************************************************
 ** Make the home page modern and colorful.
 ** Add daily news to home -> lead into leader pages.
-** Fix filters in PageNav.
 ** Add content to Maps/Schedules category.
 ** Add banners and more data for leaders.
 ** Create a recent polling category.
@@ -24,8 +23,7 @@ import whitehouse from '.././images/whitehouse.svg';
 class Home extends Component {
   render() {
     function random() {
-      let x = Math.floor(Math.random() * 27);
-      return x
+      return Math.floor(Math.random() * 27);
     }
     let selection = data.data[random()];
     return (
@@ -34,6 +32,7 @@ class Home extends Component {
           <div className="home-action">
             <h1>Tracking world leaders with Public Data</h1>
             <h3>Public and free tracking of current world leaders. Using data from news outlets, non-profits, and government organizations.</h3>
+            <button className="button-entry" onClick={this.props.showMenu}>Begin</button>
           </div>
         </div>
         <Week />

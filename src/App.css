@@ -123,6 +123,7 @@ hr {
       max-width: 136px; }
   .App-header .logo-wrap {
     align-items: stretch;
+    border-bottom: 1px solid #D4D0C6;
     display: flex;
     flex-shrink: 0;
     justify-content: space-between;
@@ -140,7 +141,6 @@ hr {
     width: 100%; }
     .App-header .nav-wrap .inner-header {
       border-bottom: 1px solid #333333;
-      border-top: 1px solid #333333;
       display: flex;
       margin: 0 auto;
       max-width: 761px;
@@ -165,6 +165,7 @@ hr {
               .App-header .nav-wrap .inner-header .nav-links ul li a:hover {
                 background: #999; }
             .App-header .nav-wrap .inner-header .nav-links ul li:first-child {
+              border-top: 1px solid #333;
               background: #A9A69E;
               cursor: default;
               height: 51px; }
@@ -267,10 +268,6 @@ hr {
   transition: 0.3s; }
   .nav-sidenav ul div {
     width: 100%; }
-    .nav-sidenav ul div ul li:nth-child(-n+3) a img {
-      border-top: 0; }
-    .nav-sidenav ul div ul li:nth-child(-n+3) a .copy {
-      border-top: 0; }
     .nav-sidenav ul div ul li:nth-child(3n) a .copy {
       border-right: 0; }
   .nav-sidenav li a img {
@@ -586,6 +583,18 @@ hr {
       max-width: 450px;
       margin: 0 auto;
       opacity: 0; }
+    .inner-home .home-action .button-entry {
+      cursor: pointer;
+      margin-top: 50px;
+      font-size: 16px;
+      text-transform: uppercase;
+      border-radius: 3px;
+      padding: 10px 20px;
+      background: #2196f3;
+      border: 1px solid #666;
+      transition: 0.2s; }
+      .inner-home .home-action .button-entry:hover {
+        background: #1976d2; }
 
 .home-image {
   margin: 0 auto;
@@ -662,7 +671,7 @@ hr {
   width: 66%;
   position: relative; }
 
-.inner-more {
+.inner-polls {
   height: auto;
   padding: 0px 0; }
 
@@ -1169,6 +1178,8 @@ img.othersFlag {
             border-right: 1px solid #333; }
           .App-header .nav-wrap .inner-header .nav-links ul li:last-child {
             border-bottom: 1px solid #333; }
+          .App-header .nav-wrap .inner-header .nav-links ul li:nth-child(-n+2) {
+            border-top: 0; }
   .App-header:hover {
     width: 100%;
     max-width: 100%; }
@@ -1186,6 +1197,8 @@ img.othersFlag {
       .App-header li a:hover {
         background: #222;
         color: #fff; }
+    .App-header li:nth-child(-n+2) {
+      border-top: 1px solid #333; }
 
   .inner-header {
     flex-direction: column; }

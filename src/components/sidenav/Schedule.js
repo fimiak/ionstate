@@ -14,7 +14,7 @@ class Schedule extends Component {
           </div>
 
           <div className="scheduleBox">
-              <ScheduleItems selected={this.props.selected} setMap={this.props.setMap} map={this.props.map} />
+              <ScheduleItems nation={this.props.nation} setMap={this.props.setMap} map={this.props.map} />
           </div>
         </div>
     )

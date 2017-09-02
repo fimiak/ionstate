@@ -4,10 +4,10 @@ class CountryData extends Component {
     render() {
         return (
             <div className="country-detail">
-                <h4>{this.props.selected.name}</h4>
+                <h4>{this.props.nation.name}</h4>
                 <div className="country-data">
                     <div className="country-map">
-                        <img src={require('../.././images/maps/' + this.props.selected['map']) } alt="Map" />
+                        <img src={require('../.././images/maps/' + this.props.nation['map']) } alt="Map" />
                     </div>
                     <div className="country-list">
                         <ul>
@@ -25,18 +25,18 @@ class CountryData extends Component {
                             <li>Currency</li>
                         </ul>
                         <ul>
-                            <li>{this.props.selected.population}</li>
-                            <li>{this.props.selected.pop2050}</li>
-                            <li>{this.props.selected.popgrowth}</li>
-                            <li>{this.props.selected.urban}</li>
-                            <li>{this.props.selected.life}</li>
-                            <li>{this.props.selected.poverty}</li>
-                            <li>{this.props.selected.gdp}</li>
-                            <li>{this.props.selected.gdp2050}</li>
-                            <li>{this.props.selected.gdpgrowth}</li>
-                            <li>{this.props.selected.energy}</li>
-                            <li>{this.props.selected.debt}</li>
-                            <li>{this.props.selected.currency}</li>
+                            <li>{this.props.nation.population}</li>
+                            <li>{this.props.nation.pop2050}</li>
+                            <li>{this.props.nation.popgrowth}</li>
+                            <li>{this.props.nation.urban}</li>
+                            <li>{this.props.nation.life}</li>
+                            <li>{this.props.nation.poverty}</li>
+                            <li>{this.props.nation.gdp}</li>
+                            <li>{this.props.nation.gdp2050}</li>
+                            <li>{this.props.nation.gdpgrowth}</li>
+                            <li>{this.props.nation.energy}</li>
+                            <li>{this.props.nation.debt}</li>
+                            <li>{this.props.nation.currency}</li>
                         </ul>
                     </div>
 

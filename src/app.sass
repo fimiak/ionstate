@@ -131,6 +131,7 @@ hr
       max-width: 136px
   .logo-wrap
     align-items: stretch
+    border-bottom: 1px solid $ivory-dark
     display: flex
     flex-shrink: 0
     justify-content: space-between
@@ -148,7 +149,6 @@ hr
     width: 100%
     .inner-header
       border-bottom: 1px solid #333333
-      border-top: 1px solid #333333
       display: flex
       margin: 0 auto
       max-width: 761px
@@ -173,6 +173,7 @@ hr
               &:hover
                 background: #999
             &:first-child
+              border-top: 1px solid #333
               background: #A9A69E
               cursor: default
               height: 51px
@@ -279,12 +280,6 @@ hr
       width: 100%
       ul
         li
-          &:nth-child(-n+3)
-            a
-              img
-                border-top: 0
-              .copy
-                border-top: 0
           &:nth-child(3n)
             a
               .copy
@@ -605,6 +600,18 @@ hr
       max-width: 450px
       margin: 0 auto
       opacity: 0
+    .button-entry
+      cursor: pointer
+      margin-top: 50px
+      font-size: 16px
+      text-transform: uppercase
+      border-radius: 3px
+      padding: 10px 20px
+      background: #2196f3
+      border: 1px solid #666
+      transition: .2s
+      &:hover
+        background: #1976d2
 
 .home-image
   margin: 0 auto
@@ -1210,6 +1217,8 @@ img.othersFlag
                 border-right: 1px solid #333
               &:last-child
                 border-bottom: 1px solid #333
+              &:nth-child(-n+2)
+                border-top: 0
     &:hover
       width: 100%
       max-width: 100%
@@ -1229,6 +1238,8 @@ img.othersFlag
         &:hover
           background: #222
           color: #fff
+      &:nth-child(-n+2)
+        border-top: 1px solid #333
  
   .inner-header
     flex-direction: column
@@ -1348,6 +1359,8 @@ img.othersFlag
   .home-image
     max-width: 120px
     margin-bottom: -1px
+
+
  
   .inner-datasheets
     width: auto

@@ -10,8 +10,8 @@ class News extends Component {
             news: testdata,
             test: testdata,            
             loading: true,
-            selected: this.props.selected,
-            search: this.props.selected.search,
+            selected: this.props.nation,
+            search: this.props.nation.search,
             'article-0': testdata.response.docs[0],
             'article-1': testdata.response.docs[1],
             'article-2': testdata.response.docs[2],
@@ -21,9 +21,9 @@ class News extends Component {
         };
     }
 
-    componentWillUpdate() {
+    componentDidUpdate() {
       //this.performSearch();
-      this.testSearch();
+      //this.testSearch();
     }
 
     testSearch = () => {

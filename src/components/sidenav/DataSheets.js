@@ -4,7 +4,7 @@ import DataItem from './DataItem';
 
 class DataSheets extends Component {
   render() {
-    let selected = this.props.selected;
+    let selected = this.props.nation;
     return (
       <div className="datasheetsInner">
         <div className="data-image">
