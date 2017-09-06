@@ -46,8 +46,12 @@ class Main extends Component {
         }
       }
     );
-    this.topnavColor();     
     this.animateMain();
+    this.topnavColor();    
+  }
+
+  componentWillReceiveProps() {
+    this.topnavColor();    
   }
 
   animateMain() {
@@ -96,10 +100,6 @@ class Main extends Component {
   topnavColor() {
      document.getElementsByClassName('top-title')[0].setAttribute('style', 'border-image: linear-gradient(to right, ' + this.props.nation['flag-colors'] + ');border-image-slice: 1;');
   };
-
-  componentDidUpdate() {
-    this.topnavColor();     
-  }
   
   render() {
     return (

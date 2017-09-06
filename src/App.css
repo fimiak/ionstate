@@ -1,4 +1,5 @@
 /*** FONT-FACE ** */
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Kanit:600|Raleway:500");
 @font-face {
   font-family: system;
   font-style: normal;
@@ -7,7 +8,7 @@
 /*** FONT-FACE ** */
 /*** KEYFRAMES ** */
 @keyframes fade-in-right {
-  from {
+  fromfeatured {
     opacity: 0;
     transform: translateX(-15px); }
   to {
@@ -80,7 +81,7 @@ hr {
   align-content: center;
   align-items: center;
   color: #000;
-  font-size: 14px;
+  font-family: "Kanit", sans-serif;
   display: flex;
   margin: 0;
   padding: 5px; }
@@ -399,7 +400,8 @@ hr {
     padding: 0 5px; }
     .featuredBox .featured-nation h3 {
       margin: 0;
-      padding: 16px 0; }
+      font-family: "Kanit", sans-serif;
+      padding: 10px 0; }
   .featuredBox .featuredEvents {
     display: flex;
     justify-content: space-between;
@@ -407,83 +409,99 @@ hr {
     .featuredBox .featuredEvents .featuredDetails {
       width: 100%;
       display: flex; }
-      .featuredBox .featuredEvents .featuredDetails ul {
-        background: #f6f6f6;
-        list-style: none;
+      .featuredBox .featuredEvents .featuredDetails .featuredDetailsBox {
         display: flex;
-        height: 100%;
-        flex-direction: column;
-        padding: 0px;
-        margin: 0px;
-        margin-left: 5px; }
-        .featuredBox .featuredEvents .featuredDetails ul h4 {
-          margin: 0;
-          padding: 10px 0;
-          border-bottom: 1px solid #ccc; }
-        .featuredBox .featuredEvents .featuredDetails ul li {
-          text-align: left;
-          padding: 5px;
-          font-size: 14px; }
-          .featuredBox .featuredEvents .featuredDetails ul li a {
-            color: #000; }
-            .featuredBox .featuredEvents .featuredDetails ul li a:hover {
-              color: #777; }
+        width: 100%;
+        flex-direction: row; }
+      .featuredBox .featuredEvents .featuredDetails .featuredNews {
+        width: 100%; }
+        .featuredBox .featuredEvents .featuredDetails .featuredNews ul {
+          background: #f6f6f6;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          list-style: none;
+          padding: 0px;
+          min-width: 200px;
+          margin: 0px;
+          margin-left: 5px; }
+          .featuredBox .featuredEvents .featuredDetails .featuredNews ul h4 {
+            margin: 0 auto;
+            align-self: center;
+            font-family: "Raleway", sans-serif;
+            padding: 5px 0;
+            border-bottom: 1px solid #ccc;
+            width: 100%; }
+          .featuredBox .featuredEvents .featuredDetails .featuredNews ul li {
+            text-align: left;
+            font-family: Raleway, sans-serif;
+            font-size: 16px;
+            padding: 0 5px; }
+            .featuredBox .featuredEvents .featuredDetails .featuredNews ul li a {
+              color: #000;
+              line-height: 26px;
+              width: 100%; }
+              .featuredBox .featuredEvents .featuredDetails .featuredNews ul li a:hover {
+                color: #777; }
       .featuredBox .featuredEvents .featuredDetails .featuredTitle {
         background: #f6f6f6;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         margin: 0px; }
         .featuredBox .featuredEvents .featuredDetails .featuredTitle img {
           max-width: 168px;
-          padding: 10px; }
+          padding: 10px 10px 0 10px; }
         .featuredBox .featuredEvents .featuredDetails .featuredTitle h3 {
           display: flex;
+          font-family: "Raleway", sans-serif;
           font-size: 15px;
-          margin: 5px 0;
-          flex-grow: 1;
+          margin: 3px 0;
           align-items: center; }
-          .featuredBox .featuredEvents .featuredDetails .featuredTitle h3:last-child {
-            padding-bottom: 20px; }
-      .featuredBox .featuredEvents .featuredDetails div {
-        max-width: 200px; }
-        .featuredBox .featuredEvents .featuredDetails div a {
-          padding: 5px; }
-          .featuredBox .featuredEvents .featuredDetails div a button {
-            border: 1px solid #aaa;
-            background: #ECE8DD;
-            color: #000;
-            font-size: 12px;
-            margin: 10px auto;
-            padding: 10px 15px;
-            transition: 0.3s; }
-            .featuredBox .featuredEvents .featuredDetails div a button:hover {
-              background: #ccc;
-              cursor: pointer; }
+      .featuredBox .featuredEvents .featuredDetails div a button {
+        border: 1px solid #D4D0C6;
+        background: #f6f6f6;
+        color: #000;
+        font-size: 13px;
+        margin: 10px auto;
+        padding: 10px 12px;
+        transition: 0.3s; }
+        .featuredBox .featuredEvents .featuredDetails div a button:hover {
+          background: #D4D0C6;
+          cursor: pointer; }
       .featuredBox .featuredEvents .featuredDetails .featuredStats {
         margin-left: 5px;
         background: #f6f6f6;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; }
+        justify-content: flex-start;
+        width: 100%; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats .featured-flag {
           height: 75px;
-          margin: 0 auto;
+          margin: 10px auto 0;
           max-width: 100px;
           min-height: auto; }
+        .featuredBox .featuredEvents .featuredDetails .featuredStats h3 {
+          margin: 5px 0;
+          font-family: "Raleway", sans-serif; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats h4 {
           margin: 0;
           padding: 10px 0;
           border-bottom: 1px solid #ccc; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats ul {
           height: auto;
+          list-style: none;
           padding: 0;
           margin: 0; }
           .featuredBox .featuredEvents .featuredDetails .featuredStats ul li {
-            text-align: center; }
+            text-align: center;
+            line-height: 24px;
+            width: 100%; }
             .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:nth-child(even) {
-              background: #FFF; }
+              background: #D4D0C6; }
+            .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:nth-child(odd) {
+              background: #ECE8DD; }
             .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:last-child {
               border-bottom: 1px solid #ccc; }
     .featuredBox .featuredEvents img {
@@ -524,7 +542,7 @@ hr {
 .inner-content {
   box-sizing: border-box;
   height: auto;
-  margin: 0px 20px 40px;
+  margin: 0px 20px 100px;
   max-width: 900px; }
 
 .img-highlight {
@@ -563,14 +581,14 @@ hr {
   flex-direction: column; }
 
 .inner-home {
-  background: #D4D0C6;
+  background: #ECE8DD;
   border-bottom: 1px solid #D4D0C6;
   margin: 0 auto;
-  padding: 0px 0 10px;
+  padding: 100px 0 80px;
   width: 100%; }
   .inner-home h1 {
-    font-size: 38px;
-    font-family: "Arvo", cursive;
+    font-size: 43px;
+    font-family: "Raleway", cursive;
     margin: 5px 0; }
   .inner-home .home-action {
     animation: fade-in-top 0.3s ease forwards;
@@ -582,36 +600,10 @@ hr {
     .inner-home .home-action h3 {
       animation: fade-in-top 0.3s ease forwards;
       animation-delay: 0.3s;
+      font-family: "Crimson Text", sans-serif;
       max-width: 450px;
       margin: 0 auto;
       opacity: 0; }
-  .inner-home .banner-entry {
-    background: #333;
-    border: 0;
-    color: #FFF;
-    cursor: pointer;
-    margin-bottom: 60px;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding: 8px 0;
-    transition: 0.2s;
-    width: 100%; }
-    .inner-home .banner-entry span {
-      width: 0;
-      height: 0;
-      top: 33px;
-      transition: 0.2s;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      border-style: solid;
-      border-width: 10px 7.5px 0;
-      border-color: #333 transparent transparent transparent; }
-    .inner-home .banner-entry:active {
-      background: #D4D0C6; }
-      .inner-home .banner-entry:active span {
-        border-color: #D4D0C6 transparent transparent transparent; }
 
 .home-image {
   margin: 0 auto;
@@ -625,7 +617,8 @@ hr {
     animation-delay: 0.5s;
     opacity: 0;
     margin: 0 auto;
-    max-width: 1280px;
+    justify-content: flex-start;
+    max-width: 1120px;
     display: flex;
     flex-wrap: wrap; }
     .inner-week .week .week-box {
@@ -697,11 +690,14 @@ hr {
   .inner-week .week-header {
     border: 0;
     color: #FFF;
-    font-size: 22px;
-    padding: 10px 0;
     display: flex;
-    text-transform: uppercase;
-    justify-content: center; }
+    font-size: 22px;
+    font-family: Kanit, sans-serif;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 10px 0;
+    text-transform: uppercase; }
 
 .inner-datasheets {
   width: auto;
@@ -727,7 +723,7 @@ hr {
   border-top: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
-  padding: 30px 0; }
+  padding: 60px 0; }
 
 .inner-schedule {
   display: flex;
@@ -836,6 +832,8 @@ hr {
       background: #EEEEEE; }
     .data-container .data-point span {
       color: #222; }
+      .data-container .data-point span a {
+        color: #222; }
 
 .data-country {
   border: 1px solid #000;
@@ -1412,28 +1410,38 @@ img.othersFlag {
   .featuredBox .featuredEvents {
     align-items: center; }
     .featuredBox .featuredEvents .featuredDetails {
-      flex-direction: column;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       margin-right: 0; }
-      .featuredBox .featuredEvents .featuredDetails div a {
-        margin-top: 10px; }
+      .featuredBox .featuredEvents .featuredDetails div {
+        max-width: auto;
+        flex-direction: row; }
+        .featuredBox .featuredEvents .featuredDetails div a {
+          margin-top: 0; }
       .featuredBox .featuredEvents .featuredDetails .featuredTitle {
-        max-width: 100%; }
+        width: 50%;
+        justify-content: flex-start; }
+        .featuredBox .featuredEvents .featuredDetails .featuredTitle img {
+          padding-bottom: 10px; }
         .featuredBox .featuredEvents .featuredDetails .featuredTitle h3 {
+          flex-grow: 0;
           padding: 0;
           margin: 0; }
           .featuredBox .featuredEvents .featuredDetails .featuredTitle h3:last-child {
             padding-bottom: 10px; }
       .featuredBox .featuredEvents .featuredDetails .featuredStats {
         margin-left: 0;
-        max-width: 100%; }
+        width: 50%; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats .featured-flag {
-          margin-bottom: 10px; }
+          margin-bottom: 0; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats ul {
           flex-direction: row;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+          list-style: none; }
           .featuredBox .featuredEvents .featuredDetails .featuredStats ul li {
             padding: 0;
-            width: 50%; }
+            width: 100%; }
             .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:nth-child(3n) {
               background: #ECE8DD; }
             .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:nth-child(3n+1) {
@@ -1514,6 +1522,11 @@ img.othersFlag {
 
   .week {
     width: 90%; }
+    .week .week-box:last-child {
+      display: none; }
+
+  .inner-week .week-header {
+    justify-content: center; }
 
   .top-split {
     flex-direction: column; }

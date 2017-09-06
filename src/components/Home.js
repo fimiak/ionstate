@@ -10,13 +10,9 @@ import whitehouse from '.././images/whitehouse.svg';
  ********************************************************
 ** Make the home page modern and colorful.
 ** Add 100+ events to calendar.
-** Add daily news to home -> lead into leader pages.
 ** Add content to Maps/Schedules category.
 ** Add banners and more data for leaders.
-** Google Calendar Scheduling/Dates
-** Create a recent polling category.
 ** Break up data.json into a sheet for each person.
-** New data sheet includes schedule info.
 ** Node Server to store news articles, polls.
 ********************************************************
 ********************************************************
@@ -31,15 +27,14 @@ class Home extends Component {
     return (
       <div className="home">
         <div className="inner-home">
-          <button className="banner-entry" onClick={this.props.showMenu}>Click here to begin<span></span></button>
           <div className="home-action">
-            <h1>Tracking world leaders with Public Data</h1>
-            <h3>Public and free tracking of current world leaders. Using data from news outlets, non-profits, and government organizations.</h3>
+            <h1>Track global leaders</h1>
+            <h3>Using public data and calendar dates. Data gathered from major news outlets, non-profits, and government organizations.</h3>
           </div>
         </div>
 
         <div className="inner-week">
-          <div className="week-header">The Week Ahead</div>
+          <div className="week-header">Upcoming Events</div>
           <Week />
         </div>
 

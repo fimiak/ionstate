@@ -56,35 +56,37 @@ class Featured extends Component {
                 </div>
                 <div className="featuredEvents">
                     <div className="featuredDetails">
-                        <div className="featuredTitle">
-                            <img src={require('../../.././images/bio/' + this.props.selected['image'])} alt={this.props.selected['leader']} />
-                            <h3>{this.props.selected['leader-title']}</h3>
-                            <h3>{this.props.selected['leader']}</h3>
-                            <h3>{this.props.selected.name}</h3>
+                        <div className="featuredDetailsBox">
+                            <div className="featuredTitle">
+                                <img src={require('../../.././images/bio/' + this.props.selected['image'])} alt={this.props.selected['leader']} />
+                                <h3>{this.props.selected['leader-title']}</h3>
+                                <h3>{this.props.selected['leader']}</h3>
+                            </div>
+                            <div className="featuredStats">
+                                <img className="featured-flag" src={require('../../.././images/flags/' + this.props.selected.flag)} alt="" />
+                                <h3>{this.props.selected.name}</h3>
+                                <ul>
+                                    <li>Party</li>
+                                    <li>{this.props.selected['party']}</li>
+                                    <li>Age</li>
+                                    <li>{this.props.selected['age']}</li>
+                                    <li>Entered Office</li>
+                                    <li>{this.props.selected['term-start']}</li>
+                                </ul>
+                                <NavLink to={this.props.selected.country} onClick={() => this.props.setNation(this.props.selected['country'])}><button> Explore Profile</button></NavLink>
+                            </div>
                         </div>
-                        <div className="featuredStats">
-                            <img className="featured-flag" src={require('../../.././images/flags/' + this.props.selected.flag)} alt="" />
+                        <div className="featuredNews">
                             <ul>
-                                <li>Party</li>
-                                <li>{this.props.selected['party']}</li>
-                                <li>Age</li>
-                                <li>{this.props.selected['age']}</li>
-                                <li>Entered Office</li>
-                                <li>{this.props.selected['term-start']}</li>
-                                <li>End of Term</li>
-                                <li>{this.props.selected['term-end']}</li>
+                                <h4>News by NYTimes</h4>
+                                <li><a href={this.state['article-0'].web_url}>{this.state['article-0'].headline.main}</a></li>
+                                <li><a href={this.state['article-1'].web_url}>{this.state['article-1'].headline.main}</a></li>
+                                <li><a href={this.state['article-2'].web_url}>{this.state['article-2'].headline.main}</a></li>
+                                <li><a href={this.state['article-3'].web_url}>{this.state['article-3'].headline.main}</a></li>
+                                <li><a href={this.state['article-4'].web_url}>{this.state['article-4'].headline.main}</a></li>
+                                <li><a href={this.state['article-5'].web_url}>{this.state['article-5'].headline.main}</a></li>
                             </ul>
-                            <NavLink to={this.props.selected.country} onClick={() => this.props.setNation(this.props.selected['country'])}><button>View more of {this.props.selected.leader}</button></NavLink>
                         </div>
-                        <ul>
-                            <h4>News by NYTimes</h4>
-                            <li><a href={this.state['article-0'].web_url}>{this.state['article-0'].headline.main}</a></li>
-                            <li><a href={this.state['article-1'].web_url}>{this.state['article-1'].headline.main}</a></li>
-                            <li><a href={this.state['article-2'].web_url}>{this.state['article-2'].headline.main}</a></li>
-                            <li><a href={this.state['article-3'].web_url}>{this.state['article-3'].headline.main}</a></li>
-                            <li><a href={this.state['article-4'].web_url}>{this.state['article-4'].headline.main}</a></li>
-                            <li><a href={this.state['article-5'].web_url}>{this.state['article-5'].headline.main}</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
