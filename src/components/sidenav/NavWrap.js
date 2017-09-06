@@ -173,7 +173,7 @@ class NavWrap extends Component {
                     <LeaderList country={orderedList} page={1} setNation={this.props.setNation} />
                 </ul>
                 <ul id="page2" onClick={this.scrollTop}>
-                    <LeaderList country={orderedList} page={2} setNation={this.props.setNation}/>
+                    <LeaderList country={orderedList} page={2} setNation={this.props.setNation} />
                 </ul>
                 <ul id="page3" onClick={this.scrollTop}>
                     <LeaderList country={orderedList} page={3} setNation={this.props.setNation} />

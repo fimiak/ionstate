@@ -74,7 +74,7 @@ class Featured extends Component {
                                 <li>End of Term</li>
                                 <li>{this.props.selected['term-end']}</li>
                             </ul>
-                            <NavLink to={this.props.selected.country} onClick={this.scrollTop}><button>View more of {this.props.selected.leader}</button></NavLink>
+                            <NavLink to={this.props.selected.country} onClick={() => this.props.setNation(this.props.selected['country'])}><button>View more of {this.props.selected.leader}</button></NavLink>
                         </div>
                         <ul>
                             <h4>News by NYTimes</h4>
