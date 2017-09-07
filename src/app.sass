@@ -6,7 +6,6 @@
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma")
 
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Kanit:600|Raleway:500')
-
 /*** FONT-FACE ***/
 
 /*** KEYFRAMES ***/
@@ -66,12 +65,6 @@ body
 
 .hide
   display: none
-
-hr
-  border: 0
-  background: #000
-  background-image: linear-gradient(to right, #ccc, #222, #ccc)
-  height: 1px
 
 .App
   display: flex
@@ -739,7 +732,6 @@ hr
   height: auto
   padding: 0px 0
   
-
 .schedule
   border-top: 1px solid #ddd
   display: flex
@@ -974,7 +966,6 @@ hr
   display: flex
   flex-grow: 1
 
-
 .inner-footer
   display: flex
   width: 100%
@@ -1079,7 +1070,6 @@ hr
     color: #000
     text-decoration: underline
 
-
 .headline
   color: #000
   font-size: 16px
@@ -1143,8 +1133,18 @@ hr
     flex-grow: 1
     padding: 0 10px
     text-align: left
+    li
+      &:nth-child(2n+1)
+        background: #CCC
+      &:nth-child(2n+2)
+        background: #DDD
     &:nth-child(even)
       text-align: right
+      li
+        &:nth-child(2n+1)
+          background: #CCC
+        &:nth-child(2n+2)
+          background: #DDD
 
 .others
   align-items: center

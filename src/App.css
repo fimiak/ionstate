@@ -57,12 +57,6 @@ body {
 .hide {
   display: none; }
 
-hr {
-  border: 0;
-  background: #000;
-  background-image: linear-gradient(to right, #ccc, #222, #ccc);
-  height: 1px; }
-
 .App {
   display: flex;
   flex-direction: column;
@@ -1113,8 +1107,16 @@ hr {
     flex-grow: 1;
     padding: 0 10px;
     text-align: left; }
+    .country-list ul li:nth-child(2n+1) {
+      background: #CCC; }
+    .country-list ul li:nth-child(2n+2) {
+      background: #DDD; }
     .country-list ul:nth-child(even) {
       text-align: right; }
+      .country-list ul:nth-child(even) li:nth-child(2n+1) {
+        background: #CCC; }
+      .country-list ul:nth-child(even) li:nth-child(2n+2) {
+        background: #DDD; }
 
 .others {
   align-items: center;

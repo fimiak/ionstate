@@ -24,7 +24,7 @@ class LeaderList extends Component {
         const pageOneItems = listItems.slice(0, 12);
         const pageTwoItems = listItems.slice(12, 24);
         const pageThreeItems = listItems.slice(24);
-
+        console.log(listItems);
         this.setState({
             page1: pageOneItems,
             page2: pageTwoItems,
