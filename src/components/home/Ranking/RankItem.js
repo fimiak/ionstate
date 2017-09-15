@@ -19,7 +19,8 @@ class RankItem extends Component {
                         </div>
                     </div>
                     <div className="rank-item-articles">
-                        {this.props.data.age}
+                        <a href={this.props.docs.web_url} alt="">{this.props.docs.headline.print_headline}
+                        </a>
                     </div>
                 </div>
             </div>
