@@ -11,8 +11,7 @@ class Others extends Component {
     }
 
     scrollTop() {
-        this.props.setNation(this.props.params.country);        
-        document.getElementsByClassName('App-intro')[0].scrollTop = 0;
+        this.props.setNation(this.props.params.country);
     }
 
     render() {

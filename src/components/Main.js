@@ -3,7 +3,7 @@ import CountryData from './sidenav/CountryData';
 import data from '.././data/data';
 import DataSheets from './sidenav/DataSheets';
 import Footer from './Footer';
-import Maps from './sidenav/Maps';
+import LeaderMap from './Map/LeaderMap';
 import News from './sidenav/News';
 import Others from './sidenav/Others';
 import Polls from './sidenav/Polls';
@@ -20,10 +20,10 @@ class Main extends Component {
     this.state = {
       data: data,
       loading: true,
-      map: 'Washington, DC',
+      map: this.props.nation.country,
       newsToggle: true
     };
-
+    
     this.setMap = this.setMap.bind(this);
     this.showNews = this.showNews.bind(this);
     this.hideNews = this.hideNews.bind(this);
@@ -45,34 +45,10 @@ class Main extends Component {
         }
       }
     );
-    this.animateMain();
   }
 
-  componentWillReceiveProps() {
-    this.topnavColor();    
-  }
-
-  animateMain() {
-    const topBanner = document.getElementsByClassName('international-news')[0];
-    const topLeader = document.getElementsByClassName('top-leader')[0];
-    const topTitle = document.getElementsByClassName('top-title')[0];
-    const topFlag = document.getElementsByClassName('top-flag')[0];
-    const contentBoxLinks = document.getElementsByClassName('content-box-links')[0];
-    const topSplit = document.getElementsByClassName('top-split')[0];
-    topBanner.setAttribute('style', "animation: unset;opacity: 0;");
-    topLeader.setAttribute('style', "animation: unset;opacity: 0");
-    topTitle.setAttribute('style', "animation: unset;opacity: 0;");
-    topFlag.getElementsByTagName('img')[0].setAttribute('style', "animation: unset; opacity: 0;");
-    contentBoxLinks.setAttribute('style', "animation: unset;opacity: 0;");
-    topSplit.setAttribute('style', "animation: unset;opacity: 0;");
-    setTimeout(function() {
-      topBanner.setAttribute('style', "animation: fade-in-bottom ease .4s forwards;animation-delay: 0s;");
-      topLeader.setAttribute('style', "animation: fade-in-right ease 0.4s forwards;animation-delay: 0.4s;");
-      topTitle.setAttribute('style', "animation: fade-in-right ease 0.4s forwards;animation-delay: 0.6s;transform: scaleX(0);transform-origin: left;");
-      topFlag.getElementsByTagName('img')[0].setAttribute('style', "animation: fade-in-right ease 0.4s forwards;animation-delay: 0.8s;");
-      contentBoxLinks.setAttribute('style', "animation: fade-in-right ease 0.4s forwards;animation-delay: 0.6s;");
-      topSplit.setAttribute('style', "animation: fade-in-top ease 0.4s forwards;animation-delay: 1s;");
-    }, 200)   
+  componentDidUpdate() {
+    this.topnavColor();
   }
 
   setMap(place) {
@@ -114,10 +90,10 @@ class Main extends Component {
                   <div className="top-title">{this.props.nation.leader}</div>
                 </div>
                 <div className="content-box-links">
-                  <a href="#news">News</a>
+                  <a href="/">Home</a>
                   <a href="#schedule">Schedule</a>
+                  <a href="#news">News</a>
                   <a href="#country-data">Data</a>
-                  <a href="#polls">Polls</a>
                 </div>
                 <div className="top-flag">
                   <img src={require('.././images/flags/' + this.props.nation.flag)} alt={this.props.nation.name} />
@@ -126,7 +102,7 @@ class Main extends Component {
             </div>
             <div id="schedule" className="schedule">
               <Schedule map={this.state.map} nation={this.props.nation} setMap={this.setMap} />
-              <Maps props={this.props.params} map={this.state.map} nation={this.props.nation} />
+              <LeaderMap props={this.props.params} map={this.state.map} nation={this.props.nation} />
             </div>
             <div className="top-split">
               <div id="datasheets">
