@@ -8,7 +8,6 @@ import News from './sidenav/News';
 import Others from './sidenav/Others';
 import Polls from './sidenav/Polls';
 import Schedule from './sidenav/Schedule';
-import whitehouse from '.././images/whitehouse.svg';
 
 let list = [];
 for (let i = 0; i < data.data.length; i++) { // Assign data.data[i] to 'country' key.
@@ -42,12 +41,11 @@ class Main extends Component {
           navWrap.setAttribute('style', 'top: 43px;');
       } else {
           logoWrap.setAttribute('style', 'line-height: 48px;');
-          navWrap.setAttribute('style', 'top: 59px;');
+          navWrap.setAttribute('style', 'top: 58px;');
         }
       }
     );
     this.animateMain();
-    this.topnavColor();    
   }
 
   componentWillReceiveProps() {
@@ -126,20 +124,20 @@ class Main extends Component {
                 </div>
               </div>
             </div>
+            <div id="schedule" className="schedule">
+              <Schedule map={this.state.map} nation={this.props.nation} setMap={this.setMap} />
+              <Maps props={this.props.params} map={this.state.map} nation={this.props.nation} />
+            </div>
             <div className="top-split">
               <div id="datasheets">
                 <DataSheets props={this.props.params} nation={this.props.nation} />
               </div>
               <div id="news" className="news">
-                <h1>Latest News</h1>
                 <News props={this.props.params} nation={this.props.nation} />
                 <div className="news-open" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>{this.state.newsToggle ? "More" : "Hide"} News</div>
               </div>
             </div>
-            <div id="schedule" className="schedule">
-              <Schedule map={this.state.map} nation={this.props.nation} setMap={this.setMap} />
-              <Maps props={this.props.params} map={this.state.map} nation={this.props.nation} />
-            </div>
+
             <div id="country-data">
               <CountryData nation={this.props.nation} />
             </div>
@@ -151,7 +149,6 @@ class Main extends Component {
             </div>
           </div>
         </div>
-        <img className="home-image" src={whitehouse} alt='The White House' />
         <Footer />
       </div>
     )

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import whitehouse from '.././images/whitehouse.svg';
 
 class Footer extends Component {
 
@@ -27,9 +28,10 @@ class Footer extends Component {
                 <input className="input-email" placeholder="Email"></input>
                 <button className="button-submit">Submit</button>
               </div>
-              <p>PRESIDENTPRIME is a public tracker of world leaders<br /> Data sourced from public News APIs, NGOs, and Wikipedia<br/>Images not property of PRESIDENTPRIME. Sourced by Google<br /> Copyright 2017</p>
+              <p>PRESIDENTPRIME is a non-partisan tracker of world leaders<br /> Data sourced from public News APIs, NGOs, and Wikipedia<br/>Images not property of PRESIDENTPRIME.<br /> Copyright 2017</p>
             </div>
         </div>
+        <img className="home-image" src={whitehouse} alt="" />
       </div>
     )
   }

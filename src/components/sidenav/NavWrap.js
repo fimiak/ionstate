@@ -43,8 +43,6 @@ class NavWrap extends Component {
     }
 
     componentDidMount() {
-        document.getElementById('page2').setAttribute('style', 'visibility: hidden;max-height: 0;');
-        document.getElementById('page3').setAttribute('style', 'visibility: hidden;max-height: 0;');
         this.orderByGdp();
     }
 
@@ -62,31 +60,29 @@ class NavWrap extends Component {
     }
 
     changePage() {
-        this.setState(prevState => ({
-            showAll: false
-        }))
         if (this.state.page === 1 ) {
-            document.getElementById('page1').setAttribute('style', 'visibility: hidden;max-height: 0;');
-            document.getElementById('page2').setAttribute('style', 'visibility: visible;');
-            document.getElementById('page3').setAttribute('style', 'visibility: hidden;max-height: 0;');
+            document.getElementById('page1').classList.remove('page-show');
+            document.getElementById('page2').classList.add('page-show');
+            document.getElementById('page3').classList.remove('page-show');            
             this.setState(prevState => ({
-                page: 2
+                page: 2,
+                showAll: false                
                 })
             );
         } else if (this.state.page === 2) {
-            document.getElementById('page1').setAttribute('style', 'visibility: hidden;max-height: 0;');
-            document.getElementById('page2').setAttribute('style', 'visibility: hidden;max-height: 0;opacity: 0;');
-            document.getElementById('page3').setAttribute('style', 'visibility: visible;');
+            document.getElementById('page2').classList.remove('page-show');
+            document.getElementById('page3').classList.add('page-show');
             this.setState(prevState => ({
-                page: 3
+                page: 3,
+                showAll: false                
                 })
             );
         } else {
-            document.getElementById('page1').setAttribute('style', 'visibility: visible;');
-            document.getElementById('page2').setAttribute('style', 'visibility: hidden;max-height: 0;');
-            document.getElementById('page3').setAttribute('style', 'visibility: hidden;max-height: 0;');
+            document.getElementById('page3').classList.remove('page-show');
+            document.getElementById('page1').classList.add('page-show');
             this.setState(prevState => ({
-                page: 1
+                page: 1,
+                showAll: false                
                 })
             );
         }
@@ -144,25 +140,23 @@ class NavWrap extends Component {
 
     showAll() {
         this.setState(prevState => ({
-            showAll: true
+            showAll: true,
+            page: 1
             }));
-        document.getElementById('page1').setAttribute('style', 'visibility: visible;');
-        document.getElementById('page2').setAttribute('style', 'visibility: visible;');
-        document.getElementById('page3').setAttribute('style', 'visibility: visible;');
+        document.getElementById('page1').classList.add('page-show');
+        document.getElementById('page2').classList.add('page-show');
+        document.getElementById('page3').classList.add('page-show');
     }
 
     hideAll() {
         this.setState(prevState => ({
-            showAll: false
-            })
-        );
-        document.getElementById('page1').setAttribute('style', 'visibility: visible;');
-        document.getElementById('page2').setAttribute('style', 'visibility: hidden;height: 0;');
-        document.getElementById('page3').setAttribute('style', 'visibility: hidden;height: 0;');
-        this.setState(prevState => ({
+            showAll: false,
             page: 1
             })
         );
+        document.getElementById('page1').classList.add('page-show');
+        document.getElementById('page2').classList.remove('page-show');
+        document.getElementById('page3').classList.remove('page-show');
     }
 
     render() {
@@ -170,15 +164,9 @@ class NavWrap extends Component {
           <div id="nav-wrap" className={"nav-wrap " + this.props.menuState}>
             <div className="inner-header">
               <div className="nav-sidenav" onClick={this.props.closeMenu}>
-                <ul id="page1" onClick={this.scrollTop}>
-                    <LeaderList country={orderedList} page={1} setNation={this.props.setNation} />
-                </ul>
-                <ul id="page2" onClick={this.scrollTop}>
-                    <LeaderList country={orderedList} page={2} setNation={this.props.setNation} />
-                </ul>
-                <ul id="page3" onClick={this.scrollTop}>
-                    <LeaderList country={orderedList} page={3} setNation={this.props.setNation} />
-                </ul>
+                <LeaderList id="page1" country={orderedList} page={1} setNation={this.props.setNation} class="page-show" />
+                <LeaderList id="page2" country={orderedList} page={2} setNation={this.props.setNation} />
+                <LeaderList id="page3" country={orderedList} page={3} setNation={this.props.setNation} />
               </div>
               <div className="nav-links">
                 <ul>

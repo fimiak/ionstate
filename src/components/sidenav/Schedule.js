@@ -9,7 +9,7 @@ class Schedule extends Component {
         <div className="inner-schedule">
           <div className="scheduleHeader">
             <div className="monthBox">
-              Schedule
+              Upcoming Schedule
             </div>
           </div>
 

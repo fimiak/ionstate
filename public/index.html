@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/globe.ico">
     <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">    
     <title>Tracking Global Leaders | PRESIDENTPRIME</title>
-
+    
 <!-- Google Analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -116,6 +116,7 @@
            * the authorized user's calendar. If no events are found an
            * appropriate message is printed.
            */
+
           function listUpcomingEvents() {
             gapi.client.calendar.events.list({
               'calendarId': 'primary',
@@ -134,26 +135,26 @@
                   var when = event.start.dateTime;
                   var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
                   var date = '';
-                  let regx = /^[0-9]{4}-(((0[13578]|(10|12))-(0[1-9]|[1-2][0-9]|3[0-1]))|(02-(0[1-9]|[1-2][0-9]))|((0[469]|11)-(0[1-9]|[1-2][0-9]|30)))$/;
-                  let regDate = event.start.date.match(regx); // Regex article date out of raw data.
-                  let monthParse = regDate[09];
-                  let month = months[Math.floor(monthParse)-1];
+                  let dateSplit = event.start.date.split('');
+                  let monthParse = parseInt(dateSplit[5] + dateSplit[6]);
+                  let dayParse = parseInt(dateSplit[8] + dateSplit[9]);
+                  let month = months[monthParse-1];
+                  console.log(monthParse);
                   if (!when) {
                     when = event.start.date;
                   }
-                  appendPre(event.summary + ' (' + when + ')')
+                  appendPre(event.summary + ' (' + when + ')');
                   document.getElementsByClassName('week-details')[i].getElementsByTagName('span')[0].innerHTML = event.summary;
                   document.getElementsByClassName('week-day')[i].innerHTML = month || 'To Be Determined';
-                  document.getElementsByClassName('week-date')[i].getElementsByTagName('span')[0].innerHTML = regDate[10] || 1;
+                  document.getElementsByClassName('week-date')[i].getElementsByTagName('span')[0].innerHTML = dayParse || 1;
                   document.getElementsByClassName('week-details')[i].getElementsByTagName('img')[0].src = event.description || 'https://blackthen.com/wp-content/uploads/2015/11/congress.jpg';
                   document.getElementsByClassName('week-details')[i].getElementsByTagName('a')[0].href = event.location;
                   }
               } else {
-                appendPre('No upcoming events found.');
+                return console.log('no events');
               }
             });
           }
-    
         </script>
     
         <script async defer src="https://apis.google.com/js/api.js"

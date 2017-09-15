@@ -5,17 +5,18 @@ import Contact from './components/Contact';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import Main from './components/Main';
+//import { Provider } from 'react-redux';
 
 const routes = (
-  <Router history={browserHistory}>
-    <Route component={App}>
-      <IndexRedirect to="/" />
-      <Route path="/" component={Home} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/:country" component={Main} />
-      <Route path="*" component={NotFound} />
-    </Route>
-  </Router>
+    <Router history={browserHistory}>
+      <Route component={App}>
+        <IndexRedirect to="/" />
+        <Route path="/" component={Home} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/:country" component={Main} />
+        <Route path="*" component={NotFound} />
+      </Route>
+    </Router>
 );
 
 export default routes;

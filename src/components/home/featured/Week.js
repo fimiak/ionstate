@@ -13,6 +13,7 @@ class Week extends Component {
                 <Weekday day={schedule.schedule[4]} />
                 <Weekday day={schedule.schedule[5]} />
                 <Weekday day={schedule.schedule[6]} />
+                <Weekday day={schedule.schedule[6]} />
             </div>
         )
     }

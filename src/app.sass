@@ -5,12 +5,12 @@
   font-weight: 300
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma")
 
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Kanit:600|Raleway:500')
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Kanit:200|Raleway:500')
 /*** FONT-FACE ***/
 
 /*** KEYFRAMES ***/
 @keyframes fade-in-right 
-  fromfeatured
+  from
     opacity: 0
     transform: translateX(-15px)
   to
@@ -28,16 +28,30 @@
 @keyframes fade-in-bottom
   from
     opacity: 0
-    transform: translateY(0)
+    transform: translateY(-15px)
   to
     opacity: 1
     transform: translateY(0)
+
+@keyframes fade-out-top 
+  from
+    opacity: 1
+    transform: translateY(0)
+  to
+    opacity: 0
+    transform: translateY(15px)
 /*** KEYFRAMES ***/
 
 /*** VARIABLES ***/
 $ivory: #ECE8DD
 $ivory-dark: #D4D0C6
 $crimson: #C45C4F
+$gradient: linear-gradient(to right, #fff, #fff)
+
+
+$box-shadow-low: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07)
+$box-shadow-high: 0 18px 35px rgba(50,50,93,.1), 0 8px 15px rgba(0,0,0,.07)
+
 /*** VARIABLES ***/
 
 /** MAIN STYLES **/
@@ -83,7 +97,6 @@ body
 .title
   align-content: center
   align-items: center
-  color: #000
   font-family: 'Kanit', sans-serif
   display: flex
   margin: 0
@@ -127,13 +140,15 @@ body
       max-width: 136px
   .logo-wrap
     align-items: stretch
-    border-bottom: 1px solid $ivory-dark
+    background: $gradient
+    border-bottom: 1px solid #333
     display: flex
     flex-shrink: 0
     justify-content: space-between
     line-height: 48px
-    padding: 0 15px
+    padding: 0 0 0 15px
     transition: .15s
+    z-index: 99
     .navbar
       display: flex
       align-items: stretch
@@ -144,18 +159,16 @@ body
     width: 100%
     position: absolute
     top: 58px
-    z-index: 99
+    z-index: 88
     .inner-header
       border-bottom: 1px solid #333333
       display: flex
       margin: 0 auto
       max-width: 761px
-      transition: 0.15s ease-in
       .nav-links
         cursor: pointer
         background: #BBB
         border-left: 1px solid #333333
-        transition: .3s
         ul
           display: flex
           width: 190px
@@ -250,15 +263,13 @@ body
 
 .show
   opacity: 1
-  max-height: 451px
-  transition: .4s
-  visibility: visible
+  transition: 100ms
+  max-height: 551px
 
 .hidden
-  max-height: 0
   opacity: 0
-  transition: .2s
-  visibility: hidden
+  transition: 100ms
+  pointer-events: none
 
 .fadeIn
   display: block
@@ -272,34 +283,37 @@ body
 .nav-sidenav
   display: flex
   flex-direction: column
-  transition: .3s
-  ul
-    div
-      width: 100%
-      ul
-        li
-          &:nth-child(3n)
-            a
-              .copy
-                border-right: 0
+  transition: 0s
+  .leader-list
+    display: none
+  .page-show
+    display: block
   li
     a
       img
         height: 50px
+  div
+    width: 100%
+    ul
+      li
+        &:nth-child(3n)
+          a
+            .copy
+              border-right: 0
+
 
 .button-menu
-  background: $ivory
+  background: #333
   border: 0
+  cursor: pointer
   display: block
   padding: 0
-  cursor: pointer
   transition: .5s
-
-.open-menu
-  padding: 3px 5px 2px
-
-.close-menu
-  padding: 3px 5px 2px
+  width: 58px
+  .open-menu
+    padding: 3px 5px 2px
+  .close-menu
+    padding: 3px 5px 2px
 
 .App-intro
   background: #FFFFFF
@@ -394,19 +408,27 @@ body
   flex-direction: row
   flex-grow: 1
 
+.inner-featured
+  border-bottom-left-radius: 5px
+  border-bottom-right-radius: 5px
+  box-shadow: 0px 2px 4px rgba(50,50,95, .1)
+  background: $ivory
+  width: 100%
+  max-width: 800px
+  margin: 0 auto 20px
+
 .featuredBox
   animation: fade-in-top .3s ease forwards
   animation-delay: .8s
-  opacity: 0
-  border: 1px solid $ivory-dark
+  background: $ivory
   box-sizing: border-box
-  margin: 30px auto
+  margin: 0 auto 20px
   max-width: 800px
-  width: 96%
+  opacity: 0
+  width: 100%
   .featured-nation
-    background: #f6f6f6
-    flex-direction: row
     display: flex
+    flex-direction: row
     justify-content: center
     padding: 0 5px
     h3
@@ -415,8 +437,8 @@ body
       padding: 10px 0
   .featuredEvents
     display: flex
-    justify-content: space-between
     padding: 5px
+    justify-content: space-between
     .featuredDetails
       width: 100%
       display: flex
@@ -428,18 +450,22 @@ body
         width: 100%
         ul
           background: #f6f6f6
+          border-radius: 5px
           display: flex
           flex-direction: row
           flex-wrap: wrap
+          height: 100%
           list-style: none
-          padding: 0px
+          padding: 0 0 5px
           min-width: 200px
           margin: 0px
           margin-left: 5px
           h4
             margin: 0 auto
-            align-self: center
-            font-family: 'Raleway', sans-serif
+            border-top-left-radius: 5px
+            border-top-right-radius: 5px
+            background: #bebbb2
+            font-family: 'Kanit', sans-serif
             padding: 5px 0
             border-bottom: 1px solid #ccc
             width: 100%
@@ -447,7 +473,7 @@ body
             text-align: left
             font-family: Raleway, sans-serif
             font-size: 16px
-            padding: 0 5px
+            padding: 0 10px
             a
               color: #000
               line-height: 26px
@@ -456,43 +482,51 @@ body
                 color: #777
       .featuredTitle
         background: #f6f6f6
+        border-radius: 5px
         display: flex
         flex-direction: column
         align-items: center
-        justify-content: flex-start
+        justify-content: space-between
         margin: 0px
         img
           max-width: 168px
           padding: 10px 10px 0 10px
-        h3
+        div
           display: flex
-          font-family: 'Raleway', sans-serif
-          font-size: 15px
-          margin: 3px 0
+          flex-grow: 1
           align-items: center
+          h3
+            display: flex
+            font-family: 'Raleway', sans-serif
+            font-size: 15px
+            margin: 3px 0
+            align-items: center
       div
         a
           button
-            border: 1px solid $ivory-dark
-            background: #f6f6f6
+            border: 1px solid #bebbb2
+            background: #bebbb2
+            box-shadow: $box-shadow-low
             color: #000
             font-size: 13px
-            margin: 10px auto
+            margin: 12px auto
             padding: 10px 12px
             transition: .3s
             &:hover
               background: $ivory-dark
+              border: 1px solid $ivory-dark
+              box-shadow: $box-shadow-high
+              transform: translateY(-2px)
               cursor: pointer
       .featuredStats
         margin-left: 5px
-        background: #f6f6f6
         display: flex
         flex-direction: column
         justify-content: flex-start
         width: 100%
         .featured-flag
           height: 75px
-          margin: 10px auto 0
+          margin: 0 auto 0
           max-width: 100px
           min-height: auto
         h3
@@ -595,122 +629,185 @@ body
   flex-direction: column
 
 .inner-home
-  background: $ivory
-  border-bottom: 1px solid $ivory-dark
+  background: #FFF
   margin: 0 auto
-  padding: 100px 0 80px
+  padding: 10px 0 0
   width: 100%
+  max-width: 800px
   h1
-    font-size: 43px
+    font-size: 33px
     font-family: 'Raleway', cursive
     margin: 5px 0
   .home-action
-    animation: fade-in-top .3s ease forwards
-    animation-delay: 0.1s
-    opacity: 0
     max-width: 600px
-    margin: 0 auto 50px
+    margin: 0 auto
     width: 96%
     h3
-      animation: fade-in-top .3s ease forwards
-      animation-delay: 0.3s
       font-family: 'Crimson Text', sans-serif
       max-width: 450px
       margin: 0 auto
-      opacity: 0
 .home-image
+  opacity: .7
+  margin: 30px auto 0
+  max-width: 160px
+
+.inner-map 
+  box-shadow: 0px 2px 4px rgba(50,50,95, .1)
+  width: 100%
+  border-radius: 5px
+  background: $ivory
+  max-width: 800px
+  margin: 20px auto
+
+.inner-home-map 
+  background: $ivory
+  border-radius: 5px
+  max-width: 810px
+  padding: 5px 15px
   margin: 0 auto
-  max-width: 240px
+
+.header
+  animation: fade-in-top 0.5s ease forwards
+  animation-delay: 500ms
+  border-bottom: 1px solid $ivory-dark
+  color: #000
+  display: flex
+  font-size: 18px
+  font-family: Kanit, sans-serif
+  justify-content: space-between
+  margin: 0 auto 10px
+  max-width: 800px
+  opacity: 0
+  padding: 10px 15px 0
+  text-transform: uppercase
+
+.inner-rank
+  background: $ivory
+  box-shadow: 0px 2px 4px rgba(50,50,95, .1)
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+  border-radius: 5px
+  width: 100%
+  max-width: 800px
+  margin: 0 auto 20px
+
+.rank-item
+  display: flex
+  padding: 0 15px
+  margin: 0 auto 15px
+  .rank-item-image
+    box-shadow: $box-shadow-low
+    max-height: 93px
+    margin-right: 10px
+    transition: .1s
+    &:hover
+      box-shadow: $box-shadow-high
+      transform: translateY(-2px)
+      opacity: 0.9
+    img
+      box-shadow: $box-shadow-low
+      height: 100%
+      width: 60px
+  .rank-item-data
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+
+    .rank-item-head
+      background: $ivory-dark
+      display: flex
+      justify-content: space-between
+      padding: 5px
+
+    .rank-item-articles
+      background: #f6f6f6
+      box-sizing: border-box
+      border: 1px solid $ivory-dark
+      flex-grow: 1
+      padding: 5px
+      text-align: left
 
 .inner-week
-  background: #333
+  background: $ivory
+  box-shadow: 0px 2px 4px rgba(50,50,95, .1)
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
   width: 100%
+  max-width: 800px
+  margin: 0 auto
+
   .week
     animation: fade-in-top .3s ease forwards
     animation-delay: 0.5s
-    opacity: 0
-    margin: 0 auto
-    justify-content: flex-start
-    max-width: 1120px
     display: flex
     flex-wrap: wrap
+    opacity: 0
+    margin: 0 auto
+    max-width: 800px
     .week-box
       align-items: center
-      border: 1px solid $ivory-dark
+      border-bottom-right-radius: 5px
       box-sizing: border-box
       display: flex
-      height: 150px
+      height: 88px
       flex-direction: column
       overflow: hidden
-      width: 160px
-      margin: 0px auto 20px
+      margin: 0px auto 15px
+      max-width: 390px
       position: relative
+      width: 100%
+      &:nth-child(even)
+        border-bottom-right-radius: 0
+        border-bottom-left-radius: 5px
+        .week-details
+          a
+            flex-direction: row-reverse
+            img
+              margin-left: 5px
+              margin-right: 0
       .week-title
-        border-bottom: 1px solid $ivory-dark
         display: flex
-        flex-direction: row
+        flex-direction: column
+        height: 88px
         justify-content: space-between
-        width: 100%
-        height: 40px
         overflow: hidden
+        width: 100%
         .week-day
           align-items: center
-          background: #FFF
-          display: flex
-          justify-content: center
-          flex-grow: 1
-        .week-date
-          background: $ivory
-          border-left: 1px solid #CCC
+          background: #bebbb2
           color: #000
           display: flex
-          flex-direction: column
-          padding: 0 10px
-          justify-content: space-around
-          width: auto
-          span
-            font-size: 16px
+          height: 36px
+          min-height: 36px
+          padding: 0 5px
+          justify-content: center
       .week-details
-        color: #FFF
         background: $ivory
         display: flex
         flex-grow: 1
         align-items: flex-end
-        justify-content: center
         width: 100%
         cursor: pointer
         overflow: hidden
         a
-          display: flex
           align-items: flex-end
-          color: #EEE
+          cursor: default
+          display: flex
+          height: 100%
+          text-decoration: none
+          width: 100%
           img
-            height: 110px
-            width: 160px
-            transition: 100ms
-          span
-            background: rgba(55,55,55,.6)
-            font-size: 12px
-            width: 100%
-            position: absolute
-            padding: 4px
-            transition: 100ms
-          &:hover img
-            opacity: .8
-          &:hover span
-            background: rgba(55,55,55,.8)
-            padding: 8px 4px
-  .week-header
-    border: 0
-    color: #FFF
-    display: flex
-    font-size: 22px
-    font-family: Kanit, sans-serif
-    justify-content: flex-start
-    margin: 0 auto
-    max-width: 1120px
-    padding: 10px 0
-    text-transform: uppercase
+            height: 88px
+            width: 128px
+            margin-right: 5px
+            min-width: 128px
+          .week-content
+            background: #f3f3f3
+            font-size: 14px
+            text-align: left
+            color: #000
+            flex-grow: 1
+            padding: 0 5px
 
 .inner-datasheets
   width: auto
@@ -733,10 +830,10 @@ body
   padding: 0px 0
   
 .schedule
-  border-top: 1px solid #ddd
+  background: #F6F6F6
   display: flex
   justify-content: space-between
-  padding: 60px 0
+  border-bottom: 20px solid #FFF
 
 .inner-schedule
   display: flex
@@ -785,8 +882,8 @@ body
           justify-content: center
           flex-direction: column
           display: flex
-          width: 70px
-          height: 70px
+          min-width: 68px
+          height: 64px
           font-size: 24px
           font-weight: 200
           .monthBox
@@ -879,9 +976,15 @@ body
 
 .maps
   border: 0
+  box-shadow: $box-shadow-low
   max-width: 1000px
   height: 296px
+  margin-bottom: 10px
+  transition: .1s
   width: 100%
+  &:hover
+    box-shadow: $box-shadow-high
+    transform: translateY(-2px)
 
 #overlay
   width: 100%
@@ -898,6 +1001,7 @@ body
   flex-wrap: wrap
   align-content: flex-start
   height: 530px
+  padding: 20px 0
   overflow: hidden
   transition: .3s
   h4
@@ -913,15 +1017,17 @@ body
           flex-direction: row-reverse
 
 .news-open
-  background: #eeeeee
-  border: 1px solid #333
+  background: #DDD
+  border: 1px solid #D1D1D1
+  box-shadow: $box-shadow-low
   cursor: pointer
   padding: 10px 0
   width: 40%
-  transition: .2s
+  transition: .1s
   margin: 20px auto
   &:hover
-    background: #DDD
+    transform: translateY(-2px)
+    box-shadow: $box-shadow-high
 
 .contact
   background: $ivory
@@ -937,7 +1043,7 @@ body
   flex-direction: column
   border-left: 0
   align-items: center
-  justify-content: center
+  justify-content: flex-end
   color: #fff
   min-height: 300px
   a
@@ -1134,6 +1240,7 @@ body
     padding: 0 10px
     text-align: left
     li
+      padding: 0 3px
       &:nth-child(2n+1)
         background: #CCC
       &:nth-child(2n+2)
@@ -1244,7 +1351,7 @@ img.othersFlag
       span
         margin-top: 3px
     .logo-wrap
-      padding: 0 5px
+      padding: 0 0 0 5px
     .nav-wrap
       .inner-header
         max-width: 100%
@@ -1317,7 +1424,6 @@ img.othersFlag
   .title
     font-size: 12px
     font-weight: 200
-    padding: 0
 
   .content-box-links
     height: 40px
@@ -1451,10 +1557,17 @@ img.othersFlag
               margin-bottom: 3px
 
   .inner-home
+    padding: 10px 0 0
+    .home-action
+      margin: 0 auto 20px
     h1
       font-size: 24px
     img
       width: 75%
+
+  .inner-map
+    margin: 0 auto
+
 
   .featuredBox
     .featuredEvents
@@ -1604,7 +1717,7 @@ img.othersFlag
         font-size: 13px
  
   .maps
-    height: 220px
+    min-height: 220px
     width: 100%
 
   img.othersArrow

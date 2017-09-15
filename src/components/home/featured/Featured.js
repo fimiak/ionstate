@@ -51,16 +51,15 @@ class Featured extends Component {
     render() {
         return (
             <div className="featuredBox">
-                <div className="featured-nation">
-                    <h3>Featured Nation</h3>
-                </div>
                 <div className="featuredEvents">
                     <div className="featuredDetails">
                         <div className="featuredDetailsBox">
                             <div className="featuredTitle">
                                 <img src={require('../../.././images/bio/' + this.props.selected['image'])} alt={this.props.selected['leader']} />
-                                <h3>{this.props.selected['leader-title']}</h3>
-                                <h3>{this.props.selected['leader']}</h3>
+                                <div>
+                                    <h3>{this.props.selected['leader-title']} <br/> {this.props.selected['leader']}</h3>
+                                </div>
+
                             </div>
                             <div className="featuredStats">
                                 <img className="featured-flag" src={require('../../.././images/flags/' + this.props.selected.flag)} alt="" />
@@ -78,7 +77,7 @@ class Featured extends Component {
                         </div>
                         <div className="featuredNews">
                             <ul>
-                                <h4>News by NYTimes</h4>
+                                <h4>{this.props.selected.leader} in The New York Times</h4>
                                 <li><a href={this.state['article-0'].web_url}>{this.state['article-0'].headline.main}</a></li>
                                 <li><a href={this.state['article-1'].web_url}>{this.state['article-1'].headline.main}</a></li>
                                 <li><a href={this.state['article-2'].web_url}>{this.state['article-2'].headline.main}</a></li>

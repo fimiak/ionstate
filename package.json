@@ -6,8 +6,9 @@
   "dependencies": {
     "animated": "^0.2.0",
     "axios": "^0.15.3",
-    "react": "^15.4.2",
+    "react": "^15.6.1",
     "react-dom": "^15.4.2",
+    "react-redux": "^5.0.6",
     "react-router": "^2.7.0",
     "react-router-dom": "^4.1.1",
     "react-transition-group": "^2.2.0",
@@ -26,7 +27,7 @@
     "flow-bin": "^0.47.0",
     "jest": "^20.0.4",
     "jest-cli": "^20.0.4",
-    "react-scripts": "0.9.5",
+    "react-scripts": "0.7.0",
     "react-test-renderer": "^15.6.1"
   },
   "scripts": {

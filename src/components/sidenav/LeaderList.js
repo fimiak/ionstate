@@ -24,7 +24,6 @@ class LeaderList extends Component {
         const pageOneItems = listItems.slice(0, 12);
         const pageTwoItems = listItems.slice(12, 24);
         const pageThreeItems = listItems.slice(24);
-        console.log(listItems);
         this.setState({
             page1: pageOneItems,
             page2: pageTwoItems,
@@ -38,7 +37,7 @@ class LeaderList extends Component {
 
     render() {
         return (
-            <div>
+            <div id={this.props.id} className={'leader-list ' + (this.props.class || '')}>
                 { this.props.page === 1 && <ul>{this.state.page1}</ul> }
                 { this.props.page === 2 && <ul>{this.state.page2}</ul> }
                 { this.props.page === 3 && <ul>{this.state.page3}</ul> }
