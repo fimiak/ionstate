@@ -38,7 +38,7 @@ class Main extends Component {
     appWindow.addEventListener('scroll', function() { 
         if (appWindow.scrollTop >= 24) {
           logoWrap.setAttribute('style', 'line-height: 32px;');
-          navWrap.setAttribute('style', 'top: 43px;');
+          navWrap.setAttribute('style', 'top: 42px;');
       } else {
           logoWrap.setAttribute('style', 'line-height: 48px;');
           navWrap.setAttribute('style', 'top: 58px;');
@@ -80,23 +80,23 @@ class Main extends Component {
       <div className="contentBox">
         <div className="content">
           <div className="inner-content" >
-            <div className="international-news">
+            <div className="international-news fade-in-bottom">
               <img src={require('.././images/' + this.props.nation.banner)} alt={this.props.nation.leader} />
             </div>
             <div id="top-content" className="top-content">
               <div className="top-nav">
-                <div className="top-banner">
+                <div className="top-banner fade-in-right">
                   <div className="top-icon"><img className="top-leader" alt={this.props.nation.leader} src={require('.././images/thumbs/' + this.props.nation.thumb)}></img></div>
                   <div className="top-title">{this.props.nation.leader}</div>
                 </div>
-                <div className="content-box-links">
+                <div className="content-box-links fade-in-right">
                   <a href="/">Home</a>
                   <a href="#schedule">Schedule</a>
                   <a href="#news">News</a>
                   <a href="#country-data">Data</a>
                 </div>
                 <div className="top-flag">
-                  <img src={require('.././images/flags/' + this.props.nation.flag)} alt={this.props.nation.name} />
+                  <img className="fade-in-right" src={require('.././images/flags/' + this.props.nation.flag)} alt={this.props.nation.name} />
                 </div>
               </div>
             </div>
@@ -104,7 +104,7 @@ class Main extends Component {
               <Schedule map={this.state.map} nation={this.props.nation} setMap={this.setMap} />
               <LeaderMap props={this.props.params} map={this.state.map} nation={this.props.nation} />
             </div>
-            <div className="top-split">
+            <div className="top-split fade-in-top">
               <div id="datasheets">
                 <DataSheets props={this.props.params} nation={this.props.nation} />
               </div>

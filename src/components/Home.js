@@ -25,6 +25,25 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 const month = months[date.getMonth()];
 
 class Home extends Component {
+
+  componentDidMount() {
+    const appWindow = document.getElementsByClassName('App-intro')[0];
+    const logoWrap = document.getElementsByClassName('logo-wrap')[0];
+    const navWrap = document.getElementsByClassName('nav-wrap')[0];
+
+    appWindow.addEventListener('scroll', function() { 
+        if (appWindow.scrollTop >= 24) {
+          logoWrap.setAttribute('style', 'line-height: 32px;');
+          navWrap.setAttribute('style', 'top: 42px;');
+      } else {
+          logoWrap.setAttribute('style', 'line-height: 48px;');
+          navWrap.setAttribute('style', 'top: 58px;');
+        }
+      }
+    );
+  }
+
+
   render() {
     return (
       <div className="home">
