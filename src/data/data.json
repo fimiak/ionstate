@@ -16,6 +16,7 @@
       "leader": "Donald Trump",
       "deputy-title": "Vice President",
       "deputy-leader": "Mike Pence",
+      "twitter": "910286961243414528",
       "elections": {
           "2018": {
               "date": "November 2018"
@@ -62,6 +63,7 @@
       "leader": "Theresa May",
       "deputy-title": "Chancellor of the Exchequer",
       "deputy-leader": "Philip Hammand",
+      "twitter": "910286961243414528",
       "elections": {
           "2018": {
               "date": "N/A"
@@ -106,6 +108,7 @@
       "flag-colors": "#006847, #FFF, #CE1126",
       "leader-title": "President",
       "leader": "Enrique Peña Nieto",
+      "twitter": "910286961243414528",
       "elections": {
           "2018": {
               "date": "December 1, 2018"
@@ -150,6 +153,7 @@
       "flag-colors": "#002395, #FFF, #ED2939",
       "leader-title": "President",
       "leader": "Emmanuel Macron",
+      "twitter": "910286961243414528",
       "elections": {
           "2018": {
               "date": "May, 2021"
@@ -193,6 +197,7 @@
       "flag-colors": "#000, #DD0000, #FFCE00",
       "leader-title": "Chancellor",
       "leader": "Angela Merkel",
+      "twitter": "germanydiplo",
       "elections": {
           "2018": {
               "date": "September 24, 2017"
@@ -236,6 +241,7 @@
       "flag-colors": "#FF0000, #FAFAFA, #FAFAFA, #FF0000",
       "leader-title": "Prime Minister",
       "leader": "Justin Trudeau",
+      "twitter": "JustinTrudeau",
       "elections": {
           "2018": {
               "date": "October, 2019"
@@ -280,6 +286,7 @@
       "flag-colors": "#FAFAFA 20%, #0000FF 50%, #FF0000 80%",
       "leader-title": "President",
       "leader": "Vladimir Putin",
+      "twitter": "PutinRF_Eng",
       "deputy-title": "Prime Minister",
       "deputy-leader": "Dmitry Medvedev",
       "elections": {
@@ -326,6 +333,7 @@
       "flag-colors": "#DE2810, #FFDE00, #DE2810",
       "leader-title": "President",
       "leader": "Xi Jinping",
+      "twitter": "XHNews",
       "deputy-title": "Premier",
       "deputy-leader": "Li Keqiang",
       "elections": {
@@ -372,6 +380,7 @@
       "flag-colors": "#FAFAFA 25%, #BC002D 50%, #FAFAFA 75%",
       "leader-title": "Prime Minister",
       "leader": "Shinzo Abe",
+      "twitter": "AbeShinzo",
       "deputy-title": "Deputy Prime Minister",
       "deputy-leader": "Taro Aso",
       "elections": {
@@ -418,6 +427,7 @@
       "flag-colors": "#009B3A, #FEDF00, #002776", 
       "leader-title": "President",
       "leader": "Michel Temer",
+      "twitter": "MichelTemer",
       "deputy-title": "Vice President",
       "deputy-leader": "None",
       "elections": {
@@ -463,6 +473,7 @@
       "flag-colors": "#FF9933, #FFF, #128807",
       "leader-title": "Prime Minister",
       "leader": "Narendra Modi",
+      "twitter": "narendramodi",
       "deputy-title": "President",
       "deputy-leader": "Pranab Mukherjee",
       "elections": {
@@ -508,6 +519,7 @@
       "flag-colors": "#FF0000,#FFFFFF,#0000FF",
       "leader-title": "Prime Minister",
       "leader": "Malcolm Turnbull",
+      "twitter": "TurnbullMalcolm",
       "party": "Liberal",
       "previous-leader": "Tony Abbott",
       "previous-leader-party": "",
@@ -543,6 +555,7 @@
       "flag-colors": "#003399,#FFCC00,#003399",
       "leader-title": "European Council President",
       "leader": "Donald Tusk",
+      "twitter": "donaldtusk",
       "party": "None",
       "previous-leader": "",
       "previous-leader-party": "",
@@ -577,6 +590,7 @@
       "flag-colors": "#74ACDF,#FFFFFF,#74ACDF",
       "leader-title": "President",
       "leader": "Mauricio Macri",
+      "twitter": "mauriciomacri",
       "party": "Republican Proposal",
       "previous-leader": "",
       "previous-leader-party": "",
@@ -612,6 +626,7 @@
       "flag-colors": "#E70011,#FFFFFF",
       "leader-title": "President",
       "leader": "Joko Widodo",
+      "twitter": "jokowi",
       "party": "Democratic Party of Struggle",
       "previous-leader": "S. Yudhoyono",
       "previous-leader-party": "",
@@ -647,6 +662,7 @@
       "flag-colors": "#009246,#FFFFFF,#CE2B37",
       "leader-title": "Prime Minister",
       "leader": "Paolo Gentiloni",
+      "twitter": "PaoloGentiloni",
       "party": "Democratic Party",
       "previous-leader": "Matteo Renzi",
       "previous-leader-party": "",
@@ -682,6 +698,7 @@
       "flag-colors": "#FFFFFF,#C70000,#3D5897,#FFFFFF",
       "leader-title": "President",
       "leader": "Moon Jae-In",
+      "twitter": "moonriver365",      
       "party": "Democratic",
       "previous-leader": "Hwang Kyo-ahn",
       "previous-leader-party": "",
@@ -717,6 +734,7 @@
       "flag-colors": "#199D00,#FFFFFF,#199D00",
       "leader-title": "King of Saudi Arabia",
       "leader": "King Salman",
+      "twitter": "KingSalman",      
       "party": "House of Saud",
       "previous-leader": "King Abdullah",
       "previous-leader-party": "",
@@ -752,6 +770,7 @@
       "flag-colors": "#F31930,#FFFFFF,#F31930",
       "leader-title": "Prime Minister",
       "leader": "Recep Erdogan",
+      "twitter": "RT_Erdogan",      
       "party": "Justice and Development",
       "previous-leader": "Abdullah Gul",
       "previous-leader-party": "",
@@ -787,6 +806,7 @@
       "flag-colors": "#000000,#FFCC00,#009933,#FFFFFF,#FF0000,#0000FF",
       "leader-title": "President",
       "leader": "Jacob Zuma",
+      "twitter": "SAPresident",
       "party": "African National Congress",
       "previous-leader": "K. Motlanthe",
       "previous-leader-party": "",
@@ -822,6 +842,7 @@
       "flag-colors": "#FF0000,#FFFFFF,#00732F,#000000",
       "leader-title": "President",
       "leader": "Khalifa Al Nahyan",
+      "twitter": "uaeembassyus",
       "party": "House of Al Nahyan",
       "previous-leader": "Maktoum Rashid Al Maktoum",
       "previous-leader-party": "",
@@ -857,6 +878,7 @@
       "flag-colors": "#CE1126,#FFFFFF,#000000",
       "leader-title": "President",
       "leader": "Abdel Fattah el-Sisi",
+      "twitter": "mfaegypt",      
       "party": "Independent",
       "previous-leader": "Adly Mansour",
       "previous-leader-party": "",
@@ -892,6 +914,7 @@
       "flag-colors": "#EC0015,#FFFF00,#EC0015",
       "leader-title": "President",
       "leader": "Trần Đại Quang",
+      "twitter": "mofavietnam",
       "party": "Communist Party",
       "previous-leader": "Truong Tan Sang",
       "previous-leader-party": "",
@@ -927,6 +950,7 @@
       "flag-colors": "#239F40,#FFFFFF,#DA0000",
       "leader-title": "President",
       "leader": "Hassan Rouhani",
+      "twitter": "HassanRouhani",
       "party": "Moderation and Development",
       "previous-leader": "M. Ahmadinejad",
       "previous-leader-party": "",
@@ -962,6 +986,7 @@
       "flag-colors": "#36A100,#FFFFFF,#36A100",
       "leader-title": "President",
       "leader": "Muhammadu Buhari",
+      "twitter": "MBuhari",
       "party": "All Progressives Congress",
       "previous-leader": "Shehu Shagari",
       "previous-leader-party": "",
@@ -997,6 +1022,7 @@
       "flag-colors": "#FFFFFF,#0C590B,#0C590B",
       "leader-title": "President",
       "leader": "Mamnoon Hussain",
+      "twitter": "pid_gov",
       "party": "Pakistan Muslim League",
       "previous-leader": "Asif Ali Zardari",
       "previous-leader-party": "",
@@ -1032,6 +1058,7 @@
       "flag-colors": "#E70000,#FFFFFF,#001B9A,#FFFFFF,#E70000",
       "leader-title": "Prime Minister",
       "leader": "Prayut Chan-o-cha",
+      "twitter": "mfathai_pr_en",
       "party": "Independent",
       "previous-leader": "N. Boonsongpaisan",
       "previous-leader-party": "",
@@ -1067,6 +1094,7 @@
       "flag-colors": "#E70000,#FFFFFF,#001B9A,#FFFFFF,#E70000",
       "leader-title": "Prime Minister",
       "leader": "Mariano Rajoy",
+      "twitter": "marianorajoy",
       "party": "People's Party",
       "previous-leader": "Jose Zapatero",
       "previous-leader-party": "",
@@ -1102,6 +1130,7 @@
       "flag-colors": "#E70000,#FFFFFF,#001B9A,#FFFFFF,#E70000",
       "leader-title": "President",
       "leader": "Andrzej Duda",
+      "twitter": "AndrzejDuda",
       "party": "Independent",
       "previous-leader": "B. Komorowski",
       "previous-leader-party": "",
@@ -1137,6 +1166,7 @@
       "flag-colors": "#E70000,#FFFFFF,#001B9A,#FFFFFF,#E70000",
       "leader-title": "Prime Minister",
       "leader": "Mark Rutte",
+      "twitter": "markrutte",
       "party": "Freedom and Democracy Party",
       "previous-leader": "Jan Balkenende",
       "previous-leader-party": "",

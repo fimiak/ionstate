@@ -8,6 +8,7 @@ import News from './sidenav/News';
 import Others from './sidenav/Others';
 import Polls from './sidenav/Polls';
 import Schedule from './sidenav/Schedule';
+import TwitterApi from './api/TwitterApi';
 
 let list = [];
 for (let i = 0; i < data.data.length; i++) { // Assign data.data[i] to 'country' key.
@@ -34,7 +35,8 @@ class Main extends Component {
     const appWindow = document.getElementsByClassName('App-intro')[0];
     const logoWrap = document.getElementsByClassName('logo-wrap')[0];
     const navWrap = document.getElementsByClassName('nav-wrap')[0];
-
+    this.topnavColor();
+    
     appWindow.addEventListener('scroll', function() { 
         if (appWindow.scrollTop >= 24) {
           logoWrap.setAttribute('style', 'line-height: 32px;');
@@ -99,6 +101,9 @@ class Main extends Component {
                   <img className="fade-in-right" src={require('.././images/flags/' + this.props.nation.flag)} alt={this.props.nation.name} />
                 </div>
               </div>
+            </div>
+            <div id="twitter" className="twitter-container">
+              <TwitterApi nation={this.props.nation} />
             </div>
             <div id="schedule" className="schedule">
               <Schedule map={this.state.map} nation={this.props.nation} setMap={this.setMap} />
