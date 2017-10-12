@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react/react.js';
 import { Link } from 'react-router';
 
 

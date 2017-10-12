@@ -12,7 +12,7 @@
     "react-router": "^2.7.0",
     "react-router-dom": "^4.1.1",
     "react-transition-group": "^2.2.0",
-    "react-twitter-widgets": "^1.6.1",
+    "react-twitter-widgets": "^1.7.1",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0"
   },

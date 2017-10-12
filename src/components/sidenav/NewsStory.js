@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react/react.js';
 import testdata from '../../data/testdata';
 
 class NewsStory extends Component {

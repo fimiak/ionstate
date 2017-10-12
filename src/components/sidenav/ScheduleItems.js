@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react/react.js';
 import schedule from '../../data/schedule';
 
 const schedList = schedule.schedule;

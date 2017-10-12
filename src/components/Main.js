@@ -1,14 +1,13 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react/react.js';
+import Biography from './sidenav/Biography';
 import CountryData from './sidenav/CountryData';
 import data from '.././data/data';
 import DataSheets from './sidenav/DataSheets';
 import Footer from './Footer';
-import LeaderMap from './Map/LeaderMap';
 import News from './sidenav/News';
 import Others from './sidenav/Others';
 import Polls from './sidenav/Polls';
 import Schedule from './sidenav/Schedule';
-import TwitterApi from './api/TwitterApi';
 
 let list = [];
 for (let i = 0; i < data.data.length; i++) { // Assign data.data[i] to 'country' key.
@@ -21,7 +20,6 @@ class Main extends Component {
     this.state = {
       data: data,
       loading: true,
-      map: this.props.nation.country,
       newsToggle: true
     };
     
@@ -35,15 +33,18 @@ class Main extends Component {
     const appWindow = document.getElementsByClassName('App-intro')[0];
     const logoWrap = document.getElementsByClassName('logo-wrap')[0];
     const navWrap = document.getElementsByClassName('nav-wrap')[0];
+    const buttonMenu = document.getElementsByClassName('button-menu')[0];
     this.topnavColor();
     
     appWindow.addEventListener('scroll', function() { 
         if (appWindow.scrollTop >= 24) {
           logoWrap.setAttribute('style', 'line-height: 32px;');
           navWrap.setAttribute('style', 'top: 42px;');
+          buttonMenu.setAttribute('style', 'width: 42px');
       } else {
           logoWrap.setAttribute('style', 'line-height: 48px;');
           navWrap.setAttribute('style', 'top: 58px;');
+          buttonMenu.setAttribute('style', 'width: 58px');          
         }
       }
     );
@@ -76,7 +77,7 @@ class Main extends Component {
   topnavColor() {
      document.getElementsByClassName('top-title')[0].setAttribute('style', 'border-image: linear-gradient(to right, ' + this.props.nation['flag-colors'] + ');border-image-slice: 1;');
   };
-  
+
   render() {
     return (
       <div className="contentBox">
@@ -102,29 +103,37 @@ class Main extends Component {
                 </div>
               </div>
             </div>
-            <div id="twitter" className="twitter-container">
-              <TwitterApi nation={this.props.nation} />
-            </div>
-            <div id="schedule" className="schedule">
-              <Schedule map={this.state.map} nation={this.props.nation} setMap={this.setMap} />
-              <LeaderMap props={this.props.params} map={this.state.map} nation={this.props.nation} />
-            </div>
+
             <div className="top-split fade-in-top">
               <div id="datasheets">
                 <DataSheets props={this.props.params} nation={this.props.nation} />
               </div>
-              <div id="news" className="news">
-                <News props={this.props.params} nation={this.props.nation} />
-                <div className="news-open" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>{this.state.newsToggle ? "More" : "Hide"} News</div>
+              <div id="biography">
+                <Biography nation={this.props.nation} />
               </div>
+            </div>
+
+            <div className="top-split fade-in-top">
+              <div id="news" className="news">
+              <News props={this.props.params} nation={this.props.nation} />
+                <div className="news-open" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>
+                  {this.state.newsToggle ? "More" : "Hide"} News
+                </div>
+              </div>
+            </div>
+
+            <div id="schedule" className="schedule">
+              <Schedule map={this.state.map} nation={this.props.nation} setMap={this.setMap}  props={this.props.params} />
             </div>
 
             <div id="country-data">
               <CountryData nation={this.props.nation} />
             </div>
+
             <div id="polls">
               <Polls props={this.props.params} />
             </div>
+
             <div id="others">
               <Others props={this.props.params} id={this.props.nation.id} setNation={this.props.setNation} />
             </div>

@@ -3,6 +3,8 @@
     {
       "id": 0,
       "country": "usa",
+      "biography": "U.S. President, real estate mogul and former reality TV star Donald John Trump was born in 1946, in Queens, New York. In 1971, he became involved in large, profitable building projects in Manhattan. In 1980, he opened the Grand Hyatt, which made him the city's best-known developer. In 2004, Trump began starring in the hit NBC reality series The Apprentice.",
+      "biography-extended": "Trump turned his attention to politics, and in 2015 he announced his candidacy for president of the United States on the Republican ticket. After winning a majority of the primaries and caucuses, Trump became the official Republican candidate for president on July 19, 2016. That November, Trump was elected the 45th President of the United States.",
       "name": "United States of America",
       "image": "trump.jpg",
       "thumb":"trump.jpg",
@@ -16,7 +18,7 @@
       "leader": "Donald Trump",
       "deputy-title": "Vice President",
       "deputy-leader": "Mike Pence",
-      "twitter": "910286961243414528",
+      "twitter": "realDonaldTrump",
       "elections": {
           "2018": {
               "date": "November 2018"
@@ -50,6 +52,8 @@
     {
       "id": 1,
       "country": "uk",
+      "biography": "Following the resignation of David Cameron, Theresa May is Britain's first female PM since Margaret Thatcher and the first to lead the country out of the European Union after its historic Brexit referendum, which was held in June 2016.",
+      "biography-extended": "May is a member of the Conservative Party and originally voted to stay in the EU, despite having reservations. Prior to her taking the top office, she had served as home secretary since 2010 and was elected MP (Member of Parliament) of Maidenhead in 1997.",
       "name": "United Kingdom",
       "image": "may.jpg",
       "thumb": "may.jpg",
@@ -63,7 +67,7 @@
       "leader": "Theresa May",
       "deputy-title": "Chancellor of the Exchequer",
       "deputy-leader": "Philip Hammand",
-      "twitter": "910286961243414528",
+      "twitter": "theresa_may",
       "elections": {
           "2018": {
               "date": "N/A"
@@ -97,6 +101,7 @@
     {
       "id": 2,
       "country": "mexico",
+      "biography": "President Enrique Peña Nieto was born on July 20, 1966, in Atlacomulco, Mexico. Interested in politics from the time he was a boy, Peña Nieto quickly climbed the ranks of power and at the age of 39 was elected governor of the State of Mexico. In 2012, Peña Nieto won the Mexican presidency with 38 percent of the vote, though his administration has been marked by the country's violent drug trade, a property and other scandals. His approval ratings among the citizens of Mexico have declined during his time in office.",
       "name": "Mexico",
       "image": "nieto.jpg",
       "thumb": "nieto.png",
@@ -108,7 +113,7 @@
       "flag-colors": "#006847, #FFF, #CE1126",
       "leader-title": "President",
       "leader": "Enrique Peña Nieto",
-      "twitter": "910286961243414528",
+      "twitter": "epn",
       "elections": {
           "2018": {
               "date": "December 1, 2018"
@@ -142,6 +147,8 @@
     {
       "id": 3,
       "country": "france",
+      "biography": "Born in 1977 in northern France, Emmanuel Macron attended a series of elite schools before joining the French Finance Ministry in 2004. Following a four-year stint at an investment bank, he joined President François Hollande's staff in 2012, eventually becoming minister of economy, industry and digital data.",
+      "biography-extended": "After forming the centrist En Marche! party in 2016, Macron became a surprising frontrunner in the presidential race. He defeated National Front leader Marine Le Pen in May 2017 to become, at age 39, the youngest president in French history.",
       "name": "France",
       "image": "macron.jpg",
       "thumb": "macron.jpg",
@@ -153,7 +160,7 @@
       "flag-colors": "#002395, #FFF, #ED2939",
       "leader-title": "President",
       "leader": "Emmanuel Macron",
-      "twitter": "910286961243414528",
+      "twitter": "EmmanuelMacron",
       "elections": {
           "2018": {
               "date": "May, 2021"
@@ -186,6 +193,8 @@
     {
       "id": 4,
       "country": "germany",
+      "biography": "Angela Dorothea Kasner, better known as Angela Merkel, was born in Hamburg, West Germany, on July 17, 1954. Trained as a physicist, Merkel entered politics after the 1989 fall of the Berlin Wall.",
+      "biography-extended": "Rising to the position of chairwoman of the Christian Democratic Union party, Merkel became Germany's first female chancellor, and one of the leading figures of the European Union, following the 2005 national elections.",
       "name": "Germany",
       "image": "merkel.jpg",
       "thumb": "merkel.jpg",
@@ -197,7 +206,7 @@
       "flag-colors": "#000, #DD0000, #FFCE00",
       "leader-title": "Chancellor",
       "leader": "Angela Merkel",
-      "twitter": "germanydiplo",
+      "twitter": "AngelaMerkeICDU",
       "elections": {
           "2018": {
               "date": "September 24, 2017"
@@ -230,6 +239,8 @@
     {
       "id": 5,
       "country": "canada",
+      "biography": "Justin Trudeau spent his early years in the spotlight as the son of famed Canadian prime minister Pierre Trudeau. After college, Justin worked as a teacher for several years before entering politics. He was first elected to the Canadian Parliament in 2008.",
+      "biography-extended": "In 2013, Trudeau became the leader of the Liberal Party. He and his party won an impressive victory in 2015 with Trudeau becoming the country's second youngest prime minister.",
       "name": "Canada",
       "image": "trudeau.jpg",
       "thumb": "trudeau.jpg",
@@ -242,6 +253,8 @@
       "leader-title": "Prime Minister",
       "leader": "Justin Trudeau",
       "twitter": "JustinTrudeau",
+      "deputy-title": "Deputy Prime Minister",
+      "deputy-leader": "Vacant",
       "elections": {
           "2018": {
               "date": "October, 2019"
@@ -275,6 +288,7 @@
     {
       "id": 6,
       "country": "russia",
+      "biography": "In 1999, Russian president Boris Yeltsin dismissed his prime minister and promoted former KGB officer Vladimir Putin in his place. In December 1999, Yeltsin resigned, appointing Putin president, and he was re-elected in 2004. In April 2005, he made a historic visit to Israel—the first visit there by any Kremlin leader. Putin could not run for the presidency again in 2008, but was appointed prime minister by his successor, Dmitry Medvedev. Putin was re-elected to the presidency in March 2012. In 2014, he was reportedly nominated for a Nobel Peace Prize.",
       "name": "Russia",
       "image": "putin.jpg",
       "thumb": "putin.jpg",
@@ -322,6 +336,8 @@
     {
       "id": 7,
       "country": "china",
+      "biography": "Xi Jinping was born June 15, 1953. His father was well placed in the Chinese Communist Party (CCP), but fell out of favor during the Cultural Revolution, and Xi had to start from the bottom. He worked up the ranks, touching all the right bases within the bureaucracy to become a major player in the Chinese Politburo.",
+      "biography-extended": "By 2013, Xi was elected General Secretary of the Communist Party, Chair of the Military Commission and President of the People’s Republic of China. He has since accomplished his goal of cracking down on government corruption, although he has also been criticized for human rights violations and disruptive economic regulations.",
       "name": "China",
       "image": "xi.jpg",
       "thumb": "xi.jpg",
@@ -333,7 +349,7 @@
       "flag-colors": "#DE2810, #FFDE00, #DE2810",
       "leader-title": "President",
       "leader": "Xi Jinping",
-      "twitter": "XHNews",
+      "twitter": "ChinaEUMission",
       "deputy-title": "Premier",
       "deputy-leader": "Li Keqiang",
       "elections": {
@@ -369,6 +385,7 @@
     {
       "id": 8,
       "country": "japan",
+      "biography": "",
       "name": "Japan",
       "image": "abe.jpg",
       "thumb": "abe.jpg",

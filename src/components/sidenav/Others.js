@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react/react.js';
 import forwardIcon from '../../icons/arrow-right.svg';
 import backIcon from '../../icons/arrow-left.svg';
 import NavLink from '../NavLink';

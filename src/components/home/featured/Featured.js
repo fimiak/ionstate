@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react/react.js';
 import NavLink from '../.././NavLink'
 import axios from 'axios';
 import testdata from '../../../data/testdata';
@@ -42,7 +42,6 @@ class Featured extends Component {
     componentWillMount() {
         this.performSearch();
     }
-
 
     scrollTop() {
         document.getElementsByClassName('App-intro')[0].scrollTop = 0;

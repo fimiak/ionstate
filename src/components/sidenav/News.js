@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react/react.js';
 import NewsStory from './NewsStory';
 import axios from 'axios';
 import testdata from '../../data/testdata';

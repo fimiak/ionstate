@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react/react.js';
 import DataBox from './DataBox';
 import DataItem from './DataItem';
 

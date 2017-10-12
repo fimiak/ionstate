@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react/react.js';
 import NavWrap from './components/sidenav/NavWrap';
 import closeIcon from './icons/x.svg';
 import data from './data/data';

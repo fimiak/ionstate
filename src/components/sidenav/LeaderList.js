@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react/react.js';
 import NavLink from '../NavLink';
 
 class LeaderList extends Component {

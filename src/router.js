@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react/react.js';
 import { Router, Route, browserHistory, IndexRedirect } from 'react-router';
 import App from './App';
 import Contact from './components/Contact';

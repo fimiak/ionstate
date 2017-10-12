@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react/react.js';
 import data from '../../data/data';
 import NavLink from '../NavLink';
 import LeaderList from './LeaderList';

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react/react.js';
 import Weekday from './Weekday';
 import schedule from './../../../data/schedule';
 

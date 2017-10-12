@@ -192,7 +192,7 @@ body {
               .App-header .nav-wrap .inner-header .nav-links ul li:nth-child(2) a {
                 height: 100%; }
             .App-header .nav-wrap .inner-header .nav-links ul li:last-child {
-              border-bottom: 1px solid transparent; }
+              border-bottom: 1px solid rgba(0, 0, 0, 0); }
               .App-header .nav-wrap .inner-header .nav-links ul li:last-child:hover {
                 border-bottom: 1px solid #999; }
   .App-header ul {
@@ -304,7 +304,7 @@ body {
   cursor: pointer;
   display: block;
   padding: 0;
-  transition: 0.5s;
+  transition: 0.2s;
   width: 58px; }
   .button-menu .open-menu {
     padding: 3px 5px 2px; }
@@ -405,9 +405,6 @@ body {
   flex-grow: 1; }
 
 .inner-featured {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(50, 50, 95, 0.1);
   background: #ECE8DD;
   width: 100%;
   max-width: 800px;
@@ -418,7 +415,7 @@ body {
   animation-delay: 0.8s;
   background: #ECE8DD;
   box-sizing: border-box;
-  margin: 0 auto 20px;
+  margin: 10px auto 20px;
   max-width: 800px;
   opacity: 0;
   width: 100%; }
@@ -445,11 +442,9 @@ body {
       .featuredBox .featuredEvents .featuredDetails .featuredNews {
         background: #bebbb2;
         border: 1px solid #D4D0C6;
-        border-radius: 5px;
         width: 100%; }
         .featuredBox .featuredEvents .featuredDetails .featuredNews ul {
           background: #f6f6f6;
-          border-radius: 5px;
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
@@ -461,7 +456,6 @@ body {
           .featuredBox .featuredEvents .featuredDetails .featuredNews ul h4 {
             margin: 0 auto;
             background: #D4D0C6;
-            border-radius: 5px;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             font-family: "Kanit", sans-serif;
@@ -482,7 +476,6 @@ body {
       .featuredBox .featuredEvents .featuredDetails .featuredTitle {
         background: #f6f6f6;
         border: 1px solid #D4D0C6;
-        border-radius: 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -504,16 +497,13 @@ body {
       .featuredBox .featuredEvents .featuredDetails div a button {
         border: 1px solid #bebbb2;
         background: #bebbb2;
-        box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
         color: #000;
         font-size: 13px;
         margin: 12px auto;
         padding: 10px 12px;
-        transition: 0.3s; }
+        transition: 0.15s; }
         .featuredBox .featuredEvents .featuredDetails div a button:hover {
-          background: #D4D0C6;
-          border: 1px solid #D4D0C6;
-          box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
           transform: translateY(-2px);
           cursor: pointer; }
       .featuredBox .featuredEvents .featuredDetails .featuredStats {
@@ -589,8 +579,8 @@ body {
   max-width: 900px; }
 
 .img-highlight {
-  padding: 20px;
-  width: 280px;
+  padding: 25px 0 0;
+  width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -635,12 +625,11 @@ body {
     font-family: "Raleway", cursive;
     margin: 5px 0; }
   .inner-home .home-action {
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 auto;
     width: 96%; }
     .inner-home .home-action h3 {
       font-family: "Crimson Text", sans-serif;
-      max-width: 450px;
       margin: 0 auto; }
 
 .home-image {
@@ -651,9 +640,7 @@ body {
 .inner-map {
   animation: fade-in-top 0.4s ease forwards;
   animation-delay: 0.2s;
-  box-shadow: 0px 2px 4px rgba(50, 50, 95, 0.1);
   width: 100%;
-  border-radius: 5px;
   background: #ECE8DD;
   opacity: 0;
   max-width: 800px;
@@ -664,7 +651,7 @@ body {
   opacity: 0.9;
   border-radius: 5px;
   max-width: 810px;
-  padding: 5px 15px;
+  padding: 5px;
   margin: 0 auto; }
 
 .header {
@@ -674,37 +661,34 @@ body {
   font-size: 18px;
   font-family: "Kanit", sans-serif;
   justify-content: space-between;
-  margin: 0 auto 10px;
+  margin: 0 auto;
   max-width: 800px;
-  padding: 10px 15px 0;
+  padding: 5px 15px 0;
   text-transform: uppercase; }
 
 .inner-rank {
   animation: fade-in-top 0.4s ease forwards;
   animation-delay: 0.6s;
   background: #ECE8DD;
-  box-shadow: 0px 2px 4px rgba(50, 50, 95, 0.1);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-radius: 5px;
   max-width: 800px;
   margin: 0 auto 20px;
   opacity: 0;
   width: 100%; }
+
+.rank {
+  margin-top: 15px; }
 
 .rank-item {
   display: flex;
   padding: 0 15px;
   margin: 0 auto 15px; }
   .rank-item .rank-item-image {
-    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
     max-height: 93px;
     margin-right: 10px;
     transition: 0.1s; }
     .rank-item .rank-item-image:hover {
       box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
-      transform: translateY(-2px);
-      opacity: 0.9; }
+      transform: translateY(-2px); }
     .rank-item .rank-item-image img {
       box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
       height: 93px;
@@ -713,6 +697,31 @@ body {
     display: flex;
     flex-grow: 1;
     flex-direction: column; }
+    .rank-item .rank-item-data .rank-link {
+      position: relative;
+      margin: 0 5px; }
+      .rank-item .rank-item-data .rank-link .rank-image {
+        height: 132px;
+        width: 220px;
+        padding-bottom: 35px; }
+      .rank-item .rank-item-data .rank-link .rank-headline {
+        background: #ffffff;
+        box-sizing: border-box;
+        display: block;
+        font-size: 14px;
+        font-weight: 900;
+        left: 20px;
+        line-height: 13px;
+        max-width: 180px;
+        min-height: 56px;
+        max-height: 80px;
+        overflow: hidden;
+        padding: 10px;
+        position: absolute;
+        top: -55px; }
+      .rank-item .rank-item-data .rank-link:hover .rank-headline {
+        box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+        transform: translateY(-2px); }
     .rank-item .rank-item-data .rank-item-head {
       background: #D4D0C6;
       display: flex;
@@ -723,16 +732,14 @@ body {
       box-sizing: border-box;
       border: 1px solid #D4D0C6;
       flex-grow: 1;
-      padding: 5px;
-      text-align: left; }
+      padding: 10px 5px;
+      text-align: left;
+      width: 100%; }
       .rank-item .rank-item-data .rank-item-articles a {
         color: #333; }
 
 .inner-week {
   background: #ECE8DD;
-  box-shadow: 0px 2px 4px rgba(50, 50, 95, 0.1);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   width: 100%;
   max-width: 800px;
   margin: 0 auto; }
@@ -819,11 +826,6 @@ body {
     border: 1px solid #000;
     padding: 10px 5px; }
 
-.inner-maps {
-  margin: 0 auto;
-  width: 66%;
-  position: relative; }
-
 .inner-polls {
   height: auto;
   padding: 0px 0; }
@@ -831,103 +833,95 @@ body {
 .twitter-inner {
   animation: fade-in-top ease 0.4s forwards;
   animation-delay: 0.6s;
-  opacity: 0;
   background: #f6f6f6;
   max-width: 900px;
-  min-height: 403px;
-  margin: 0 auto 10px;
-  padding: 15px; }
+  margin: 0 auto 25px;
+  opacity: 0;
+  padding: 5px 0 0; }
   .twitter-inner iframe {
     margin: 0 auto; }
 
+.timeline {
+  width: 500px; }
+
 .schedule {
   background: #F6F6F6;
+  border-top: 15px solid #FFF;
   display: flex;
   margin-bottom: 10px;
   justify-content: space-between; }
-
-.inner-schedule {
-  animation: fade-in-top ease 0.4s forwards;
-  animation-delay: 0.8s;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  opacity: 0;
-  justify-content: center;
-  margin: 0 5px;
-  width: 320px; }
-  .inner-schedule .scheduleHeader {
-    background: #E2E2E2;
-    border: 1px solid #ddd;
-    border-bottom: 0; }
-    .inner-schedule .scheduleHeader div {
-      line-height: 40px;
-      padding: 0 5px;
-      display: inline-block;
-      cursor: pointer;
-      min-width: 100px; }
-      .inner-schedule .scheduleHeader div:hover {
-        background: #eee; }
-    .inner-schedule .scheduleHeader .monthBox:hover {
-      background: none;
-      cursor: default; }
-  .inner-schedule .scheduleBox {
-    background: #FFF;
-    border: 1px solid #ddd;
-    padding: 5px;
+  .schedule .schedule-div {
+    width: 100%; }
+  .schedule .inner-schedule {
+    animation: fade-in-top ease 0.4s forwards;
+    animation-delay: 0.8s;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; }
-    .inner-schedule .scheduleBox ul {
-      margin: 0;
-      list-style: none;
-      padding: 0;
-      width: 100%; }
-      .inner-schedule .scheduleBox ul .dayBox {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    flex-direction: column;
+    height: auto;
+    opacity: 0;
+    justify-content: center;
+    width: 320px; }
+    .schedule .inner-schedule .scheduleBox {
+      background: #e6e6e6;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: 100%; }
+      .schedule .inner-schedule .scheduleBox ul {
+        margin: 0;
+        list-style: none;
+        padding: 0;
         width: 100%; }
-        .inner-schedule .scheduleBox ul .dayBox .dateBox {
-          background: #f8f8f8;
-          align-items: center;
-          margin: 5px 0;
-          justify-content: center;
-          flex-direction: column;
+        .schedule .inner-schedule .scheduleBox ul .dayBox {
           display: flex;
-          min-width: 68px;
-          height: 68px;
-          font-size: 24px;
-          font-weight: 200; }
-          .inner-schedule .scheduleBox ul .dayBox .dateBox .monthBox {
-            font-size: 12px;
-            margin-bottom: 4px; }
-        .inner-schedule .scheduleBox ul .dayBox .eventBox {
-          font-size: 12px;
-          flex-direction: column;
-          justify-content: space-between;
-          margin: 5px;
-          display: flex;
+          flex-direction: row;
           align-items: center;
-          flex-grow: 1;
-          height: 68px;
-          overflow: hidden; }
-          .inner-schedule .scheduleBox ul .dayBox .eventBox p {
+          padding: 5px; }
+          .schedule .inner-schedule .scheduleBox ul .dayBox .dateBox {
             background: #f8f8f8;
-            padding: 0 5px;
-            box-sizing: border-box;
-            margin: 0;
-            width: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             display: flex;
+            height: 68px;
+            font-size: 24px;
+            font-weight: 200;
+            margin-right: 5px; }
+            .schedule .inner-schedule .scheduleBox ul .dayBox .dateBox .monthBox {
+              font-size: 12px;
+              margin-bottom: 4px;
+              min-width: 68px; }
+          .schedule .inner-schedule .scheduleBox ul .dayBox .eventBox {
+            font-size: 12px;
+            flex-direction: column;
             flex-grow: 1;
-            text-align: left; }
-          .inner-schedule .scheduleBox ul .dayBox .eventBox span {
-            background: #efefef;
-            width: 100%;
-            padding: 2px; }
-          .inner-schedule .scheduleBox ul .dayBox .eventBox:hover {
-            background: #F3F3F3;
-            cursor: pointer; }
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            height: 68px;
+            overflow: hidden; }
+            .schedule .inner-schedule .scheduleBox ul .dayBox .eventBox p {
+              background: #f8f8f8;
+              padding: 3px 5px;
+              box-sizing: border-box;
+              margin: 0;
+              width: 100%;
+              display: flex;
+              flex-grow: 1;
+              text-align: left; }
+            .schedule .inner-schedule .scheduleBox ul .dayBox .eventBox span {
+              background: #CCC;
+              width: 100%;
+              padding: 2px 0; }
+            .schedule .inner-schedule .scheduleBox ul .dayBox .eventBox:hover {
+              background: #F3F3F3;
+              cursor: pointer; }
+  .schedule .mapsBox {
+    display: flex; }
+    .schedule .mapsBox .inner-maps {
+      margin: 0 auto;
+      width: 66%;
+      position: relative; }
 
 .top-split {
   background: #F6F6F6;
@@ -982,7 +976,7 @@ body {
 .data-image {
   display: flex;
   justify-content: center;
-  padding: 0 5px; }
+  padding: 0 25px; }
 
 .data-pic {
   width: 200px;
@@ -991,17 +985,18 @@ body {
 .listItems li:nth-child(-n+4) {
   display: none; }
 
+.biography {
+  padding: 32px 30px 0;
+  text-align: left; }
+  .biography .biography-text {
+    min-height: 305px; }
+
 .maps {
   border: 0;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   max-width: 1000px;
   height: 296px;
-  margin-bottom: 10px;
   transition: 0.1s;
   width: 100%; }
-  .maps:hover {
-    box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
-    transform: translateY(-2px); }
 
 .leadermap {
   animation: fade-in-top ease 0.4s forwards;
@@ -1024,11 +1019,13 @@ body {
   color: #000; }
 
 .inner-news {
+  border-top: 15px solid #FFF;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   height: 530px;
-  padding: 20px 0;
+  margin: 0 auto;
+  padding: 25px 0;
   overflow: hidden;
   transition: 0.3s; }
   .inner-news h4 {
@@ -1044,15 +1041,15 @@ body {
 .news-open {
   background: #DDD;
   border: 1px solid #D1D1D1;
-  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   cursor: pointer;
   padding: 10px 0;
   width: 40%;
   transition: 0.1s;
   margin: 20px auto; }
   .news-open:hover {
+    background: #DADADA;
     transform: translateY(-2px);
-    box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07); }
+    box-shadow: 0 8px 35px rgba(50, 50, 93, 0.1), 0 1px 15px rgba(0, 0, 0, 0.07); }
 
 .contact {
   background: #ECE8DD;
@@ -1232,10 +1229,10 @@ body {
 .country-detail h4 {
   background: #F6F6F6;
   border-bottom: 1px solid #ddd;
+  border-top: 15px solid #FFF;
   font-family: "Kanit", sans-serif;
   padding: 17px 0;
-  margin: 0;
-  margin-top: 10px; }
+  margin: 0; }
 
 .country-data {
   display: flex;
