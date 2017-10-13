@@ -4,9 +4,6 @@ import closeIcon from './icons/x.svg';
 import data from './data/data';
 import menuIcon from './icons/menu.svg';
 import './App.css';
-//import ReactDOM from 'react-dom';
-//import { createStore, applyMiddleware } from 'redux';
-//import { load } from './actions';
 
 let list = [];
 for (let i = 0; i < data.data.length; i++) { // Assign data.data[i] to 'country' key.

@@ -5,7 +5,6 @@ import Contact from './components/Contact';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
 import Main from './components/Main';
-//import { Provider } from 'react-redux';
 
 const routes = (
     <Router history={browserHistory}>

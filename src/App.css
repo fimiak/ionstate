@@ -408,14 +408,14 @@ body {
   background: #ECE8DD;
   width: 100%;
   max-width: 800px;
-  margin: 10px auto 20px; }
+  margin: 15px auto; }
 
 .featuredBox {
   animation: fade-in-top 0.3s ease forwards;
   animation-delay: 0.8s;
   background: #ECE8DD;
   box-sizing: border-box;
-  margin: 10px auto 20px;
+  margin: 15px auto;
   max-width: 800px;
   opacity: 0;
   width: 100%; }
@@ -439,11 +439,11 @@ body {
         display: flex;
         width: 100%;
         flex-direction: row; }
-      .featuredBox .featuredEvents .featuredDetails .featuredNews {
+      .featuredBox .featuredEvents .featuredDetails .featured-news {
         background: #bebbb2;
         border: 1px solid #D4D0C6;
         width: 100%; }
-        .featuredBox .featuredEvents .featuredDetails .featuredNews ul {
+        .featuredBox .featuredEvents .featuredDetails .featured-news ul {
           background: #f6f6f6;
           display: flex;
           flex-direction: row;
@@ -453,26 +453,31 @@ body {
           padding: 0;
           min-width: 200px;
           margin: 0px; }
-          .featuredBox .featuredEvents .featuredDetails .featuredNews ul h4 {
-            margin: 0 auto;
-            background: #D4D0C6;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            font-family: "Kanit", sans-serif;
-            padding: 5px 0;
-            border-bottom: 1px solid #ccc;
+          .featuredBox .featuredEvents .featuredDetails .featured-news ul p {
+            padding: 1px 10px 0;
+            font-size: 12px;
+            height: 60px;
+            overflow: hidden;
+            text-align: left; }
+          .featuredBox .featuredEvents .featuredDetails .featured-news ul span {
+            background: #EAEAEA;
+            font-family: "Raleway", sans-serif;
+            padding: 12px 0;
             width: 100%; }
-          .featuredBox .featuredEvents .featuredDetails .featuredNews ul li {
+          .featuredBox .featuredEvents .featuredDetails .featured-news ul li {
             text-align: left;
             font-family: Raleway, sans-serif;
             font-size: 16px;
+            min-height: 50px;
             padding: 0 10px; }
-            .featuredBox .featuredEvents .featuredDetails .featuredNews ul li a {
+            .featuredBox .featuredEvents .featuredDetails .featured-news ul li a {
               color: #000;
-              line-height: 26px;
+              line-height: 25px;
               width: 100%; }
-              .featuredBox .featuredEvents .featuredDetails .featuredNews ul li a:hover {
+              .featuredBox .featuredEvents .featuredDetails .featured-news ul li a:hover {
                 color: #777; }
+            .featuredBox .featuredEvents .featuredDetails .featured-news ul li:last-child {
+              margin-bottom: 5px; }
       .featuredBox .featuredEvents .featuredDetails .featuredTitle {
         background: #f6f6f6;
         border: 1px solid #D4D0C6;
@@ -483,26 +488,28 @@ body {
         margin: 0px; }
         .featuredBox .featuredEvents .featuredDetails .featuredTitle img {
           max-width: 168px;
-          padding: 10px 10px 0 10px; }
+          padding: 0 10px 10px 10px; }
         .featuredBox .featuredEvents .featuredDetails .featuredTitle div {
+          align-items: center;
+          justify-content: center;
           display: flex;
-          flex-grow: 1;
-          align-items: center; }
-          .featuredBox .featuredEvents .featuredDetails .featuredTitle div h3 {
+          flex-direction: column;
+          flex-grow: 1; }
+          .featuredBox .featuredEvents .featuredDetails .featuredTitle div span {
             display: flex;
             font-family: "Raleway", sans-serif;
-            font-size: 15px;
-            margin: 3px 0;
+            font-size: 16px;
+            font-weight: 700;
             align-items: center; }
       .featuredBox .featuredEvents .featuredDetails div a button {
         border: 1px solid #bebbb2;
         color: #000;
         font-size: 13px;
-        margin: 12px auto;
+        margin: 12px auto 0;
         padding: 10px 12px;
         transition: 0.15s; }
         .featuredBox .featuredEvents .featuredDetails div a button:hover {
-          box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 8px 35px rgba(50, 50, 93, 0.1), 0 1px 15px rgba(0, 0, 0, 0.07);
           transform: translateY(-2px);
           cursor: pointer; }
       .featuredBox .featuredEvents .featuredDetails .featuredStats {
@@ -515,9 +522,17 @@ body {
           margin: 0 auto 0;
           max-width: 100px;
           min-height: auto; }
-        .featuredBox .featuredEvents .featuredDetails .featuredStats h3 {
-          margin: 5px 0;
+        .featuredBox .featuredEvents .featuredDetails .featuredStats span {
+          background: #D4D0C6;
+          margin: 11px 0 0;
+          padding: 12px 0;
           font-family: "Raleway", sans-serif; }
+        .featuredBox .featuredEvents .featuredDetails .featuredStats .featured-stats-list span {
+          background: inherit;
+          margin: 0;
+          padding: 0;
+          font-family: system, sans-serif;
+          float: right; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats h4 {
           margin: 0;
           padding: 10px 0;
@@ -528,15 +543,18 @@ body {
           padding: 0;
           margin: 0; }
           .featuredBox .featuredEvents .featuredDetails .featuredStats ul li {
-            text-align: center;
+            box-sizing: border-box;
+            font-size: 14px;
             line-height: 24px;
+            padding: 0 2px;
+            text-align: left;
             width: 100%; }
             .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:nth-child(even) {
               background: #D4D0C6; }
             .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:nth-child(odd) {
               background: #ECE8DD; }
-            .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:last-child {
-              border-bottom: 1px solid #ccc; }
+            .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:first-child {
+              text-align: center; }
     .featuredBox .featuredEvents img {
       max-width: 188px;
       min-height: 200px; }
@@ -616,20 +634,27 @@ body {
 .inner-home {
   background: #FFF;
   margin: 0 auto;
-  padding: 10px 0 0;
+  padding: 10px 0;
   width: 100%;
   max-width: 800px; }
   .inner-home h1 {
-    font-size: 33px;
-    font-family: "Raleway", cursive;
-    margin: 5px 0; }
+    font-family: "Raleway", sans-serif; }
   .inner-home .home-action {
-    max-width: 550px;
-    margin: 0 auto;
-    width: 96%; }
+    display: flex;
+    margin: 0 auto; }
+    .inner-home .home-action h1 {
+      flex-grow: 2;
+      font-size: 31px;
+      text-align: left;
+      margin: 5px 0; }
     .inner-home .home-action h3 {
+      flex-basis: 50%;
+      align-self: flex-end;
+      line-height: 16px;
+      text-align: right;
+      font-size: 13px;
       font-family: "Crimson Text", sans-serif;
-      margin: 0 auto; }
+      margin: 5px auto; }
 
 .home-image {
   opacity: 0.7;
@@ -643,7 +668,7 @@ body {
   background: #ECE8DD;
   opacity: 0;
   max-width: 800px;
-  margin: 20px auto; }
+  margin: 0 auto 15px; }
 
 .inner-home-map {
   background: #ECE8DD;
@@ -663,13 +688,17 @@ body {
   max-width: 800px;
   padding: 5px 15px 0;
   text-transform: uppercase; }
+  .header span {
+    align-self: center;
+    font-size: 14px;
+    text-transform: capitalize; }
 
 .inner-rank {
   animation: fade-in-top 0.4s ease forwards;
   animation-delay: 0.6s;
   background: #ECE8DD;
   max-width: 800px;
-  margin: 0 auto 20px;
+  margin: 0 auto 15px;
   opacity: 0;
   width: 100%; }
 
@@ -684,11 +713,7 @@ body {
     max-height: 93px;
     margin-right: 10px;
     transition: 0.1s; }
-    .rank-item .rank-item-image:hover {
-      box-shadow: 0 18px 35px rgba(50, 50, 93, 0.1), 0 8px 15px rgba(0, 0, 0, 0.07);
-      transform: translateY(-2px); }
     .rank-item .rank-item-image img {
-      box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
       height: 93px;
       width: 60px; }
   .rank-item .rank-item-data {

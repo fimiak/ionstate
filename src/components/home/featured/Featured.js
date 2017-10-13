@@ -1,5 +1,5 @@
 import React, { Component } from 'react/react.js';
-import NavLink from '../.././NavLink'
+import NavLink from '../.././NavLink';
 import axios from 'axios';
 import testdata from '../../../data/testdata';
 
@@ -54,35 +54,34 @@ class Featured extends Component {
                     <div className="featuredDetails">
                         <div className="featuredDetailsBox">
                             <div className="featuredTitle">
-                                <img src={require('../../.././images/bio/' + this.props.selected['image'])} alt={this.props.selected['leader']} />
                                 <div>
-                                    <h3>{this.props.selected['leader-title']} <br/> {this.props.selected['leader']}</h3>
+                                    <span>{this.props.selected['leader-title']}</span>
+                                    <span>{this.props.selected['leader']}</span>
                                 </div>
-
+                                <img src={require('../../.././images/bio/' + this.props.selected['image'])} alt={this.props.selected['leader']} />
                             </div>
                             <div className="featuredStats">
                                 <img className="featured-flag" src={require('../../.././images/flags/' + this.props.selected.flag)} alt="" />
-                                <h3>{this.props.selected.name}</h3>
-                                <ul>
-                                    <li>Party</li>
+                                <span>{this.props.selected.name}</span>
+                                <ul className="featured-stats-list">
                                     <li>{this.props.selected['party']}</li>
-                                    <li>Age</li>
-                                    <li>{this.props.selected['age']}</li>
-                                    <li>Entered Office</li>
-                                    <li>{this.props.selected['term-start']}</li>
+                                    <li>Time in Office<span>N/A</span></li>
+                                    <li>Start<span>{this.props.selected['term-start']}</span></li>
+                                    <li>Born<span>{this.props.selected['birth-date']}</span></li>
+                                    <li>Age<span>{this.props.selected['age']}</span></li>
+                                    <li>Webpage <span><a href={this.props.selected['webpage']}>Link</a></span></li>
                                 </ul>
                                 <NavLink to={this.props.selected.country} onClick={() => this.props.setNation(this.props.selected['country'])}><button> Explore Profile</button></NavLink>
                             </div>
                         </div>
-                        <div className="featuredNews">
+                        <div className="featured-news">
                             <ul>
-                                <h4>{this.props.selected.leader} in The New York Times</h4>
+                                <p>...{this.props.selected['biography-extended']}</p>
+                                <span>{this.props.selected.leader} in The New York Times</span>
                                 <li><a href={this.state['article-0'].web_url}>{this.state['article-0'].headline.main}</a></li>
                                 <li><a href={this.state['article-1'].web_url}>{this.state['article-1'].headline.main}</a></li>
                                 <li><a href={this.state['article-2'].web_url}>{this.state['article-2'].headline.main}</a></li>
                                 <li><a href={this.state['article-3'].web_url}>{this.state['article-3'].headline.main}</a></li>
-                                <li><a href={this.state['article-4'].web_url}>{this.state['article-4'].headline.main}</a></li>
-                                <li><a href={this.state['article-5'].web_url}>{this.state['article-5'].headline.main}</a></li>
                             </ul>
                         </div>
                     </div>

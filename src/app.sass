@@ -434,14 +434,14 @@ body
   background: $ivory
   width: 100%
   max-width: 800px
-  margin: 10px auto 20px
+  margin: 15px auto
 
 .featuredBox
   animation: fade-in-top .3s ease forwards
   animation-delay: .8s
   background: $ivory
   box-sizing: border-box
-  margin: 10px auto 20px
+  margin: 15px auto
   max-width: 800px
   opacity: 0
   width: 100%
@@ -465,7 +465,7 @@ body
         display: flex
         width: 100%
         flex-direction: row
-      .featuredNews
+      .featured-news
         background: #bebbb2
         border: 1px solid #D4D0C6
         width: 100%
@@ -479,26 +479,31 @@ body
           padding: 0
           min-width: 200px
           margin: 0px
-          h4
-            margin: 0 auto
-            background: #D4D0C6
-            border-bottom-left-radius: 0
-            border-bottom-right-radius: 0
-            font-family: 'Kanit', sans-serif
-            padding: 5px 0
-            border-bottom: 1px solid #ccc
+          p
+            padding: 1px 10px 0
+            font-size: 12px
+            height: 60px
+            overflow: hidden
+            text-align: left
+          span
+            background: #EAEAEA
+            font-family: 'Raleway', sans-serif
+            padding: 12px 0
             width: 100%
           li
             text-align: left
             font-family: Raleway, sans-serif
             font-size: 16px
+            min-height: 50px
             padding: 0 10px
             a
               color: #000
-              line-height: 26px
+              line-height: 25px
               width: 100%
               &:hover
                 color: #777
+            &:last-child
+              margin-bottom: 5px
       .featuredTitle
         background: #f6f6f6
         border: 1px solid #D4D0C6
@@ -509,16 +514,18 @@ body
         margin: 0px
         img
           max-width: 168px
-          padding: 10px 10px 0 10px
+          padding: 0 10px 10px 10px
         div
-          display: flex
-          flex-grow: 1
           align-items: center
-          h3
+          justify-content: center
+          display: flex
+          flex-direction: column
+          flex-grow: 1
+          span
             display: flex
             font-family: 'Raleway', sans-serif
-            font-size: 15px
-            margin: 3px 0
+            font-size: 16px
+            font-weight: 700
             align-items: center
       div
         a
@@ -526,11 +533,11 @@ body
             border: 1px solid #bebbb2
             color: #000
             font-size: 13px
-            margin: 12px auto
+            margin: 12px auto 0
             padding: 10px 12px
             transition: .15s
             &:hover
-              box-shadow: $box-shadow-low
+              box-shadow: $box-shadow-very-low
               transform: translateY(-2px)
               cursor: pointer
       .featuredStats
@@ -543,9 +550,18 @@ body
           margin: 0 auto 0
           max-width: 100px
           min-height: auto
-        h3
-          margin: 5px 0
+        span
+          background: #D4D0C6
+          margin: 11px 0 0
+          padding: 12px 0
           font-family: 'Raleway', sans-serif
+        .featured-stats-list
+          span
+            background: inherit
+            margin: 0
+            padding: 0
+            font-family: system, sans-serif
+            float: right
         h4
           margin: 0
           padding: 10px 0
@@ -556,15 +572,18 @@ body
           padding: 0
           margin: 0
           li
-            text-align: center
+            box-sizing: border-box
+            font-size: 14px
             line-height: 24px
+            padding: 0 2px
+            text-align: left
             width: 100%
             &:nth-child(even)
               background: #D4D0C6
             &:nth-child(odd)
               background: $ivory
-            &:last-child
-              border-bottom: 1px solid #ccc
+            &:first-child
+              text-align: center
     img
       max-width: 188px
       min-height: 200px
@@ -645,20 +664,27 @@ body
 .inner-home
   background: #FFF
   margin: 0 auto
-  padding: 10px 0 0
+  padding: 10px 0
   width: 100%
   max-width: 800px
   h1
-    font-size: 33px
-    font-family: 'Raleway', cursive
-    margin: 5px 0
+    font-family: 'Raleway', sans-serif
   .home-action
-    max-width: 550px
+    display: flex
     margin: 0 auto
-    width: 96%
+    h1
+      flex-grow: 2
+      font-size: 31px
+      text-align: left
+      margin: 5px 0
     h3
+      flex-basis: 50%
+      align-self: flex-end
+      line-height: 16px
+      text-align: right
+      font-size: 13px
       font-family: 'Crimson Text', sans-serif
-      margin: 0 auto
+      margin: 5px auto
 .home-image
   opacity: .7
   margin: 30px auto 0
@@ -671,7 +697,7 @@ body
   background: $ivory
   opacity: 0
   max-width: 800px
-  margin: 20px auto
+  margin: 0 auto 15px
 
 .inner-home-map 
   background: $ivory
@@ -691,13 +717,17 @@ body
   max-width: 800px
   padding: 5px 15px 0
   text-transform: uppercase
+  span
+    align-self: center
+    font-size: 14px
+    text-transform: capitalize
 
 .inner-rank
   animation: fade-in-top 0.4s ease forwards
   animation-delay: 0.6s
   background: $ivory
   max-width: 800px
-  margin: 0 auto 20px
+  margin: 0 auto 15px
   opacity: 0
   width: 100%
 
@@ -712,11 +742,7 @@ body
     max-height: 93px
     margin-right: 10px
     transition: .1s
-    &:hover
-      box-shadow: $box-shadow-high
-      transform: translateY(-2px)
     img
-      box-shadow: $box-shadow-low
       height: 93px
       width: 60px
   .rank-item-data

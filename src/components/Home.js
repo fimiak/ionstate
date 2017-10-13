@@ -11,7 +11,6 @@ import Week from './home/featured/Week';
  ********************************************************
 ** Make the home page modern and colorful.
 ** Add 100+ events to calendar.
-** Add content to Maps/Schedules category.
 ** Add banners and more data for leaders.
 ** Break up data.json into a sheet for each person.
 ** Node Server to store news articles, polls.
@@ -53,11 +52,11 @@ class Home extends Component {
         <div className="inner-home">
           <div className="home-action">
             <h1>Tracking global leaders</h1>
-            <h3>Using public data and calendar dates. Data gathered from major news outlets, non-profits, and government organizations.</h3>
+            <h3>Presidentprime is a public access site supporting features for discovering information about a selection of top presidents and prime ministers.</h3>
           </div>
         </div>
         <div className="inner-map">
-          <div className="header">Map Tracker <span>{month + " " + date.getDate()}</span></div>
+          <div className="header">Map Tracker <span>{month + " " + date.getDate() + ", " + date.getFullYear()}</span></div>
           <Map />
         </div>
         <div className="inner-rank">
