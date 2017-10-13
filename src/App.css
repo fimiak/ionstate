@@ -408,7 +408,7 @@ body {
   background: #ECE8DD;
   width: 100%;
   max-width: 800px;
-  margin: 0 auto 20px; }
+  margin: 10px auto 20px; }
 
 .featuredBox {
   animation: fade-in-top 0.3s ease forwards;
@@ -496,7 +496,6 @@ body {
             align-items: center; }
       .featuredBox .featuredEvents .featuredDetails div a button {
         border: 1px solid #bebbb2;
-        background: #bebbb2;
         color: #000;
         font-size: 13px;
         margin: 12px auto;
@@ -649,9 +648,8 @@ body {
 .inner-home-map {
   background: #ECE8DD;
   opacity: 0.9;
-  border-radius: 5px;
   max-width: 810px;
-  padding: 5px;
+  padding: 15px;
   margin: 0 auto; }
 
 .header {
@@ -749,7 +747,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     opacity: 0;
-    margin: 0 auto;
+    margin: 15px auto 0;
     max-width: 800px;
     padding: 0 15px; }
     .inner-week .week .week-box {
@@ -763,13 +761,6 @@ body {
       max-width: 384px;
       position: relative;
       width: 100%; }
-      .inner-week .week .week-box:nth-child(even) {
-        margin-right: 1px; }
-        .inner-week .week .week-box:nth-child(even) .week-details a {
-          flex-direction: row-reverse; }
-          .inner-week .week .week-box:nth-child(even) .week-details a img {
-            margin-left: 5px;
-            margin-right: 0; }
       .inner-week .week .week-box .week-title {
         border: 1px solid #D4D0C6;
         display: flex;

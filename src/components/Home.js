@@ -30,14 +30,17 @@ class Home extends Component {
     const appWindow = document.getElementsByClassName('App-intro')[0];
     const logoWrap = document.getElementsByClassName('logo-wrap')[0];
     const navWrap = document.getElementsByClassName('nav-wrap')[0];
-
+    const buttonMenu = document.getElementsByClassName('button-menu')[0];
+    
     appWindow.addEventListener('scroll', function() { 
         if (appWindow.scrollTop >= 24) {
           logoWrap.setAttribute('style', 'line-height: 32px;');
           navWrap.setAttribute('style', 'top: 42px;');
+          buttonMenu.setAttribute('style', 'width: 42px');          
       } else {
           logoWrap.setAttribute('style', 'line-height: 48px;');
           navWrap.setAttribute('style', 'top: 58px;');
+          buttonMenu.setAttribute('style', 'width: 58px');
         }
       }
     );
@@ -58,7 +61,7 @@ class Home extends Component {
           <Map />
         </div>
         <div className="inner-rank">
-          <div className="header">Daily News Ranking</div>
+          <div className="header">Latest News</div>
           <Rank data={data.data} />
         </div>
         <div className="inner-week">

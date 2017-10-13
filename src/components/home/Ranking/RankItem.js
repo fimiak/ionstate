@@ -2,7 +2,6 @@ import React, { Component } from 'react/react.js';
 
 class RankItem extends Component {
     render() {
-        console.log(this.props.docs);        
         return(
             <div className="rank-item">
                 <div className="rank-item-image">
@@ -18,17 +17,17 @@ class RankItem extends Component {
                     </div>
                     <div className="rank-item-articles">
                         <a className="rank-link" href={this.props.docs.web_url} alt="">
-                            <img className="rank-image" src={require('../../.././images/' + this.props.docs.multimedia.url)} />
+                            <img className="rank-image" src={require('../../.././images/' + this.props.docs.multimedia.url)} alt="" />
                             <span className="rank-headline">{this.props.docs.headline.print_headline}</span>
                         </a>
 
                         <a className="rank-link" href={this.props.docs.web_url} alt="">
-                            <img className="rank-image" src={require('../../.././images/' + this.props.docs.multimedia.url)} />
+                            <img className="rank-image" src={require('../../.././images/' + this.props.docs.multimedia.url)} alt="" />
                             <span className="rank-headline">{this.props.docs.headline.print_headline}</span>
                         </a>
 
                         <a className="rank-link" href={this.props.docs.web_url} alt="">
-                            <img className="rank-image" src={require('../../.././images/' + this.props.docs.multimedia.url)} />
+                            <img className="rank-image" src={require('../../.././images/' + this.props.docs.multimedia.url)} alt="" />
                             <span className="rank-headline">{this.props.docs.headline.print_headline}</span>
                         </a>
                     </div>
