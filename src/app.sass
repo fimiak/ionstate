@@ -1,14 +1,20 @@
+/*****************/
 /*** FONT-FACE ***/
+/*****************/
 @font-face
   font-family: system
   font-style: normal
   font-weight: 300
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma")
 
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Kanit:200|Raleway:500')
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Kanit:200|Raleway:500|Roboto')
+/*****************/
 /*** FONT-FACE ***/
+/*****************/
 
+/*****************/
 /*** KEYFRAMES ***/
+/*****************/
 @keyframes fade-in-right 
   from
     opacity: 0
@@ -48,21 +54,28 @@
   to
     opacity: 0
     transform: translateY(15px)
+/*****************/
 /*** KEYFRAMES ***/
+/*****************/
 
+/*****************/
 /*** VARIABLES ***/
+/*****************/
 $ivory: #ECE8DD
 $ivory-dark: #D4D0C6
 $crimson: #C45C4F
 $gradient: linear-gradient(to right, #fff, #fff)
 
-$box-shadow-very-low: 0 8px 35px rgba(50,50,93,.1),0 1px 15px rgba(0,0,0,.07)
-$box-shadow-low: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07)
+$box-shadow-very-low: 0 4px 30px rgba(50,50,93,.1),0 1px 10px rgba(0,0,0,.07)
+$box-shadow-low: 0 10px 30px rgba(50,50,93,.1), 0 4px 15px rgba(0,0,0,.07)
 $box-shadow-high: 0 18px 35px rgba(50,50,93,.1), 0 8px 15px rgba(0,0,0,.07)
-
+/*****************/
 /*** VARIABLES ***/
+/*****************/
 
-/** MAIN STYLES **/
+/*******************/
+/*** MAIN STYLES ***/
+/*******************/
 *
   font-family: system, sans-serif
 
@@ -710,12 +723,13 @@ body
   border-bottom: 1px solid $ivory-dark
   color: #000
   display: flex
-  font-size: 18px
-  font-family: 'Kanit', sans-serif
+  font-size: 16px
+  font-family: 'Roboto', sans-serif
+  font-weight: 400
   justify-content: space-between
   margin: 0 auto
   max-width: 800px
-  padding: 5px 15px 0
+  padding: 10px 15px
   text-transform: uppercase
   span
     align-self: center
@@ -749,15 +763,25 @@ body
     display: flex
     flex-grow: 1
     flex-direction: column
+    .rank-head-name
+      display: flex
+      align-items: flex-end
+      font-size: 14px
+      justify-content: space-between
+      flex-grow: 1
+      span
+        font-size: 12px
+        justify-content: center
     .rank-link
       position: relative
       margin: 0 5px
       .rank-image
         height: 132px
         width: 220px
-        padding-bottom: 35px
+        padding-bottom: 15px
       .rank-headline
         background: #ffffff
+        box-shadow: $box-shadow-very-low
         box-sizing: border-box
         display: block
         font-size: 14px
@@ -770,7 +794,7 @@ body
         overflow: hidden
         padding: 10px
         position: absolute
-        top: -55px
+        bottom: 5px
       &:hover .rank-headline
         box-shadow: $box-shadow-low
         transform: translateY(-2px)
@@ -778,12 +802,10 @@ body
       background: $ivory-dark
       display: flex
       justify-content: space-between
-      padding: 5px
+      padding: 5px 10px
 
     .rank-item-articles
-      background: #f6f6f6
       box-sizing: border-box
-      border: 1px solid $ivory-dark
       flex-grow: 1
       padding: 10px 5px
       text-align: left
@@ -1385,20 +1407,22 @@ img.othersFlag
     text-align: right
   p
     margin: 5px 0
+/*******************/
 /*** MAIN STYLES ***/
+/*******************/
+
 
 
 /*****************************/
-
-
-
+/*****************************/
 /*****************************/
 /******** Mobile SASS ********/
 /*****************************/
-
-
-
 /*****************************/
+/*****************************/
+
+
+
 @media (max-width: 1000px)
 
   html
@@ -1845,4 +1869,6 @@ img.othersFlag
         width: 100%
       p
         text-align: center
+/*******************/
 /*** Mobile Sass ***/
+/*******************/

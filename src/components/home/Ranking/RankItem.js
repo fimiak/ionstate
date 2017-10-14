@@ -1,6 +1,7 @@
 import React, { Component } from 'react/react.js';
 
 class RankItem extends Component {
+    
     render() {
         return(
             <div className="rank-item">
@@ -13,22 +14,23 @@ class RankItem extends Component {
                     <div className="rank-item-head">
                         <div className="rank-head-name">
                             {this.props.data.leader}
+                            <span>{this.props.data.name}</span>
                         </div>
                     </div>
                     <div className="rank-item-articles">
-                        <a className="rank-link" href={this.props.docs.web_url} alt="">
-                            <img className="rank-image" src={require('../../.././images/' + this.props.docs.multimedia.url)} alt="" />
-                            <span className="rank-headline">{this.props.docs.headline.print_headline}</span>
+                        <a className="rank-link" href={this.props.docs[0].web_url} alt="">
+                            <img className="rank-image" src={require('../../.././images/' + this.props.docs[0].multimedia.url)} alt="" />
+                            <span className="rank-headline">{this.props.docs[0].headline.print_headline}</span>
                         </a>
 
-                        <a className="rank-link" href={this.props.docs.web_url} alt="">
-                            <img className="rank-image" src={require('../../.././images/' + this.props.docs.multimedia.url)} alt="" />
-                            <span className="rank-headline">{this.props.docs.headline.print_headline}</span>
+                        <a className="rank-link" href={this.props.docs[1].web_url} alt="">
+                            <img className="rank-image" src={require('../../.././images/' + this.props.docs[1].multimedia.url)} alt="" />
+                            <span className="rank-headline">{this.props.docs[1].headline.print_headline}</span>
                         </a>
 
-                        <a className="rank-link" href={this.props.docs.web_url} alt="">
-                            <img className="rank-image" src={require('../../.././images/' + this.props.docs.multimedia.url)} alt="" />
-                            <span className="rank-headline">{this.props.docs.headline.print_headline}</span>
+                        <a className="rank-link" href={this.props.docs[2].web_url} alt="">
+                            <img className="rank-image" src={require('../../.././images/' + this.props.docs[2].multimedia.url)} alt="" />
+                            <span className="rank-headline">{this.props.docs[2].headline.print_headline}</span>
                         </a>
                     </div>
                 </div>

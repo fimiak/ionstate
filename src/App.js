@@ -1,8 +1,10 @@
 import React, { Component } from 'react/react.js';
 import NavWrap from './components/sidenav/NavWrap';
+import { fetchedNews } from './components/requests/NewsLoader';
 import closeIcon from './icons/x.svg';
 import data from './data/data';
 import menuIcon from './icons/menu.svg';
+import testdata from './data/testdata';
 import './App.css';
 
 let list = [];
@@ -68,7 +70,7 @@ class App extends Component {
           <NavWrap menu={this.state.menu} menuState={this.state.menuState} closeMenu={this.closeMenu} nation={this.state.nation} setNation={this.setNation} />
         </div>
         <div className="App-intro">
-          {React.cloneElement(this.props.children, { nation: this.state.nation, setNation: this.setNation, showMenu: this.showMenu })}
+          {React.cloneElement(this.props.children, { nation: this.state.nation, news: fetchedNews, setNation: this.setNation, showMenu: this.showMenu, testdata: testdata })}
         </div>
       </div>
     );

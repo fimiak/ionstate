@@ -1,6 +1,6 @@
 import React, { Component } from 'react/react.js';
-import NavLink from '../.././NavLink';
 import axios from 'axios';
+import NavLink from '../.././NavLink';
 import testdata from '../../../data/testdata';
 
 class Featured extends Component {
@@ -25,22 +25,22 @@ class Featured extends Component {
             .then(response => {
                 this.setState({
                     news: response.data.response,
+                    loading: false,            
                     'article-0': response.data.response.docs[0],
                     'article-1': response.data.response.docs[1],
                     'article-2': response.data.response.docs[2],
                     'article-3': response.data.response.docs[3],
                     'article-4': response.data.response.docs[4],
-                    'article-5': response.data.response.docs[5],
-                    loading: false
+                    'article-5': response.data.response.docs[5]
                 });
             })
             .catch(error => {
-                console.log('Error fetching and parsing data', error);
+                console.log('Error fetching data', error);
             });
-    }
+        }
 
     componentWillMount() {
-        this.performSearch();
+        //this.performSearch();
     }
 
     scrollTop() {

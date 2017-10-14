@@ -45,24 +45,27 @@ class Home extends Component {
     );
   }
 
-
   render() {
     return (
       <div className="home">
+
         <div className="inner-home">
           <div className="home-action">
             <h1>Tracking global leaders</h1>
             <h3>Presidentprime is a public access site supporting features for discovering information about a selection of top presidents and prime ministers.</h3>
           </div>
         </div>
+
+        <div className="inner-rank">
+          <div className="header">Latest News</div>
+          <Rank data={data.data} news={this.props.news} testdata={this.props.testdata} />
+        </div>
+
         <div className="inner-map">
           <div className="header">Map Tracker <span>{month + " " + date.getDate() + ", " + date.getFullYear()}</span></div>
           <Map />
         </div>
-        <div className="inner-rank">
-          <div className="header">Latest News</div>
-          <Rank data={data.data} />
-        </div>
+
         <div className="inner-week">
           <div className="header">Upcoming Events</div>
           <Week />

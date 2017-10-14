@@ -1,12 +1,18 @@
+/**************** */
 /*** FONT-FACE ** */
-@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Kanit:200|Raleway:500");
+/**************** */
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text|Kanit:200|Raleway:500|Roboto");
 @font-face {
   font-family: system;
   font-style: normal;
   font-weight: 300;
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"); }
+/**************** */
 /*** FONT-FACE ** */
+/**************** */
+/**************** */
 /*** KEYFRAMES ** */
+/**************** */
 @keyframes fade-in-right {
   from {
     opacity: 0;
@@ -42,10 +48,18 @@
   to {
     opacity: 0;
     transform: translateY(15px); } }
+/**************** */
 /*** KEYFRAMES ** */
+/**************** */
+/**************** */
 /*** VARIABLES ** */
+/**************** */
+/**************** */
 /*** VARIABLES ** */
-/** MAIN STYLES */
+/**************** */
+/****************** */
+/*** MAIN STYLES ** */
+/****************** */
 * {
   font-family: system, sans-serif; }
 
@@ -509,7 +523,7 @@ body {
         padding: 10px 12px;
         transition: 0.15s; }
         .featuredBox .featuredEvents .featuredDetails div a button:hover {
-          box-shadow: 0 8px 35px rgba(50, 50, 93, 0.1), 0 1px 15px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 4px 30px rgba(50, 50, 93, 0.1), 0 1px 10px rgba(0, 0, 0, 0.07);
           transform: translateY(-2px);
           cursor: pointer; }
       .featuredBox .featuredEvents .featuredDetails .featuredStats {
@@ -681,12 +695,13 @@ body {
   border-bottom: 1px solid #D4D0C6;
   color: #000;
   display: flex;
-  font-size: 18px;
-  font-family: "Kanit", sans-serif;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   justify-content: space-between;
   margin: 0 auto;
   max-width: 800px;
-  padding: 5px 15px 0;
+  padding: 10px 15px;
   text-transform: uppercase; }
   .header span {
     align-self: center;
@@ -720,15 +735,25 @@ body {
     display: flex;
     flex-grow: 1;
     flex-direction: column; }
+    .rank-item .rank-item-data .rank-head-name {
+      display: flex;
+      align-items: flex-end;
+      font-size: 14px;
+      justify-content: space-between;
+      flex-grow: 1; }
+      .rank-item .rank-item-data .rank-head-name span {
+        font-size: 12px;
+        justify-content: center; }
     .rank-item .rank-item-data .rank-link {
       position: relative;
       margin: 0 5px; }
       .rank-item .rank-item-data .rank-link .rank-image {
         height: 132px;
         width: 220px;
-        padding-bottom: 35px; }
+        padding-bottom: 15px; }
       .rank-item .rank-item-data .rank-link .rank-headline {
         background: #ffffff;
+        box-shadow: 0 4px 30px rgba(50, 50, 93, 0.1), 0 1px 10px rgba(0, 0, 0, 0.07);
         box-sizing: border-box;
         display: block;
         font-size: 14px;
@@ -741,19 +766,17 @@ body {
         overflow: hidden;
         padding: 10px;
         position: absolute;
-        top: -55px; }
+        bottom: 5px; }
       .rank-item .rank-item-data .rank-link:hover .rank-headline {
-        box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
+        box-shadow: 0 10px 30px rgba(50, 50, 93, 0.1), 0 4px 15px rgba(0, 0, 0, 0.07);
         transform: translateY(-2px); }
     .rank-item .rank-item-data .rank-item-head {
       background: #D4D0C6;
       display: flex;
       justify-content: space-between;
-      padding: 5px; }
+      padding: 5px 10px; }
     .rank-item .rank-item-data .rank-item-articles {
-      background: #f6f6f6;
       box-sizing: border-box;
-      border: 1px solid #D4D0C6;
       flex-grow: 1;
       padding: 10px 5px;
       text-align: left;
@@ -1065,7 +1088,7 @@ body {
   .news-open:hover {
     background: #DADADA;
     transform: translateY(-2px);
-    box-shadow: 0 8px 35px rgba(50, 50, 93, 0.1), 0 1px 15px rgba(0, 0, 0, 0.07); }
+    box-shadow: 0 4px 30px rgba(50, 50, 93, 0.1), 0 1px 10px rgba(0, 0, 0, 0.07); }
 
 .contact {
   background: #ECE8DD;
@@ -1348,10 +1371,14 @@ img.othersFlag {
   .footer-last p {
     margin: 5px 0; }
 
+/****************** */
 /*** MAIN STYLES ** */
+/****************** */
+/**************************** */
 /**************************** */
 /**************************** */
 /******** Mobile SASS ******* */
+/**************************** */
 /**************************** */
 /**************************** */
 @media (max-width: 1000px) {
@@ -1777,6 +1804,8 @@ img.othersFlag {
         width: 100%; }
       .footer .footer-last p {
         text-align: center; } }
+/****************** */
 /*** Mobile Sass ** */
+/****************** */
 
 /*# sourceMappingURL=App.css.map */
