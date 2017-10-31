@@ -1,41 +1,47 @@
-import React, { Component } from 'react/react.js';
-import schedule from '../../data/schedule';
+import React, { Component } from 'react';
+import schedule from '../../data/schedule.json';
 
 const schedList = schedule.schedule;
 
 class ScheduleItems extends Component {
-    constructor(props) {
-        super(props);
-        this.onSetMap = this.onSetMap.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.onSetMap = this.onSetMap.bind(this);
+  }
 
-    onSetMap(place) {
-        this.props.setMap(place);
-        document.getElementById("overlay").setAttribute('style', 'opacity: 0;');
-      }
+  onSetMap(place) {
+    this.props.setMap(place);
+    document.getElementById('overlay').setAttribute('style', 'opacity: 0;');
+  }
 
-    render() {
-        const listItems = schedList.map((data) =>
-            <li key={data.id.toString()}>
-                <div className="dayBox">
-                    <div className="dateBox">
-                        <span className="monthBox">{data.month}</span>
-                        <span>{data.date}</span>
-                    </div>
-                    <div className="eventBox" onClick={() => this.onSetMap(data.place)}>
-                        <p>{data.title}</p>
-                        <span>{data.place}</span>
-                    </div>
-                </div>
-            </li>
-        );
+  render() {
+    const listItems = schedList.map(data => (
+      <li key={data.id.toString()}>
+        <div className="dayBox">
+          <div className="dateBox">
+            <span className="monthBox">{data.month}</span>
+            <span>{data.date}</span>
+          </div>
+          <div
+            className="eventBox"
+            onClick={() => {}}
+            onKeyPress={this.onSetMap(data.place)}
+            role="button"
+            tabIndex="0"
+          >
+            <p>{data.title}</p>
+            <span>{data.place}</span>
+          </div>
+        </div>
+      </li>
+    ));
 
-        return (
-            <ul className="listItems">
-                {listItems}
-            </ul>
-        )
-    }
+    return (
+      <ul className="listItems">
+        {listItems}
+      </ul>
+    );
+  }
 }
 
 export default ScheduleItems;

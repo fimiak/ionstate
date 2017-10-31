@@ -1,7 +1,7 @@
-import React, {Component} from 'react/react.js';
+import React, { Component } from 'react';
 import Biography from './sidenav/Biography';
 import CountryData from './sidenav/CountryData';
-import data from '.././data/data';
+import data from '.././data/data.json';
 import DataSheets from './sidenav/DataSheets';
 import Footer from './Footer';
 import News from './sidenav/News';
@@ -9,20 +9,19 @@ import Others from './sidenav/Others';
 import Polls from './sidenav/Polls';
 import Schedule from './sidenav/Schedule';
 
-let list = [];
-for (let i = 0; i < data.data.length; i++) { // Assign data.data[i] to 'country' key.
-list[data.data[i]['country']] = data.data[i];
+const list = [];
+for (let i = 0; i < data.data.length; i += 1) { // Assign data.data[i] to 'country' key.
+  list[data.data[i].country] = data.data[i];
 }
 
 class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: data,
-      loading: true,
-      newsToggle: true
+      data,
+      newsToggle: true,
     };
-    
+
     this.setMap = this.setMap.bind(this);
     this.showNews = this.showNews.bind(this);
     this.hideNews = this.hideNews.bind(this);
@@ -35,19 +34,18 @@ class Main extends Component {
     const navWrap = document.getElementsByClassName('nav-wrap')[0];
     const buttonMenu = document.getElementsByClassName('button-menu')[0];
     this.topnavColor();
-    
-    appWindow.addEventListener('scroll', function() { 
-        if (appWindow.scrollTop >= 24) {
-          logoWrap.setAttribute('style', 'line-height: 32px;');
-          navWrap.setAttribute('style', 'top: 42px;');
-          buttonMenu.setAttribute('style', 'width: 42px');
+
+    appWindow.addEventListener('scroll', () => {
+      if (appWindow.scrollTop >= 24) {
+        logoWrap.setAttribute('style', 'line-height: 32px;');
+        navWrap.setAttribute('style', 'top: 42px;');
+        buttonMenu.setAttribute('style', 'width: 42px');
       } else {
-          logoWrap.setAttribute('style', 'line-height: 48px;');
-          navWrap.setAttribute('style', 'top: 58px;');
-          buttonMenu.setAttribute('style', 'width: 58px');          
-        }
+        logoWrap.setAttribute('style', 'line-height: 48px;');
+        navWrap.setAttribute('style', 'top: 58px;');
+        buttonMenu.setAttribute('style', 'width: 58px');          
       }
-    );
+    });
   }
 
   componentDidUpdate() {
@@ -56,27 +54,30 @@ class Main extends Component {
 
   setMap(place) {
     this.setState({
-      map: place
+      map: place,
     });
   }
 
   showNews() {
     document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: 1106px;');
     this.setState({
-      newsToggle: false
+      newsToggle: false,
     });
   }
 
   hideNews() {
     document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: 530px;');
     this.setState({
-      newsToggle: true
+      newsToggle: true,
     });
   }
 
   topnavColor() {
-     document.getElementsByClassName('top-title')[0].setAttribute('style', 'border-image: linear-gradient(to right, ' + this.props.nation['flag-colors'] + ');border-image-slice: 1;');
-  };
+    document.getElementsByClassName('top-title')[0].setAttribute( 
+      'style',
+      `border-image: linear-gradient(to right, ${this.props.nation['flag-colors']});border-image-slice: 1;`,
+    );
+  }
 
   render() {
     return (
@@ -89,7 +90,9 @@ class Main extends Component {
             <div id="top-content" className="top-content">
               <div className="top-nav">
                 <div className="top-banner fade-in-right">
-                  <div className="top-icon"><img className="top-leader" alt={this.props.nation.leader} src={require('.././images/thumbs/' + this.props.nation.thumb)}></img></div>
+                  <div className="top-icon">
+                    <img className="top-leader" alt={this.props.nation.leader} src={require(`.././images/thumbs/${this.props.nation.thumb}`)} />
+                  </div>
                   <div className="top-title">{this.props.nation.leader}</div>
                 </div>
                 <div className="content-box-links fade-in-right">
@@ -99,7 +102,7 @@ class Main extends Component {
                   <a href="#country-data">Data</a>
                 </div>
                 <div className="top-flag">
-                  <img className="fade-in-right" src={require('.././images/flags/' + this.props.nation.flag)} alt={this.props.nation.name} />
+                  <img className="fade-in-right" src={require(`.././images/flags/${this.props.nation.flag}`)} alt={this.props.nation.name} />
                 </div>
               </div>
             </div>
@@ -115,15 +118,23 @@ class Main extends Component {
 
             <div className="top-split fade-in-top">
               <div id="news" className="news">
-              <News props={this.props.params} nation={this.props.nation} />
-                <div className="news-open" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>
-                  {this.state.newsToggle ? "More" : "Hide"} News
-                </div>
+                <News
+                  props={this.props.params}
+                  nation={this.props.nation}
+                />
+                <a className="news-open" role="button" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>
+                  {this.state.newsToggle ? 'More' : 'Hide'} News
+                </a>
               </div>
             </div>
 
             <div id="schedule" className="schedule">
-              <Schedule map={this.state.map} nation={this.props.nation} setMap={this.setMap}  props={this.props.params} />
+              <Schedule
+                map={this.state.map}
+                nation={this.props.nation}
+                setMap={this.setMap}
+                props={this.props.params}
+              />
             </div>
 
             <div id="country-data">
@@ -135,13 +146,17 @@ class Main extends Component {
             </div>
 
             <div id="others">
-              <Others props={this.props.params} id={this.props.nation.id} setNation={this.props.setNation} />
+              <Others
+                props={this.props.params}
+                id={this.props.nation.id}
+                setNation={this.props.setNation}
+              />
             </div>
           </div>
         </div>
         <Footer />
       </div>
-    )
+    );
   }
 }
 

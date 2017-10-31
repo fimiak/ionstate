@@ -1,13 +1,52 @@
-import React, { Component } from 'react/react.js';
+/* @flow */
 
-class RankItem extends Component {
-    
+import React, { Component } from 'react';
+
+type Props = {
+    data: {
+        country: string,
+        leader: string,
+        name: string,
+        thumb: string
+    },
+    docs: [
+        {
+            headline: {
+                print_headline: string
+            },
+            multimedia: {
+                url: string
+            },
+            web_url: string
+        },
+        {
+            headline: {
+                print_headline: string
+            },
+            multimedia: {
+                url: string
+            },
+            web_url: string
+        },
+        {
+            headline: {
+                print_headline: string
+            },
+            multimedia: {
+                url: string
+            },
+            web_url: string
+        }
+    ]
+};
+
+class RankItem extends Component<Props> {
     render() {
         return(
             <div className="rank-item">
                 <div className="rank-item-image">
                     <a href={this.props.data.country} alt="" >
-                        <img src={require('../../.././images/bio/' + this.props.data.thumb)} alt="" />
+                        <img src={require('../../.././images/bio/' + this.props.data.image)} alt="" />
                     </a>
                 </div>
                 <div className="rank-item-data">

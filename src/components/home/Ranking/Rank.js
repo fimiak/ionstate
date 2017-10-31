@@ -1,16 +1,41 @@
-import React, { Component } from 'react/react.js';
+/* @flow */
+
+import * as React from 'react';
 import axios from 'axios';
 import RankItem from './RankItem';
 
-class Rank extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            loading: true,            
-            news: this.props.testdata
+type Props = {
+    data: Object,
+    news: {
+        response: {
+            data: any;
+        }
+    },
+    testdata: {
+        response: {
+            data: any,
+            docs: any
         }
     }
+};
+
+type State = {
+    loading: boolean,
+    news: {
+        response: {
+            data: any,
+            docs: any
+        }
+    }
+};
+
+class Rank extends React.Component<Props, State> {
+
+    state =
+    {
+        loading: true,            
+        news: this.props.testdata
+    };
 
     performSearch = () => {
         let nytimes = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q=may, theresa&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48';

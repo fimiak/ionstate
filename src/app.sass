@@ -7,7 +7,7 @@
   font-weight: 300
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma")
 
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Kanit:200|Raleway:500|Roboto')
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Kanit|Raleway|Archivo+Black')
 /*****************/
 /*** FONT-FACE ***/
 /*****************/
@@ -63,7 +63,7 @@
 /*****************/
 $ivory: #ECE8DD
 $ivory-dark: #D4D0C6
-$crimson: #C45C4F
+$crimson: #E85A4F
 $gradient: linear-gradient(to right, #fff, #fff)
 
 $box-shadow-very-low: 0 4px 30px rgba(50,50,93,.1),0 1px 10px rgba(0,0,0,.07)
@@ -115,16 +115,18 @@ body
   height: 30px
   width: 30px
 
-.title
-  align-content: center
-  align-items: center
-  font-family: 'Kanit', sans-serif
-  display: flex
-  margin: 0
-  padding: 5px
+
 
 .title-link
   text-decoration: none
+  .title
+    align-content: center
+    align-items: center
+    color: #666
+    font-family: 'Archivo Black', sans-serif
+    display: flex
+    margin: 0
+    padding: 5px
 
 .App-logo
   height: 30px
@@ -254,12 +256,7 @@ body
           max-height: 50px
           min-width: 50px
           width: 50px
-        .img-size
-          border: 0
-          box-sizing: content-box
-          width: 15px
-          height: 15px
-          padding: 3px 0
+
         &:hover
           background: #A9A69E
   &:hover
@@ -269,6 +266,13 @@ body
       transition: 0.2s
     li .sidelink-text
       transition-delay: .25s
+
+.img-size
+  border: 0
+  box-sizing: content-box
+  width: 15px
+  height: 15px
+  padding: 3px 0
 
 .active,
 .App-header .active
@@ -712,7 +716,7 @@ body
   max-width: 800px
   margin: 0 auto 15px
 
-.inner-home-map 
+.inner-home-map
   background: $ivory
   opacity: 0.9
   max-width: 810px
@@ -723,9 +727,9 @@ body
   border-bottom: 1px solid $ivory-dark
   color: #000
   display: flex
+  font-family: 'Archivo Black', sans-serif
   font-size: 16px
-  font-family: 'Roboto', sans-serif
-  font-weight: 400
+  font-weight: 700
   justify-content: space-between
   margin: 0 auto
   max-width: 800px
@@ -735,6 +739,86 @@ body
     align-self: center
     font-size: 14px
     text-transform: capitalize
+
+.grid-item
+  background: #DDD
+  box-sizing: border-box
+  height: 190px
+  margin-bottom: 15px
+  width: 190px
+  a
+    text-decoration: none
+
+.grid-list
+  width: 800px
+  margin: 0 auto
+
+.grid-list-ul
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  list-style: none
+  padding: 0
+
+.grid-image
+  width: 100%
+  &:hover + .grid-copy
+    background: rgba(34,34,34,.8)
+    color: #FFF
+    margin-top: -53px
+    padding: 5px 0
+
+.grid-copy
+  background: rgba(51,51,51,.5)
+  color: #EEE
+  font-size: 14px
+  height: 40px
+  margin-top: -47px
+  padding: 2px 0
+  position: absolute
+  transition: .1s
+  width: 190px
+  &:hover
+    background: rgba(34,34,34,.8)
+    color: #FFF
+    margin-top: -53px
+    padding: 5px 0
+
+.grid-sort
+  background: $ivory-dark
+  display: flex
+  justify-content: space-between
+  margin: 10px auto 0
+  max-width: 800px
+  span
+    align-items: center
+    color: #000
+    font-family: sans-serif
+    font-weight: 500
+    display: flex
+    justify-content: center
+    margin: 0
+    flex-grow: 2
+  ul
+    display: flex
+    flex-grow: 0
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      border-left: 1px solid #000
+      color: #000
+      cursor: pointer
+      font-size: 13px
+      font-weight: bold
+      padding: 5px 10px
+      a
+        align-items: center
+        display: flex
+        padding: 0 5px
+        .img-size
+          padding-right: 5px
+
 
 .inner-rank
   animation: fade-in-top 0.4s ease forwards
@@ -798,6 +882,9 @@ body
       &:hover .rank-headline
         box-shadow: $box-shadow-low
         transform: translateY(-2px)
+      &:active .rank-headline
+        box-shadow: $box-shadow-very-low
+        transform: translateY(0)
     .rank-item-head
       background: $ivory-dark
       display: flex

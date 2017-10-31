@@ -13,6 +13,7 @@ class TwitterApi extends Component {
                     options={{
                         chrome: 'noheader, nofooter, noborders',        
                         height: '350',
+                        tweetLimit: 2,
                         width: '450'
                     }}
                 />
