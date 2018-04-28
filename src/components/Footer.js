@@ -10,7 +10,7 @@ function Footer() {
             <h3>Tools</h3>
             <a href="https://facebook.github.io/react/">ReactJS</a>
             <a href="https://www.cia.gov/library/publications/the-world-factbook/">World Factbook</a>
-            <a href="https://developer.nytimes.com/">NYTimes API</a>
+            <a href="https://developer.nytimes.com/">NY Times API</a>
             <a href="https://developers.google.com/maps/">Google Maps</a>
           </div>
           <div className="footer-column footer-middle">
@@ -27,10 +27,8 @@ function Footer() {
             <button className="button-submit">Submit</button>
           </div>
           <p>
-            PRESIDENTPRIME is a non-partisan tracker of world leaders <br />
-            Data sourced from public News APIs, NGOs, and Wikipedia <br />
-            Images not property of PRESIDENTPRIME. <br />
-            Copyright 2017
+            Data sourced from public APIs and Wikipedia<br />
+            PRESIDENTPRIME 2017
           </p>
         </div>
       </div>

@@ -78,9 +78,11 @@ html, body, #root {
   width: 100%; }
 
 body {
-  background: #ECE8DD;
-  display: flex;
-  overflow: hidden; }
+  background: #EEE;
+  display: flex; }
+
+a {
+  color: #FFFFFF; }
 
 .hide {
   display: none; }
@@ -91,24 +93,73 @@ body {
   height: 100%;
   text-align: center; }
 
+.container {
+  background: #FFF;
+  display: grid;
+  grid-template-areas: "sidebar header" "sidebar main" "footer footer";
+  grid-template-columns: 15% auto;
+  grid-template-rows: 60px auto 220px;
+  margin: 0 auto;
+  max-width: 1440px; }
+
+.sidebar {
+  background: #222;
+  color: #FFF;
+  grid-area: sidebar;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  .sidebar div p {
+    color: #FFF;
+    font-weight: bold;
+    padding: 0 5px; }
+  .sidebar div ul {
+    color: #FFF; }
+  .sidebar div li {
+    border-bottom: 1px solid #999;
+    margin: 0; }
+
+.sidebar-body {
+  margin: 0 5px; }
+
+.leader-list {
+  margin: 0 0 0 5px; }
+
+.sidebar-header {
+  align-items: center;
+  background: #E94949;
+  color: #FFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-content: center;
+  align-items: center; }
+
+.sidebar-topics ul {
+  list-style: none;
+  padding: 0 0 0 10px; }
+  .sidebar-topics ul li {
+    border: none;
+    color: #CCC;
+    margin-bottom: 5px; }
+
+.sidebar-full {
+  color: #CCC;
+  font-size: 10px; }
+
+.sidebar-body {
+  height: 100%; }
+
 .globeIcon {
-  height: 30px;
-  width: 30px; }
+  height: 24px;
+  width: 24px; }
 
 .top-logo {
   height: 30px;
   width: 30px; }
-
-.title-link {
-  text-decoration: none; }
-  .title-link .title {
-    align-content: center;
-    align-items: center;
-    color: #666;
-    font-family: "Archivo Black", sans-serif;
-    display: flex;
-    margin: 0;
-    padding: 5px; }
 
 .App-logo {
   height: 30px;
@@ -116,10 +167,18 @@ body {
   transition-delay: 0.2s;
   transition: 0.2s; }
 
+.header {
+  color: #FFF;
+  grid-area: header;
+  overflow: hidden;
+  width: 100%; }
+
 .App-header {
+  background: #DDD;
   color: #ffa14e;
   display: flex;
   flex-direction: column;
+  height: 50px;
   min-height: 33px;
   overflow: hidden;
   width: 100%; }
@@ -144,16 +203,16 @@ body {
       margin: 0 auto;
       max-width: 136px; }
   .App-header .logo-wrap {
-    align-items: stretch;
-    background: linear-gradient(to right, #fff, #fff);
+    align-items: center;
+    background-color: #DDD;
     border-bottom: 1px solid #333;
     display: flex;
     flex-shrink: 0;
+    height: 100%;
     justify-content: space-between;
     line-height: 48px;
-    padding: 0 0 0 15px;
-    transition: 0.15s;
-    z-index: 99; }
+    padding: 0 0 0 0;
+    transition: 0.15s; }
     .App-header .logo-wrap .navbar {
       display: flex;
       align-items: stretch;
@@ -182,19 +241,21 @@ body {
             .App-header .nav-wrap .inner-header .nav-links ul .nav-links-active a:hover {
               background: #98958e; }
           .App-header .nav-wrap .inner-header .nav-links ul li {
-            background: #bbb;
+            background: #D4D0C6;
             justify-content: left;
             min-width: 190px;
             border-bottom: 1px solid #333; }
             .App-header .nav-wrap .inner-header .nav-links ul li a {
               color: #000;
               width: 100%;
-              height: 22px; }
+              height: 22px;
+              justify-content: center; }
               .App-header .nav-wrap .inner-header .nav-links ul li a:hover {
                 background: #aaa; }
             .App-header .nav-wrap .inner-header .nav-links ul li:first-child {
               border-top: 1px solid #333;
-              background: #A9A69E;
+              border-bottom: 1px solid #333;
+              background: #D4D0C6;
               cursor: default;
               height: 51px; }
               .App-header .nav-wrap .inner-header .nav-links ul li:first-child a {
@@ -205,10 +266,6 @@ body {
               height: 34px; }
               .App-header .nav-wrap .inner-header .nav-links ul li:nth-child(2) a {
                 height: 100%; }
-            .App-header .nav-wrap .inner-header .nav-links ul li:last-child {
-              border-bottom: 1px solid rgba(0, 0, 0, 0); }
-              .App-header .nav-wrap .inner-header .nav-links ul li:last-child:hover {
-                border-bottom: 1px solid #999; }
   .App-header ul {
     display: flex;
     padding: 0;
@@ -252,6 +309,22 @@ body {
   width: 15px;
   height: 15px;
   padding: 3px 0; }
+
+.navbar-search {
+  background: #EEE;
+  border: 0;
+  color: #000;
+  font-size: 16px;
+  outline: none;
+  padding: 0 15px;
+  text-transform: uppercase;
+  transition: 150ms;
+  width: 100%; }
+  .navbar-search::placeholder {
+    color: #999; }
+  .navbar-search:focus {
+    background: #333;
+    color: #FFF; }
 
 .active,
 .App-header .active {
@@ -298,6 +371,32 @@ body {
   display: none;
   transition: 0.5s; }
 
+.leader-list {
+  margin: 0;
+  list-style: none;
+  padding: 0; }
+  .leader-list li:hover {
+    background: #444; }
+  .leader-list .copy {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    justify-content: center;
+    padding: 0 3px; }
+  .leader-list a {
+    align-items: center;
+    color: #FFF;
+    display: flex;
+    font-weight: 600;
+    text-decoration: none; }
+    .leader-list a img {
+      min-width: 50px; }
+    .leader-list a span {
+      font-size: 11px;
+      font-weight: 400;
+      text-align: center; }
+
 .nav-sidenav {
   display: flex;
   flex-direction: column;
@@ -316,11 +415,13 @@ body {
 .button-menu {
   background: #333;
   border: 0;
+  border-radius: 0;
   cursor: pointer;
   display: block;
+  height: 60px;
   padding: 0;
   transition: 0.2s;
-  width: 58px; }
+  width: 60px; }
   .button-menu .open-menu {
     padding: 3px 5px 2px; }
   .button-menu .close-menu {
@@ -457,6 +558,7 @@ body {
       .featuredBox .featuredEvents .featuredDetails .featured-news {
         background: #bebbb2;
         border: 1px solid #D4D0C6;
+        border-left: 0;
         width: 100%; }
         .featuredBox .featuredEvents .featuredDetails .featured-news ul {
           background: #f6f6f6;
@@ -475,9 +577,9 @@ body {
             overflow: hidden;
             text-align: left; }
           .featuredBox .featuredEvents .featuredDetails .featured-news ul span {
-            background: #EAEAEA;
+            background: #EEE;
             font-family: "Raleway", sans-serif;
-            padding: 12px 0;
+            padding: 12px 10px;
             width: 100%; }
           .featuredBox .featuredEvents .featuredDetails .featured-news ul li {
             text-align: left;
@@ -496,6 +598,7 @@ body {
       .featuredBox .featuredEvents .featuredDetails .featuredTitle {
         background: #f6f6f6;
         border: 1px solid #D4D0C6;
+        border-right: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -516,31 +619,38 @@ body {
             font-size: 16px;
             font-weight: 700;
             align-items: center; }
-      .featuredBox .featuredEvents .featuredDetails div a button {
-        border: 1px solid #bebbb2;
-        color: #000;
-        font-size: 13px;
-        margin: 12px auto 0;
-        padding: 10px 12px;
-        transition: 0.15s; }
-        .featuredBox .featuredEvents .featuredDetails div a button:hover {
-          box-shadow: 0 4px 30px rgba(50, 50, 93, 0.1), 0 1px 10px rgba(0, 0, 0, 0.07);
-          transform: translateY(-2px);
-          cursor: pointer; }
+      .featuredBox .featuredEvents .featuredDetails div a {
+        text-align: center; }
+        .featuredBox .featuredEvents .featuredDetails div a button {
+          border: 1px solid #bebbb2;
+          color: #000;
+          font-size: 13px;
+          margin: 12px auto 0;
+          padding: 10px 12px;
+          transition: 0.15s; }
+          .featuredBox .featuredEvents .featuredDetails div a button:hover {
+            box-shadow: 0 4px 30px rgba(50, 50, 93, 0.1), 0 1px 10px rgba(0, 0, 0, 0.07);
+            transform: translateY(-2px);
+            cursor: pointer; }
       .featuredBox .featuredEvents .featuredDetails .featuredStats {
+        background: #EEE;
+        border-bottom: 1px solid #D4D0C6;
+        border-top: 1px solid #D4D0C6;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        padding: 0 10px;
         width: 100%; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats .featured-flag {
-          height: 75px;
-          margin: 0 auto 0;
+          height: 50px;
+          margin: 10px auto 0;
           max-width: 100px;
           min-height: auto; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats span {
           background: #D4D0C6;
           margin: 11px 0 0;
-          padding: 12px 0;
+          padding: 12px 0px;
+          text-align: center;
           font-family: "Raleway", sans-serif; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats .featured-stats-list span {
           background: inherit;
@@ -550,7 +660,7 @@ body {
           float: right; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats h4 {
           margin: 0;
-          padding: 10px 0;
+          padding: 10px 0px;
           border-bottom: 1px solid #ccc; }
         .featuredBox .featuredEvents .featuredDetails .featuredStats ul {
           height: auto;
@@ -561,8 +671,8 @@ body {
             box-sizing: border-box;
             font-size: 14px;
             line-height: 24px;
-            padding: 0 2px;
-            text-align: left;
+            padding: 0 5px;
+            text-align: center;
             width: 100%; }
             .featuredBox .featuredEvents .featuredDetails .featuredStats ul li:nth-child(even) {
               background: #D4D0C6; }
@@ -618,7 +728,8 @@ body {
   align-items: center; }
   .img-highlight .img-highlight-leader {
     width: 100%;
-    position: relative; }
+    position: relative;
+    text-align: center; }
     .img-highlight .img-highlight-leader .img-highlight-image {
       position: relative;
       z-index: 1;
@@ -634,6 +745,7 @@ body {
       top: 75%; }
   .img-highlight .img-highlight-text {
     background: #ddd;
+    text-align: center;
     width: 100%; }
     .img-highlight .img-highlight-text p {
       color: #000;
@@ -644,10 +756,10 @@ body {
 
 .home {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  grid-area: main; }
 
 .inner-home {
-  background: #FFF;
   margin: 0 auto;
   padding: 10px 0;
   width: 100%;
@@ -673,26 +785,26 @@ body {
 
 .home-image {
   opacity: 0.7;
-  margin: 30px auto 0;
+  margin: -30px auto 0;
   max-width: 160px; }
 
 .inner-map {
   animation: fade-in-top 0.4s ease forwards;
   animation-delay: 0.2s;
   width: 100%;
-  background: #ECE8DD;
+  border-bottom: 1px solid #D4D0C6;
+  border-top: 1px solid #D4D0C6;
   opacity: 0;
   max-width: 800px;
   margin: 0 auto 15px; }
 
 .inner-home-map {
   background: #ECE8DD;
-  opacity: 0.9;
+  border: none;
   max-width: 810px;
-  padding: 15px;
   margin: 0 auto; }
 
-.header {
+.item-header {
   border-bottom: 1px solid #D4D0C6;
   color: #000;
   display: flex;
@@ -704,7 +816,7 @@ body {
   max-width: 800px;
   padding: 10px 15px;
   text-transform: uppercase; }
-  .header span {
+  .item-header span {
     align-self: center;
     font-size: 14px;
     text-transform: capitalize; }
@@ -720,7 +832,7 @@ body {
 
 .grid-list {
   width: 800px;
-  margin: 0 auto; }
+  margin: 40px auto 0; }
 
 .grid-list-ul {
   display: flex;
@@ -1179,22 +1291,29 @@ body {
   .contact .contact-details {
     padding: 200px 0 300px; }
 
-.footer {
-  background: #2c2c2c;
-  width: 100%;
-  box-sizing: border-box;
+.twitter-inner {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  border-left: 0;
+  justify-content: center; }
+
+.footer {
   align-items: center;
-  justify-content: flex-end;
+  background: #2c2c2c;
+  border-left: 0;
+  box-sizing: border-box;
   color: #fff;
-  min-height: 300px; }
+  display: flex;
+  flex-direction: column;
+  grid-area: footer;
+  justify-content: flex-end;
+  min-height: 220px;
+  width: 100%; }
   .footer a {
     color: #fff;
-    padding: 5px 0;
     margin: 1px 10px 0 0;
     font-size: 12px;
+    padding: 5px 0;
     text-align: left;
     transition: 0.25s;
     text-decoration: none; }

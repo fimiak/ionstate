@@ -8,27 +8,28 @@ import News from './sidenav/News';
 import Others from './sidenav/Others';
 import Polls from './sidenav/Polls';
 import Schedule from './sidenav/Schedule';
+import TwitterApi from './api/TwitterApi';
 
 const list = [];
-for (let i = 0; i < data.data.length; i += 1) { // Assign data.data[i] to 'country' key.
+for (let i = 0; i < data.data.length; i++) { // Assign data.data[i] to 'country' key.
   list[data.data[i].country] = data.data[i];
 }
-
 class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data,
+      nation: list[props.location.pathname.replace(/[/]/, '')],
+      nat: props.location.pathname.replace(/[/]/, ''),
       newsToggle: true,
     };
-
+    console.log(this.state.nat);
     this.setMap = this.setMap.bind(this);
     this.showNews = this.showNews.bind(this);
     this.hideNews = this.hideNews.bind(this);
     this.topnavColor = this.topnavColor.bind(this);
   }
 
-  componentDidMount() {
+  componentWillUpdate() {
     const appWindow = document.getElementsByClassName('App-intro')[0];
     const logoWrap = document.getElementsByClassName('logo-wrap')[0];
     const navWrap = document.getElementsByClassName('nav-wrap')[0];
@@ -75,25 +76,26 @@ class Main extends Component {
   topnavColor() {
     document.getElementsByClassName('top-title')[0].setAttribute( 
       'style',
-      `border-image: linear-gradient(to right, ${this.props.nation['flag-colors']});border-image-slice: 1;`,
+      `border-image: linear-gradient(to right, ${this.state.nation['flag-colors']});border-image-slice: 1;`,
     );
   }
 
+  // <img src={require('.././images/' + this.props.nation.banner)} alt={this.props.nation.leader} />
   render() {
     return (
       <div className="contentBox">
         <div className="content">
           <div className="inner-content" >
             <div className="international-news fade-in-bottom">
-              <img src={require('.././images/' + this.props.nation.banner)} alt={this.props.nation.leader} />
+              
             </div>
             <div id="top-content" className="top-content">
               <div className="top-nav">
                 <div className="top-banner fade-in-right">
                   <div className="top-icon">
-                    <img className="top-leader" alt={this.props.nation.leader} src={require(`.././images/thumbs/${this.props.nation.thumb}`)} />
+                    <img className="top-leader" alt={this.state.nation.leader} src={require(`.././images/thumbs/${this.state.nation.thumb}`)} />
                   </div>
-                  <div className="top-title">{this.props.nation.leader}</div>
+                  <div className="top-title">{this.state.nation.leader}</div>
                 </div>
                 <div className="content-box-links fade-in-right">
                   <a href="/">Home</a>
@@ -102,25 +104,25 @@ class Main extends Component {
                   <a href="#country-data">Data</a>
                 </div>
                 <div className="top-flag">
-                  <img className="fade-in-right" src={require(`.././images/flags/${this.props.nation.flag}`)} alt={this.props.nation.name} />
+                  <img className="fade-in-right" alt={this.state.nation.name} src={require(`.././images/flags/${this.state.nation.flag}`)}  />
                 </div>
               </div>
             </div>
 
             <div className="top-split fade-in-top">
               <div id="datasheets">
-                <DataSheets props={this.props.params} nation={this.props.nation} />
+                <DataSheets props={this.state.params} nation={this.state.nation} />
               </div>
               <div id="biography">
-                <Biography nation={this.props.nation} />
+                <Biography nation={this.state.nation} />
               </div>
             </div>
 
             <div className="top-split fade-in-top">
               <div id="news" className="news">
                 <News
-                  props={this.props.params}
-                  nation={this.props.nation}
+                  props={this.state.params}
+                  nation={this.state.nation}
                 />
                 <a className="news-open" role="button" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>
                   {this.state.newsToggle ? 'More' : 'Hide'} News
@@ -131,24 +133,24 @@ class Main extends Component {
             <div id="schedule" className="schedule">
               <Schedule
                 map={this.state.map}
-                nation={this.props.nation}
+                nation={this.state.nation}
                 setMap={this.setMap}
                 props={this.props.params}
               />
             </div>
 
             <div id="country-data">
-              <CountryData nation={this.props.nation} />
+              <CountryData nation={this.state.nation} />
             </div>
 
-            <div id="polls">
-              <Polls props={this.props.params} />
+            <div id="twitter">
+              <TwitterApi nation={this.state.nation} />
             </div>
 
             <div id="others">
               <Others
                 props={this.props.params}
-                id={this.props.nation.id}
+                id={0}
                 setNation={this.props.setNation}
               />
             </div>
@@ -161,3 +163,9 @@ class Main extends Component {
 }
 
 export default Main;
+
+/*
+            <div id="polls">
+              <Polls props={this.props.params} />
+            </div>
+*/

@@ -1,12 +1,12 @@
 import React from 'react';
 
-function CountryData() {
+function CountryData(props) {
   return (
     <div className="country-detail">
-      <h4>{this.props.nation.name}</h4>
+      <h4>{props.nation.name}</h4>
       <div className="country-data">
         <div className="country-map">
-          <img src={require(`../.././images/maps/${this.props.nation.map}`)} alt="Map" />
+          <img src={require(`../.././images/maps/${props.nation.map}`)} alt="Map" />
         </div>
         <div className="country-list">
           <ul>
@@ -24,18 +24,18 @@ function CountryData() {
             <li>Currency</li>
           </ul>
           <ul>
-            <li>{this.props.nation.population}</li>
-            <li>{this.props.nation.pop2050}</li>
-            <li>{this.props.nation.popgrowth}</li>
-            <li>{this.props.nation.urban}</li>
-            <li>{this.props.nation.life}</li>
-            <li>{this.props.nation.poverty}</li>
-            <li>{this.props.nation.gdp}</li>
-            <li>{this.props.nation.gdp2050}</li>
-            <li>{this.props.nation.gdpgrowth}</li>
-            <li>{this.props.nation.energy}</li>
-            <li>{this.props.nation.debt}</li>
-            <li>{this.props.nation.currency}</li>
+            <li>{props.nation.population}</li>
+            <li>{props.nation.pop2050}</li>
+            <li>{props.nation.popgrowth}</li>
+            <li>{props.nation.urban}</li>
+            <li>{props.nation.life}</li>
+            <li>{props.nation.poverty}</li>
+            <li>{props.nation.gdp}</li>
+            <li>{props.nation.gdp2050}</li>
+            <li>{props.nation.gdpgrowth}</li>
+            <li>{props.nation.energy}</li>
+            <li>{props.nation.debt}</li>
+            <li>{props.nation.currency}</li>
           </ul>
         </div>
 

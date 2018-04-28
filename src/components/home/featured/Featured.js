@@ -62,11 +62,11 @@ class Featured extends Component {
                 <span>{this.props.selected.name}</span>
                 <ul className="featured-stats-list">
                   <li>{this.props.selected.party}</li>
-                  <li>Time in Office<span>N/A</span></li>
-                  <li>Start<span>{this.props.selected['term-start']}</span></li>
-                  <li>Born<span>{this.props.selected['birth-date']}</span></li>
-                  <li>Age<span>{this.props.selected.age}</span></li>
-                  <li>Webpage <span><a href={this.props.selected.webpage}>Link</a></span></li>
+                  <li>Inauguration</li>
+                  <li>{this.props.selected['term-start']}</li>
+                  <li>Birthdate<span></span></li>
+                  <li>{this.props.selected['birth-date']}</li>
+                  <li><a href={this.props.selected.webpage}>Homepage</a></li>
                 </ul>
                 <NavLink
                   to={this.props.selected.country}

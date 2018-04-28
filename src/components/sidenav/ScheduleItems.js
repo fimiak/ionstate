@@ -6,13 +6,12 @@ const schedList = schedule.schedule;
 class ScheduleItems extends Component {
   constructor(props) {
     super(props);
-    this.onSetMap = this.onSetMap.bind(this);
   }
 
-  onSetMap(place) {
+  /*onSetMap = (place) => {
     this.props.setMap(place);
     document.getElementById('overlay').setAttribute('style', 'opacity: 0;');
-  }
+  }*/
 
   render() {
     const listItems = schedList.map(data => (
@@ -25,7 +24,7 @@ class ScheduleItems extends Component {
           <div
             className="eventBox"
             onClick={() => {}}
-            onKeyPress={this.onSetMap(data.place)}
+            /*onKeyPress={'a'/*this.onSetMap(data.place)}*/
             role="button"
             tabIndex="0"
           >

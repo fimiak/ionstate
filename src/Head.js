@@ -12,7 +12,7 @@ for (let i = 0; i < data.data.length; i += 1) { // Assign data.data[i] to 'count
   list[data.data[i].country] = data.data[i];
 }
 
-class App extends Component {
+class Head extends Component {
   constructor(props) {
     super(props);
     this.state =
@@ -31,13 +31,6 @@ class App extends Component {
       nation: list[arg],
     }));
   }
-
-  /* componentDidReceiveProps() {
-    const slice = 'hi';
-    this.setState(() => ({
-      nation: list[slice],
-    }));
-  } */
 
   closeMenu() {
     this.setState({
@@ -59,16 +52,12 @@ class App extends Component {
       <div className="App">
         <div className="App-header" >
           <div className="logo-wrap">
-            <a className="title-link" href="/">
-              <h4 className="title">
-                <img className="globeIcon" src="globe.ico" alt="" /> | PRESIDENTPRIME
-              </h4>
-            </a>
             <div className="navbar">
+              <input className="navbar-search" placeholder="Search" />
               <button className="button-menu" onClick={this.showMenu}>
                 {(this.state.menu === false)
-                  ? <img className="open-menu" src={menuIcon} alt="open" />
-                  : <img className="close-menu" src={closeIcon} alt="close" />}
+                  ? <img className="open-menu" src={menuIcon} alt="open menu" />
+                  : <img className="close-menu" src={closeIcon} alt="close menu" />}
               </button>
             </div>
           </div>
@@ -80,18 +69,9 @@ class App extends Component {
             setNation={this.setNation}
           />
         </div>
-        <div className="App-intro">
-          {React.cloneElement(this.props.children, {
-            nation: this.state.nation,
-            news: fetchedNews,
-            setNation: this.setNation,
-            showMenu: this.showMenu,
-            testdata,
-          })}
-        </div>
       </div>
     );
   }
 }
-
-export default App;
+          
+export default Head;

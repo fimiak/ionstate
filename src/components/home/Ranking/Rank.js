@@ -31,8 +31,7 @@ type State = {
 
 class Rank extends React.Component<Props, State> {
 
-    state =
-    {
+    state = {
         loading: true,            
         news: this.props.testdata
     };

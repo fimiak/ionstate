@@ -2,29 +2,28 @@ import React from 'react';
 import DataBox from './DataBox';
 import DataItem from './DataItem';
 
-function DataSheets() {
-  const selected = this.props.nation;
+function DataSheets(props) {
   return (
     <div className="datasheetsInner">
       <div className="data-image">
-        <DataBox props={selected} />
+        <DataBox props={props.nation} />
       </div>
       <div className="data-container">
-        <DataItem item={selected['leader-title']} value={selected.leader} />
-        <DataItem item="Governing" value={selected.name} />
-        <DataItem item="Party" value={selected.party} />
-        <DataItem item={selected['deputy-title']} value={selected['deputy-leader']} />
-        <DataItem item="Term Start" value={selected['term-start']} />
-        <DataItem item="Term End" value={selected['term-end']} />
-        <DataItem item="Birthdate" value={selected['birth-date']} />
-        <DataItem item="Previous Leader" value={selected['previous-leader']} />
-        <DataItem item="Age" value={selected.age} />
-        <DataItem item="Previous Party" value={selected['previous-leader-party']} />
+        <DataItem item={props.nation['leader-title']} value={props.nation.leader} />
+        <DataItem item="Governing" value={props.nation.name} />
+        <DataItem item="Party" value={props.nation.party} />
+        <DataItem item={props.nation['deputy-title']} value={props.nation['deputy-leader']} />
+        <DataItem item="Term Start" value={props.nation['term-start']} />
+        <DataItem item="Term End" value={props.nation['term-end']} />
+        <DataItem item="Birthdate" value={props.nation['birth-date']} />
+        <DataItem item="Previous Leader" value={props.nation['previous-leader']} />
+        <DataItem item="Age" value={props.nation.age} />
+        <DataItem item="Previous Party" value={props.nation['previous-leader-party']} />
         <DataItem
           item="Official Webpage"
-          value={<a href={selected.webpage}>{selected.leader}</a>}
+          value={<a href={props.nation.webpage}>{props.nation.leader}</a>}
         />
-        <DataItem item="Wikipedia" value={<a href={selected.wikipedia}>Wikipedia</a>} />
+        <DataItem item="Wikipedia" value={<a href={props.nation.wikipedia}>Wikipedia</a>} />
       </div>
     </div>
   );

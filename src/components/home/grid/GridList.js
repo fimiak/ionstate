@@ -7,18 +7,17 @@ class GridList extends Component {
     this.state = {
       list: [],
     };
-    this.listItems = this.listItems.bind(this);
   }
 
-  componentWillReceiveProps() {
+  componentDidMount() {
     this.listItems();
   }
 
-  listItems() {
+  listItems = () => {
     const listItems = this.props.data.map(data => (
       <li key={data.order} className="grid-item">
         <NavLink to={data.country} onClick={() => this.props.setNation(data.country)}>
-          <img className="grid-image" src={`../../.././images/thumbs/' + ${data.thumb}`} alt="" />
+          <img className="grid-image" src={`../../.././images/thumbs/${data.thumb}`} alt="" />
           <div className="copy grid-copy">
             <span> {data.leader} <br /> {data.name}</span>
           </div>
@@ -30,7 +29,6 @@ class GridList extends Component {
       list: listItems.slice(0),
     });
   }
-
 
   render() {
     return (

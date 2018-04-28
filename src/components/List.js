@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import data from '.././data/data.json';
-import Footer from './Footer';
 import GridList from './home/grid/GridList';
 import NavLink from './NavLink';
 // SVGs
@@ -11,7 +10,7 @@ import typeIcon from '../icons/type.svg';
 
 
 const orderBy = data.data.slice(0);
-let orderedList = orderBy.sort((a, b) => {
+const orderedList = orderBy.sort((a, b) => {
   const x = a.name.toLowerCase();
   const y = b.name.toLowerCase();
   return x < y ? -1 : x > y ? 1 : 0;
@@ -30,12 +29,11 @@ class List extends Component {
     order(); // Add key id/order to newly ordered lists
 
     this.orderByName = this.orderByName.bind(this);
-    this.orderByGdp = this.orderByGdp.bind(this);
     this.orderByGrowth = this.orderByGrowth.bind(this);
     this.orderByCountry = this.orderByCountry.bind(this);
   }
 
-  orderByGdp() {
+  orderByGdp = () => {
     orderedList.sort((a, b) => b.gdp - a.gdp);
     order();
     this.setState(() => ({
@@ -82,29 +80,28 @@ class List extends Component {
           <span>Sort List</span>
           <ul>
             <li>
-              <NavLink activeClassName="active" onClick={this.orderByCountry}>
+              <NavLink to="/list" onClick={this.orderByCountry}>
                 <img className="img-size" src={list} alt="" />Country Name
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="active" onClick={this.orderByGdp}>
+              <NavLink to="/list" onClick={this.orderByGdp}>
                 <img className="img-size" src={barIcon} alt="" />GDP
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="active" onClick={this.orderByGrowth}>
+              <NavLink to="/list" onClick={this.orderByGrowth}>
                 <img className="img-size" src={trendIcon} alt="" />GDP Growth
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="active" onClick={this.orderByName}>
+              <NavLink to="/list" onClick={this.orderByName}>
                 <img className="img-size" src={typeIcon} alt="" />Leader Name
               </NavLink>
             </li>
           </ul>
         </div>
         <GridList data={orderedList} />
-        <Footer />
       </div>
     );
   }

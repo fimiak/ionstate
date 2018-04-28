@@ -54,10 +54,10 @@ class NavWrap extends Component {
               class="page-show"
             />
           </div>
-          <div className="nav-links">
+          <div className="nav-links" onClick={this.props.closeMenu} onKeyPress={this.props.closeMenu} role="menu">
             <ul>
               <li>
-                <NavLink to="/list">See All</NavLink>
+                <NavLink to="/list">Show All</NavLink>
               </li>
             </ul>
           </div>

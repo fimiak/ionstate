@@ -1,10 +1,10 @@
 import React from 'react';
 
-function DataItem() {
+function DataItem(props) {
   return (
     <div className="data-point">
-      <span>{this.props.item}</span>
-      <span>{this.props.value}</span>
+      <span>{props.item}</span>
+      <span>{props.value}</span>
     </div>
   );
 }

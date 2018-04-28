@@ -1,4 +1,4 @@
-import React, { Component } from 'react/react.js';
+import React, { Component } from 'react';
 import { Timeline } from 'react-twitter-widgets';
 
 class TwitterApi extends Component {
