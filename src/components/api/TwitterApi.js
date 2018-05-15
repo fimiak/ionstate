@@ -1,25 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Timeline } from 'react-twitter-widgets';
 
-class TwitterApi extends Component {
-    render() {        
-        return(
-            <div id="twitter-inner" className="twitter-inner">
-                <Timeline
-                    dataSource={{
-                        sourceType: 'profile',
-                        screenName: this.props.nation.twitter
-                    }}
-                    options={{
-                        chrome: 'noheader, nofooter, noborders',        
-                        height: '350',
-                        tweetLimit: 2,
-                        width: '450'
-                    }}
-                />
-            </div>
-        )
-    }
+function TwitterApi(props) {
+  return (
+    <div id="twitter-inner" className="twitter-inner">
+      <Timeline
+        dataSource={{
+          sourceType: 'profile',
+          screenName: props.nation.twitter,
+        }}
+        options={{
+          chrome: 'nofooter, noborders, noheader',
+          height: '300',
+          tweetLimit: 2,
+          width: '330',
+        }}
+      />
+    </div>
+  );
 }
 
 export default TwitterApi;

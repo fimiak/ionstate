@@ -28,7 +28,7 @@ function Footer() {
           </div>
           <p>
             Data sourced from public APIs and Wikipedia<br />
-            PRESIDENTPRIME 2017
+            PRESIDENTPRIME 2018
           </p>
         </div>
       </div>

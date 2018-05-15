@@ -4,9 +4,6 @@ import schedule from '../../data/schedule.json';
 const schedList = schedule.schedule;
 
 class ScheduleItems extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   /*onSetMap = (place) => {
     this.props.setMap(place);

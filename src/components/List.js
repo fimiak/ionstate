@@ -8,7 +8,6 @@ import list from '../icons/list.svg';
 import trendIcon from '../icons/trending-up.svg';
 import typeIcon from '../icons/type.svg';
 
-
 const orderBy = data.data.slice(0);
 const orderedList = orderBy.sort((a, b) => {
   const x = a.name.toLowerCase();
@@ -27,10 +26,6 @@ class List extends Component {
     super(props);
 
     order(); // Add key id/order to newly ordered lists
-
-    this.orderByName = this.orderByName.bind(this);
-    this.orderByGrowth = this.orderByGrowth.bind(this);
-    this.orderByCountry = this.orderByCountry.bind(this);
   }
 
   orderByGdp = () => {
@@ -41,7 +36,7 @@ class List extends Component {
     }));
   }
 
-  orderByGrowth() {
+  orderByGrowth = () => {
     orderedList.sort((a, b) => b.gdpgrowth - a.gdpgrowth);
     order();
     this.setState(() => ({
@@ -49,7 +44,7 @@ class List extends Component {
     }));
   }
 
-  orderByName() {
+  orderByName = () => {
     orderedList.sort((a, b) => {
       const x = a.search.toLowerCase();
       const y = b.search.toLowerCase();
@@ -61,7 +56,7 @@ class List extends Component {
     }));
   }
 
-  orderByCountry() {
+  orderByCountry = () => {
     orderedList.sort((a, b) => {
       const x = a.name.toLowerCase();
       const y = b.name.toLowerCase();

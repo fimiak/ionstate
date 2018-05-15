@@ -3,10 +3,9 @@ import Biography from './sidenav/Biography';
 import CountryData from './sidenav/CountryData';
 import data from '.././data/data.json';
 import DataSheets from './sidenav/DataSheets';
-import Footer from './Footer';
 import News from './sidenav/News';
 import Others from './sidenav/Others';
-import Polls from './sidenav/Polls';
+// import Polls from './sidenav/Polls';
 import Schedule from './sidenav/Schedule';
 import TwitterApi from './api/TwitterApi';
 
@@ -22,7 +21,6 @@ class Main extends Component {
       nat: props.location.pathname.replace(/[/]/, ''),
       newsToggle: true,
     };
-    console.log(this.state.nat);
     this.setMap = this.setMap.bind(this);
     this.showNews = this.showNews.bind(this);
     this.hideNews = this.hideNews.bind(this);
@@ -44,7 +42,7 @@ class Main extends Component {
       } else {
         logoWrap.setAttribute('style', 'line-height: 48px;');
         navWrap.setAttribute('style', 'top: 58px;');
-        buttonMenu.setAttribute('style', 'width: 58px');          
+        buttonMenu.setAttribute('style', 'width: 58px');
       }
     });
   }
@@ -74,7 +72,7 @@ class Main extends Component {
   }
 
   topnavColor() {
-    document.getElementsByClassName('top-title')[0].setAttribute( 
+    document.getElementsByClassName('top-title')[0].setAttribute(
       'style',
       `border-image: linear-gradient(to right, ${this.state.nation['flag-colors']});border-image-slice: 1;`,
     );
@@ -86,9 +84,6 @@ class Main extends Component {
       <div className="contentBox">
         <div className="content">
           <div className="inner-content" >
-            <div className="international-news fade-in-bottom">
-              
-            </div>
             <div id="top-content" className="top-content">
               <div className="top-nav">
                 <div className="top-banner fade-in-right">
@@ -104,7 +99,7 @@ class Main extends Component {
                   <a href="#country-data">Data</a>
                 </div>
                 <div className="top-flag">
-                  <img className="fade-in-right" alt={this.state.nation.name} src={require(`.././images/flags/${this.state.nation.flag}`)}  />
+                  <img className="fade-in-right" alt={this.state.nation.name} src={require(`.././images/flags/${this.state.nation.flag}`)} />
                 </div>
               </div>
             </div>
@@ -115,6 +110,8 @@ class Main extends Component {
               </div>
               <div id="biography">
                 <Biography nation={this.state.nation} />
+                <TwitterApi nation={this.state.nation} />
+
               </div>
             </div>
 
@@ -124,9 +121,9 @@ class Main extends Component {
                   props={this.state.params}
                   nation={this.state.nation}
                 />
-                <a className="news-open" role="button" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>
+                <button className="news-open" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>
                   {this.state.newsToggle ? 'More' : 'Hide'} News
-                </a>
+                </button>
               </div>
             </div>
 
@@ -144,7 +141,6 @@ class Main extends Component {
             </div>
 
             <div id="twitter">
-              <TwitterApi nation={this.state.nation} />
             </div>
 
             <div id="others">
@@ -156,7 +152,6 @@ class Main extends Component {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

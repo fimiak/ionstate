@@ -3,11 +3,12 @@ import data from '.././data/data.json';
 import Featured from './home/featured/Featured';
 import Map from './Map/Map';
 // import Rank from './home/Ranking/Rank';
-import Week from './home/featured/Week';
+// import Week from './home/featured/Week';
+import ElectionCalWrap from './elections/ElectionCalWrap';
 
 const selection = data.data[Math.floor(Math.random() * 27)];
 const date = new Date();
-const months = [
+/* const months = [
   'January',
   'February',
   'March',
@@ -21,6 +22,7 @@ const months = [
   'November',
   'December',
 ];
+*/
 // const month = months[date.getMonth()];
 
 class Home extends Component {
@@ -51,8 +53,14 @@ class Home extends Component {
         <div className="inner-home">
           <div className="home-action">
             <h1>Tracking global leaders</h1>
-            <h3>Presidentprime is a public access site supporting features for discovering information about a selection of top presidents and prime ministers.</h3>
+            <h3>Presidentprime is a public access site supporting features for discovering
+               information about a selection of top presidents and prime ministers.
+            </h3>
           </div>
+        </div>
+
+        <div className="inner-home">
+          <ElectionCalWrap />
         </div>
 
         <div className="inner-map">

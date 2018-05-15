@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import NavLink from '../NavLink';
+//import NavLink from '../NavLink';
+import { NavLink } from 'react-router-dom';
+
 
 class LeaderList extends Component {
   constructor(props) {
@@ -7,22 +9,24 @@ class LeaderList extends Component {
     this.state = {
       page1: [],
     };
+
+    this.listItems = this.listItems.bind(this);
   }
 
   componentWillMount() {
     this.listItems();
   }
 
-
   componentWillReceiveProps() {
     this.listItems();
   }
 
-  listItems = () => {
+  listItems() {
     const listItems = this.props.country.map(country => (
-      <li key={country.order}>
+      <li key={country.id}>
         <NavLink
-          to={country.country}
+          to={"/" + country.country}
+          activeClassName="navlink-active"
           onClick={() => this.props.setNation(country.country)}>
           <img src={require(`../.././images/thumbs/${country.thumb}`)} alt="" />
           <div className="copy" onClick={this.props.scrollTop}>
@@ -34,7 +38,7 @@ class LeaderList extends Component {
     ));
 
     this.setState({
-      page1: listItems.slice(0, 35),
+      page1: listItems.slice(0, 10),
     });
   }
 

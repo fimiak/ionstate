@@ -126,17 +126,20 @@ a
   height: 100%
   top: 0
   left: 0
-  div
-    p
-      color: #FFF
-      font-weight: bold
-      padding: 0 5px
-    ul
-      color: #FFF
-    li
-      border-bottom: 1px solid #999
-      margin: 0
 
+.sidebar-inner
+  p
+    align-items: center
+    color: #E94949
+    display: flex
+    font-weight: bold
+    justify-content: space-between
+    padding: 0 5px
+  ul
+    color: #FFF
+  li
+    border-bottom: 1px solid #666
+    margin: 0
 
 .sidebar-body
   margin: 0 5px
@@ -160,11 +163,13 @@ a
 .sidebar-topics
   ul
     list-style: none
-    padding: 0 0 0 10px
+    padding: 0 0 15px 10px
     li
       border: none
       color: #CCC
-      margin-bottom: 5px
+      margin-bottom: 3px
+  .sidebar-date
+    justify-content: center
 
 .sidebar-full
   color: #CCC
@@ -172,6 +177,7 @@ a
 
 .sidebar-body
   height: 100%
+
 
 // END Sidebar
 
@@ -227,7 +233,7 @@ a
   .logo-wrap
     align-items: center
     background-color: #DDD
-    border-bottom: 1px solid #333
+    border-bottom: 1px solid #E94949
     display: flex
     flex-shrink: 0
     height: 100%
@@ -242,9 +248,11 @@ a
       justify-content: flex-end
   .nav-wrap
     background: #333
-    width: 100%
+    overflow: hidden
     position: absolute
-    top: 58px
+    top: 50px
+    right: 0
+    width: 100%
     z-index: 88
     .inner-header
       border-bottom: 1px solid #333333
@@ -395,25 +403,28 @@ a
   display: none
   transition: .5s
 
-
 .leader-list
+  border-top: 1px solid #E94949
   margin: 0
   list-style: none
   padding: 0
-  li
-    &:hover
-      background: #444
   .copy
-    align-items: center
     display: flex
     flex-direction: column
     font-size: 12px
     justify-content: center
-    padding: 0 3px
+    transition: 500ms
+    padding: 0 5px
+    width: 0
+    position: relative
+    white-space: nowrap
   a
     align-items: center
     color: #FFF
     display: flex
+    position: relative
+    text-align: right
+    transition: 500ms
     font-weight: 600
     text-decoration: none
     img
@@ -421,8 +432,20 @@ a
     span
       font-size: 11px
       font-weight: 400
-      text-align: center
+    &:hover
+      background: #333
+      .copy
+        width: 100%
+        justify-content: flex-end
 
+.leader-list
+  .navlink-active
+    background: #333
+    &:hover
+      background: #444
+    .copy
+      width: 100%
+      justify-content: flex-end
 
 .nav-sidenav
   display: flex
@@ -724,7 +747,6 @@ a
     justify-content: center
     align-items: center
 
-
 .contentBox
   align-items: center
   display: flex
@@ -806,6 +828,7 @@ a
   .home-action
     display: flex
     margin: 0 auto
+    padding: 0 5px
     h1
       flex-grow: 2
       font-size: 31px
@@ -893,6 +916,7 @@ a
   margin-top: -47px
   padding: 2px 0
   position: absolute
+  text-align: center
   transition: .1s
   width: 190px
   &:hover
@@ -928,11 +952,14 @@ a
       cursor: pointer
       font-size: 13px
       font-weight: bold
-      padding: 5px 10px
+      &:hover
+        background: $ivory
       a
         align-items: center
+        color: #000
         display: flex
-        padding: 0 5px
+        padding: 5px 15px
+        text-decoration: none
         .img-size
           padding-right: 5px
 
@@ -1339,6 +1366,51 @@ a
   flex-direction: column
   justify-content: center
 
+/* Election Calendar
+
+.election-cal
+  background: #EEE
+  padding: 5px
+  .election-cal-years
+    display: flex
+    margin: 0 0 5px
+    a
+      color: #000
+      cursor: pointer
+      margin: 0 5px
+      text-decoration: none
+      font-family: 'Arial', sans-serif
+      font-weight: 600
+      &:hover
+        text-decoration: underline
+
+.election-cal-list
+  cursor: default
+  display: flex
+  flex-direction: column
+  list-style: none
+  margin: 0 5px 5px
+  padding: 0 0 5px
+  li
+    display: flex
+    justify-content: space-between
+    padding: 0 5px
+    &:nth-child(odd)
+      background: #DADADA
+    &:nth-child(even)
+      background: #E5E5E5
+  
+.election-cal-date
+  color: #888
+
+.election-cal-loadlist
+  cursor: pointer
+  &:hover
+    text-decoration: underline
+
+/*/
+
+
 .footer
   align-items: center
   background: #2c2c2c
@@ -1617,10 +1689,11 @@ img.othersFlag
     text-align: right
   p
     margin: 5px 0
-/*******************/
-/*** MAIN STYLES ***/
-/*******************/
-
+/*****************************/
+/*****************************/
+/****** DESKTOP STYLES *******/
+/*****************************/
+/*****************************/
 
 
 /*****************************/
@@ -1632,7 +1705,6 @@ img.othersFlag
 /*****************************/
 
 
-
 @media (max-width: 1000px)
 
   html
@@ -1640,9 +1712,17 @@ img.othersFlag
 
   body
     overflow: auto // To help scrollbar
- 
+
   h2
     font-size: 1.1em
+
+  .container
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+
+  .sidebar
+    display: none
 
   .App-intro
     padding-top: 0
@@ -1664,14 +1744,12 @@ img.othersFlag
         .nav-sidenav
           img
             border-top: 0
-
         .nav-links
           border-left: 0
           ul
             width: 100%
             li
               min-width: 0
-
               &:nth-child(3)
                 display: none
               &:first-child
@@ -1865,7 +1943,7 @@ img.othersFlag
               margin-bottom: 3px
 
   .inner-home
-    padding: 10px 0 0
+    padding: 0
     .home-action
       margin: 0 auto 20px
     h1

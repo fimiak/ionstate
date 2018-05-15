@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import NavWrap from './components/sidenav/NavWrap';
-import { fetchedNews } from './components/requests/NewsLoader';
+//import { fetchedNews } from './components/requests/NewsLoader';
 import closeIcon from './icons/x.svg';
 import data from './data/data.json';
 import menuIcon from './icons/menu.svg';
-import testdata from './data/testdata.json';
+//import testdata from './data/testdata.json';
 import './App.css';
 
 const list = [];
