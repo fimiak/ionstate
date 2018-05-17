@@ -410,9 +410,6 @@ a {
       font-weight: 400; }
     .leader-list a:hover {
       background: #333; }
-      .leader-list a:hover .copy {
-        width: 100%;
-        justify-content: flex-end; }
 
 .leader-list .navlink-active {
   background: #333; }
