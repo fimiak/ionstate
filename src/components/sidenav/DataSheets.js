@@ -9,6 +9,7 @@ function DataSheets(props) {
         <DataBox props={props.nation} />
       </div>
       <div className="data-container">
+        <h3>Biography</h3>
         <DataItem item={props.nation['leader-title']} value={props.nation.leader} />
         <DataItem item="Governing" value={props.nation.name} />
         <DataItem item="Party" value={props.nation.party} />

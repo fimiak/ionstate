@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Biography(props) {
   return (
@@ -6,14 +7,24 @@ function Biography(props) {
       <div className="biography-text">
         <h3>Biography</h3>
         <p>
-          {props.nation.biography}
+          {props.biography}
         </p>
         <p>
-          {props.nation['biography-extended']}
+          {props.extended}
         </p>
       </div>
     </div>
   );
 }
+
+Biography.defaultProps = {
+  biography: 'Bio',
+  extended: ' ',
+};
+
+Biography.propTypes = {
+  biography: PropTypes.string,
+  extended: PropTypes.string,
+};
 
 export default Biography;

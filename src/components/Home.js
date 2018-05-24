@@ -2,28 +2,14 @@ import React, { Component } from 'react';
 import data from '.././data/data.json';
 import Featured from './home/featured/Featured';
 import Map from './Map/Map';
+import Ad from './ads/Ad';
 // import Rank from './home/Ranking/Rank';
 // import Week from './home/featured/Week';
 import ElectionCalWrap from './elections/ElectionCalWrap';
+import summit from '.././images/summit.jpg';
 
 const selection = data.data[Math.floor(Math.random() * 27)];
 const date = new Date();
-/* const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-*/
-// const month = months[date.getMonth()];
 
 class Home extends Component {
   componentDidMount() {
@@ -59,7 +45,15 @@ class Home extends Component {
           </div>
         </div>
 
-        <div className="inner-home">
+        <div className="home-hero">
+          <img src={summit} alt="G7 2017" />
+          <div className="home-overlay">
+            The G7 Summit - June 8-9 2018
+          </div>
+        </div>
+
+        <div className="inner-election">
+          <div className="item-header">Upcoming Elections</div>
           <ElectionCalWrap />
         </div>
 
@@ -73,6 +67,10 @@ class Home extends Component {
         <div className="inner-featured">
           <div className="item-header">Featured</div>
           <Featured selected={selection} />
+        </div>
+
+        <div className="inner-ad">
+          <Ad />
         </div>
 
       </div>

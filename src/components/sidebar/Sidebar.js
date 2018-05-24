@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import LeaderList from '../.././components/sidenav/LeaderList';
+import PropTypes from 'prop-types';
 import data from '../.././data/data.json';
+import LeaderList from '../.././components/sidenav/LeaderList';
 
 const list = [];
 for (let i = 0; i < data.data.length; i += 1) { // Assign data.data[i] to 'country' key.
@@ -17,19 +18,8 @@ class Sidebar extends Component {
     return (
       <div className="sidebar-inner">
         <a className="title-link sidebar-header" href="/">
-          <img className="globeIcon" src="globe.ico" alt="" />| TITLE
+          <img className="globeIcon" src="globe.ico" alt="" />| Prime
         </a>
-        <div className="sidebar-topics">
-          <p className="sidebar-date">{new Date().toJSON().slice(0, 10).replace(/-/g, '/')}</p>
-          <p>Filter by Topics</p>
-          <ul className="sidebar-body">
-            <li><a href="/">Defense</a></li>
-            <li><a href="/">Domestic</a></li>
-            <li><a href="/">Elections</a></li>
-            <li><a href="/">Headlines</a></li>
-            <li><a href="/">International</a></li>
-          </ul>
-        </div>
         <p>Latest Activity <a className="sidebar-full" href="/list" alt="Full List">View full list</a></p>
         <LeaderList
           id="page1"
@@ -38,9 +28,27 @@ class Sidebar extends Component {
           setNation={this.props.setNation}
           class="page-show"
         />
+        <div className="sidebar-topics">
+          <p> Follow Topics</p>
+          <ul className="sidebar-body">
+            <li><a href="/">Defense</a></li>
+            <li><a href="/">Domestic</a></li>
+            <li><a href="/">Elections</a></li>
+            <li><a href="/">Headlines</a></li>
+            <li><a href="/">International</a></li>
+          </ul>
+        </div>
       </div>
     );
   }
 }
+
+Sidebar.defaultProps = {
+  setNation: '',
+};
+
+Sidebar.propTypes = {
+  setNation: PropTypes.func,
+};
 
 export default Sidebar;

@@ -3,8 +3,9 @@ import Biography from './sidenav/Biography';
 import CountryData from './sidenav/CountryData';
 import data from '.././data/data.json';
 import DataSheets from './sidenav/DataSheets';
-import News from './sidenav/News';
+import News from './news/News';
 import Others from './sidenav/Others';
+import Ad from './ads/Ad';
 // import Polls from './sidenav/Polls';
 import Schedule from './sidenav/Schedule';
 import TwitterApi from './api/TwitterApi';
@@ -104,15 +105,14 @@ class Main extends Component {
               </div>
             </div>
 
-            <div className="top-split fade-in-top">
-              <div id="datasheets">
-                <DataSheets props={this.state.params} nation={this.state.nation} />
-              </div>
-              <div id="biography">
-                <Biography nation={this.state.nation} />
-                <TwitterApi nation={this.state.nation} />
+            <div className="top-split fade-in-top datasheets" id="datasheets">
+              <DataSheets props={this.state.params} nation={this.state.nation} />
+            </div>
 
-              </div>
+
+
+            <div id="twitter fade-in-top">
+              <TwitterApi nation={this.state.nation} />
             </div>
 
             <div className="top-split fade-in-top">
@@ -136,11 +136,14 @@ class Main extends Component {
               />
             </div>
 
-            <div id="country-data">
-              <CountryData nation={this.state.nation} />
+            <div className="top-split fade-in-top">
+              <div id="biography">
+                <Biography biography={this.state.nation.biography} extended={this.state.nation['biography-election']} />
+              </div>
             </div>
 
-            <div id="twitter">
+            <div id="country-data">
+              <CountryData nation={this.state.nation} />
             </div>
 
             <div id="others">
@@ -149,6 +152,10 @@ class Main extends Component {
                 id={0}
                 setNation={this.props.setNation}
               />
+            </div>
+
+            <div className="inner-ad">
+              <Ad />
             </div>
           </div>
         </div>

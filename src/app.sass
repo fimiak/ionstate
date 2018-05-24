@@ -62,7 +62,7 @@
 /*** VARIABLES ***/
 /*****************/
 $ivory: #ECE8DD
-$ivory-dark: #D4D0C6
+$ivory-dark: #D7D0C8
 $crimson: #E85A4F
 $gradient: linear-gradient(to right, #fff, #fff)
 
@@ -114,7 +114,7 @@ a
   display: grid
   grid-template-areas: "sidebar header" "sidebar main" "footer footer"
   grid-template-columns: 15% auto
-  grid-template-rows: 60px auto 220px
+  grid-template-rows: 50px auto 220px
   margin: 0 auto
   max-width: 1440px
 // Sidebar
@@ -150,9 +150,9 @@ a
 .sidebar-header
   align-items: center
   background: #E94949
-  color: #FFF
-  box-shadow: 0px 0px 10px rgba(0,0,0, .15)
+  color: #000
   display: flex
+  font-weight: 700
   height: 50px
   justify-content: center
   text-decoration: none
@@ -177,7 +177,6 @@ a
 
 .sidebar-body
   height: 100%
-
 
 // END Sidebar
 
@@ -233,7 +232,6 @@ a
   .logo-wrap
     align-items: center
     background-color: #DDD
-    border-bottom: 1px solid #E94949
     display: flex
     flex-shrink: 0
     height: 100%
@@ -250,12 +248,13 @@ a
     background: #333
     overflow: hidden
     position: absolute
-    top: 50px
-    right: 0
+    top: 0
+    height: 50px
+    right: 0px
+    margin-right: 55px
     width: 100%
     z-index: 88
     .inner-header
-      border-bottom: 1px solid #333333
       display: flex
       margin: 0 auto
       max-width: 761px
@@ -343,7 +342,7 @@ a
   padding: 3px 0
 
 .navbar-search
-  background: #EEE
+  background: #F1F1F1
   border: 0
   color: #000
   font-size: 16px
@@ -413,7 +412,7 @@ a
     flex-direction: column
     font-size: 12px
     justify-content: center
-    transition: 500ms
+    transition: 300ms
     padding: 0 5px
     width: 0
     position: relative
@@ -424,7 +423,7 @@ a
     display: flex
     position: relative
     text-align: right
-    transition: 500ms
+    transition: 300ms
     font-weight: 600
     text-decoration: none
     img
@@ -434,7 +433,6 @@ a
       font-weight: 400
     &:hover
       background: #333
-      .copy
 
 .leader-list
   .navlink-active
@@ -468,15 +466,15 @@ a
 
 
 .button-menu
-  background: #333
+  background: #888
   border: 0
   border-radius: 0
   cursor: pointer
   display: block
-  height: 60px
+  height: 50px
   padding: 0
   transition: .2s
-  width: 60px
+  width: 50px
   .open-menu
     padding: 3px 5px 2px
   .close-menu
@@ -495,18 +493,23 @@ a
   color: #333
   display: flex
   flex-direction: row
-  margin: 00px auto
+  justify-content: space-between
+  margin: 0 auto
   width: 100%
   .active
     background: rgba(0,0,0,1)
     color: #fff
   a
+    background: #DDD
+    border-left: 1px solid #FFF
+    border-right: 1px solid #FFF
     color: #000
     display: block
-    padding: 0px 28px
+    margin: 0
     text-decoration: none
     text-transform: uppercase
-    width: 160px
+    min-width: 30px
+    width: 100%
     &:hover
       background: rgba(0,0,0,.1)
   .active:hover
@@ -555,16 +558,18 @@ a
   border-bottom: 2px solid #ddd
   box-sizing: border-box
   font-family: 'Kanit', sans-serif  
-  font-size: 12px
+  font-size: 14px
   min-width: 280px
   padding: 4px
   margin: 0 25px
+  text-align: center
   position: relative
   text-transform: uppercase
   white-space: nowrap
 
 .top-content
   background: #fff
+  padding: 10px 0
   position: relative
   width: 100%
 
@@ -574,176 +579,91 @@ a
   display: flex
   flex-direction: row
   flex-grow: 1
+  max-width: 45%
 
 .inner-featured
   background: $ivory
-  width: 100%
-  max-width: 800px
+  max-width: 900px
   margin: 15px auto
+  width: 100%
 
-.featuredBox
+.inner-ad
+  max-width: 900px
+  display: flex
+  align-items: center
+  justify-content: center
+  background: $ivory
+  height: 100px
+  margin: 15px auto 30px
+  width: 100%
+
+.featured
   animation: fade-in-top .3s ease forwards
   animation-delay: .8s
   background: $ivory
+  display: flex
   box-sizing: border-box
-  margin: 15px auto
-  max-width: 800px
+  margin: 0 auto
+  padding: 15px
   opacity: 0
   width: 100%
-  .featured-nation
+
+.featured-details
+  background: $ivory
+  display: flex
+  align-items: flex-start
+  flex-direction: row
+  flex-grow: 1
+  flex-wrap: no-wrap
+
+.featured-details-items
+  display: flex
+  flex-direction: column
+  padding: 15px
+
+.featured-icons
+  display: flex
+  flex-direction: column
+
+.featured-flag
+  max-height: 50px
+  border-bottom: 1px solid $ivory
+
+.featured-leader
+  max-height: 100px
+
+.featured-news
+  background: $ivory-dark
+  flex-grow: 1
+  max-width: 70%
+  ul
+    list-style: none
+    margin: 0
+    padding: 15px
+    li
+      margin-bottom: 5px
+      a
+        color: #222
+      &:last-child
+        margin-bottom: 0
+    span
+      display: block
+      margin-bottom: 15px
+
+.featured-link
+  background: #CCC
+  display: flex
+  transition: 150ms
+  a
+    color: #000
     display: flex
-    flex-direction: row
-    justify-content: center
-    padding: 0 5px
-    h3
-      margin: 0
-      font-family: 'Kanit', sans-serif
-      padding: 10px 0
-  .featuredEvents
-    display: flex
-    padding: 0 15px
-    justify-content: space-between
-    .featuredDetails
-      width: 100%
-      display: flex
-      .featuredDetailsBox
-        display: flex
-        width: 100%
-        flex-direction: row
-      .featured-news
-        background: #bebbb2
-        border: 1px solid $ivory-dark
-        border-left: 0
-        width: 100%
-        ul
-          background: #f6f6f6
-          display: flex
-          flex-direction: row
-          flex-wrap: wrap
-          height: 100%
-          list-style: none
-          padding: 0
-          min-width: 200px
-          margin: 0px
-          p
-            padding: 1px 10px 0
-            font-size: 12px
-            height: 60px
-            overflow: hidden
-            text-align: left
-          span
-            background: #EEE
-            font-family: 'Raleway', sans-serif
-            padding: 12px 10px
-            width: 100%
-          li
-            text-align: left
-            font-family: Raleway, sans-serif
-            font-size: 16px
-            min-height: 50px
-            padding: 0 10px
-            a
-              color: #000
-              line-height: 25px
-              width: 100%
-              &:hover
-                color: #777
-            &:last-child
-              margin-bottom: 5px
-      .featuredTitle
-        background: #f6f6f6
-        border: 1px solid #D4D0C6
-        border-right: 0
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: space-between
-        margin: 0px
-        img
-          max-width: 168px
-          padding: 0 10px 10px 10px
-        div
-          align-items: center
-          justify-content: center
-          display: flex
-          flex-direction: column
-          flex-grow: 1
-          span
-            display: flex
-            font-family: 'Raleway', sans-serif
-            font-size: 16px
-            font-weight: 700
-            align-items: center
-      div
-        a
-          text-align: center
-          button
-            border: 1px solid #bebbb2
-            color: #000
-            font-size: 13px
-            margin: 12px auto 0
-            padding: 10px 12px
-            transition: .15s
-            &:hover
-              box-shadow: $box-shadow-very-low
-              transform: translateY(-2px)
-              cursor: pointer
-      .featuredStats
-        background: #EEE
-        border-bottom: 1px solid $ivory-dark
-        border-top: 1px solid $ivory-dark
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        padding: 0 10px
-        width: 100%
-        .featured-flag
-          height: 50px
-          margin: 10px auto 0
-          max-width: 100px
-          min-height: auto
-        span
-          background: #D4D0C6
-          margin: 11px 0 0
-          padding: 12px 0px
-          text-align: center
-          font-family: 'Raleway', sans-serif
-        .featured-stats-list
-          span
-            background: inherit
-            margin: 0
-            padding: 0
-            font-family: system, sans-serif
-            float: right
-        h4
-          margin: 0
-          padding: 10px 0px
-          border-bottom: 1px solid #ccc
-        ul
-          height: auto
-          list-style: none
-          padding: 0
-          margin: 0
-          li
-            box-sizing: border-box
-            font-size: 14px
-            line-height: 24px
-            padding: 0 5px
-            text-align: center
-            width: 100%
-            &:nth-child(even)
-              background: #D4D0C6
-            &:nth-child(odd)
-              background: $ivory
-            &:first-child
-              text-align: center
-    img
-      max-width: 188px
-      min-height: 200px
-  .featuredMore
-    display: flex
-    justify-content: center
     align-items: center
+    text-decoration: none
+    padding: 0 15px
+    width: 100%
+    height: 100%
+  &:hover
+    background: #BBB
 
 .contentBox
   align-items: center
@@ -756,13 +676,16 @@ a
   align-items: center
   background: #fff
   display: flex
-  flex-grow: 0
+  flex-grow: 1
   flex-wrap: nowrap
   font-family: sans-serif
   font-size: 12px
-  justify-content: center
+  justify-content: space-between
   line-height: 60px
+  text-align: center
   overflow-x: auto
+  a
+    background: #EEE
 
 .content
   align-items: center
@@ -816,11 +739,34 @@ a
   flex-direction: column
   grid-area: main
 
-.inner-home
+.home-hero
+  animation: fade-in-top 0.4s ease forwards
   margin: 0 auto
-  padding: 10px 0
+  max-width: 900px
   width: 100%
-  max-width: 800px
+  text-align: center
+  position: relative
+  .home-overlay
+    background-color: rgba(210,210,210,0.85)
+    bottom: 3px
+    box-sizing: border-box
+    font-size: 28px
+    padding: 10px 15px
+    position: absolute
+    transition: 150ms
+    width: 100%
+    cursor: pointer
+  &:hover
+    .home-overlay
+      padding: 20px 15px
+
+.inner-home
+  background: #F8F8F8
+  box-sizing: border-box
+  margin: 15px auto 0
+  padding: 15px 15px
+  width: 100%
+  max-width: 900px
   h1
     font-family: 'Raleway', sans-serif
   .home-action
@@ -840,29 +786,36 @@ a
       font-size: 13px
       font-family: 'Crimson Text', sans-serif
       margin: 5px auto
+
 .home-image
   opacity: .7
   margin: -30px auto 0
   max-width: 160px
 
+.inner-election
+  background: $ivory
+  margin: 30px auto
+  max-width: 900px
+  width: 100%
+
 .inner-map 
   animation: fade-in-top 0.4s ease forwards
   animation-delay: 0.2s
+  background: $ivory
   width: 100%
-  border-bottom: 1px solid $ivory-dark
-  border-top: 1px solid $ivory-dark
   opacity: 0
-  max-width: 800px
+  max-width: 900px
   margin: 0 auto 15px
 
 .inner-home-map
   background: $ivory
   border: none
-  max-width: 810px
+  display: flex
+  justify-content: flex-end
+  max-width: 900px
   margin: 0 auto
 
 .item-header
-  border-bottom: 1px solid $ivory-dark
   color: #000
   display: flex
   font-family: 'Archivo Black', sans-serif
@@ -1228,14 +1181,17 @@ a
 
 .datasheetsInner
   display: flex
-  flex-direction: column
+  flex-direction: row
+  justify-content: space-around
   margin: 0 auto
   padding: 0 0 5px
-  max-width: 400px
+  max-width: 900px
+  width: 100%
 
 .data-container
   display: flex
-  flex-direction: row
+  flex-direction: column
+  align-items: center
   flex-wrap: wrap
   font-size: 14px
   justify-content: center
@@ -1249,7 +1205,7 @@ a
     margin: 0 5px
     padding: 5px
     width: 100%
-    max-width: 350px
+    max-width: 400px
     &:nth-child(even)
       background: #EEEEEE
     span
@@ -1285,17 +1241,17 @@ a
     display: none
 
 .biography
-  padding: 32px 30px 0
+  padding: 32px 30px
   text-align: left
   .biography-text
-    min-height: 305px
+    min-height: 50px
 
 .maps
   border: 0
   max-width: 1000px
   height: 296px
   transition: .1s
-  width: 100%
+  width: 50%
 
 .leadermap
   animation: fade-in-top ease 0.4s forwards
@@ -1367,7 +1323,8 @@ a
 /* Election Calendar
 
 .election-cal
-  background: #EEE
+  display: flex
+  flex-direction: column
   padding: 5px
   .election-cal-years
     display: flex
@@ -1391,30 +1348,36 @@ a
   padding: 0 0 5px
   li
     display: flex
+    font-size: 16px
     justify-content: space-between
-    padding: 0 5px
+    padding: 8px
     &:nth-child(odd)
-      background: #DADADA
+      background: #DDD
     &:nth-child(even)
-      background: #E5E5E5
+      background: $ivory-dark
   
 .election-cal-date
   color: #888
 
 .election-cal-loadlist
+  align-self: center
+  background: #DDD
   cursor: pointer
+  margin: 10px 5px
+  padding: 5px
+  text-align: center
+  width: 100px
   &:hover
     text-decoration: underline
 
 /*/
-
 
 .footer
   align-items: center
   background: #2c2c2c
   border-left: 0
   box-sizing: border-box
-  color: #fff
+  color: $ivory
   display: flex
   flex-direction: column
   grid-area: footer
@@ -1422,7 +1385,7 @@ a
   min-height: 220px
   width: 100%
   a
-    color: #fff
+    color: $ivory
     margin: 1px 10px 0 0
     font-size: 12px
     padding: 5px 0
@@ -1458,13 +1421,17 @@ a
   background: #333
   border: 1px solid $ivory-dark
   border-radius: 2px
-  color: #fff
+  color: $ivory
   font-size: 14px
   padding: 5px
-  transition: .3s
+  transition: 150ms
+  &::placeholder
+    color: $ivory
   &:focus
     background: $ivory-dark
-    color: #000000
+    color: #000
+    &::placeholder
+      color: #000
 
 .button-submit
   background: $ivory-dark
@@ -1476,14 +1443,13 @@ a
   margin: 5px
   margin-right: 0
   padding: 5px
-  transition: .25s
+  transition: .15s
   &:hover
-    background: #333
-    color: $ivory-dark
+    background: #999
+    border: 1px solid #999
   &:active
     background: $ivory-dark
     border: 1px solid $ivory-dark
-    color: #000000
     transition: 0s
 
 .news
@@ -1681,7 +1647,7 @@ img.othersFlag
   flex-grow: 2
   align-items: flex-end
   font-size: 12px
-  color: #fff
+  color: $ivory
   text-align: right
   h3
     text-align: right
@@ -1862,7 +1828,6 @@ img.othersFlag
     width: auto
     top: auto
     min-width: auto
-    font-size: 11px
     height: auto
     margin: 0 7px
     padding: 0

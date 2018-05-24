@@ -61,17 +61,10 @@ class Head extends Component {
               </button>
             </div>
           </div>
-          <NavWrap
-            menu={this.state.menu}
-            menuState={this.state.menuState}
-            closeMenu={this.closeMenu}
-            nation={this.state.nation}
-            setNation={this.setNation}
-          />
         </div>
       </div>
     );
   }
 }
-          
+
 export default Head;

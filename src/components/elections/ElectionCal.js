@@ -33,7 +33,6 @@ class ElectionCal extends React.Component {
   render() {
     return (
       <div className="election-cal">
-        <h2 className="">Upcoming Elections</h2>
         <div className="election-cal-years">
           <a onClick={() => this.changeYear(2018)}>2018</a>
           <a onClick={() => this.changeYear(2019)}>2019</a>
