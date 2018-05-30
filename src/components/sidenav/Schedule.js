@@ -13,7 +13,6 @@ class Schedule extends Component {
   render() {
     return (
       <div className="schedule-div">
-        <h4>Travel</h4>
         <div className="mapsBox">
           <div className="inner-schedule">
             <div className="scheduleBox">

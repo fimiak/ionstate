@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 function Biography(props) {
   return (
     <div className="biography">
+      <h4>Biography</h4>
       <div className="biography-text">
-        <h3>Biography</h3>
         <p>
           {props.biography}
         </p>
@@ -18,7 +18,7 @@ function Biography(props) {
 }
 
 Biography.defaultProps = {
-  biography: 'Bio',
+  biography: 'This biography can be viewed at Wikipedia.org.',
   extended: ' ',
 };
 

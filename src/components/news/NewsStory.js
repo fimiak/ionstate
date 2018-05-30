@@ -10,13 +10,6 @@ function NewsStory(props) {
     <div className="news-box">
       <div className="news-story">
         <div className="news-img-container">
-          <a className="article-link" href={props.news.web_url}>
-            <img
-              className="article-image"
-              alt="Article"
-              src={(props.news.multimedia.length === 0) ? '' : require(`../../images/${testImage}`)}
-            />
-          </a>
           <a className="article-link-headline" href={props.news.web_url}>
             <span className="headline">{ props.news.length >= 0 ? '' : props.news.headline.main}</span>
           </a>
@@ -27,6 +20,13 @@ function NewsStory(props) {
             <span className="time">{ props.news.length >= 0 ? '' : regDate}</span>
           </div>
           <div className="article-text">
+            <a className="article-link" href={props.news.web_url}>
+              <img
+                className="article-image"
+                alt="Article"
+                src={(props.news.multimedia.length === 0) ? '' : require(`../../images/${testImage}`)}
+              />
+            </a>
             <span className="article">{props.news.snippet}</span>
           </div>
         </div>

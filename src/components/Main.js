@@ -8,7 +8,6 @@ import Others from './sidenav/Others';
 import Ad from './ads/Ad';
 // import Polls from './sidenav/Polls';
 import Schedule from './sidenav/Schedule';
-import TwitterApi from './api/TwitterApi';
 
 const list = [];
 for (let i = 0; i < data.data.length; i++) { // Assign data.data[i] to 'country' key.
@@ -26,30 +25,6 @@ class Main extends Component {
     this.showNews = this.showNews.bind(this);
     this.hideNews = this.hideNews.bind(this);
     this.topnavColor = this.topnavColor.bind(this);
-  }
-
-  componentWillUpdate() {
-    const appWindow = document.getElementsByClassName('App-intro')[0];
-    const logoWrap = document.getElementsByClassName('logo-wrap')[0];
-    const navWrap = document.getElementsByClassName('nav-wrap')[0];
-    const buttonMenu = document.getElementsByClassName('button-menu')[0];
-    this.topnavColor();
-
-    appWindow.addEventListener('scroll', () => {
-      if (appWindow.scrollTop >= 24) {
-        logoWrap.setAttribute('style', 'line-height: 32px;');
-        navWrap.setAttribute('style', 'top: 42px;');
-        buttonMenu.setAttribute('style', 'width: 42px');
-      } else {
-        logoWrap.setAttribute('style', 'line-height: 48px;');
-        navWrap.setAttribute('style', 'top: 58px;');
-        buttonMenu.setAttribute('style', 'width: 58px');
-      }
-    });
-  }
-
-  componentDidUpdate() {
-    this.topnavColor();
   }
 
   setMap(place) {
@@ -109,12 +84,6 @@ class Main extends Component {
               <DataSheets props={this.state.params} nation={this.state.nation} />
             </div>
 
-
-
-            <div id="twitter fade-in-top">
-              <TwitterApi nation={this.state.nation} />
-            </div>
-
             <div className="top-split fade-in-top">
               <div id="news" className="news">
                 <News
@@ -136,10 +105,8 @@ class Main extends Component {
               />
             </div>
 
-            <div className="top-split fade-in-top">
-              <div id="biography">
-                <Biography biography={this.state.nation.biography} extended={this.state.nation['biography-election']} />
-              </div>
+            <div className="biography">
+              <Biography biography={this.state.nation.biography} extended={this.state.nation['biography-election']} />
             </div>
 
             <div id="country-data">
@@ -157,6 +124,7 @@ class Main extends Component {
             <div className="inner-ad">
               <Ad />
             </div>
+
           </div>
         </div>
       </div>

@@ -36,19 +36,13 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <div className="inner-home">
-          <div className="home-action">
-            <h1>Tracking global leaders</h1>
-            <h3>Presidentprime is a public access site supporting features for discovering
-               information about a selection of top presidents and prime ministers.
-            </h3>
-          </div>
-        </div>
 
         <div className="home-hero">
-          <img src={summit} alt="G7 2017" />
+          <a href="https://g7.gc.ca/en/" alt="G7">
+            <img src={summit} alt="G7 2017" />
+          </a>
           <div className="home-overlay">
-            The G7 Summit - June 8-9 2018
+            Upcoming - The G7 Summit - Charlevoix, Quebec - June 8-9 2018
           </div>
         </div>
 
@@ -59,7 +53,7 @@ class Home extends Component {
 
         <div className="inner-map">
           <div className="item-header">
-            Map Tracker <span>{`month ${date.getDate()}, ${date.getFullYear()}`}</span>
+            Travel <span>{`month ${date.getDate()}, ${date.getFullYear()}`}</span>
           </div>
           <Map />
         </div>

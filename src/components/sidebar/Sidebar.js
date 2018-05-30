@@ -17,9 +17,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar-inner">
-        <a className="title-link sidebar-header" href="/">
-          <img className="globeIcon" src="globe.ico" alt="" />| Prime
-        </a>
+        <a className="sidebar-header" href="/">Ionstate</a>
         <p>Latest Activity <a className="sidebar-full" href="/list" alt="Full List">View full list</a></p>
         <LeaderList
           id="page1"

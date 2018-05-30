@@ -47,29 +47,29 @@ class Featured extends Component {
   render() {
     return (
       <div className="featured">
-        <div className="featured-details">
-          <div className="featured-icons">
-            <img className="featured-flag" src={require(`../../.././images/flags/${this.props.selected.flag}`)} alt={this.props.selected.name} />
-            <img className="featured-leader" src={require(`../../.././images/bio/${this.props.selected.image}`)} alt={this.props.selected.leader} />
+        <div className="featured-layout">
+          <div className="featured-details">
+            <div className="featured-icons">
+              <img className="featured-flag" src={require(`../../.././images/flags/${this.props.selected.flag}`)} alt={this.props.selected.name} />
+              <span><b>{this.props.selected.name}</b></span>
+            </div>
+            <div className="featured-details-items">
+              <img className="featured-leader" src={require(`../../.././images/bio/${this.props.selected.image}`)} alt={this.props.selected.leader} />
+              <span>{this.props.selected['leader-title']} <br/>{this.props.selected.leader}</span>
+            </div>
           </div>
-          <div className="featured-details-items">
-            <span><b>{this.props.selected.name}</b></span><br/>
-            <span>{this.props.selected['leader-title']}</span>
-            <span>{this.props.selected.leader}</span>
-
+          <div className="featured-news">
+            <ul>
+              <span><b>Articles featuring {this.props.selected.leader}</b></span>
+              <li><a href={this.state['article-0'].web_url}>{this.state['article-0'].headline.main}</a></li>
+              <li><a href={this.state['article-1'].web_url}>{this.state['article-1'].headline.main}</a></li>
+              <li><a href={this.state['article-2'].web_url}>{this.state['article-2'].headline.main}</a></li>
+              <li><a href={this.state['article-3'].web_url}>{this.state['article-3'].headline.main}</a></li>
+            </ul>
           </div>
-        </div>
-        <div className="featured-news">
-          <ul>
-            <span><b>Latest articles featuring {this.props.selected.leader}.</b></span>
-            <li><a href={this.state['article-0'].web_url}>{this.state['article-0'].headline.main}</a></li>
-            <li><a href={this.state['article-1'].web_url}>{this.state['article-1'].headline.main}</a></li>
-            <li><a href={this.state['article-2'].web_url}>{this.state['article-2'].headline.main}</a></li>
-            <li><a href={this.state['article-3'].web_url}>{this.state['article-3'].headline.main}</a></li>
-          </ul>
         </div>
         <div className="featured-link">
-          <NavLink to={this.props.selected.country} onClick={() => this.props.setNation(this.props.selected.country)}>Profile
+          <NavLink to={this.props.selected.country} onClick={() => this.props.setNation(this.props.selected.country)}>View More
           </NavLink>
         </div>
       </div>

@@ -36,11 +36,10 @@ class ElectionCal extends React.Component {
         <div className="election-cal-years">
           <a onClick={() => this.changeYear(2018)}>2018</a>
           <a onClick={() => this.changeYear(2019)}>2019</a>
-          <a onClick={() => this.changeYear(2019)}>2020</a>
-          <a onClick={() => this.changeYear(2019)}>2021</a>
+          <a onClick={() => this.changeYear(2020)}>2020</a>
+          <a onClick={() => this.changeYear(2021)}>2021</a>
         </div>
         <ElectionCalList dates={this.props} loaded={this.state.loaded} year={this.state.year} />
-        <span className="election-cal-loadlist" onClick={this.loadList}>{(this.state.loaded === true) ? "" : "View more" }</span>
       </div>
     );
   }

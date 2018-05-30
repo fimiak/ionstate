@@ -7,28 +7,27 @@ function Footer() {
       <div className="inner-footer">
         <div className="footer-links">
           <div className="footer-column">
-            <h3>Tools</h3>
-            <a href="https://facebook.github.io/react/">ReactJS</a>
-            <a href="https://www.cia.gov/library/publications/the-world-factbook/">World Factbook</a>
+            <h3>More Tools</h3>
+            <a href="https://www.cia.gov/library/publications/the-world-factbook/">CIA World Factbook</a>
             <a href="https://developer.nytimes.com/">NY Times API</a>
             <a href="https://developers.google.com/maps/">Google Maps</a>
           </div>
           <div className="footer-column footer-middle">
-            <h3>Links</h3>
+            <h3>More Links</h3>
             <a href="/">Home Page</a>
             <a href="/contact">Contact Us</a>
             <a href="http://www.wikipedia.org">Wikipedia</a>
           </div>
         </div>
         <div className="footer-column footer-last">
-          <h3>Newsletter</h3>
+          <h3>Join the Newsletter</h3>
           <div className="footer-input">
-            <input className="input-email" placeholder="Email" />
+            <input className="input-email" placeholder="Email Address" />
             <button className="button-submit">Submit</button>
           </div>
           <p>
-            Data sourced from public APIs and Wikipedia<br />
-            PRESIDENTPRIME 2018
+            All data from public sources & APIs.<br />
+            IONSTATE 2018
           </p>
         </div>
       </div>
