@@ -52,14 +52,12 @@ class Home extends Component {
         </div>
 
         <div className="inner-map">
-          <div className="item-header">
-            Travel <span>{`month ${date.getDate()}, ${date.getFullYear()}`}</span>
-          </div>
+          <div className="item-header">Upcoming Summits</div>
           <Map />
         </div>
 
         <div className="inner-featured">
-          <div className="item-header">Featured</div>
+          <div className="item-header">Featured Leader</div>
           <Featured selected={selection} />
         </div>
 

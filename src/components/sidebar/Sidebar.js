@@ -27,7 +27,7 @@ class Sidebar extends Component {
           class="page-show"
         />
         <div className="sidebar-topics">
-          <p> Follow Topics</p>
+          <p>Follow Topic <br/> (Coming Soon)</p>
           <ul className="sidebar-body">
             <li><a href="/">Defense</a></li>
             <li><a href="/">Domestic</a></li>

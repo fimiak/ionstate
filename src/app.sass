@@ -125,12 +125,12 @@ li
   padding: 0px 5px
 
 h4
-  background: #EEE
+  background: #DDD
   font-size: 16px
   font-weight: bold
   margin: 0
   padding: 15px 10px
-
+  text-align: center
 
 .hide
   display: none
@@ -213,6 +213,12 @@ h4
 
 .sidebar-body
   height: 100%
+  li
+    margin: 5px 0
+  a
+    &:hover
+      color: #E94949
+      text-decoration: underline
 
 // END Sidebar
 
@@ -442,15 +448,20 @@ h4
   margin: 0
   list-style: none
   padding: 0
+  &:hover
+    .copy
+      &:hover
+        padding: 0 10px
   .copy
     display: flex
     flex-direction: column
     font-size: 12px
     justify-content: center
-    transition: 300ms
+    transition: 200ms
     padding: 0 5px
     position: relative
     white-space: nowrap
+
   a
     align-items: center
     color: #FFF
@@ -464,17 +475,20 @@ h4
     span
       font-size: 11px
       font-weight: 400
+     
     &:hover
       background: #333
+
 
 .leader-list
   .navlink-active
     background: #333
     &:hover
-      background: #444
+      background: #3F3F3F
     .copy
       width: 100%
       justify-content: flex-end
+      padding: 0px 10px
 
 .nav-sidenav
   display: flex
@@ -665,11 +679,13 @@ h4
   flex-grow: 1
   font-weight: 700
   flex-wrap: no-wrap
-  padding: 10px
 
 .featured-details-items
+  align-items: center
+  border-bottom: 1px solid #AAA
   display: flex
   flex-direction: row
+  padding: 10px
   span
     align-self: center
     margin: 0 10px
@@ -677,9 +693,10 @@ h4
     width: 100%
 
 .featured-icons
+  align-items: center
   display: flex
   flex-direction: row
-  margin-bottom: 10px
+  padding: 10px
   span
     align-self: center
     margin: 0 10px
@@ -696,11 +713,11 @@ h4
 .featured-news
   border: 1px solid $ivory-dark
   flex-grow: 1
-  max-width: 70%
+  max-width: 75%
   ul
     list-style: none
     margin: 0
-    padding: 15px
+    padding: 10px
     li
       margin-bottom: 10px
       a
@@ -709,17 +726,18 @@ h4
         margin-bottom: 0
     span
       display: block
-      margin-bottom: 15px
+      margin-bottom: 10px
 
 .featured-link
   border: 1px solid #AAA
-  background: #CCC
+  background: $ivory-dark
   display: flex
   align-self: flex-end
-  margin: 0 10px 10px
+  margin: 5px auto
   padding: 5px 15px
   transition: 100ms
   text-align: center
+  max-width: 90px
   a
     color: #000
     display: flex
@@ -881,18 +899,14 @@ h4
       background: $ivory
 
 .item-header
+  background: #D2D2D2
   color: #000
   display: flex
   font-size: 16px
-  font-weight: 700
-  justify-content: space-between
+  justify-content: center
   margin: 0 auto
-  padding: 10px
+  padding: 12px 0px
   text-transform: uppercase
-  span
-    align-self: center
-    font-size: 14px
-    text-transform: capitalize
 
 .grid-item
   background: #DDD
@@ -1312,6 +1326,8 @@ h4
   .biography-text
     min-height: 50px
     padding: 5px 10px
+    p
+      padding: 0 10px
 
 .maps
   border: 0
@@ -1348,7 +1364,7 @@ h4
   border-top: 15px solid #FFF
   display: flex
   flex-wrap: wrap
-  height: 530px
+  height: 580px
   margin: 0 auto
   padding: 10px
   overflow: hidden
@@ -1367,15 +1383,12 @@ h4
         flex-direction: row-reverse
 
 .news-open
-  background: #DDD
-  border: 1px solid #D1D1D1
   cursor: pointer
   padding: 10px 0
+  max-width: 150px
   width: 40%
   transition: .1s
-  margin: 20px auto
-  &:hover
-    background: #DADADA
+  margin: 15px auto
 
 .contact
   background: $ivory
@@ -1665,7 +1678,7 @@ h4
 
 .others
   align-items: center
-  background: #F9F9F9
+  background: #EEE
   display: flex
   justify-content: space-between
   margin: 30px 0
@@ -1675,16 +1688,21 @@ h4
     max-width: 50px
     width: auto
   div
-    background: #EEE
     box-sizing: border-box
     display: flex
+    cursor: pointer
     transition: .2s
     width: auto
+    &:hover
+      img.othersArrow
+        background: #AAA
+        border-radius: 24px
+        margin: 1px 11px
     span
-      font-size: 11px
+      font-size: 12px
       color: #000
       text-transform: uppercase
-      padding: 5px 0
+      padding: 5px 10px
     a
       align-items: center
       background: none
@@ -1692,19 +1710,22 @@ h4
       justify-content: space-between
       flex-direction: row
       text-decoration: none
-      margin: 10px
+      padding: 10px
       width: 100%
-    &:hover
-      background: #DDD
     &:last-child
       justify-content: flex-end
       a
         padding-left: 10px
         padding-right: 10px
-
+    
 img.othersArrow
   align-self: center
-  height: 100%
+  background: #CCC
+  border-radius: 12px
+  padding: 5px
+  margin: 1px 11px
+  height: 22px
+  transition: 200ms
 
 img.othersFlag
   padding: 0 5px
@@ -1724,12 +1745,15 @@ img.othersFlag
     text-align: right
   p
     margin: 5px 0
-/*****************************/
-/*****************************/
-/****** DESKTOP STYLES *******/
-/*****************************/
-/*****************************/
 
+
+/*****************************/
+/*****************************/
+/*****************************/
+/******** END DESKTOP ********/
+/*****************************/
+/*****************************/
+/*****************************/
 
 /*****************************/
 /*****************************/
