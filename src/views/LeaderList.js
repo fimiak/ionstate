@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-//import NavLink from '../NavLink';
 import { NavLink } from 'react-router-dom';
-
 
 class LeaderList extends Component {
   constructor(props) {
@@ -28,7 +26,7 @@ class LeaderList extends Component {
           to={"/" + country.country}
           activeClassName="navlink-active"
           onClick={() => this.props.setNation(country.country)}>
-          <img src={require(`../.././images/thumbs/${country.thumb}`)} alt="" />
+          <img src={require(`.././images/thumbs/${country.thumb}`)} alt="" />
           <div className="copy" onClick={this.props.scrollTop}>
             {country.leader}
             <span>{country.name}</span>

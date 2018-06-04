@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import data from '../.././data/data.json';
-import LeaderList from '../.././components/sidenav/LeaderList';
+import LeaderList from '../.././views/LeaderList';
 
 const list = [];
 for (let i = 0; i < data.data.length; i += 1) { // Assign data.data[i] to 'country' key.
   list[data.data[i].country] = data.data[i];
 }
+/**
+list.map((data.data) => {
+
+})
+ */
 
 const orderBy = data.data.slice(0);
 const orderedList = orderBy.sort((a, b) => b.gdp - a.gdp);
+
 class Sidebar extends Component {
   componentDidMount() {
   }

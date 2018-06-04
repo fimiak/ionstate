@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Biography from './sidenav/Biography';
-import CountryData from './sidenav/CountryData';
+import Biography from './Biography';
+import CountryData from './vitals/CountryData';
 import data from '.././data/data.json';
-import DataSheets from './sidenav/DataSheets';
+import DataSheets from './vitals/DataSheets';
 import News from './news/News';
-import Others from './sidenav/Others';
+import Others from './suggestions/Others';
 import Ad from './ads/Ad';
-// import Polls from './sidenav/Polls';
-import Schedule from './sidenav/Schedule';
+// import Polls from './Polls';
+import Schedule from './schedule/Schedule';
 
 const list = [];
 for (let i = 0; i < data.data.length; i++) { // Assign data.data[i] to 'country' key.

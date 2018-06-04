@@ -9,7 +9,7 @@ class LeaderMap extends Component {
     return (
       <div className="inner-maps">
         <div id="overlay" onClick={this.clearOverlay} />
-        <div>
+        <div className="inner-leader-map">
           <iframe
             className="leadermap"
             frameBorder="0"

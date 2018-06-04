@@ -1,14 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import Head from './Head';
-import Contact from './components/Contact';
-import Home from './components/Home';
-import List from './components/List';
-// import NotFound from './components/NotFound';
-import Main from './components/Main';
-import Sidebar from './components/sidebar/Sidebar';
-import Footer from './components/Footer';
+import Contact from './views/Contact';
+import Home from './views/Home';
+import List from './views/List';
+// import NotFound from './views/NotFound';
+import Main from './views/Main';
+import Sidebar from './views/sidebar/Sidebar';
+import Footer from './views/Footer';
+
+function counter(state = 0, action) {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1;
+    default:
+      return state;
+  }
+}
+
+const store = createStore(counter);
 
 const PrimaryLayout = () => (
   <div className="container">
@@ -39,6 +52,8 @@ const App = () => (
 );
 
 ReactDOM.render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root'),
 );
