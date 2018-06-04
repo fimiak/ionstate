@@ -1,6 +1,6 @@
 {
   "name": "retracker",
-  "version": "0.2.0",
+  "version": "1.7.0",
   "private": true,
   "homepage": "http://presidentprime.com",
   "dependencies": {
@@ -10,8 +10,8 @@
     "flow-typed": "^2.2.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-redux": "^5.0.6",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-transition-group": "^2.2.0",
@@ -38,10 +38,9 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-standard": "^3.0.1",
-    "jest": "^22.4.3",
+    "jest": "^23.1.0",
     "jest-cli": "^20.0.4",
     "mocha": "^4.0.1",
-    "react": "^16.3.2",
     "react-scripts": "0.7.0",
     "react-test-renderer": "^15.6.1"
   },
