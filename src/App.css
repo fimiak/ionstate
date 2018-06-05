@@ -261,7 +261,7 @@ h4 {
       display: flex;
       align-items: stretch;
       flex-grow: 1;
-      justify-content: flex-end; }
+      justify-content: space-between; }
   .App-header .nav-wrap {
     background: #333;
     height: 50px;
@@ -354,17 +354,17 @@ h4 {
   display: flex;
   flex-wrap: nowrap; }
 
+.navbar-group-left {
+  flex-grow: 0; }
+
+.navbar-group-right {
+  flex-grow: 1;
+  justify-content: flex-end; }
+
 .navbar-search-hidden {
   padding: 0 !important;
   width: 0 !important;
   visibility: hidden; }
-
-.img-size {
-  border: 0;
-  box-sizing: content-box;
-  height: 15px;
-  padding: 3px 0;
-  width: 15px; }
 
 .navbar-search {
   background: #444;
@@ -374,10 +374,17 @@ h4 {
   outline: none;
   padding: 0 15px;
   text-transform: uppercase;
-  transition: 300ms;
+  transition: 400ms ease;
   width: 100%; }
   .navbar-search::placeholder {
     color: #999; }
+
+.img-size {
+  border: 0;
+  box-sizing: content-box;
+  height: 15px;
+  padding: 3px 0;
+  width: 15px; }
 
 .active,
 .App-header .active {
@@ -484,26 +491,35 @@ h4 {
       border-right: 0; }
 
 .button-menu {
+  background: #DDD;
   border: 0;
   border-radius: 0;
   box-sizing: border-box;
+  color: #666;
   cursor: pointer;
-  display: block;
+  display: flex;
   height: 50px;
+  justify-content: center;
+  min-width: 50px;
   padding: 0;
   transition: 150ms;
-  width: 50px; }
+  width: auto; }
   .button-menu:hover {
     border: 0; }
+  .button-menu a {
+    align-items: center;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none; }
   .button-menu .open-menu {
-    background: #DDD;
     box-sizing: border-box;
-    height: 100%;
-    padding: 12px;
-    transition: 150ms;
-    width: 100%; }
-    .button-menu .open-menu:hover {
-      background: #CCC; }
+    padding: 0;
+    transition: 150ms; }
+  .button-menu .search-menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column; }
 
 .icon-search {
   stroke: #FF0000; }
@@ -817,6 +833,9 @@ h4 {
   .home-hero:hover .home-overlay {
     padding: 30px 15px; }
 
+.home-hero-img {
+  max-width: 100%; }
+
 .inner-home {
   background: #F8F8F8;
   box-sizing: border-box;
@@ -962,7 +981,7 @@ h4 {
       font-size: 13px;
       font-weight: bold; }
       .grid-sort ul li:hover {
-        background: #ECE8DD; }
+        background: #BBB; }
       .grid-sort ul li a {
         align-items: center;
         color: #000;
@@ -1188,13 +1207,14 @@ h4 {
             justify-content: center;
             flex-direction: column;
             display: flex;
-            height: 40px;
-            font-size: 24px;
-            padding: 10px;
+            height: 60px;
+            width: 60px;
+            min-width: 60px;
+            font-size: 18px;
             font-weight: 200;
             margin-right: 4px; }
             .schedule .inner-schedule .scheduleBox ul .dayBox .dateBox .monthBox {
-              font-size: 13px;
+              font-size: 12px;
               margin-bottom: 4px;
               min-width: 40px;
               text-align: center; }
@@ -1373,10 +1393,15 @@ h4 {
   width: 40%; }
 
 .contact {
-  background: #ECE8DD;
-  height: 100%; }
+  background: #FFF;
+  height: 100%;
+  padding: 0px 40px; }
   .contact .contact-details {
-    padding: 200px 0 300px; }
+    background: #ECE8DD;
+    border: 1px solid #D7D0C8;
+    margin: 40px auto;
+    padding: 100px 0;
+    text-align: center; }
 
 .twitter-inner {
   align-items: center;
@@ -1608,7 +1633,7 @@ h4 {
   padding: 10px; }
 
 .time {
-  max-width: 61px;
+  max-width: 65px;
   white-space: nowrap;
   overflow: hidden; }
 
@@ -1819,6 +1844,9 @@ img.othersFlag {
   .inner-header {
     flex-direction: column; }
 
+  .home-hero {
+    width: auto; }
+
   .show {
     display: block;
     opacity: 1;
@@ -1846,9 +1874,14 @@ img.othersFlag {
   .open-menu {
     height: 16px; }
 
+  .top-content {
+    padding: 0; }
+
   .top-nav {
+    align-items: center;
     height: auto;
-    flex-direction: row; }
+    flex-direction: column-reverse;
+    justify-content: center; }
     .top-nav a {
       height: auto;
       font-size: 10px;
@@ -1859,10 +1892,7 @@ img.othersFlag {
     max-height: 200px; }
 
   .top-banner {
-    align-items: center;
-    flex-direction: row;
-    height: 40px;
-    justify-content: center; }
+    display: none; }
 
   .top-icon {
     height: 40px;
@@ -1888,6 +1918,7 @@ img.othersFlag {
   .top-title {
     width: auto;
     top: auto;
+    font-size: 13px;
     min-width: auto;
     height: auto;
     margin: 0 7px;
@@ -1920,6 +1951,15 @@ img.othersFlag {
   .data-pic {
     width: auto; }
 
+  .featured-layout {
+    flex-direction: column; }
+
+  .featured-news {
+    max-width: 100%; }
+
+  .mapsBox {
+    flex-direction: column; }
+
   .inner-content {
     width: 100%;
     margin-bottom: 20px; }
@@ -1941,6 +1981,9 @@ img.othersFlag {
   #schedule {
     flex-direction: column; }
 
+  .schedule .schedule-div {
+    margin: 0; }
+
   .inner-maps {
     width: 90%; }
 
@@ -1956,12 +1999,13 @@ img.othersFlag {
       padding: 0;
       margin: 0 auto;
       width: 90%; }
+      .inner-schedule .scheduleBox ul li:last-child .dayBox {
+        padding-bottom: 0; }
       .inner-schedule .scheduleBox ul .dayBox .dateBox {
         box-sizing: border-box;
-        width: 50px;
-        height: 50px;
         font-size: 16px;
-        margin-left: 5px; }
+        margin-left: 0;
+        padding: 0; }
         .inner-schedule .scheduleBox ul .dayBox .dateBox .monthBox {
           font-size: 11px;
           margin-bottom: 3px; }
@@ -2091,6 +2135,10 @@ img.othersFlag {
     position: relative;
     top: auto; }
 
+  .country-map {
+    margin: 10px;
+    padding: 0; }
+
   .week {
     width: 90%; }
     .week .week-box:last-child {
@@ -2123,6 +2171,9 @@ img.othersFlag {
     min-height: 220px;
     width: 100%; }
 
+  .map {
+    flex-direction: column; }
+
   img.othersArrow {
     max-width: 15px; }
 
@@ -2137,6 +2188,30 @@ img.othersFlag {
     .others div span {
       font-size: 10px;
       padding: 0; }
+
+  .grid-list {
+    margin: 0;
+    width: auto; }
+
+  .grid-list-ul {
+    justify-content: space-around;
+    margin: 0 auto; }
+
+  .grid-sort {
+    margin: 0 auto; }
+    .grid-sort ul {
+      flex-direction: column;
+      flex-wrap: wrap; }
+      .grid-sort ul li a {
+        padding: 5px; }
+
+  .grid-item {
+    height: 160px;
+    margin: 0;
+    width: 160px; }
+
+  .grid-copy {
+    width: 140px; }
 
   .inner-footer {
     flex-direction: column-reverse;

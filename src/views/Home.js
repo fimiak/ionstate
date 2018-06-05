@@ -14,7 +14,7 @@ function Home() {
     <div className="home">
       <div className="home-hero">
         <a href="https://g7.gc.ca/en/" alt="G7">
-          <img src={summit} alt="G7 2017" />
+          <img className="home-hero-img" src={summit} alt="G7 2017" />
         </a>
         <div className="home-overlay">
           Upcoming - The G7 Summit - Charlevoix, Quebec - June 8-9 2018

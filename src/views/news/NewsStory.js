@@ -7,7 +7,7 @@ function NewsStory(props) {
   const regx = /^(.*?)(?=T)/;
   const regDate = dataDate.match(regx)[0]; // Regex article date out of raw data.
   return (
-    <div className="news-box">
+    <li className="news-box">
       <div className="news-story">
         <div className="news-img-container">
           <a className="article-link-headline" href={props.news.web_url}>
@@ -24,15 +24,17 @@ function NewsStory(props) {
               <img
                 className="article-image"
                 alt="Article"
-                src={(props.news.multimedia.length === 0) ? '' : require(`../../images/${testImage}`)}
+                src={(props.news.multimedia === true) ? '' : require(`../../images/${testImage}`)}
               />
             </a>
             <span className="article">{props.news.snippet}</span>
           </div>
         </div>
       </div>
-    </div>
+    </li>
   );
 }
 
 export default NewsStory;
+
+/* require(`../../images/${testImage}`) */
