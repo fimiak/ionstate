@@ -25,15 +25,15 @@ class Others extends Component {
         <div>
           <NavLink className="others-back" to={`/${previous.country}`} onClick={this.scrollTop}>
             <img className="othersArrow" src={backIcon} alt="back" />
-            <img className="othersFlag" src={require(`../.././images/flags/${previous.flag}`)} alt={previous.name} />
             <span>{previous.name}</span>
+            <img className="othersFlag" src={require(`../.././images/flags/${previous.flag}`)} alt={previous.name} />
           </NavLink>
         </div>
 
         <div>
           <NavLink className="others-forward" to={`/${next.country}`} onClick={this.scrollTop}>
-            <span>{next.name}</span>
             <img className="othersFlag" src={require(`../.././images/flags/${next.flag}`)} alt={next.name} />
+            <span>{next.name}</span>
             <img className="othersArrow" src={forwardIcon} alt="forward" />
           </NavLink>
         </div>

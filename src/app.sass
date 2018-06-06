@@ -1413,7 +1413,7 @@ h4
   border-top: 15px solid #FFF
   display: flex
   flex-wrap: wrap
-  height: 580px
+  flex-direction: row
   margin: 0 auto
   padding: 10px
   overflow: hidden
@@ -1425,17 +1425,17 @@ h4
     display: none
 
 .news-box
+  background: #DDD
+  max-width: 420px
+  padding: 10px
   width: 100%
-  &:nth-child(even)
-    .news-story
-      .news-img-container
-        flex-direction: row-reverse
 
 .news-open
   cursor: pointer
-  margin: 15px auto
+  margin: 0 auto 10px
   max-width: 150px
   padding: 10px 0
+  text-transform: uppercase
   transition: .1s
   width: 40%
 
@@ -1597,46 +1597,85 @@ h4
     margin: 1.5em 0
 
 .news-story
-  border: 1px solid #DDD
   box-sizing: border-box
   display: flex
   flex-direction: column
-  margin-bottom: 10px
+  height: 100%
+  max-height: 280px
+  position: relative
+  &:hover
+    .news-text-container
+      opacity: 1
+    .headline
+      color: #000
 
 .news-img-container
   background: #DDD
   display: flex
-  flex-direction: row
-  height: auto
+  flex-direction: column
   overflow: hidden
   width: 100%
 
 .news-info-container
-  max-height: 250px
+  bottom: 0
+  max-height: 280px
+  display: flex
+  flex-direction: column
   width: 100%
 
+.news-text-container
+  bottom: 0
+  display: flex
+  opacity: 0
+  overflow: hidden
+  flex-direction: column-reverse
+  position: absolute
+  transition: 500ms
+
+.news-micro
+  display: flex
+  flex-wrap: wrap
+  padding: 10px
+  margin: 0
+
+.news-box-micro
+  max-width: 205px
+  padding: 10px 6.66px 10px
+  &:nth-child(4n + 1)
+    padding-left: 10px
+  &:nth-child(4n)
+    padding-right: 10px
+  &:last-child
+    padding-right: 10px
+
 .article
-  font-size: 14px
-  padding: 5px 10px
+  font-size: 13px
+  overflow: hidden
+  max-height: 80px
   text-align: left
   color: #000
+  width: 100%
+  &:hover
+    .article-image
+      z-index: 1
 
 .article-image
-  max-height: 100px
-  max-width: 150px
+  max-height: 280px
+  max-width: 420px
+  width: 100%
 
 .article-link
   display: grid
 
 .article-link-headline
   align-self: center
+  background: #CCC
   box-sizing: border-box
   display: flex
   justify-content: center
-  max-height: 54px
   height: 100%
   overflow: hidden
-  padding: 12px 3px
+  padding: 10px
   text-decoration: none
   width: 100%
 
@@ -1659,8 +1698,9 @@ h4
 
 .headline
   color: #000
-  font-size: 16px
-  font-weight: bold
+  font-family: 'Titiliium', sans-serif
+  font-size: 14px
+  font-weight: 500
   text-transform: uppercase
   vertical-align: middle
   &:hover
@@ -1675,6 +1715,7 @@ h4
 
 .article-text
   align-items: center
+  background: #F0F0F0
   box-sizing: border-box
   display: flex
   justify-content: space-between
@@ -1741,8 +1782,7 @@ h4
   margin: 30px 0
   width: 100%
   img
-    height: 37.5px
-    max-width: 50px
+    max-height: 46px
     width: auto
   div
     box-sizing: border-box
@@ -1751,14 +1791,17 @@ h4
     transition: .2s
     width: auto
     &:hover
+      background: #DDD
       img.othersArrow
-        background: #AAA
+        background: #BBB
         border-radius: 24px
-        margin: 1px 11px
+        margin: 0 7px
+        padding: 5px
     span
       font-size: 12px
       color: #000
       text-transform: uppercase
+      margin: 0 5px
       padding: 5px 10px
     a
       align-items: center
@@ -1767,25 +1810,18 @@ h4
       justify-content: space-between
       flex-direction: row
       text-decoration: none
-      padding: 10px
+      padding: 0
       width: 100%
     &:last-child
       justify-content: flex-end
-      a
-        padding-left: 10px
-        padding-right: 10px
     
 img.othersArrow
   align-self: center
   background: #CCC
-  border-radius: 12px
   height: 22px
-  margin: 1px 11px
-  padding: 5px
+  margin: 0
+  padding: 12px
   transition: 200ms
-
-img.othersFlag
-  padding: 0 5px
 
 .footer-column
   flex: 1
@@ -2049,12 +2085,16 @@ img.othersFlag
   .schedule .schedule-div
     margin: 0
 
-  .inner-maps
+  .schedule .mapsBox .inner-maps
+    margin-bottom: 10px
     width: 90%
+
+  .leadermap
+    height: 320px
 
   .inner-schedule
     font-size: 12px
-    margin: 0 auto 10px
+    margin: 10px auto
     width: 100%
     .scheduleHeader
       margin: 0 auto
@@ -2143,6 +2183,7 @@ img.othersFlag
 
   .inner-news
     padding: 0 0 10px
+    justify-content: center
 
   .news
     h1
@@ -2152,20 +2193,32 @@ img.othersFlag
   .news-open
     font-size: 13px
     padding: 7px 0
+    margin-top: 10px
     width: 30%
- 
-  .news-box
-    width: 100%
 
   .news-story
     align-items: center
-    border: 1px solid #e6e6e6
     flex-direction: column
-    margin: 3px auto
-    max-width: 400px
     overflow: hidden
     padding: 0
-    width: 92%
+
+  .news-micro
+    justify-content: center
+    max-width: 320px
+    margin: 0 auto
+    padding: 0
+
+  .news-box-micro
+    max-width: 145px
+    padding: 0px 10px 10px
+    &:nth-child(odd)
+      padding-right: 5px
+    &:nth-child(even)
+      padding-left: 5px
+    &:nth-child(-n + 2)
+      padding-top: 10px
+    &:last-child
+      padding-right: 10px
 
   .news-img-container
     position: relative
@@ -2178,30 +2231,30 @@ img.othersFlag
     margin: 0
 
   .article
-    font-size: 11px
+    font-size: 10px
     height: auto
  
   .article-image
-    height: 50px
     margin: 0 auto
-    z-index: 1
 
   .article-link
     border-top: 0
     margin: 0 auto
 
+  .article-text
+    padding: 5px
+
   .article-author-date
     padding: 2px 3px
     display: flex
+    flex-wrap: wrap
+    font-size: 9px
 
   .article-link-headline
     padding: 1px 3px
     min-height: auto
     .headline
       font-size: 13px
-
-  .article-text
-    padding-left: 3px
  
   .content-box-links
     width: 100%
@@ -2249,24 +2302,22 @@ img.othersFlag
   .map
     flex-direction: column
 
-
-
-  img.othersArrow
-    max-width: 15px
-
   .others
     img
-      height: 25px
+      height: 36px
+      padding: 2px 0
     div
       max-width: 50%
-      a
-        padding: 10px 5px
-      &:last-child
-        a
-          padding: 10px 5px
+      &:hover
+        img.othersArrow
+          margin: 0 4px
       span
         font-size: 10px
         padding: 0
+
+    img.othersArrow
+      height: 20px
+      padding: 9px   
 
   .grid-list
     margin: 0

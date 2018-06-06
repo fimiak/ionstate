@@ -23,8 +23,11 @@ class Main extends Component {
     };
     this.setMap = this.setMap.bind(this);
     this.showNews = this.showNews.bind(this);
-    this.hideNews = this.hideNews.bind(this);
     this.topnavColor = this.topnavColor.bind(this);
+  }
+
+  componentDidMount() {
+    this.topnavColor();
   }
 
   setMap(place) {
@@ -34,16 +37,8 @@ class Main extends Component {
   }
 
   showNews() {
-    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: 1106px;');
     this.setState({
       newsToggle: false,
-    });
-  }
-
-  hideNews() {
-    document.getElementsByClassName('inner-news')[0].setAttribute('style', 'height: 530px;');
-    this.setState({
-      newsToggle: true,
     });
   }
 
@@ -54,7 +49,6 @@ class Main extends Component {
     );
   }
 
-  // <img src={require('.././images/' + this.props.nation.banner)} alt={this.props.nation.leader} />
   render() {
     return (
       <div className="contentBox">
@@ -89,10 +83,13 @@ class Main extends Component {
                 <News
                   props={this.state.params}
                   nation={this.state.nation}
+                  newsToggle={this.state.newsToggle}
                 />
-                <button className="news-open" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>
-                  {this.state.newsToggle ? 'More' : 'Hide'} News
-                </button>
+                {this.state.newsToggle ? 
+                  <button className="news-open" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>
+                    {this.state.newsToggle ? 'Load More' : ''}
+                  </button> : ''
+                }
               </div>
             </div>
 

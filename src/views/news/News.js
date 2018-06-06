@@ -37,11 +37,18 @@ class News extends Component {
 
   render() {
     const listItems = this.state.data.map((data, index) =>
-      <NewsStory news={data} test={index} />);
+      <NewsStory news={data} test={index} micro="" />);
+    const listMicro = this.state.data.map((data, index) =>
+      <NewsStory news={data} test={index} micro="news-box-micro" />);
     return (
-      <ul className="inner-news">
-        {listItems}
-      </ul>
+      <div>
+        <ul className="inner-news">
+          {listItems.slice(0, 2)}
+        </ul>
+        <ul className="news-micro">
+          {this.props.newsToggle ? listMicro.slice(2, 6) : listMicro.slice(2, 13)}
+        </ul>
+      </div>
     );
   }
 }
