@@ -17,7 +17,7 @@ function Home() {
           <img className="home-hero-img" src={summit} alt="G7 2017" />
         </a>
         <div className="home-overlay">
-          Upcoming - The G7 Summit - Charlevoix, Quebec - June 8-9 2018
+          G7 Summit 2018 - June 8, 9 - Charlevoix, Quebec
         </div>
       </div>
 
