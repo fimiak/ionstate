@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Featured from '.././home/featured/Featured';
-import Map from '.././Map/Map';
+import Map from '.././maps/Map';
 import Ad from '.././ads/Ad';
 // import Rank from './home/Ranking/Rank';
 import ElectionCalWrap from '.././elections/ElectionCalWrap';

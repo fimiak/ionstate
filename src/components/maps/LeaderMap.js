@@ -13,7 +13,9 @@ class LeaderMap extends Component {
           <iframe
             className="leadermap"
             frameBorder="0"
-            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBEERsCbyJvSuyQFpq2IcnunlrO-m-qhc0&q= ${this.props.map}`}
+            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBEERsCbyJvSuyQFpq2IcnunlrO-m-qhc0&q= ${
+              this.props.map
+            }`}
             title="map"
             allowFullScreen
           />
