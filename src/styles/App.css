@@ -743,7 +743,7 @@ h4 {
         .featured-news ul li a:hover {
           color: #a33333; }
         .featured-news ul li a img {
-          max-width: 176px; }
+          max-width: 174px; }
       .featured-news ul li:last-child {
         margin-bottom: 0; }
     .featured-news ul span {
@@ -758,7 +758,7 @@ h4 {
   min-height: 24px;
   padding: 5px 5px;
   position: absolute;
-  width: 166px; }
+  width: 164px; }
 
 .featured-link {
   border: 1px solid #AAA;
