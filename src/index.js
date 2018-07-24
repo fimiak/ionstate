@@ -3,39 +3,36 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import Head from './Head';
-import Contact from './views/Contact';
-import Home from './views/Home';
-import List from './views/List';
-// import NotFound from './views/NotFound';
-import Main from './views/Main';
-import Sidebar from './views/sidebar/Sidebar';
-import Footer from './views/Footer';
+import Head from './components/Head';
+import Contact from './components/Contact';
+import Home from './components/home/Home';
+import HomeContainer from './components/home/HomeContainer';
+import List from './components/list/List';
+import ListContainer from './components/list/ListContainer';
 
-function counter(state = 0, action) {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1;
-    default:
-      return state;
-  }
-}
-
-const store = createStore(counter);
+// import NotFound from './components/NotFound';
+import Main from './components/Main';
+import MapContainer from './components/maps/Map';
+import Sidebar from './components/sidebar/Sidebar';
+import Footer from './components/Footer';
+import SidebarContainer from './components/sidebar/SidebarContainer';
+import { browserHistory } from 'react-router';
+import store from './store';
 
 const PrimaryLayout = () => (
   <div className="container">
     <aside className="sidebar">
-      <Route path="/" component={Sidebar} />
+      <Route path="/" component={SidebarContainer} />
     </aside>
     <header className="header">
       <Route path="/" component={Head} />
     </header>
     <section className="main">
       <Switch>
-        <Route path="/" exact component={Home} />
+        <Route path="/" exact component={HomeContainer} />
         <Route path="/contact" exact component={Contact} />
-        <Route path="/list" exact component={List} />
+        <Route path="/list" exact component={ListContainer} />
+        <Route path="/map" exact component={MapContainer} />
         <Route path="/:id" component={Main} />
       </Switch>
     </section>
@@ -45,7 +42,7 @@ const PrimaryLayout = () => (
   </div>
 );
 
-const App = () => (
+const MyApp = () => (
   <BrowserRouter>
     <PrimaryLayout />
   </BrowserRouter>
@@ -53,7 +50,7 @@ const App = () => (
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <MyApp />
   </Provider>,
   document.getElementById('root')
 );
