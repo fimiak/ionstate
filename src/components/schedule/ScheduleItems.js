@@ -4,7 +4,6 @@ import schedule from '../../data/schedule.json';
 const schedList = schedule.schedule;
 
 class ScheduleItems extends Component {
-
   /*onSetMap = (place) => {
     this.props.setMap(place);
     document.getElementById('overlay').setAttribute('style', 'opacity: 0;');
@@ -23,8 +22,7 @@ class ScheduleItems extends Component {
             onClick={() => {}}
             /*onKeyPress={'a'/*this.onSetMap(data.place)}*/
             role="button"
-            tabIndex="0"
-          >
+            tabIndex="0">
             <p>{data.title}</p>
             <span>{data.place}</span>
           </div>
@@ -32,11 +30,7 @@ class ScheduleItems extends Component {
       </li>
     ));
 
-    return (
-      <ul className="listItems">
-        {listItems}
-      </ul>
-    );
+    return <ul className="listItems">{listItems}</ul>;
   }
 }
 
