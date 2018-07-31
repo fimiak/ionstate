@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import LeaderMap from '.././maps/LeaderMap';
 import ScheduleItems from './ScheduleItems';
 
 class Schedule extends Component {
@@ -19,7 +18,6 @@ class Schedule extends Component {
               <ScheduleItems nation={this.props.nation} setMap={this.props.setMap} map={this.props.map} />
             </div>
           </div>
-          <LeaderMap props={this.props.params} map={this.state.map} nation={this.props.nation} />
         </div>
       </div>
     );

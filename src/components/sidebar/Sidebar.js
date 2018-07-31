@@ -24,13 +24,15 @@ class Sidebar extends Component {
         <a className="sidebar-header" href="/">
           Ionstate
         </a>
-        <p>
-          Latest Activity{' '}
-          <a className="sidebar-full" href="/list" alt="Full List">
-            View full list
-          </a>
-        </p>
-        <LeaderList id="page1" country={orderedList} page={1} setNation={this.props.setNation} class="page-show" />
+        <div className="sidebar-content">
+          <p>
+            Latest Activity{' '}
+            <a className="sidebar-full" href="/list" alt="Full List">
+              View full list
+            </a>
+          </p>
+          <LeaderList id="page1" country={orderedList} page={1} setNation={this.props.setNation} class="page-show" />
+        </div>
       </div>
     );
   }
@@ -46,28 +48,3 @@ Sidebar.propTypes = {
 };
 */
 export default Sidebar;
-
-/*
-<div className="sidebar-topics">
-          <p>
-            Follow Topic <br /> (Coming Soon)
-          </p>
-          <ul className="sidebar-body">
-            <li>
-              <a href="/">Defense</a>
-            </li>
-            <li>
-              <a href="/">Domestic</a>
-            </li>
-            <li>
-              <a href="/">Elections</a>
-            </li>
-            <li>
-              <a href="/">Headlines</a>
-            </li>
-            <li>
-              <a href="/">International</a>
-            </li>
-          </ul>
-        </div>
-*/

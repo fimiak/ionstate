@@ -4,14 +4,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Head from './components/Head';
-import Contact from './components/Contact';
+import Contact from './components/contact/Contact';
 import Home from './components/home/Home';
 import HomeContainer from './components/home/HomeContainer';
 import List from './components/list/List';
 import ListContainer from './components/list/ListContainer';
 
 // import NotFound from './components/NotFound';
-import Main from './components/Main';
+import Main from './components/detail/Main';
 import MapContainer from './components/maps/Map';
 import Sidebar from './components/sidebar/Sidebar';
 import Footer from './components/Footer';

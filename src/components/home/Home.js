@@ -25,7 +25,7 @@ class Home extends Component {
     return (
       <div className="home">
         <div className="home-hero">
-          <a href="https://g7.gc.ca/en/" alt="G7">
+          <a className="home-hero-link" href="https://g7.gc.ca/en/" alt="G7">
             <img className="home-hero-img" src={summit} alt="G7 2018" />
           </a>
           <div className="home-overlay">The G7 Summit 2018 - June 8 - 9 - Charlevoix, Quebec</div>

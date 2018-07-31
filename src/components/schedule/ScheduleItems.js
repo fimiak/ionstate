@@ -14,7 +14,7 @@ class ScheduleItems extends Component {
       <li key={data.id.toString()}>
         <div className="dayBox">
           <div className="dateBox">
-            <span className="monthBox">{data.month}</span>
+            <span className="monthBox">{data.month.slice(0, 3)}</span>
             <span>{data.date}</span>
           </div>
           <div

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Biography from './Biography';
-import CountryData from './vitals/CountryData';
-import data from '.././data/data.json';
-import DataSheets from './vitals/DataSheets';
-import News from './news/News';
-import Others from './suggestions/Others';
-import Ad from './ads/Ad';
+import Biography from '.././Biography';
+import CountryData from '.././vitals/CountryData';
+import data from '../.././data/data.json';
+import DataSheets from '.././vitals/DataSheets';
+import News from '.././news/News';
+import Others from './others/Others';
+import Ad from '.././ads/Ad';
 // import Polls from './Polls';
-import Schedule from './schedule/Schedule';
+import Schedule from '.././schedule/Schedule';
 
 const list = [];
 for (let i = 0; i < data.data.length; i++) {
@@ -59,28 +59,29 @@ class Main extends Component {
           <div className="inner-content">
             <div id="top-content" className="top-content">
               <div className="top-nav">
-                <div className="top-banner fade-in-right">
-                  <div className="top-icon">
+                <div className="top-nav-leader">
+                  <div className="top-banner fade-in-right">
+                    <div className="top-icon">
+                      <img
+                        className="top-leader"
+                        alt={this.state.nation.leader}
+                        src={require(`../.././images/thumbs/${this.state.nation.thumb}`)}
+                      />
+                    </div>
+                    <div className="top-title">{this.state.nation.leader}</div>
+                  </div>
+                  <div className="top-flag">
                     <img
-                      className="top-leader"
-                      alt={this.state.nation.leader}
-                      src={require(`.././images/thumbs/${this.state.nation.thumb}`)}
+                      className="fade-in-right"
+                      alt={this.state.nation.name}
+                      src={require(`../.././images/flags/${this.state.nation.flag}`)}
                     />
                   </div>
-                  <div className="top-title">{this.state.nation.leader}</div>
                 </div>
                 <div className="content-box-links fade-in-right">
-                  <a href="/">Home</a>
-                  <a href="#schedule">Schedule</a>
                   <a href="#news">News</a>
-                  <a href="#country-data">Data</a>
-                </div>
-                <div className="top-flag">
-                  <img
-                    className="fade-in-right"
-                    alt={this.state.nation.name}
-                    src={require(`.././images/flags/${this.state.nation.flag}`)}
-                  />
+                  <a href="#schedule">Schedule</a>
+                  <a href="#country-data">Resources</a>
                 </div>
               </div>
             </div>
@@ -92,13 +93,6 @@ class Main extends Component {
             <div className="top-split fade-in-top">
               <div id="news" className="news">
                 <News props={this.state.params} nation={this.state.nation} newsToggle={this.state.newsToggle} />
-                {this.state.newsToggle ? (
-                  <button className="news-open" onClick={this.state.newsToggle ? this.showNews : this.hideNews}>
-                    {this.state.newsToggle ? 'Load More' : ''}
-                  </button>
-                ) : (
-                  ''
-                )}
               </div>
             </div>
 

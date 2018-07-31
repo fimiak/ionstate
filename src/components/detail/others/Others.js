@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import forwardIcon from '../../icons/arrow-right.svg';
-import backIcon from '../../icons/arrow-left.svg';
-import NavLink from '../NavLink';
-import data from '../.././data/data.json';
+import forwardIcon from '../../../icons/arrow-right.svg';
+import backIcon from '../../../icons/arrow-left.svg';
+import NavLink from '../../NavLink';
+import data from '../../.././data/data.json';
 
 class Others extends Component {
   constructor(props) {
@@ -26,13 +26,13 @@ class Others extends Component {
           <NavLink className="others-back" to={`/${previous.country}`} onClick={this.scrollTop}>
             <img className="othersArrow" src={backIcon} alt="back" />
             <span>{previous.name}</span>
-            <img className="othersFlag" src={require(`../.././images/flags/${previous.flag}`)} alt={previous.name} />
+            <img className="othersFlag" src={require(`../../.././images/flags/${previous.flag}`)} alt={previous.name} />
           </NavLink>
         </div>
 
         <div>
           <NavLink className="others-forward" to={`/${next.country}`} onClick={this.scrollTop}>
-            <img className="othersFlag" src={require(`../.././images/flags/${next.flag}`)} alt={next.name} />
+            <img className="othersFlag" src={require(`../../.././images/flags/${next.flag}`)} alt={next.name} />
             <span>{next.name}</span>
             <img className="othersArrow" src={forwardIcon} alt="forward" />
           </NavLink>

@@ -12,8 +12,8 @@ class News extends Component {
   }
 
   componentDidMount() {
-    this.performSearch();
-    // this.testSearch();
+    // this.performSearch();
+    this.testSearch();
   }
 
   testSearch() {
@@ -46,7 +46,6 @@ class News extends Component {
     return (
       <div>
         <ul className="inner-news">{listItems.slice(0, 2)}</ul>
-        <ul className="news-micro">{this.props.newsToggle ? listMicro.slice(2, 6) : listMicro.slice(2)}</ul>
       </div>
     );
   }

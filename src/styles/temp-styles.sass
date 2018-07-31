@@ -1,0 +1,530 @@
+
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/********************** Mobile SASS **********************/
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+
+
+@media (min-width: 1000px)
+
+  html
+    height: auto
+
+  body
+    overflow: auto // To help scrollbar
+
+  h2
+    font-size: 1.1em
+
+  .container
+    display: flex
+    flex-direction: column
+    margin: 0 auto
+
+  .sidebar
+    display: none
+
+  .App-intro
+    padding-top: 0
+
+  .App-header
+    .copy
+      border-top: 0
+      border-right: 0
+      border-bottom: 0
+      font-size: 11px
+      min-width: auto
+      span
+        margin-top: 3px
+    .nav-wrap
+      .inner-header
+        max-width: 100%
+        .nav-sidenav
+          img
+            border-top: 0
+        .nav-links
+          border-left: 0
+          ul
+            width: 100%
+            li
+              min-width: 0
+              &:nth-child(3)
+                display: none
+              &:first-child
+                background: #BBB
+                height: 35px
+                a
+                  &:hover
+                    background: #BBB
+              &:nth-child(2)
+                height: 35px
+              &:nth-child(1n + 1)
+                border-right: 1px solid #333
+              &:last-child
+                border-bottom: 1px solid #333
+              &:nth-child(-n+2)
+                border-top: 0
+    &:hover
+      width: 100%
+      max-width: 100%
+    ul
+      li
+        a
+          font-size: 11px
+          width: 100%
+    li
+      background: #222
+      border-bottom: 1px solid #333
+      border-right: 1px solid #333
+      width: 50%
+      a
+        line-height: 8px
+        padding: 0
+        &:hover
+          background: #222
+          color: #fff
+      &:nth-child(-n+2)
+        border-top: 1px solid #333
+ 
+  .inner-header
+    flex-direction: column
+
+  .home-hero
+    width: auto
+
+  .show
+    display: block
+    opacity: 1
+    height: auto
+    visibility: visible
+
+  .about
+    line-height: 18px
+    margin: 0
+ 
+  .about:hover
+    background: #222
+ 
+  .none
+    display: none
+
+  .title
+    font-size: 12px
+    font-weight: 200
+
+  .content-box-links
+    height: 40px
+    line-height: 40px
+
+  .open-menu
+    height: 16px
+
+  .top-content
+    padding: 0
+
+  .top-nav
+    align-items: center
+    height: auto
+    flex-direction: column-reverse
+    justify-content: center
+    a
+      height: auto
+      font-size: 10px
+      padding: 0
+      width: 100%
+
+  .international-news
+    max-height: 200px
+ 
+  .top-banner
+    display: none
+ 
+  .top-icon
+    height: 40px
+    width: 100%
+
+  .top-flag
+    width: auto
+    display: none
+    align-items: center
+    height: 100%
+    box-sizing: border-box
+    padding: 5px
+    border-left: 1px solid #000
+    img
+      height: 35px
+      width: 50px
+ 
+  .top-leader
+    height: 100%
+    padding: 0
+    max-height: 40px
+ 
+  .top-title
+    width: auto
+    top: auto
+    font-size: 13px
+    min-width: auto
+    height: auto
+    margin: 0 7px
+    padding: 0
+    left: auto
+    line-height: 2em
+ 
+  .data-sheets
+    flex-direction: column
+
+  .data-container
+    padding: 0 10px
+    .data-point
+      padding: 4px 10px
+      margin: 1px 5px
+      max-width: 100%
+      span
+        font-size: 12px
+
+  .data-image
+    width: auto
+ 
+  .img-highlight
+    margin: 0 auto
+    padding: 10px 0
+    .img-highlight-text
+      p
+        font-size: 14px
+
+  .img-highlight-image
+    max-height: 188px
+
+  .data-pic
+    width: auto
+
+  .featured-layout
+    flex-direction: column
+
+  .featured-news
+    max-width: 100%
+
+  .mapsBox
+    flex-direction: column
+ 
+  .inner-content
+    width: 100%
+    margin-bottom: 20px
+
+  .home-image
+    max-width: 120px
+    margin-bottom: -1px
+ 
+  .inner-datasheets
+    width: auto
+    td
+      padding: 5px 2px
+      font-size: 14px
+
+  .datasheets-inner
+    flex-direction: column
+    padding: 0 0 5px
+
+  #schedule
+    flex-direction: column
+
+  .schedule .schedule-div
+    margin: 0
+
+  .schedule .mapsBox .inner-maps
+    margin-bottom: 10px
+    width: 90%
+
+  .leadermap
+    height: 320px
+
+  .inner-schedule
+    font-size: 12px
+    margin: 10px auto
+    width: 100%
+    .scheduleHeader
+      margin: 0 auto
+      width: 90%
+    .scheduleBox
+      font-size: 11px
+      padding: 0
+      margin: 0 auto
+      width: 90%
+      ul
+        li
+          &:last-child
+            .dayBox
+              padding-bottom: 0
+        .dayBox
+          .dateBox
+            box-sizing: border-box
+            font-size: 16px
+            margin-left: 0
+            padding: 0
+            .monthBox
+              font-size: 11px
+              margin-bottom: 3px
+
+  .inner-home
+    padding: 0
+    .home-action
+      margin: 0 auto 20px
+    h1
+      font-size: 24px
+    img
+      width: 75%
+
+  .inner-map
+    margin: 0 auto
+
+
+  .featuredBox
+    .featuredEvents
+      align-items: center
+      .featuredDetails
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        margin-right: 0
+
+        div
+          max-width: auto
+          flex-direction: row
+          a
+            margin-top: 0
+        .featuredTitle
+          width: 50%
+          justify-content: flex-start
+          img
+            padding-bottom: 10px
+          h3
+            flex-grow: 0
+            padding: 0
+            margin: 0
+            &:last-child
+              padding-bottom: 10px
+        .featuredStats
+          margin-left: 0
+          width: 50%
+          .featured-flag
+            margin-bottom: 0
+          ul
+            flex-direction: row
+            flex-wrap: wrap
+            list-style: none
+            li
+              padding: 0
+              width: 100%
+              &:nth-child(3n)
+                background: $ivory
+              &:nth-child(3n+1)
+                background: $ivory-dark
+              &:nth-child(3n+2)
+                background: #dcd9d1
+        ul
+          margin-left: 0
+      img
+        width: 132px
+        min-height: auto
+
+  .inner-news
+    padding: 0 0 10px
+    justify-content: center
+
+  .news
+    h1
+      font-size: 18px
+      margin: 1em 0 .5em
+
+  .news-open
+    font-size: 13px
+    padding: 7px 0
+    margin-top: 10px
+    width: 30%
+
+  .news-story
+    align-items: center
+    flex-direction: column
+    overflow: hidden
+    padding: 0
+
+  .news-micro
+    justify-content: center
+    max-width: 320px
+    margin: 0 auto
+    padding: 0
+
+  .news-box-micro
+    max-width: 145px
+    padding: 0px 10px 10px
+    &:nth-child(odd)
+      padding-right: 5px
+    &:nth-child(even)
+      padding-left: 5px
+    &:nth-child(-n + 2)
+      padding-top: 10px
+    &:last-child
+      padding-right: 10px
+
+  .news-img-container
+    position: relative
+    width: 100%
+    &::after
+      display: none
+
+  .news-info-container
+    background: #f2f2f2
+    margin: 0
+
+  .article
+    font-size: 10px
+    height: auto
+ 
+  .article-image
+    margin: 0 auto
+
+  .article-link
+    border-top: 0
+    margin: 0 auto
+
+  .article-text
+    padding: 5px
+
+  .article-author-date
+    padding: 2px 3px
+    display: flex
+    flex-wrap: wrap
+    font-size: 9px
+
+  .article-link-headline
+    padding: 1px 3px
+    min-height: auto
+    .headline
+      font-size: 13px
+ 
+  .content-box-links
+    width: 100%
+    position: relative
+    top: auto
+
+  .country-map
+    margin: 10px
+    padding: 0
+
+  .week
+    width: 90%
+    .week-box
+      &:last-child
+        display: none
+
+  .inner-week
+    .week-header
+      justify-content: center
+
+  .top-split
+    flex-direction: column
+
+  .data-country
+    width: auto
+
+  .country-data
+    flex-direction: column
+
+  .country-list
+    flex-basis: unset
+    ul
+      padding: 0 0 0 10px
+      text-align: left
+      &:last-child
+        text-align: right
+        padding: 0 10px 0 0
+      li
+        font-size: 13px
+ 
+  .maps
+    min-height: 220px
+    width: 100%
+
+  .map
+    flex-direction: column
+
+  .others
+    img
+      height: 36px
+      padding: 2px 0
+    div
+      max-width: 50%
+      &:hover
+        img.othersArrow
+          margin: 0 4px
+      span
+        font-size: 10px
+        padding: 0
+
+    img.othersArrow
+      height: 20px
+      padding: 9px   
+
+  .grid-list
+    margin: 0
+    width: auto
+
+  .grid-list-ul
+    justify-content: space-around
+    margin: 0 auto
+
+  .grid-sort
+    margin: 0 auto
+    ul
+      flex-direction: column
+      flex-wrap: wrap
+      li 
+        a
+          padding: 5px
+
+  .grid-item
+    height: 160px
+    margin: 0
+    width: 160px
+  
+  .grid-copy
+    width: 140px
+ 
+  .inner-footer
+    flex-direction: column-reverse
+    flex-wrap: wrap
+    height: auto
+    margin: 0 auto
+    width: 90%
+ 
+  .footer
+    height: auto
+    a
+      font-size: 13px
+      margin: 1px 0
+      width: auto
+    .footer-input
+      margin: 0 auto
+    .footer-column
+      margin: 0 auto
+    .footer-links
+      flex-direction: row
+      display: flex
+      .footer-middle
+        h3
+          text-align: right
+          align-self: flex-end
+        a
+          text-align: right
+    .footer-last
+      text-align: center
+      margin: 20px auto
+      h3
+        text-align: center
+        width: 100%
+      p
+        text-align: center

@@ -1,6 +1,6 @@
-/*****************/
-/*** FONT-FACE ***/
-/*****************/
+/*********************************************************/
+/************************ FONT-FACE **********************/
+/*********************************************************/
 @font-face
   font-family: system
   font-style: normal
@@ -8,13 +8,15 @@
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma")
 
 @import url('https://fonts.googleapis.com/css?family=Kanit|Raleway|Titillium+Web:400,700,900')
-/*****************/
-/*** FONT-FACE ***/
-/*****************/
-
-/*****************/
-/*** KEYFRAMES ***/
-/*****************/
+/*********************************************************/
+/*********************************************************/
+/*********************** FONT-FACE ***********************/
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/*********************** KEYFRAMES ***********************/
+/*********************************************************/
+/*********************************************************/
 @keyframes fade-in-right 
   from
     opacity: 0
@@ -54,13 +56,13 @@
   to
     opacity: 0
     transform: translateY(15px)
-/*****************/
-/*** KEYFRAMES ***/
-/*****************/
-
-/*****************/
-/*** VARIABLES ***/
-/*****************/
+/*********************************************************/
+/*********************** KEYFRAMES ***********************/
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/*********************** VARIABLES ***********************/
+/*********************************************************/
 $ivory: #ECE8DD
 $ivory-dark: #D7D0C8
 $crimson: #E85A4F
@@ -69,13 +71,15 @@ $gradient: linear-gradient(to right, #fff, #fff)
 $box-shadow-very-low: 0 4px 30px rgba(50,50,93,.1),0 1px 10px rgba(0,0,0,.07)
 $box-shadow-low: 0 10px 30px rgba(50,50,93,.1), 0 4px 15px rgba(0,0,0,.07)
 $box-shadow-high: 0 18px 35px rgba(50,50,93,.1), 0 8px 15px rgba(0,0,0,.07)
-/*****************/
-/*** VARIABLES ***/
-/*****************/
-
-/*******************/
-/*** MAIN STYLES ***/
-/*******************/
+/*********************************************************/
+/*********************************************************/
+/*********************** VARIABLES ***********************/
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/********************** MAIN STYLES **********************/
+/*********************************************************/
+/*********************************************************/
 *
   font-family: system, sans-serif
 
@@ -144,12 +148,11 @@ h4
 .container
   background: #FFF
   display: grid
-  grid-template-areas: "sidebar header" "sidebar main" "footer footer"
-  grid-template-columns: 15% auto
-  grid-template-rows: 50px auto 220px
+  grid-template-areas: "sidebar" "header" "main" "footer"
+  grid-template-columns: auto
+  grid-template-rows: 50px auto auto auto
   margin: 0 auto
   max-width: 1440px
-// Sidebar
 
 .sidebar
   background: #222
@@ -173,6 +176,9 @@ h4
     border-bottom: 1px solid #666
     margin: 0
     padding: 0
+
+.sidebar-content
+  display: none
 
 .sidebar-body
   margin: 0 5px
@@ -474,15 +480,14 @@ h4
   &:hover
     .copy
       &:hover
-        padding: 0 15px
+        padding: 0 0 0 15px
   .copy
     display: flex
     flex-direction: column
     font-size: 12px
-    height: 50px
     justify-content: center
     transition: 200ms
-    padding: 0 10px
+    padding: 0 0 0 10px
     position: relative
 
   a
@@ -508,13 +513,13 @@ h4
 
 .leader-list
   .navlink-active
-    background: #333
+    background: #373737
     &:hover
       background: #3F3F3F
     .copy
       width: 100%
       justify-content: flex-end
-      padding: 0px 15px
+      padding: 0 0 0 10px
 
 .nav-sidenav
   display: flex
@@ -546,6 +551,7 @@ h4
   color: #666
   cursor: pointer
   display: flex
+  font-size: 12px
   height: 50px
   justify-content: center
   min-width: 50px
@@ -564,6 +570,7 @@ h4
     box-sizing: border-box
     padding: 0
     transition: 150ms
+    width: 18px
   .search-menu
     align-items: center
     display: flex
@@ -585,7 +592,7 @@ h4
 .top-nav
   color: #333
   display: flex
-  flex-direction: row
+  flex-direction: column
   justify-content: space-between
   margin: 0 auto
   width: 100%
@@ -609,6 +616,10 @@ h4
   .active:hover
     background: #000
     color: #ffa500
+
+.top-nav-leader
+  display: flex
+  justify-content: space-between
 
 .top-icon
   height: 60px
@@ -647,16 +658,15 @@ h4
   animation-delay: 0.4s
   align-items: center
   background: #FBFBFB
+  border-bottom: 1px solid #EEE
+  box-sizing: border-box
   cursor: default
   justify-content: center
   display: flex
   transform: scaleX(0)
   transform-origin: left
-  border-top: 1px solid #EEE
-  box-sizing: border-box
   font-family: 'Arial', 'Helvetica', sans-serif  
   font-size: 15px
-  min-width: 280px
   width: 100%
   height: 100%
   padding: 4px
@@ -668,7 +678,7 @@ h4
 
 .top-content
   background: #fff
-  padding: 30px 0 0
+  padding: 0
   position: relative
   width: 100%
 
@@ -678,21 +688,19 @@ h4
   display: flex
   flex-direction: row
   flex-grow: 1
-  max-width: 45%
 
 .inner-featured
   max-width: 900px
-  margin: 15px auto
+  margin: 0 auto
   width: 100%
 
 .inner-ad
-  max-width: 900px
   display: flex
   align-items: center
   justify-content: center
-  background: #EEE
+  background: #DEDEDE
   height: 100px
-  margin: 15px auto 30px
+  margin: 0 auto
   width: 100%
 
 .featured
@@ -704,6 +712,7 @@ h4
   animation-delay: .8s
   background: #EEE
   display: flex
+  flex-direction: column
   box-sizing: border-box
   margin: 0 auto
   padding: 10px
@@ -711,17 +720,18 @@ h4
   width: 100%
 
 .featured-details
-  background: $ivory-dark
+  background: #D3D3D3
   box-sizing: border-box
   display: flex
-  flex-direction: column
+  flex-direction: row
   flex-grow: 1
   font-weight: 700
   flex-wrap: no-wrap
+  justify-content: space-between
 
 .featured-details-items
   align-items: center
-  border-bottom: 1px solid #AAA
+  border-bottom: 1px solid #CCC
   display: flex
   flex-direction: row
   padding: 10px
@@ -750,23 +760,23 @@ h4
   max-height: 80px
 
 .featured-news
-  background: $ivory
-  border: 1px solid $ivory-dark
-  max-width: 75%
+  background: #E9E9E9
   ul
     display: flex
     flex-wrap: wrap
     list-style: none
-    justify-content: space-between
+    justify-content: center
     margin: 0
     height: auto
     padding: 10px 5px
     li
-      background: #D7D0C8
+      background: #DfDfDf
       display: flex
-      margin: 0 5px
+      margin: 0 5px 10px
       flex: 1
       justify-content: center
+      min-width: 200px
+      max-width: 430px
       padding: 0
       a
         align-items: center
@@ -777,27 +787,40 @@ h4
         text-align: center
         justify-content: space-between
         text-decoration: none
-        max-height: 200px
-        padding: 10px
+        margin: 10px
+        position: relative
         &:hover
-          color: #a33333
+          span
+            padding: 20px 0
         img
-          max-width: 174px
+          height: 100%
+          width: 100%
       &:last-child
         margin-bottom: 0
     span
       display: block
-      margin-bottom: 10px
+      transition: .2s
+      width: 100%
 
 .featured-article-title
-  background: rgba(45,45,45,.8)
-  bottom: 22px
+  background: rgba(45,45,45,.85)
+  bottom: 0
+  box-sizing: border-box
   color: #DDD
   font-weight: 700
   min-height: 24px
-  padding: 5px 5px
+  padding: 10px 0
   position: absolute
-  width: 164px
+
+.featured-page-link
+  text-align: right
+  a
+    color: #000
+    font-size: 12px
+    padding: 0 5px
+    &:hover
+      color: #CC0000
+      text-decoration: underline
 
 .featured-link
   border: 1px solid #AAA
@@ -840,7 +863,7 @@ h4
   text-align: center
   overflow-x: auto
   a
-    background: #EEE
+    background: #EAEAEA
 
 .content
   align-items: center
@@ -852,12 +875,10 @@ h4
 .inner-content
   box-sizing: border-box
   height: auto
-  margin: 0px 20px
-  max-width: 900px
+  margin: 0px 
 
 .img-highlight
-  padding: 25px 0 0
-  width: 350px
+  width: 100%
   display: flex
   flex-direction: column
   align-items: center
@@ -895,14 +916,14 @@ h4
   grid-area: main
 
 .home-hero
-  margin: 30px auto 0
+  margin: 0 auto
   max-width: 900px
   width: 100%
   text-align: center
   position: relative
   .home-overlay
-    background-color: rgba(34,34,34,0.7)
-    bottom: 3px
+    background-color: rgba(34,34,34,0.85)
+    bottom: 0
     box-sizing: border-box
     color: #DDD
     font-size: 18px
@@ -916,8 +937,13 @@ h4
     .home-overlay
       padding: 30px 15px
 
+.home-hero-link
+  display: block
+
 .home-hero-img
+  display: flex
   max-width: 100%
+  
 
 .inner-home
   background: #F8F8F8
@@ -935,8 +961,7 @@ h4
   max-width: 160px
 
 .inner-election
-  background: #EEE
-  margin: 30px auto
+  margin: 0 auto
   max-width: 900px
   width: 100%
 
@@ -951,7 +976,7 @@ h4
 
 .map
   display: flex
-  flex-direction: row
+  flex-direction: column
 
 .inner-home-map
   background: #EEE
@@ -967,8 +992,10 @@ h4
 .inner-map-list
   background: #DDD
   flex-grow: 1
-  margin: 10px 0 10px 10px
+  margin: 10px 10px 0
   padding: 10px
+  h3
+    margin: 0 0 10px
   ul
     border: 1px solid #AAA
     margin: 0
@@ -985,28 +1012,32 @@ h4
   font-size: 15px
   font-weight: 900
   justify-content: center
-  margin: 0 auto
+  margin: 10px auto 0
   padding: 10px 0px
   text-transform: uppercase
 
 .grid-item
   background: #DDD
   box-sizing: border-box
-  height: 190px
-  margin-bottom: 15px
+  display: flex
+  height: 140px
+  margin: 5px
   padding: 10px
-  width: 190px
+  width: 140px
   a
+    display: block
+    position: relative
     text-decoration: none
 
+
 .grid-list
-  width: 800px
-  margin: 10px auto 0
+  max-width: 640px
+  margin: 0 auto
 
 .grid-list-ul
   display: flex
   flex-wrap: wrap
-  justify-content: space-between
+  justify-content: center
   list-style: none
   margin: 10px auto
   padding: 0
@@ -1021,44 +1052,53 @@ h4
 
 .grid-copy
   background: rgba(51,51,51,.5)
+  bottom: 0
   color: #EEE
-  font-size: 14px
-  height: 40px
-  margin-top: -47px
+  font-size: 12px
+  min-width: 120px
   padding: 2px 0
   position: absolute
   text-align: center
   transition: .1s
-  width: 170px
+  
   &:hover
     background: rgba(34,34,34,.8)
     color: #FFF
     margin-top: -53px
     padding: 5px 0
+  span
+    display: block
+    width: 100%
+
 
 .grid-sort
   background: $ivory-dark
   display: flex
   justify-content: space-between
-  margin: 30px auto 0
+  margin: 0 auto
   max-width: 800px
+  max-width: 320px
+  flex-direction: column
   span
     align-items: center
+    background-color: #BBB
     color: #000
     font-family: sans-serif
     font-weight: 500
     display: flex
     justify-content: center
-    margin: 0
+    padding: 15px 0
     flex-grow: 2
+    width: 100%
   ul
     display: flex
+    flex-direction: column
     flex-grow: 0
     list-style: none
     margin: 0
     padding: 0
     li
-      border-left: 1px solid #999
+      border-bottom: 1px solid #BBB
       color: #000
       cursor: pointer
       font-size: 13px
@@ -1256,9 +1296,8 @@ h4
 
 .schedule
   background: #F6F6F6
-  border-top: 15px solid #FFF
   display: flex
-  margin-bottom: 30px
+  margin: 10px auto
   justify-content: space-between
   .schedule-div
     margin: 10px
@@ -1268,10 +1307,7 @@ h4
     flex-direction: column
     height: auto
     justify-content: center
-    width: 320px
     .scheduleBox
-      background: #e6e6e6
-      padding: 10px
       display: flex
       flex-direction: row
       flex-wrap: wrap
@@ -1287,8 +1323,9 @@ h4
           align-items: center
           padding: 2px 0px
           .dateBox
-            background: #f8f8f8
+            background: #FFF
             align-items: center
+            align-self: flex-start
             justify-content: center
             flex-direction: column
             display: flex
@@ -1304,16 +1341,15 @@ h4
               min-width: 40px
               text-align: center
           .eventBox
+            background: #FFF
             font-size: 13px
             flex-direction: column
             flex-grow: 1
             justify-content: space-between
             display: flex
             align-items: center
-            height: 60px
             overflow: hidden
             p
-              background: #f8f8f8
               padding: 10px
               overflow: hidden
               box-sizing: border-box
@@ -1322,46 +1358,50 @@ h4
               display: flex
               flex-grow: 1
               display: block
-              white-space: nowrap
               text-overflow: ellipsis
               text-align: left
             span
-              background: #D3D3D3
+              background: #EAEAEA
+              box-sizing: border-box
+              display: flex
+              justify-content: flex-end
               width: 100%
               padding: 3px
-              text-align: center
-            &:hover
-              background: #F3F3F3
-              cursor: pointer
   .mapsBox
     display: flex
+    flex-direction: column
     .inner-maps
       margin: 0 auto
       width: 66%
       position: relative
 
 .top-split
-  background: #F6F6F6
   display: flex
   animation-delay: 1s
   opacity: 0
 
-.datasheetsInner
+.datasheets-inner
+  background: #f6f6f6
   display: flex
-  flex-direction: row
-  justify-content: space-around
+  flex-direction: column
+  justify-content: space-between
   margin: 0 auto
   padding: 10px
-  max-width: 900px
   width: 100%
 
 .data-container
   display: flex
+  flex: 1
   flex-direction: column
   align-items: center
   flex-wrap: wrap
   font-size: 14px
-  justify-content: center
+  margin: 50px 0 0
+  a
+    color: #000000
+    align-self: flex-end
+    font-size: 12px
+    margin-bottom: 2px
 
   .data-point
     background: #FAFAFA
@@ -1369,7 +1409,6 @@ h4
     box-sizing: border-box
     display: flex
     justify-content: space-between
-    margin: 0 5px
     padding: 5px
     width: 100%
     max-width: 400px
@@ -1396,8 +1435,8 @@ h4
 
 .data-image
   display: flex
+  flex: 1
   justify-content: center
-  padding: 0 25px
 
 .data-pic
   width: 200px
@@ -1448,11 +1487,14 @@ h4
   color: #000
 
 .news
+  background: #f6f6f6
   display: flex
   flex-direction: column
+  margin-top: 10px
+  width: 100%
 
 .inner-news
-  border-top: 15px solid #FFF
+  justify-content: space-around
   display: flex
   flex-wrap: wrap
   flex-direction: row
@@ -1471,6 +1513,8 @@ h4
   max-width: 420px
   padding: 10px
   width: 100%
+  &:first-child
+    margin-bottom: 10px
 
 .news-open
   cursor: pointer
@@ -1501,6 +1545,7 @@ h4
 /* Election Calendar
 
 .election-cal
+  background: #EEE
   display: flex
   flex-direction: column
   padding: 10px
@@ -1531,7 +1576,7 @@ h4
   display: flex
   flex-direction: column
   list-style: none
-  margin: 10px 0 0
+  margin: 0
   li
     background: $ivory
     display: flex
@@ -1542,7 +1587,7 @@ h4
       background: $ivory-dark
   
 .election-cal-date
-  color: #888
+  color: #555
 
 .election-cal-loadlist
   align-self: center
@@ -1595,8 +1640,7 @@ h4
   width: 100%
   max-width: 900px
   justify-content: space-between
-  flex-direction: row
-  padding: 10px
+  flex-direction: column
 
 .input-email
   background: #333
@@ -1743,7 +1787,7 @@ h4
   font-family: 'Titiliium', sans-serif
   font-size: 14px
   font-weight: 500
-  text-transform: uppercase
+  text-transform: capitalize
   vertical-align: middle
   &:hover
     color: #666
@@ -1777,7 +1821,7 @@ h4
 .country-data
   background: #F6F6F6
   display: flex
-  flex-direction: row
+  flex-direction: column
 
 .country-map
   background: #C7D8EC
@@ -1785,25 +1829,29 @@ h4
   flex-grow: 1
   align-items: center
   justify-content: center
-  margin: 10px 0 10px 10px
   img
     height: auto
     max-height: 220px
     max-width: 300px
 
 .country-list
-  background: #e6e6e6
   display: flex
-  flex-basis: 50%
+  justify-content: space-between
   margin: 10px
   ul
-    list-style: none
+    background: #EEE
+    display: flex
     flex-basis: 50%
+    flex-direction: column
     flex-grow: 1
-    padding: 0 10px
+    padding: 10px
+    margin: 0
+    list-style: none
     text-align: left
+    &:first-child
+      margin-right: 10px
     li
-      padding: 3px
+      padding: 3px 5px
       &:nth-child(2n+1)
         background: #CCC
       &:nth-child(2n+2)
@@ -1818,10 +1866,10 @@ h4
 
 .others
   align-items: center
-  background: #EEE
   display: flex
+  flex-direction: column
   justify-content: space-between
-  margin: 30px 0
+  margin: 0
   width: 100%
   img
     max-height: 46px
@@ -1831,14 +1879,16 @@ h4
     display: flex
     cursor: pointer
     transition: .2s
-    width: auto
+    width: 100%
+    &:first-child
+      display: none
     &:hover
       background: #DDD
       img.othersArrow
         background: #BBB
-        border-radius: 24px
-        margin: 0 7px
-        padding: 5px
+        padding: 12px
+        transition: .2s
+        width: 50px
     span
       font-size: 12px
       color: #000
@@ -1847,7 +1897,7 @@ h4
       padding: 5px 10px
     a
       align-items: center
-      background: none
+      background: #EEE
       display: flex
       justify-content: space-between
       flex-direction: row
@@ -1864,562 +1914,92 @@ img.othersArrow
   margin: 0
   padding: 12px
   transition: 200ms
+  width: 22px
 
 .footer-column
   flex: 1
   flex-direction: column
   display: flex
+  margin: 30px auto
+  text-align: center
+  h3
+    padding: 0 10px
+    text-align: auto
+  a
+    margin: 0 15px
+    text-align: auto
+
+.footer-middle
+  h3
+    text-align: right
+  a
+    text-align: right
 
 .footer-last
   flex-grow: 2
-  align-items: flex-end
+  align-items: center
   font-size: 12px
   color: $ivory
   text-align: right
+  margin: 0 auto 50px
   h3
     text-align: right
   p
     margin: 5px 0
+    text-align: center
 
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
+/********************* START DESKTOP *********************/
+/*********************************************************/
+/*********************************************************/
+/*********************************************************/
 
-/*****************************/
-/*****************************/
-/*****************************/
-/******** END DESKTOP ********/
-/*****************************/
-/*****************************/
-/*****************************/
-
-/*****************************/
-/*****************************/
-/*****************************/
-/******** Mobile SASS ********/
-/*****************************/
-/*****************************/
-/*****************************/
-
-
-@media (max-width: 1000px)
-
-  html
-    height: auto
-
-  body
-    overflow: auto // To help scrollbar
-
-  h2
-    font-size: 1.1em
+@media (min-width: 980px) 
 
   .container
-    display: flex
-    flex-direction: column
+    background: #FFF
+    display: grid
+    grid-template-areas: "sidebar header" "sidebar main" "sidebar footer"
+    grid-template-columns: 200px auto
+    grid-template-rows: auto
     margin: 0 auto
+    max-width: 1200px
 
   .sidebar
-    display: none
+    min-width: 200px
 
-  .App-intro
-    padding-top: 0
-
-  .App-header
-    .copy
-      border-top: 0
-      border-right: 0
-      border-bottom: 0
-      font-size: 11px
-      min-width: auto
-      span
-        margin-top: 3px
-    .logo-wrap
-      padding: 0 0 0 5px
-    .nav-wrap
-      .inner-header
-        max-width: 100%
-        .nav-sidenav
-          img
-            border-top: 0
-        .nav-links
-          border-left: 0
-          ul
-            width: 100%
-            li
-              min-width: 0
-              &:nth-child(3)
-                display: none
-              &:first-child
-                background: #BBB
-                height: 35px
-                a
-                  &:hover
-                    background: #BBB
-              &:nth-child(2)
-                height: 35px
-              &:nth-child(1n + 1)
-                border-right: 1px solid #333
-              &:last-child
-                border-bottom: 1px solid #333
-              &:nth-child(-n+2)
-                border-top: 0
-    &:hover
-      width: 100%
-      max-width: 100%
-    ul
-      li
-        a
-          font-size: 11px
-          width: 100%
-    li
-      background: #222
-      border-bottom: 1px solid #333
-      border-right: 1px solid #333
-      width: 50%
-      a
-        line-height: 8px
-        padding: 0
-        &:hover
-          background: #222
-          color: #fff
-      &:nth-child(-n+2)
-        border-top: 1px solid #333
- 
-  .inner-header
-    flex-direction: column
-
-  .home-hero
-    width: auto
-
-  .show
+  .sidebar-content
     display: block
-    opacity: 1
-    height: auto
-    visibility: visible
 
-  .about
-    line-height: 18px
-    margin: 0
- 
-  .about:hover
-    background: #222
- 
-  .none
-    display: none
-
-  .title
-    font-size: 12px
-    font-weight: 200
-
-  .content-box-links
-    height: 40px
-    line-height: 40px
-
-  .open-menu
-    height: 16px
-
-  .top-content
-    padding: 0
-
-  .top-nav
-    align-items: center
-    height: auto
-    flex-direction: column-reverse
-    justify-content: center
-    a
-      height: auto
-      font-size: 10px
-      padding: 0
-      width: 100%
-
-  .international-news
-    max-height: 200px
- 
-  .top-banner
-    display: none
- 
-  .top-icon
-    height: 40px
-    width: 100%
-
-  .top-flag
-    width: auto
-    display: none
-    align-items: center
-    height: 100%
-    box-sizing: border-box
-    padding: 5px
-    border-left: 1px solid #000
-    img
-      height: 35px
-      width: 50px
- 
-  .top-leader
-    height: 100%
-    padding: 0
-    max-height: 40px
- 
-  .top-title
-    width: auto
-    top: auto
-    font-size: 13px
-    min-width: auto
-    height: auto
-    margin: 0 7px
-    padding: 0
-    left: auto
-    line-height: 2em
- 
-  .data-sheets
-    flex-direction: column
+  .datasheets-inner
+    flex-direction: row
 
   .data-container
-    .data-point
-      padding: 4px 10px
-      margin: 1px 5px
-      max-width: 100%
-      span
-        font-size: 12px
+    justify-content: flex-end
 
-  .data-image
-    width: auto
- 
-  .img-highlight
-    margin: 0 auto
-    padding: 10px 0
-    .img-highlight-text
-      p
-        font-size: 14px
-
-  .img-highlight-image
-    max-height: 188px
-
-  .data-pic
-    width: auto
+  .news-box
+    &:first-child
+      margin-bottom: 0
 
   .featured-layout
+    flex-direction: row
+
+  .featured-details
     flex-direction: column
+    justify-content: flex-start
+    min-width: 200px
 
-  .featured-news
-    max-width: 100%
-
-  .mapsBox
-    flex-direction: column
- 
-  .inner-content
-    width: 100%
-    margin-bottom: 20px
-
-  .home-image
-    max-width: 120px
-    margin-bottom: -1px
- 
-  .inner-datasheets
-    width: auto
-    td
-      padding: 5px 2px
-      font-size: 14px
-
-  .datasheetsInner
-    flex-direction: column
-    padding: 0 0 5px
-
-  #schedule
-    flex-direction: column
-
-  .schedule .schedule-div
-    margin: 0
-
-  .schedule .mapsBox .inner-maps
-    margin-bottom: 10px
-    width: 90%
-
-  .leadermap
-    height: 320px
-
-  .inner-schedule
-    font-size: 12px
-    margin: 10px auto
-    width: 100%
-    .scheduleHeader
-      margin: 0 auto
-      width: 90%
-    .scheduleBox
-      font-size: 11px
-      padding: 0
-      margin: 0 auto
-      width: 90%
-      ul
-        li
-          &:last-child
-            .dayBox
-              padding-bottom: 0
-        .dayBox
-          .dateBox
-            box-sizing: border-box
-            font-size: 16px
-            margin-left: 0
-            padding: 0
-            .monthBox
-              font-size: 11px
-              margin-bottom: 3px
-
-  .inner-home
-    padding: 0
-    .home-action
-      margin: 0 auto 20px
-    h1
-      font-size: 24px
-    img
-      width: 75%
-
-  .inner-map
-    margin: 0 auto
-
-
-  .featuredBox
-    .featuredEvents
-      align-items: center
-      .featuredDetails
-        display: flex
-        flex-direction: row
-        flex-wrap: wrap
-        margin-right: 0
-
-        div
-          max-width: auto
-          flex-direction: row
-          a
-            margin-top: 0
-        .featuredTitle
-          width: 50%
-          justify-content: flex-start
-          img
-            padding-bottom: 10px
-          h3
-            flex-grow: 0
-            padding: 0
-            margin: 0
-            &:last-child
-              padding-bottom: 10px
-        .featuredStats
-          margin-left: 0
-          width: 50%
-          .featured-flag
-            margin-bottom: 0
-          ul
-            flex-direction: row
-            flex-wrap: wrap
-            list-style: none
-            li
-              padding: 0
-              width: 100%
-              &:nth-child(3n)
-                background: $ivory
-              &:nth-child(3n+1)
-                background: $ivory-dark
-              &:nth-child(3n+2)
-                background: #dcd9d1
-        ul
-          margin-left: 0
-      img
-        width: 132px
-        min-height: auto
-
-  .inner-news
-    padding: 0 0 10px
-    justify-content: center
-
-  .news
-    h1
-      font-size: 18px
-      margin: 1em 0 .5em
-
-  .news-open
-    font-size: 13px
-    padding: 7px 0
-    margin-top: 10px
-    width: 30%
-
-  .news-story
-    align-items: center
-    flex-direction: column
-    overflow: hidden
-    padding: 0
-
-  .news-micro
-    justify-content: center
-    max-width: 320px
-    margin: 0 auto
-    padding: 0
-
-  .news-box-micro
-    max-width: 145px
-    padding: 0px 10px 10px
-    &:nth-child(odd)
-      padding-right: 5px
-    &:nth-child(even)
-      padding-left: 5px
-    &:nth-child(-n + 2)
-      padding-top: 10px
-    &:last-child
-      padding-right: 10px
-
-  .news-img-container
-    position: relative
-    width: 100%
-    &::after
-      display: none
-
-  .news-info-container
-    background: #f2f2f2
-    margin: 0
-
-  .article
-    font-size: 10px
-    height: auto
- 
-  .article-image
-    margin: 0 auto
-
-  .article-link
-    border-top: 0
-    margin: 0 auto
-
-  .article-text
-    padding: 5px
-
-  .article-author-date
-    padding: 2px 3px
-    display: flex
-    flex-wrap: wrap
-    font-size: 9px
-
-  .article-link-headline
-    padding: 1px 3px
-    min-height: auto
-    .headline
-      font-size: 13px
- 
-  .content-box-links
-    width: 100%
-    position: relative
-    top: auto
-
-  .country-map
-    margin: 10px
-    padding: 0
-
-  .week
-    width: 90%
-    .week-box
-      &:last-child
-        display: none
-
-  .inner-week
-    .week-header
-      justify-content: center
-
-  .top-split
-    flex-direction: column
-
-  .data-country
-    width: auto
-
-  .country-data
-    flex-direction: column
-
-  .country-list
-    flex-basis: unset
-    ul
-      padding: 0 0 0 10px
-      text-align: left
-      &:last-child
-        text-align: right
-        padding: 0 10px 0 0
-      li
-        font-size: 13px
- 
-  .maps
-    min-height: 220px
-    width: 100%
-
-  .map
+  .featured-details-items
     flex-direction: column
 
   .others
-    img
-      height: 36px
-      padding: 2px 0
+    flex-direction: row
     div
-      max-width: 50%
-      &:hover
-        img.othersArrow
-          margin: 0 4px
-      span
-        font-size: 10px
-        padding: 0
+      &:first-child
+        display: block
+        margin-right: 10px
 
-    img.othersArrow
-      height: 20px
-      padding: 9px   
-
-  .grid-list
-    margin: 0
-    width: auto
-
-  .grid-list-ul
-    justify-content: space-around
-    margin: 0 auto
-
-  .grid-sort
-    margin: 0 auto
-    ul
-      flex-direction: column
-      flex-wrap: wrap
-      li 
-        a
-          padding: 5px
-
-  .grid-item
-    height: 160px
-    margin: 0
-    width: 160px
-  
-  .grid-copy
-    width: 140px
- 
-  .inner-footer
-    flex-direction: column-reverse
-    flex-wrap: wrap
-    height: auto
-    margin: 0 auto
-    width: 90%
- 
-  .footer
-    height: auto
-    a
-      font-size: 13px
-      margin: 1px 0
-      width: auto
-    .footer-input
-      margin: 0 auto
-    .footer-column
-      margin: 0 auto
-    .footer-links
-      flex-direction: row
-      display: flex
-      .footer-middle
-        h3
-          text-align: right
-          align-self: flex-end
-        a
-          text-align: right
-    .footer-last
-      text-align: center
-      margin: 20px auto
-      h3
-        text-align: center
-        width: 100%
-      p
-        text-align: center
-/*******************/
-/*** Mobile Sass ***/
-/*******************/
+  .inner-ad
+    margin-top: 10px

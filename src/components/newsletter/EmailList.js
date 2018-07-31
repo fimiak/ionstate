@@ -10,8 +10,7 @@ function EmailList() {
         name="mc-embedded-subscribe-form"
         className="validate"
         target="_blank"
-        noValidate
-      >
+        noValidate>
         <div id="mc_embed_signup_scroll">
           <div className="mc-field-group">
             <input type="email" value="" name="EMAIL" className="required email" id="mce-EMAIL" />
@@ -22,27 +21,15 @@ function EmailList() {
             <div className="response" id="mce-success-response" />
           </div>
           <div aria-hidden="true">
-            <input
-              type="text"
-              name="b_b6ca623d477533c7a0fd4aae3_3694cbac9e"
-              tabIndex="-1"
-              value=""
-            />
+            <input type="text" name="b_b6ca623d477533c7a0fd4aae3_3694cbac9e" tabIndex="-1" value="" />
           </div>
           <div className="clear">
-            <input
-              type="submit"
-              value="Subscribe"
-              name="subscribe"
-              id="mc-embedded-subscribe"
-              className="button"
-            />
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button" />
           </div>
         </div>
       </form>
     </div>
   );
 }
-
 
 export default EmailList;

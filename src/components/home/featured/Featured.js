@@ -86,12 +86,9 @@ class Featured extends Component {
                   <span className="featured-article-title">{this.state['article-1'].headline.main}</span>
                 </a>
               </li>
-              <li>
-                <a href={this.state['article-2'].web_url}>
-                  <img src={require(`../../../images/testdata/test3.jpg`)} alt="/" />
-                  <span className="featured-article-title">{this.state['article-2'].headline.main}</span>
-                </a>
-              </li>
+              <span className="featured-page-link">
+                <a href={this.props.selected.country}>See more</a>
+              </span>
             </ul>
           </div>
         </div>
