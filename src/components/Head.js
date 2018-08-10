@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import searchIcon from './../icons/search.svg';
-import listIcon from './../icons/list.svg';
+import gridIcon from './../icons/grid.svg';
 import homeIcon from './../icons/home.svg';
 import mapIcon from './../icons/map.svg';
 import sendIcon from './../icons/send.svg';
@@ -37,13 +37,13 @@ class Head extends Component {
                   </a>
                 </button>
                 <button className="button-menu">
-                  <a href="/map">
-                    <img className="open-menu" src={mapIcon} alt="" /> Map
+                  <a href="/list">
+                    <img className="open-menu" src={gridIcon} alt="" /> List
                   </a>
                 </button>
                 <button className="button-menu">
-                  <a href="/list">
-                    <img className="open-menu" src={listIcon} alt="" /> Grid
+                  <a href="/map">
+                    <img className="open-menu" src={mapIcon} alt="" /> Map
                   </a>
                 </button>
               </div>
