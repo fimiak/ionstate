@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Ad() {
-  return <div>Ad Placeholder</div>;
+  return <div />;
 }
 
 export default Ad;
