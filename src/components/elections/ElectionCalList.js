@@ -1,36 +1,13 @@
 import React from 'react';
-import ElectionCalListItems from './ElectionCalListItems';
 
 class ElectionCalList extends React.Component {
-
   constructor(props) {
     super(props);
-    this.state = {
-      "dates": this.props.dates,
-      "list": undefined,
-      "quick": undefined
-    }
+
+    this.listItems = this.listItems.bind(this);
   }
 
-  listItems = () => {
-    const listItems = this.props.dates.dates[0][this.props.year].map(date => (
-      <li>
-        {date.election}
-        <span className="election-cal-date">{date.date}</span>
-      </li>
-    ));
-
-    const quickListItems = listItems.slice(0, 4);
-
-    this.setState(
-      { 
-        list: listItems,
-        quick: quickListItems
-      }
-    )
-  }
-
-  componentWillMount() {
+  componentDidMount() {
     this.listItems();
   }
 
@@ -38,11 +15,20 @@ class ElectionCalList extends React.Component {
     this.listItems();
   }
 
+  listItems() {
+    const list = this.props.dates.map((date, index) => {
+      return (
+        <li key={index}>
+          {date.country}
+          <span>{date.date_of_election.slice(0, 10)}</span>
+        </li>
+      );
+    });
+    return list;
+  }
 
   render() {
-    return (
-      <ElectionCalListItems loaded={this.props.loaded} list={this.state.list} quick={this.state.quick} />
-    );
+    return <ul className="election-cal-list">{this.listItems()}</ul>;
   }
 }
 

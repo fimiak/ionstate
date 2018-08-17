@@ -40,9 +40,6 @@ class News extends Component {
 
   render() {
     const listItems = this.state.data.map((data, index) => <NewsStory key={index} news={data} test={index} micro="" />);
-    const listMicro = this.state.data.map((data, index) => (
-      <NewsStory key={index} news={data} test={index} micro="news-box-micro" />
-    ));
     return (
       <div>
         <ul className="inner-news">{listItems.slice(0, 2)}</ul>

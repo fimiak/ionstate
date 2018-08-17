@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import NavLink from '../.././NavLink';
+//import NavLink from '../.././NavLink';
 import testdata from '../../../data/testdata.json';
 
 class Featured extends Component {

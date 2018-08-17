@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import Featured from '.././home/featured/Featured';
-import Map from '.././maps/Map';
 import Ad from '.././ads/Ad';
 // import Rank from './home/Ranking/Rank';
 import ElectionCalWrap from '.././elections/ElectionCalWrap';
 import summit from '../.././images/summit.jpg';
-import data from '../../reducers/data';
 // <button onClick={this.props.addLike.bind(null, i)}>&hearts; {data.likes}</button>
 
 class Home extends Component {
+  state = { dates: [{ id: 0, date_of_election: '', country: 'Not Available' }] };
+
+  componentDidMount() {
+    fetch('https://fast-journey-76120.herokuapp.com/elections/list')
+      .then(res => res.json())
+      .then(dates => this.setState({ dates }));
+  }
+
   render() {
     let selection = Math.floor(Math.random() * 27);
     switch (selection) {
@@ -21,7 +27,6 @@ class Home extends Component {
       default:
         break;
     }
-    let i = 10;
     return (
       <div className="home">
         <div className="home-hero">
@@ -40,7 +45,7 @@ class Home extends Component {
 
         <div className="inner-election">
           <div className="item-header">Upcoming Elections</div>
-          <ElectionCalWrap {...this.props} />
+          <ElectionCalWrap {...this.props} {...this.state} />
         </div>
 
         <div className="inner-ad">

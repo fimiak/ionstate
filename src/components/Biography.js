@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import data from '../reducers/data';
 
 function Biography(props) {
   return (

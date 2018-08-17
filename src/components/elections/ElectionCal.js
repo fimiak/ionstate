@@ -6,8 +6,7 @@ class ElectionCal extends React.Component {
     super(props);
 
     this.state = {
-      loaded: false,
-      year: 2018
+      loaded: false
     };
   }
 
@@ -21,17 +20,10 @@ class ElectionCal extends React.Component {
         });
   };
 
-  changeYear = year => {
-    this.setState({
-      year: year,
-      loaded: false
-    });
-  };
-
   render() {
     return (
       <div className="election-cal">
-        <ElectionCalList dates={this.props} loaded={this.state.loaded} year={this.state.year} />
+        <ElectionCalList loaded={this.state.loaded} {...this.props} />
       </div>
     );
   }
