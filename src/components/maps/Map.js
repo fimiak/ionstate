@@ -1,4 +1,5 @@
 import React from 'react';
+import Ad from '.././ads/Ad';
 
 function Map() {
   return (
@@ -21,6 +22,9 @@ function Map() {
           title="map"
           allowFullScreen
         />
+      </div>
+      <div className="inner-ad">
+        <Ad />
       </div>
     </div>
   );

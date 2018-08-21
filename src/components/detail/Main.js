@@ -60,7 +60,7 @@ class Main extends Component {
             <div id="top-content" className="top-content">
               <div className="top-nav">
                 <div className="top-nav-leader">
-                  <div className="top-banner fade-in-right">
+                  <div className="top-banner fade-in-bottom">
                     <div className="top-icon">
                       <img
                         className="top-leader"
@@ -72,13 +72,13 @@ class Main extends Component {
                   </div>
                   <div className="top-flag">
                     <img
-                      className="fade-in-right"
+                      className="fade-in-bottom"
                       alt={this.state.nation.name}
                       src={require(`../.././images/flags/${this.state.nation.flag}`)}
                     />
                   </div>
                 </div>
-                <div className="content-box-links fade-in-right">
+                <div className="content-box-links fade-in-bottom">
                   <a href="#news">News</a>
                   <a href="#schedule">Schedule</a>
                   <a href="#country-data">Resources</a>

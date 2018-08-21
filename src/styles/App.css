@@ -9,20 +9,11 @@
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"); }
 /******************************************************** */
 /******************************************************** */
-/*********************** FONT-FACE ********************** */
-/******************************************************** */
-/******************************************************** */
 /******************************************************** */
 /*********************** KEYFRAMES ********************** */
 /******************************************************** */
 /******************************************************** */
-@keyframes fade-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(-15px); }
-  to {
-    opacity: 1;
-    transform: translateX(0); } }
+/******************************************************** */
 @keyframes fade-in-left {
   from {
     opacity: 0;
@@ -133,6 +124,7 @@ h4 {
 
 .container {
   background: #FFF;
+  box-shadow: 0 8px 30px rgba(50, 50, 93, 0.1), 0 2px 10px rgba(0, 0, 0, 0.07);
   display: grid;
   grid-template-areas: "sidebar" "header" "main" "footer";
   grid-template-columns: auto;
@@ -592,7 +584,7 @@ h4 {
   width: 60px; }
 
 .top-leader {
-  animation: fade-in-right ease 0.4s forwards;
+  animation: fade-in-bottom ease 0.4s forwards;
   animation-delay: 0.4s;
   opacity: 0;
   height: 60px;
@@ -619,7 +611,7 @@ h4 {
     max-width: 120px; }
 
 .top-title {
-  animation: fade-in-right ease 0.4s forwards;
+  animation: fade-in-bottom ease 0.4s forwards;
   animation-delay: 0.4s;
   align-items: center;
   background: #FBFBFB;
@@ -828,6 +820,8 @@ h4 {
   overflow-x: auto; }
   .content-box-links a {
     background: #EAEAEA; }
+    .content-box-links a:hover {
+      background: #E1E1E1; }
 
 .content {
   align-items: center;
@@ -837,9 +831,7 @@ h4 {
   width: 100%; }
 
 .inner-content {
-  box-sizing: border-box;
-  height: auto;
-  margin: 0px; }
+  margin: 0 auto; }
 
 .img-highlight {
   width: 100%;
@@ -927,6 +919,36 @@ h4 {
   max-width: 900px;
   width: 100%; }
 
+.summits {
+  background: #EEE;
+  margin: 10px auto 0;
+  max-width: 900px;
+  overflow: hidden; }
+  .summits .item-header {
+    margin: 0 auto; }
+
+.summits-list {
+  display: flex;
+  margin: 10px auto;
+  padding: 0 5px; }
+  .summits-list li {
+    display: flex;
+    font-size: 12px;
+    padding: 0 5px;
+    text-align: right; }
+    .summits-list li img {
+      width: 212.5px;
+      max-height: 106px; }
+    .summits-list li a {
+      color: #000;
+      display: flex;
+      flex-direction: column; }
+      .summits-list li a span {
+        padding: 0 2px; }
+      .summits-list li a:hover {
+        color: #C00;
+        text-decoration: underline; }
+
 .inner-map {
   background: #EEE;
   width: 100%;
@@ -946,7 +968,6 @@ h4 {
   display: flex;
   flex-grow: 2;
   justify-content: flex-end;
-  max-width: 900px;
   margin: 10px; }
   .inner-home-map iframe {
     width: 100%; }
@@ -1118,7 +1139,7 @@ h4 {
         padding-bottom: 15px; }
       .rank-item .rank-item-data .rank-link .rank-headline {
         background: #ffffff;
-        box-shadow: 0 4px 30px rgba(50, 50, 93, 0.1), 0 1px 10px rgba(0, 0, 0, 0.07);
+        box-shadow: 0 8px 30px rgba(50, 50, 93, 0.1), 0 2px 10px rgba(0, 0, 0, 0.07);
         box-sizing: border-box;
         display: block;
         font-size: 14px;
@@ -1136,7 +1157,7 @@ h4 {
         box-shadow: 0 10px 30px rgba(50, 50, 93, 0.1), 0 4px 15px rgba(0, 0, 0, 0.07);
         transform: translateY(-2px); }
       .rank-item .rank-item-data .rank-link:active .rank-headline {
-        box-shadow: 0 4px 30px rgba(50, 50, 93, 0.1), 0 1px 10px rgba(0, 0, 0, 0.07);
+        box-shadow: 0 8px 30px rgba(50, 50, 93, 0.1), 0 2px 10px rgba(0, 0, 0, 0.07);
         transform: translateY(0); }
     .rank-item .rank-item-data .rank-item-head {
       background: #D7D0C8;
@@ -1257,7 +1278,7 @@ h4 {
   margin: 10px auto;
   justify-content: space-between; }
   .schedule .schedule-div {
-    margin: 10px;
+    margin: 10px 10px 0;
     width: 100%; }
   .schedule .inner-schedule {
     display: flex;
@@ -1278,7 +1299,7 @@ h4 {
           display: flex;
           flex-direction: row;
           align-items: center;
-          padding: 2px 0px; }
+          padding: 0 0 10px; }
           .schedule .inner-schedule .scheduleBox ul .dayBox .dateBox {
             background: #FFF;
             align-items: center;
@@ -1291,7 +1312,7 @@ h4 {
             min-width: 60px;
             font-size: 18px;
             font-weight: 200;
-            margin-right: 4px; }
+            margin-right: 10px; }
             .schedule .inner-schedule .scheduleBox ul .dayBox .dateBox .monthBox {
               font-size: 12px;
               margin-bottom: 4px;
@@ -1416,7 +1437,6 @@ h4 {
 
 .maps {
   border: 0;
-  max-width: 900px;
   min-height: 496px;
   transition: 100ms;
   width: 50%; }
@@ -1465,6 +1485,7 @@ h4 {
 
 .news-box {
   background: #DDD;
+  margin: 0;
   max-width: 420px;
   padding: 10px;
   width: 100%; }
@@ -1815,6 +1836,7 @@ h4 {
 
 .others {
   align-items: center;
+  background: #F6F6F6;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1925,8 +1947,26 @@ img.othersArrow {
   .data-container {
     justify-content: flex-end; }
 
+  .inner-content {
+    box-sizing: border-box;
+    height: auto;
+    margin: 50px auto;
+    max-width: 900px; }
+
   .news-box:first-child {
     margin-bottom: 0; }
+
+  .news-box {
+    background: #DDD;
+    max-width: 415px;
+    margin: 0 0 0 5px;
+    padding: 10px;
+    width: 100%; }
+    .news-box:first-child {
+      margin: 0 5px 0 0; }
+
+  .home-hero {
+    margin: 25px auto 0; }
 
   .featured-layout {
     flex-direction: row; }

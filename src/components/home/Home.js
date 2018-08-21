@@ -3,7 +3,9 @@ import Featured from '.././home/featured/Featured';
 import Ad from '.././ads/Ad';
 // import Rank from './home/Ranking/Rank';
 import ElectionCalWrap from '.././elections/ElectionCalWrap';
-import summit from '../.././images/summit.jpg';
+import Summits from '.././summits/Summits';
+import summitImg from '../.././images/summit.jpg';
+
 // <button onClick={this.props.addLike.bind(null, i)}>&hearts; {data.likes}</button>
 
 class Home extends Component {
@@ -31,9 +33,14 @@ class Home extends Component {
       <div className="home">
         <div className="home-hero">
           <a className="home-hero-link" href="https://g7.gc.ca/en/" alt="G7">
-            <img className="home-hero-img" src={summit} alt="G7 2018" />
+            <img className="home-hero-img" src={summitImg} alt="G7 2018" />
           </a>
-          <div className="home-overlay">The G7 Summit 2018 - June 8 - 9 - Charlevoix, Quebec</div>
+          <div className="home-overlay">
+            G20 Summit / Buenos Aires <br /> November - December 2018
+          </div>
+        </div>
+        <div className="summits">
+          <Summits />
         </div>
 
         <div className="inner-featured">
