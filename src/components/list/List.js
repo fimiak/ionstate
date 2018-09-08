@@ -74,22 +74,26 @@ class List extends Component {
           <ul>
             <li>
               <NavLink to="/list" onClick={this.orderByCountry}>
-                <img className="img-size" src={list} alt="" />Country Name
+                <img className="img-size" src={list} alt="" />
+                Country
               </NavLink>
             </li>
             <li>
               <NavLink to="/list" onClick={this.orderByGdp}>
-                <img className="img-size" src={barIcon} alt="" />GDP
+                <img className="img-size" src={barIcon} alt="" />
+                GDP
               </NavLink>
             </li>
             <li>
               <NavLink to="/list" onClick={this.orderByGrowth}>
-                <img className="img-size" src={trendIcon} alt="" />GDP Growth
+                <img className="img-size" src={trendIcon} alt="" />
+                GDP Growth
               </NavLink>
             </li>
             <li>
               <NavLink to="/list" onClick={this.orderByName}>
-                <img className="img-size" src={typeIcon} alt="" />Leader Name
+                <img className="img-size" src={typeIcon} alt="" />
+                A-Z List
               </NavLink>
             </li>
           </ul>

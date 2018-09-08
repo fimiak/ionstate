@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 class ElectionCalList extends React.Component {
   constructor(props) {
@@ -15,20 +16,42 @@ class ElectionCalList extends React.Component {
     this.listItems();
   }
 
-  listItems() {
-    const list = this.props.dates.map((date, index) => {
-      return (
+  listItems(bool) {
+    const list = this.props.nations.map((nation, index) => {
+      let time = moment(nation.elections);
+      return time < Date.now() ? (
         <li key={index}>
-          {date.country}
-          <span>{date.date_of_election.slice(0, 10)}</span>
+          {nation.name}
+          <span>{time ? time.format('MMM DD, YYYY') : null}</span>
         </li>
-      );
+      ) : null;
     });
-    return list;
+
+    const future = this.props.nations.map((nation, index) => {
+      let time = moment(nation.elections);
+      return time > Date.now() ? (
+        <li key={index}>
+          {nation.name}
+          <span>{time ? time.format('MMM DD, YYYY') : null}</span>
+        </li>
+      ) : null;
+    });
+    return bool ? list : future;
   }
 
   render() {
-    return <ul className="election-cal-list">{this.listItems()}</ul>;
+    return (
+      <div className="election-cal-container">
+        <ul className="election-cal-list">
+          <p className="item-header election-item">Recent</p>
+          {this.listItems(true)}
+        </ul>
+        <ul className="election-cal-list">
+          <span className="item-header election-item">Upcoming</span>
+          {this.listItems(false)}
+        </ul>
+      </div>
+    );
   }
 }
 

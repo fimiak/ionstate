@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import NewsFlow from './NewsFlow';
 import NewsStory from './NewsStory';
 import testdata from '../../data/testdata.json';
 
@@ -7,42 +7,134 @@ class News extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: testdata.response.docs
+      data: testdata.response.docs,
+      news: [
+        {
+          response: {
+            docs: [
+              {
+                id: 0,
+                byline: {
+                  original: 'test'
+                },
+                headline: {
+                  main: 'Not Available'
+                },
+                leader: '5b7f07a3fb6fc0183b3fc1a1',
+                multimedia: [
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  }
+                ],
+                pub_date: '2017-08-12T12:21:27+0000',
+                snippet: 'November 2018',
+                source: 'Reuters',
+                country: 'Ireland',
+                web_url: 'https://www.nytimes.com'
+              }
+            ]
+          }
+        },
+        {
+          response: {
+            docs: [
+              {
+                id: 1,
+                byline: {
+                  original: 'test'
+                },
+                headline: {
+                  main: 'Not Available'
+                },
+                leader: '5b7f07a3fb6fc0183b3fc1a1',
+                multimedia: [
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  }
+                ],
+                pub_date: '2017-08-12T12:21:27+0000',
+                snippet: 'November 2018',
+                source: 'Reuters',
+                country: 'Ireland',
+                web_url: 'https://www.nytimes.com'
+              }
+            ]
+          }
+        },
+        {
+          response: {
+            docs: [
+              {
+                id: 0,
+                headline: {
+                  main: 'Not Available'
+                },
+                leader: '5b7f07a3fb6fc0183b3fc1a1',
+                multimedia: [
+                  {
+                    url: 'testdata/test2.jpg'
+                  },
+                  {
+                    url: 'testdata/test2.jpg'
+                  }
+                ],
+                pub_date: '2017-08-12T12:21:27+0000',
+                snippet: 'November 2018',
+                source: 'Reuters',
+                country: 'Ireland',
+                web_url: 'https://www.nytimes.com'
+              }
+            ]
+          }
+        }
+      ]
     };
   }
 
   componentDidMount() {
-    // this.performSearch();
-    this.testSearch();
-  }
-
-  testSearch() {
-    this.setState({
-      data: testdata.response.docs
-    });
-  }
-
-  performSearch() {
-    const nytimes = `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${
-      this.props.nation.search
-    }&page=0&fq=source:("The New York Times")&sort=newest&api-key=177f9a3c753d409887be6d5291df7d48`;
-    axios
-      .get(nytimes)
-      .then(response => {
-        this.setState({
-          data: response.data.response.docs
-        });
-      })
-      .catch(error => {
-        console.log('Error fetching and parsing data', error);
-      });
+    fetch('http://127.0.0.1:3001/api/news')
+      .then(res => res.json())
+      .then(news => this.setState({ news }));
   }
 
   render() {
-    const listItems = this.state.data.map((data, index) => <NewsStory key={index} news={data} test={index} micro="" />);
+    const listItems = this.state.news[0].response.docs.map((news, index) => <NewsStory key={index} news={news} />);
+
+    const listFlow = this.state.news[0].response.docs.map((news, index) => <NewsFlow key={index} news={news} />);
     return (
       <div>
         <ul className="inner-news">{listItems.slice(0, 2)}</ul>
+        <ul>{listFlow.slice(2)}</ul>
       </div>
     );
   }

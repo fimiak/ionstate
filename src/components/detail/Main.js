@@ -19,11 +19,9 @@ class Main extends Component {
     super(props);
     this.state = {
       nation: list[props.location.pathname.replace(/[/]/, '')],
-      nat: props.location.pathname.replace(/[/]/, ''),
-      newsToggle: true
+      nat: props.location.pathname.replace(/[/]/, '')
     };
     this.setMap = this.setMap.bind(this);
-    this.showNews = this.showNews.bind(this);
     this.topnavColor = this.topnavColor.bind(this);
   }
 
@@ -37,12 +35,6 @@ class Main extends Component {
     });
   }
 
-  showNews() {
-    this.setState({
-      newsToggle: false
-    });
-  }
-
   topnavColor() {
     document
       .getElementsByClassName('top-title')[0]
@@ -53,6 +45,7 @@ class Main extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="contentBox">
         <div className="content">
@@ -80,7 +73,7 @@ class Main extends Component {
                 </div>
                 <div className="content-box-links fade-in-bottom">
                   <a href="#news">News</a>
-                  <a href="#schedule">Schedule</a>
+                  <a href="#bio">Bio</a>
                   <a href="#country-data">Resources</a>
                 </div>
               </div>
@@ -92,20 +85,16 @@ class Main extends Component {
 
             <div className="top-split fade-in-top">
               <div id="news" className="news">
-                <News props={this.state.params} nation={this.state.nation} newsToggle={this.state.newsToggle} />
+                <News
+                  props={this.state.params}
+                  nation={this.state.nation}
+                  newsToggle={this.state.newsToggle}
+                  {...this.props}
+                />
               </div>
             </div>
 
-            <div id="schedule" className="schedule">
-              <Schedule
-                map={this.state.map}
-                nation={this.state.nation}
-                setMap={this.setMap}
-                props={this.props.params}
-              />
-            </div>
-
-            <div className="biography">
+            <div id="bio" className="biography">
               <Biography biography={this.state.nation.biography} extended={this.state.nation['biography-election']} />
             </div>
 

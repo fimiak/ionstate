@@ -3,6 +3,8 @@ import Weekday from './Weekday';
 import schedule from './../../../data/schedule.json';
 
 function Week() {
+
+  
   return (
     <div className="week">
       <Weekday day={schedule.schedule[0]} />

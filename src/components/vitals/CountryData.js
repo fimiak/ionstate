@@ -21,17 +21,22 @@ function CountryData(props) {
       obj[key] = props.nation[key] || 'N/A';
       return obj;
     }, {});
-  const countryKeys = Object.keys(countryMapFiltered).map((val, index) => <li key={index}> {val} </li>);
-  const countryValues = Object.values(countryMapFiltered).map((val, index) => <li key={index}> {val} </li>);
+  const countryEntries = Object.entries(countryMapFiltered).map((val, index) => (
+    <li key={index}>
+      <span>{val[0]}</span>
+      <span>{val[1]}</span>
+    </li>
+  ));
+  console.log(Object.entries(countryMapFiltered));
   return (
     <div className="country-detail">
       <h4> {props.nation.name} </h4>
       <div className="country-data">
-        <div className="country-map">
-          <img src={require(`../.././images/maps/${props.nation.map}`)} alt="Map" />
-        </div>
         <div className="country-list">
-          <ul> {countryKeys} </ul> <ul> {countryValues} </ul>
+          <ul className="country-entries">{countryEntries}</ul>
+          <div className="country-map">
+            <img src={require(`../.././images/maps/${props.nation.map}`)} alt="Map" />
+          </div>
         </div>
       </div>
     </div>
