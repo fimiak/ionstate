@@ -697,7 +697,7 @@ h4
   justify-content: center
   background: #EEE
   height: 100px
-  margin: 0 auto
+  margin: 10px auto 0
   width: 100%
 
 .featured
@@ -731,7 +731,7 @@ h4
   align-items: center
   background: #CCC
   display: flex
-  flex-direction: row
+  flex-direction: column
   span
     align-self: center
     display: flex
@@ -780,7 +780,8 @@ h4
     display: flex
     flex-wrap: wrap
     list-style: none
-    flex-direction: column
+    flex-direction: row
+    flex-wrap: wrap
     justify-content: center
     margin: 0
     height: auto
@@ -993,7 +994,9 @@ h4
 
 .summits-list
   display: flex
-  flex-direction: column
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
   margin: 10px auto
   padding: 0 5px
   li
@@ -1009,6 +1012,7 @@ h4
       display: flex
       flex-direction: column
       span
+        margin-bottom: 5px
         padding: 0 2px
       &:hover
         color: #C00
@@ -1938,6 +1942,7 @@ h4
 
 .country-list
   display: flex
+  flex-direction: column
   justify-content: space-between
   margin: 10px
   ul
@@ -1949,8 +1954,6 @@ h4
     margin: 0
     list-style: none
     text-align: left
-    &:first-child
-      margin-right: 10px
     li
       padding: 5px 10px
       &:nth-child(2n+1)
@@ -2129,6 +2132,12 @@ img.othersArrow
     ul
       flex-direction: row
 
+  .country-list
+    flex-direction: row
+    ul
+      &:first-child
+        margin-right: 10px
+
   .others
     flex-direction: row
     div
@@ -2138,6 +2147,3 @@ img.othersArrow
 
   .summits-list
     flex-direction: row
-
-  .inner-ad
-    margin-top: 10px

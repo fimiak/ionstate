@@ -662,7 +662,7 @@ h4 {
   justify-content: center;
   background: #EEE;
   height: 100px;
-  margin: 0 auto;
+  margin: 10px auto 0;
   width: 100%; }
 
 .featured {
@@ -696,7 +696,7 @@ h4 {
   align-items: center;
   background: #CCC;
   display: flex;
-  flex-direction: row; }
+  flex-direction: column; }
   .featured-details-items span {
     align-self: center;
     display: flex;
@@ -745,7 +745,8 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0;
     height: auto;
@@ -955,7 +956,9 @@ h4 {
 
 .summits-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 10px auto;
   padding: 0 5px; }
   .summits-list li {
@@ -971,6 +974,7 @@ h4 {
       display: flex;
       flex-direction: column; }
       .summits-list li a span {
+        margin-bottom: 5px;
         padding: 0 2px; }
       .summits-list li a:hover {
         color: #C00;
@@ -1888,6 +1892,7 @@ h4 {
 
 .country-list {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: 10px; }
   .country-list ul {
@@ -1899,8 +1904,6 @@ h4 {
     margin: 0;
     list-style: none;
     text-align: left; }
-    .country-list ul:first-child {
-      margin-right: 10px; }
     .country-list ul li {
       padding: 5px 10px; }
       .country-list ul li:nth-child(2n+1) {
@@ -2073,6 +2076,11 @@ img.othersArrow {
   .featured-news ul {
     flex-direction: row; }
 
+  .country-list {
+    flex-direction: row; }
+    .country-list ul:first-child {
+      margin-right: 10px; }
+
   .others {
     flex-direction: row; }
     .others div:first-child {
@@ -2080,9 +2088,6 @@ img.othersArrow {
       margin-right: 10px; }
 
   .summits-list {
-    flex-direction: row; }
-
-  .inner-ad {
-    margin-top: 10px; } }
+    flex-direction: row; } }
 
 /*# sourceMappingURL=app.css.map */
