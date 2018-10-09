@@ -112,15 +112,15 @@ class Home extends Component {
       .then(dates => this.setState({ dates }));
     */
 
-    fetch('http://127.0.0.1:3001/api/leaders')
+    fetch('https://fast-journey-76120.herokuapp.com/api/leaders')
       .then(res => res.json())
       .then(leaders => this.setState({ leaders }));
 
-    fetch('http://127.0.0.1:3001/api/nations')
+    fetch('https://fast-journey-76120.herokuapp.com/api/nations')
       .then(res => res.json())
       .then(nations => this.setState({ nations }));
 
-    fetch('http://127.0.0.1:3001/api/summits')
+    fetch('https://fast-journey-76120.herokuapp.com/api/summits')
       .then(res => res.json())
       .then(summits => this.setState({ summits }));
 

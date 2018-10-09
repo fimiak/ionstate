@@ -164,7 +164,7 @@ h4
 .sidebar-inner
   p
     align-items: center
-    color: #E94949
+    color: #eee
     display: flex
     font-weight: bold
     justify-content: space-between
@@ -181,9 +181,6 @@ h4
 
 .sidebar-body
   margin: 0 5px
-
-.leader-list
-  margin: 0 0 0 5px
 
 .sidebar-header
   align-content: center
@@ -475,7 +472,7 @@ h4
   transition: .5s
 
 .leader-list
-  border-top: 1px solid #E94949
+  border-top: 1px solid #999
   margin: 0
   list-style: none
   padding: 0
@@ -765,13 +762,15 @@ h4
     text-align: center
     width: 100%
     &:first-child
-      background: #BBB
+      background: #c3c3c3
 
 .featured-flag
   max-height: 40px
 
 .featured-leader
   max-height: 110px
+  min-height: 80px
+  min-width: 50px
 
 .featured-news
   background: #E9E9E9
@@ -806,8 +805,9 @@ h4
         justify-content: space-between
         text-decoration: none
         margin: 10px
+        min-height: 100px
         position: relative
-        min-width: 30px
+        min-width: 62px
         &:hover
           span
             padding: 15px 5px
@@ -1058,8 +1058,8 @@ h4
       background: $ivory
 
 .item-header
-  background: #222
-  color: #E94949
+  background: #bbb
+  color: #555
   display: flex
   font-size: 15px
   font-weight: 900
