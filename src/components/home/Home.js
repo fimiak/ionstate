@@ -4,8 +4,7 @@ import Ad from '.././ads/Ad';
 import ElectionCalWrap from '.././elections/ElectionCalWrap';
 import Summits from '.././summits/Summits';
 import moment from 'moment';
-
-// <button onClick={this.props.addLike.bind(null, i)}>&hearts; {data.likes}</button>
+import { Hello } from '.././contact/Contact';
 
 class Home extends Component {
   state = {
@@ -124,7 +123,7 @@ class Home extends Component {
       .then(res => res.json())
       .then(summits => this.setState({ summits }));
 
-    fetch('http://127.0.0.1:3001/api/news')
+    fetch('https://fast-journey-76120.herokuapp.com/api/news')
       .then(res => res.json())
       .then(news => this.setState({ news }));
   }
@@ -146,11 +145,9 @@ class Home extends Component {
     return (
       <div className="home">
         <div className="inner-content">
-          <div className="inner-featured">
-            <div className="item-header">Latest News</div>
-            <Featured startSlice={0} selection={selection - 1} {...this.props} {...this.state} />
-            <Featured startSlice={1} selection={selection} {...this.props} {...this.state} />
-            <Featured startSlice={2} selection={selection + 1} {...this.props} {...this.state} />
+          <Hello />
+          <div className="home-featured">
+            <Featured startSlice={0} selection={selection} {...this.props} {...this.state} />
           </div>
 
           <div className="home-hero">

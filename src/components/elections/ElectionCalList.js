@@ -32,7 +32,7 @@ class ElectionCalList extends React.Component {
       return time > Date.now() ? (
         <li key={index}>
           {nation.name}
-          <span>{time ? time.format('MMM DD, YYYY') : null}</span>
+          <span>{time ? time.format('MM/DD/YY') : null}</span>
         </li>
       ) : null;
     });
@@ -45,9 +45,7 @@ class ElectionCalList extends React.Component {
         <ul className="election-cal-list">
           <p className="item-header election-item">Recent</p>
           {this.listItems(true)}
-        </ul>
-        <ul className="election-cal-list">
-          <span className="item-header election-item">Upcoming</span>
+          <p className="item-header election-item">Upcoming</p>
           {this.listItems(false)}
         </ul>
       </div>

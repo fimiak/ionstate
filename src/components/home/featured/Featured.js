@@ -7,68 +7,37 @@ class Featured extends Component {
       let time = moment(article.pub_date);
       let article_img = article.multimedia[1].url ? article.multimedia[1].url : '';
       return (
-        <li key={index}>
-          <a href={article.web_url}>
-            <img src={`http://www.nytimes.com/${article_img}`} alt={article.name} />
-            <span className="featured-article-title">{article.headline.main}</span>
-          </a>
+        <li className="news-item" key={index}>
+          <div>
+            <a href={article.web_url}>
+              <img src={`http://www.nytimes.com/${article_img}`} alt={article.name} />
+            </a>
+          </div>
+          <div>
+            <div className="news-item-header">
+              <span>Country - {article.name}</span>
+              <span>Topic</span>
+            </div>
+            <div className="news-item-detail">
+              <span>{article.source}</span>
+              <span>{time.fromNow()}</span>
+            </div>
+            <span className="news-item-content">{article.headline.main}</span>
+          </div>
         </li>
       );
     });
-    return list.slice(0, 3);
+    return list;
   }
 
   render() {
     let selection = this.props.selection;
-    console.log(this.props.news);
     return (
       <div className="featured">
-        <div className="featured-layout">
-          <div className="featured-details">
-            <div className="featured-icons">
-              <span className="featured-page-link">
-                {this.props.leaders[selection]
-                  ? this.props.leaders[selection].first_name + ' ' + this.props.leaders[selection].last_name
-                  : 'Not Available'}
-              </span>
-            </div>
-            <div className="featured-details-items">
-              <img
-                className="featured-leader"
-                src={
-                  this.props.leaders[selection]
-                    ? require(`../../.././images/bio/${this.props.leaders[selection].image}`)
-                    : 'test.jpg'
-                }
-                alt={this.props.news[0] ? this.props.leaders[0].leader : 'Leader'}
-              />
-              <span>
-                <b>
-                  {this.props.leaders[selection]
-                    ? this.props.leaders[selection].first_name + ' ' + this.props.leaders[selection].last_name
-                    : 'Not Available'}
-                </b>
-                <a href={this.props.leaders[selection] ? this.props.leaders[selection].nation : 'Not Available'}>
-                  See more
-                </a>
-              </span>
-            </div>
-          </div>
-          <div className="featured-news">
-            <ul>{this.listItems(this.props.startSlice)}</ul>
-          </div>
-        </div>
+        <ul>{this.listItems(this.props.startSlice)}</ul>
       </div>
     );
   }
 }
 
 export default Featured;
-
-/*
-  <img
-    className="featured-leader"
-    src={require(`../../.././images/bio/${this.props.news[0].image}`)}
-    alt={this.props.news[0].leader}
-  />
-*/

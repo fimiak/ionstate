@@ -1,32 +1,9 @@
 /*********************************************************/
-/*********************************************************/
 /************************ FONT-FACE **********************/
-/*********************************************************/
-/*********************************************************/
-
-@font-face
-  font-family: system
-  font-style: normal
-  font-weight: 300
-  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma")
 
 @import url('https://fonts.googleapis.com/css?family=Kanit|Raleway|Titillium+Web:400,700,900')
 
-/*********************************************************/
-/*********************************************************/
-/*********************************************************/
 /*********************** KEYFRAMES ***********************/
-/*********************************************************/
-/*********************************************************/
-/*********************************************************/
-
-@keyframes fade-in-left
-  from
-    opacity: 0
-    transform: translateX(15px)
-  to
-    opacity: 1
-    transform: translateX(0)
 
 @keyframes fade-in-top 
   from
@@ -44,68 +21,49 @@
     opacity: 1
     transform: translateY(0)
 
-@keyframes fade-out-top 
-  from
-    opacity: 1
-    transform: translateY(0)
-  to
-    opacity: 0
-    transform: translateY(15px)
-
-/*********************************************************/
 /*********************** KEYFRAMES ***********************/
-/*********************************************************/
-/*********************************************************/
-/*********************************************************/
-/*********************** VARIABLES ***********************/
-/*********************************************************/
 
-$ivory: #ECE8DD
-$ivory-dark: #D7D0C8
-$crimson: #E85A4F
+/*********************** VARIABLES ***********************/
+
+$paragraph: #ECE8DD
+$header: #D7D0C8
+$primary: #ECE8DD
+$secondary: #E94949
+$highlight: #E94949
 $gradient: linear-gradient(to right, #fff, #fff)
 $box-shadow-very-low: 0 8px 30px rgba(50,50,93,.1),0 2px 10px rgba(0,0,0,.07)
 $box-shadow-low: 0 10px 30px rgba(50,50,93,.1), 0 4px 15px rgba(0,0,0,.07)
 $box-shadow-high: 0 18px 35px rgba(50,50,93,.1), 0 8px 15px rgba(0,0,0,.07)
 
 /*********************************************************/
-/*********************************************************/
-/*********************** VARIABLES ***********************/
-/*********************************************************/
-/*********************************************************/
-/*********************************************************/
-/********************** MAIN STYLES **********************/
-/*********************************************************/
+/********************* MOBILE STYLES *********************/
 /*********************************************************/
 
-html, body, #root
+html, 
+body,
+#root
   height: 100%
   margin: 0
   padding: 0
   width: 100%
 
 *
-  font-family: system, sans-serif
-
-input,
-button 
-  outline: none
+  box-sizing: border-box
+  font-family: sans-serif
 
 input
   color: #fff
+  outline: none
 
 *::-webkit-input-placeholder
   color: #fff
-
-a
-  &:hover
-    text-decoration: none
 
 button
   background: #BBB
   border: 1px solid #888
   color: #000
   cursor: pointer
+  outline: none
   text-decoration: none
   transition: 100ms
   &:hover
@@ -113,11 +71,8 @@ button
     border: 1px solid #777
 
 body
-  background: #EEE
+  background: #f3f3f3
   display: flex
-
-a
-  color: #FFFFFF
 
 ul
   list-style: none
@@ -125,6 +80,12 @@ ul
 
 li
   padding: 0px 5px
+
+a
+  color: #FFF
+  text-decoration: none
+  &:hover
+    text-decoration: none
 
 h4
   background: #DDD
@@ -134,34 +95,22 @@ h4
   padding: 15px 10px
   text-align: center
 
-.hide
-  display: none
-
-.App
-  display: flex
-  flex-direction: column
-  height: 100%
-  text-align: center
-
 .container
-  background: #FFF
+  border-top: 2px solid $highlight
   box-shadow: $box-shadow-very-low
   display: grid
-  grid-template-areas: "sidebar" "header" "main" "footer"
-  grid-template-columns: auto
-  grid-template-rows: 50px auto auto auto
+  grid-template-areas: "header" "main" "footer"
   margin: 0 auto
-  max-width: 1440px
+  max-width: 960px
 
 .sidebar
   background: #222
-  color: #FFF
+  display: none
   grid-area: sidebar
   height: 100%
-  left: 0
-  top: 0
 
-.sidebar-inner
+.sidebar-content
+  width: 50px
   p
     align-items: center
     color: #eee
@@ -169,24 +118,12 @@ h4
     font-weight: bold
     justify-content: space-between
     padding: 0 10px
-  ul
-    color: #FFF
-  li
-    border-bottom: 1px solid #666
-    margin: 0
-    padding: 0
-
-.sidebar-content
-  display: none
-
-.sidebar-body
-  margin: 0 5px
 
 .sidebar-header
   align-content: center
   align-items: center
   background: #E94949
-  color: #FFF
+  color: #EEE
   display: flex
   font-family: 'Titillium Web', serif
   font-size: 28px
@@ -197,270 +134,47 @@ h4
   text-decoration: none
   text-transform: uppercase
 
-.sidebar-topics
-  ul
-    list-style: none
-    padding: 0 0 15px 10px
-    li
-      border: none
-      color: #CCC
-      margin-bottom: 3px
-  .sidebar-date
-    justify-content: center
-
-.sidebar-full
-  color: #CCC
-  font-size: 10px
-
-.sidebar-body
-  height: 100%
+.sidebar-list
+  margin: 0
   li
-    margin: 5px 0
-  a
+    border-bottom: 1px solid #666
     &:hover
-      color: #E94949
-      text-decoration: underline
-
-.sidebar-button
-  background: #333333
-  color: #DDD
-  font-size: 14px
-  margin: 15px auto
-  padding: 8px
-  width: 66%
-  &:hover
-    background: #777
-
-// END Sidebar
+      background: #333
+      a
+        color: #FFF
+    a
+      align-items: center
+      color: #EEE
+      display: flex
+      font-size: 11px
+      height: 30px
 
 .globeIcon
   height: 24px
   width: 24px
 
-.top-logo 
-  height: 30px
-  width: 30px
-
-.App-logo
-  height: 30px
-  padding: 10px 5px
-  transition-delay: 0.2s
-  transition: .2s
-
 .header
-  color: #FFF
-  grid-area: header
-  overflow: hidden
-  width: 100%
-
-.App-header
-  background: #DDD
-  color: #ffa14e
+  align-items: center
+  background: #222
   display: flex
-  flex-direction: column
-  height: 50px
-  min-height: 33px
+  font-style: italic
+  font-weight: 900
+  grid-area: header
+  height: 36px
+  justify-content: center
   overflow: hidden
   width: 100%
   a
-    color: #000
-  .copy
-    border: 1px solid #333
-    border-bottom: 0
-    box-sizing: border-box
-    color: #000000
-    display: flex
-    flex-direction: column
-    font-size: 13px
-    height: 50px // Works with 2px padding
-    justify-content: center
-    margin: 0 auto
-    min-width: 140px
-    padding: 0
-    width: 100%
-    span
-      font-size: 10px
-      margin: 0 auto
-      max-width: 136px
-  .logo-wrap
-    align-items: center
-    background-color: #DDD
-    display: flex
-    flex-shrink: 0
-    height: 100%
-    justify-content: space-between
-    line-height: 48px
-    padding: 0 0 0 0
-    transition: .15s
-    .navbar
-      display: flex
-      align-items: stretch
-      flex-grow: 1
-      justify-content: space-between
-  .nav-wrap
-    background: #333
-    height: 50px
-    margin-right: 55px
-    overflow: hidden
-    position: absolute
-    right: 0px
-    top: 0
-    width: 100%
-    z-index: 88
-    .inner-header
-      display: flex
-      margin: 0 auto
-      max-width: 761px
-      .nav-links
-        cursor: pointer
-        background: #BBB
-        border-left: 1px solid #333333
-        ul
-          display: flex
-          width: 190px
-          .nav-links-active
-            background: #A9A69E
-            a
-              &:hover
-                background: #98958e
-          li
-            background: #D4D0C6
-            border-bottom: 1px solid #333
-            justify-content: left
-            min-width: 190px
-            a
-              color: #000
-              height: 22px
-              justify-content: center
-              width: 100%
-              &:hover
-                background: #aaa
-            &:first-child
-              background: #D4D0C6
-              border-bottom: 1px solid #333
-              border-top: 1px solid #333
-              cursor: default
-              height: 51px
-              a 
-                height: 100%
-                &:hover
-                  background: #A9A69E
-            &:nth-child(2)
-              height: 34px
-              a
-                height: 100%
-  ul
-    display: flex
-    flex-wrap: wrap
-    justify-content: left
-    list-style: none
-    margin: 0
-    padding: 0
-    li
-      align-items: center
-      background: $ivory-dark
-      box-sizing: border-box
-      display: flex
-      justify-content: center
-      text-decoration: none
-      a
-        align-items: center
-        display: flex
-        font-size: 13px
-        justify-content: left
-        text-decoration: none
-        padding: 0
-        img
-          border-top: 1px solid #333
-          box-sizing: border-box
-          max-height: 50px
-          min-width: 50px
-          width: 50px
-        &:hover
-          background: #A9A69E
-  &:hover
-    transition: .1s
-    transition-delay: .2s
-    .copy
-      transition: 0.2s
-    li .sidelink-text
-      transition-delay: .25s
-
-.navbar-group
-  display: flex
-  flex-wrap: nowrap
-
-.navbar-group-left
-  flex-grow: 0
-
-.navbar-group-right
-  flex-grow: 1
-  justify-content: flex-end
-
-.navbar-search-hidden
-  padding: 0!important
-  width: 0!important
-  visibility: hidden
-
-
-.navbar-search
-  background: #444
-  border: 0
-  color: #FFF
-  font-size: 15px
-  outline: none
-  padding: 0 15px
-  text-transform: uppercase
-  transition: 400ms ease
-  width: 100%
-  &::placeholder
-    color: #999
-
-.img-size
-  border: 0
-  box-sizing: content-box
-  height: 15px
-  padding: 3px 0
-  width: 15px
-
-.active,
-.App-header .active
-  background: #a9a69e
-
-.App-header .active:hover
-  background: #98958e
-
-.fade-in-bottom
-  animation: fade-in-bottom ease 0.4s forwards
-
-.fade-in-top
-  animation: fade-in-top ease 0.4s forwards
-
-.fade-in-right
-  animation: fade-in-right ease 0.4s forwards
-
-.international-news
-  animation-delay: 0s
-  max-height: 212px
-  overflow: hidden
-  img
-    display: block
-    min-height: 100%
-    max-width: 900px
-    width: 100%
+    color: $highlight
+    text-transform: uppercase
 
 .show
   opacity: 1
   transition: 100ms
-  max-height: 551px
 
 .hidden
   opacity: 0
   transition: 100ms
-  pointer-events: none
-
-.none
-  display: none
 
 .fadeIn
   display: block
@@ -476,7 +190,6 @@ h4
   margin: 0
   list-style: none
   padding: 0
-
   .copy
     display: flex
     flex-direction: column
@@ -485,7 +198,6 @@ h4
     transition: 200ms
     padding: 0 0 0 10px
     position: relative
-
   a
     align-items: center
     color: #FFF
@@ -505,7 +217,14 @@ h4
         padding: 0 0 0 15px
 
 .sidebar-open
-  display: none
+  background: #333
+  display: block
+  grid-area: 'menu'
+  position: absolute
+  height: 100%
+  max-width: 1120px
+  width: 100%
+  z-index: 9
 
 .leader-list
   .navlink-active
@@ -538,15 +257,15 @@ h4
             .copy
               border-right: 0
 
-.button-menu
-  background: #DDD
+.sidebar-button
+  background: #222
   border: 0
   border-radius: 0
   box-sizing: border-box
-  color: #666
+  color: #888
   cursor: pointer
   display: flex
-  font-size: 12px
+  font-size: 9px
   height: 50px
   justify-content: center
   min-width: 50px
@@ -563,7 +282,7 @@ h4
     text-decoration: none
   .open-menu
     box-sizing: border-box
-    padding: 0
+    margin: 2px
     transition: 150ms
     width: 18px
   .search-menu
@@ -659,7 +378,6 @@ h4
   display: flex
   transform: scaleX(0)
   transform-origin: left
-  font-family: 'Arial', 'Helvetica', sans-serif  
   font-size: 15px
   width: 100%
   height: 100%
@@ -683,13 +401,13 @@ h4
   flex-direction: row
   flex-grow: 1
 
-.inner-featured
-  max-width: 900px
+.home-featured
+  max-width: 1120px
   margin: 0 auto
   width: 100%
 
 .inner-ad
-  display: flex
+  display: none
   align-items: center
   justify-content: center
   background: #EEE
@@ -698,13 +416,17 @@ h4
   width: 100%
 
 .featured
-  display: flex
-  flex-direction: column
+  ul
+    display: grid
+    grid-gap: 8px
+    grid-template-columns: repeat(auto-fit, minmax(max-content, 320px))
+    justify-content: space-evenly
+    height: auto
 
 .featured-layout
   animation: fade-in-top .3s ease forwards
   animation-delay: .8s
-  background: #EEE
+  background: #FFF
   display: flex
   flex-direction: column
   box-sizing: border-box
@@ -722,7 +444,6 @@ h4
   font-weight: 700
   flex-wrap: no-wrap
   justify-content: space-between
-  padding: 10px
 
 .featured-details-items
   align-items: center
@@ -772,63 +493,53 @@ h4
   min-height: 80px
   min-width: 50px
 
-.featured-news
-  background: #E9E9E9
-  ul
+.news-item
+  display: flex
+  flex-direction: row
+  font-size: 12px
+  justify-content: center
+  padding: 0
+  width: 330px
+  min-width: 120px
+  a
     align-items: center
+    color: #333
+    cursor: pointer
     display: flex
-    flex-wrap: wrap
-    list-style: none
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: center
-    margin: 0
-    height: auto
-    padding: 10px 5px
-    li
-      background: #DfDfDf
-      display: flex
-      margin: 0 5px
-      flex: 1
-      justify-content: center
-      min-width: 200px
-      max-width: 430px
-      padding: 0
-      a
-        align-items: center
-        color: #333
-        cursor: pointer
-        display: flex
-        flex-direction: column
-        font-size: 12px
-        text-align: center
-        justify-content: space-between
-        text-decoration: none
-        margin: 10px
-        min-height: 100px
-        position: relative
-        min-width: 62px
-        &:hover
-          span
-            padding: 15px 5px
-        img
-          height: 100%
-          width: 100%
-    span
-      display: block
-      transition: 100ms
-      width: 100%
+    flex-direction: column
+    text-align: center
+    justify-content: space-between
+    text-decoration: none
+    position: relative
+    min-width: 62px
+  img
+    background: #CCC
+    height: 100%
+    height: 100px
+  div
+    flex: 1
 
-.featured-article-title
-  background: rgba(45,45,45,.85)
-  bottom: 0
+.news-item-detail
+  display: flex
+  flex-direction: column
+  font-size: 11px
+  font-style: italic
+  justify-content: space-between
+  padding: 2px 5px
+  text-align: right
+
+.news-item-header
+  background: #EFEFEF
+  font-weight: bold
+  padding: 3px 5px
+  text-align: center
+
+.news-item-content
   box-sizing: border-box
-  color: #DDD
   cursor: pointer
-  font-weight: 700
+  display: block
   min-height: 24px
-  padding: 7px
-  position: absolute
+  padding: 3px 5px
 
 .featured-page-link
   text-align: right
@@ -842,7 +553,7 @@ h4
 
 .featured-link
   border: 1px solid #AAA
-  background: $ivory-dark
+  background: $paragraph
   display: flex
   align-self: flex-end
   margin: 10px auto
@@ -874,7 +585,6 @@ h4
   display: flex
   flex-grow: 1
   flex-wrap: nowrap
-  font-family: sans-serif
   font-size: 12px
   justify-content: space-between
   line-height: 60px
@@ -924,9 +634,9 @@ h4
     width: 100%
     p
       color: #000
-      font-family: 'Kanit', sans-serif      
+      font-family: 'Titillium+Web', sans-serif      
       font-size: 16px
-      font-weight: bold
+      font-weight: 400
       line-height: .66em
 
 .home
@@ -971,13 +681,11 @@ h4
   padding: 15px 15px
   width: 100%
   max-width: 900px
-  h1
-    font-family: 'Raleway', sans-serif
 
 .home-image
   opacity: .7
   margin: -30px auto 0
-  max-width: 160px
+  max-width: 120px
 
 .inner-election
   margin: 0 auto
@@ -1052,20 +760,21 @@ h4
     border: 1px solid #AAA
     margin: 0
   li
-    background: $ivory-dark
+    background: $header
     padding: 10px
     &:nth-child(odd)
-      background: $ivory
+      background: $paragraph
 
 .item-header
-  background: #bbb
+  align-items: center
+  background: #E3E3E3
   color: #555
   display: flex
-  font-size: 15px
+  font-size: 12px
   font-weight: 900
+  height: 50px
   justify-content: center
-  margin: 10px auto 0
-  padding: 10px 0px
+  margin: 0 auto
   text-transform: uppercase
 
 .grid-item
@@ -1134,7 +843,6 @@ h4
     align-items: center
     background-color: #EEE
     color: #000
-    font-family: sans-serif
     font-weight: 700
     display: flex
     justify-content: center
@@ -1149,7 +857,7 @@ h4
     width: 100%
     li
       align-items: center
-      background: $ivory
+      background: $paragraph
       border-left: 1px solid #DDD
       color: #000
       cursor: pointer
@@ -1177,7 +885,7 @@ h4
 .inner-rank
   animation: fade-in-top 0.4s ease forwards
   animation-delay: 0.6s
-  background: $ivory
+  background: $paragraph
   max-width: 800px
   margin: 0 auto 15px
   opacity: 0
@@ -1240,7 +948,7 @@ h4
         box-shadow: $box-shadow-very-low
         transform: translateY(0)
     .rank-item-head
-      background: $ivory-dark
+      background: $header
       display: flex
       justify-content: space-between
       padding: 5px 10px
@@ -1255,7 +963,7 @@ h4
         color: #333
 
 .inner-week
-  background: $ivory
+  background: $paragraph
   width: 100%
   max-width: 800px
   margin: 0 auto
@@ -1297,7 +1005,7 @@ h4
           padding: 0 5px
           justify-content: center
       .week-details
-        background: $ivory
+        background: $paragraph
         display: flex
         flex-grow: 1
         align-items: flex-end
@@ -1645,11 +1353,10 @@ h4
     display: flex
     margin: 0 auto
     a
-      background: $ivory-dark
+      background: $header
       border-right: 1px solid #AAA
       color: #000
       cursor: pointer
-      font-family: 'Arial', sans-serif
       font-weight: 600
       font-size: 14px
       padding: 9px 12px
@@ -1661,6 +1368,7 @@ h4
 
 .election-cal-container
   display: flex
+  flex-direction: column
 
 .election-item
   width: 100%
@@ -1678,13 +1386,13 @@ h4
     margin-right: 5px
     margin-left: 0
   li
-    background: $ivory
+    background: $paragraph
     display: flex
-    font-size: 16px
+    font-size: 14px
     justify-content: space-between
     padding: 8px
     &:nth-child(even)
-      background: $ivory-dark
+      background: $header
   
 .election-cal-date
   color: #555
@@ -1696,71 +1404,49 @@ h4
   text-align: center
   width: 100px
 
-/*/
-
 .footer
   align-items: center
-  background: #2c2c2c
+  background: #222
   border-left: 0
   box-sizing: border-box
-  color: $ivory
+  color: $paragraph
   display: flex
   flex-direction: column
   grid-area: footer
   justify-content: flex-end
-  min-height: 220px
+  min-height: 100px
   width: 100%
-  a
-    color: $ivory
-    font-size: 12px
-    margin: 1px 10px 0 0
-    padding: 5px 0
-    text-align: left
-    text-decoration: none
-    transition: .25s
-    &:hover
-      border-radius: 5px
-      color: $ivory-dark
-  h3
-    color: #E94949
-    font-family: arial, sans-serif
-    margin: 5px 0
-    padding: 0
-    cursor: default
-    text-transform: uppercase
-    text-align: left
-    font-size: 12px
-
-.footer-links
-  display: flex
-  flex-grow: 1
 
 .inner-footer
   display: flex
+  color: #888
+  font-size: 11px
   width: 100%
   max-width: 900px
-  justify-content: space-between
+  padding: 0 10px
+  text-align: right
+  justify-content: flex-end
   flex-direction: column
 
 .input-email
   background: #333
-  border: 1px solid $ivory-dark
+  border: 1px solid $header
   border-radius: 2px
-  color: $ivory
+  color: $paragraph
   font-size: 14px
   padding: 5px
   transition: 150ms
   &::placeholder
-    color: $ivory
+    color: $paragraph
   &:focus
-    background: $ivory-dark
+    background: $header
     color: #000
     &::placeholder
       color: #000
 
 .button-submit
-  background: $ivory-dark
-  border: 1px solid $ivory-dark
+  background: $header
+  border: 1px solid $header
   border-radius: 2px
   color: #000000
   cursor: pointer
@@ -1773,8 +1459,8 @@ h4
     background: #999
     border: 1px solid #999
   &:active
-    background: $ivory-dark
-    border: 1px solid $ivory-dark
+    background: $header
+    border: 1px solid $header
     transition: 0s
 
 .news
@@ -1845,8 +1531,8 @@ h4
       z-index: 1
 
 .article-image
-  max-height: 280px
-  max-width: 420px
+  height: 280px
+  width: 420px
   width: 100%
 
 .article-link
@@ -2021,62 +1707,36 @@ img.othersArrow
   transition: 200ms
   width: 22px
 
-.footer-column
-  flex: 1
-  flex-direction: column
-  display: flex
-  margin: 30px auto
-  text-align: center
-  h3
-    padding: 0 10px
-    text-align: auto
-  a
-    margin: 0 15px
-    text-align: auto
-
-.footer-middle
-  h3
-    text-align: right
-  a
-    text-align: right
-
-.footer-last
-  flex-grow: 2
-  align-items: center
-  font-size: 12px
-  color: $ivory
-  text-align: right
-  margin: 0 auto 50px
-  h3
-    text-align: right
-  p
-    margin: 5px 0
-    text-align: center
 
 /*********************************************************/
 /*********************************************************/
-/*********************************************************/
-/********************* START DESKTOP *********************/
-/*********************************************************/
+/********************* DESKTOP STYLES *********************/
 /*********************************************************/
 /*********************************************************/
 
-@media (min-width: 980px) 
+
+@media (min-width: 960px) 
 
   .container
     background: #FFF
     display: grid
-    grid-template-areas: "sidebar header" "sidebar main" "sidebar footer"
-    grid-template-columns: 200px auto
-    grid-template-rows: auto
+    grid-template-areas: "header header" "sidebar main" "footer footer"
+    grid-template-columns: 160px auto
     margin: 0 auto
-    max-width: 1200px
+    max-width: 1280px
 
   .sidebar
-    min-width: 200px
+    display: block
+    min-width: 160px
 
   .sidebar-content
     display: block
+
+  .header
+    height: 50px
+    a
+      color: $highlight
+      text-transform: uppercase
 
   .datasheets-inner
     flex-direction: row
@@ -2086,9 +1746,7 @@ img.othersArrow
 
   .inner-content
     box-sizing: border-box
-    height: auto
-    margin: 50px auto
-    max-width: 900px
+    margin: 30px 0
 
   .grid-sort
     flex-direction: row
@@ -2131,6 +1789,9 @@ img.othersArrow
   .featured-news
     ul
       flex-direction: row
+
+  .election-cal-container
+    flex-direction: row
 
   .country-list
     flex-direction: row

@@ -17,9 +17,7 @@ class NavWrap extends Component {
     super(props);
 
     this.state = {
-
-      menu: this.props.menu,
-
+      menu: this.props.menu
     };
 
     order(); // Add key id/order to newly ordered lists
@@ -28,10 +26,10 @@ class NavWrap extends Component {
   }
 
   showMenu() {
-    const showHide = (this.state.menu === false) ? 'show' : 'hidden';
+    const showHide = this.state.menu === false ? 'show' : 'hidden';
     this.setState(prevState => ({
       menu: !prevState.menu,
-      menuState: showHide,
+      menuState: showHide
     }));
   }
 
@@ -44,15 +42,8 @@ class NavWrap extends Component {
             onClick={this.props.closeMenu}
             onKeyPress={this.props.closeMenu}
             role="button"
-            tabIndex="0"
-          >
-            <LeaderList
-              id="page1"
-              country={orderedList}
-              page={1}
-              setNation={this.props.setNation}
-              class="page-show"
-            />
+            tabIndex="0">
+            <LeaderList id="page1" country={orderedList} page={1} setNation={this.props.setNation} class="page-show" />
           </div>
           <div className="nav-links" onClick={this.props.closeMenu} onKeyPress={this.props.closeMenu} role="menu">
             <ul>

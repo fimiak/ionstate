@@ -2,7 +2,6 @@ import React from 'react';
 import moment from 'moment';
 
 function NewsFlow(props) {
-  console.log(props);
   return (
     <li className="news-flow">
       <a className="article-link" href={props.news.web_url}>

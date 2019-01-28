@@ -1,3 +1,3 @@
-A daily news tracker focused on a selection of the world's Presidents and Prime Ministers.
+A daily news tracker written in ReactJS.
 
 Bootstrapped using create-react-app.

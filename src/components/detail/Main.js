@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import Biography from '.././Biography';
+import Biography from './Biography';
 import CountryData from '.././vitals/CountryData';
 import data from '../.././data/data.json';
 import DataSheets from '.././vitals/DataSheets';
 import News from '.././news/News';
 import Others from './others/Others';
 import Ad from '.././ads/Ad';
-// import Polls from './Polls';
 import Schedule from '.././schedule/Schedule';
 
 const list = [];
@@ -21,18 +20,11 @@ class Main extends Component {
       nation: list[props.location.pathname.replace(/[/]/, '')],
       nat: props.location.pathname.replace(/[/]/, '')
     };
-    this.setMap = this.setMap.bind(this);
     this.topnavColor = this.topnavColor.bind(this);
   }
 
   componentDidMount() {
     this.topnavColor();
-  }
-
-  setMap(place) {
-    this.setState({
-      map: place
-    });
   }
 
   topnavColor() {
@@ -45,7 +37,6 @@ class Main extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="contentBox">
         <div className="content">

@@ -12,10 +12,10 @@ import ListContainer from './components/list/ListContainer';
 
 // import NotFound from './components/NotFound';
 import Main from './components/detail/Main';
-import MapContainer from './components/maps/Map';
 import Sidebar from './components/sidebar/Sidebar';
 import Footer from './components/Footer';
 import SidebarContainer from './components/sidebar/SidebarContainer';
+import SidebarOpen from './components/sidebar/SidebarOpen';
 import { browserHistory } from 'react-router';
 import store from './store';
 
@@ -32,7 +32,6 @@ const PrimaryLayout = () => (
         <Route path="/" exact component={HomeContainer} />
         <Route path="/contact" exact component={Contact} />
         <Route path="/list" exact component={ListContainer} />
-        <Route path="/map" exact component={MapContainer} />
         <Route path="/:id" component={Main} />
       </Switch>
     </section>

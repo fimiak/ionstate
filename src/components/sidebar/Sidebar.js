@@ -1,50 +1,38 @@
 import React, { Component } from 'react';
-//import PropTypes from 'prop-types';
 import LeaderList from './LeaderList';
+import searchIcon from './../../icons/search.svg';
+import gridIcon from './../../icons/grid.svg';
+import homeIcon from './../../icons/home.svg';
+import sendIcon from './../../icons/send.svg';
 
 class Sidebar extends Component {
-  componentDidMount() {}
-
   render() {
-    const list = [];
-    for (let i = 0; i < this.props.data.data.length; i += 1) {
-      // Assign data.data[i] to 'country' key.
-      list[this.props.data.data[i].country] = this.props.data.data[i];
-    }
-    /**
-    list.map((data.data) => {
-
-    })
-    */
-    const orderBy = this.props.data.data.slice(0);
-    const orderedList = orderBy.sort((a, b) => b.gdp - a.gdp);
-
     return (
       <div className="sidebar-inner">
-        <a className="sidebar-header" href="/">
-          Ionstate
-        </a>
-        <div className="sidebar-content">
-          <p>
-            Latest Activity{' '}
-            <a className="sidebar-full" href="/list" alt="Full List">
-              View full list
-            </a>
-          </p>
-          <LeaderList id="page1" country={orderedList} page={1} setNation={this.props.setNation} class="page-show" />
+        <button className="sidebar-button" onClick={() => this.handleClick()}>
+          <div className="search-menu">
+            <img className="open-menu" src={searchIcon} alt="" /> Search
+          </div>
+        </button>
+        <ul className="sidebar-list">
+          <li>
+            <a>Leader</a>
+          </li>
+          <li>
+            <a>Topic</a>
+          </li>
+          <li>
+            <a>Source</a>
+          </li>
+        </ul>
+        <div className="sidebar-menu">
+          <div className="sidebar-content">
+            <p>Topics concerning world leaders</p>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-/*
-Sidebar.defaultProps = {
-  setNation: ''
-};
-
-Sidebar.propTypes = {
-  setNation: PropTypes.func
-};
-*/
 export default Sidebar;

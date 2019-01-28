@@ -122,14 +122,15 @@ class News extends Component {
   }
 
   componentDidMount() {
-    fetch('http://127.0.0.1:3001/api/news')
+    /* FETCH DATA
+    fetch('https://fast-journey-76120.herokuapp.com/api/news')
       .then(res => res.json())
       .then(news => this.setState({ news }));
+      */
   }
 
   render() {
     const listItems = this.state.news[0].response.docs.map((news, index) => <NewsStory key={index} news={news} />);
-
     const listFlow = this.state.news[0].response.docs.map((news, index) => <NewsFlow key={index} news={news} />);
     return (
       <div>
