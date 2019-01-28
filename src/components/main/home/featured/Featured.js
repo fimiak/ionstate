@@ -31,10 +31,9 @@ class Featured extends Component {
   }
 
   render() {
-    let selection = this.props.selection;
     return (
       <div className="featured">
-        <ul>{this.listItems(this.props.startSlice)}</ul>
+        <ul>{this.listItems(this.props.startSlice).slice(0, -1)}</ul>
       </div>
     );
   }

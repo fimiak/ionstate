@@ -35,7 +35,7 @@ function CountryData(props) {
         <div className="country-list">
           <ul className="country-entries">{countryEntries}</ul>
           <div className="country-map">
-            <img src={require(`../.././images/maps/${props.nation.map}`)} alt="Map" />
+            <img src={require(`../../../.././images/maps/${props.nation.map}`)} alt="Map" />
           </div>
         </div>
       </div>

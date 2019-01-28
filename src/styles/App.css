@@ -167,6 +167,9 @@ h4 {
   display: none;
   transition: 0.5s; }
 
+.title {
+  text-align: center; }
+
 .leader-list {
   border-top: 1px solid #999;
   margin: 0;
@@ -198,15 +201,12 @@ h4 {
       .leader-list a:hover .copy {
         padding: 0 0 0 15px; }
 
-.sidebar-open {
+.menu {
   background: #333;
-  display: block;
   grid-area: "menu";
-  position: absolute;
   height: 100%;
-  max-width: 1120px;
-  width: 100%;
-  z-index: 9; }
+  padding: 30px 0;
+  width: 100%; }
 
 .leader-list .navlink-active {
   background: #373737; }
@@ -392,9 +392,9 @@ h4 {
 
 .featured ul {
   display: grid;
-  grid-gap: 8px;
+  grid-gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(max-content, 320px));
-  justify-content: space-evenly;
+  justify-content: center;
   height: auto; }
 
 .featured-layout {
@@ -513,7 +513,7 @@ h4 {
   cursor: pointer;
   display: block;
   min-height: 24px;
-  padding: 3px 5px; }
+  padding: 3px 0px; }
 
 .featured-page-link {
   text-align: right; }
@@ -749,34 +749,32 @@ h4 {
   margin: 0 auto;
   text-transform: uppercase; }
 
-.grid-item {
+.menu__grid-item {
   background: #EEE;
   box-sizing: border-box;
   display: flex;
-  height: 140px;
-  margin: 5px;
-  padding: 10px;
-  width: 140px; }
-  .grid-item a {
+  height: 120px;
+  padding: 0px;
+  width: 120px; }
+  .menu__grid-item a {
     display: block;
     position: relative;
     text-decoration: none; }
 
-.grid-list {
-  max-width: 750px;
+.menu__grid-list {
+  max-width: 640px;
   margin: 0 auto; }
 
-.grid-list-ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  margin: 10px auto;
+.menu__grid-list-ul {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(max-content, 120px));
+  margin: 0 auto;
   padding: 0; }
 
-.grid-image {
+.menu__grid-image {
   width: 100%; }
-  .grid-image:hover + .grid-copy {
+  .menu__grid-image:hover + .grid-copy {
     background: rgba(34, 34, 34, 0.8);
     color: #FFF;
     margin-top: -53px;
@@ -786,29 +784,27 @@ h4 {
   background: rgba(51, 51, 51, 0.5);
   bottom: 0;
   color: #EEE;
-  font-size: 12px;
+  font-size: 11px;
   min-width: 120px;
-  padding: 2px 0;
+  padding: 4px 0;
   position: absolute;
   text-align: center;
   transition: 0.1s; }
   .grid-copy:hover {
-    background: rgba(34, 34, 34, 0.8);
-    color: #FFF;
-    margin-top: -53px;
-    padding: 5px 0; }
+    background: rgba(34, 34, 34, 0.85);
+    color: #FFF; }
   .grid-copy span {
     display: block;
     width: 100%; }
 
-.grid-sort {
-  background: #EEE;
+.menu__grid-sort {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 740px; }
-  .grid-sort span {
+  max-width: 640px;
+  padding: 0px 0 20px; }
+  .menu__grid-sort span {
     align-items: center;
     background-color: #EEE;
     color: #000;
@@ -817,37 +813,40 @@ h4 {
     justify-content: center;
     padding: 16px 0;
     width: 100%; }
-  .grid-sort ul {
+  .menu__grid-sort ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%; }
-    .grid-sort ul li {
+    .menu__grid-sort ul li {
       align-items: center;
-      background: #ECE8DD;
-      border-left: 1px solid #DDD;
+      background: #e3e3e3;
+      border-left: 1px solid #AAA;
       color: #000;
       cursor: pointer;
       display: flex;
       flex: 1;
       font-size: 13px;
       font-weight: bold;
-      height: 50px; }
-      .grid-sort ul li:hover {
-        background: #EEE; }
-      .grid-sort ul li a {
+      height: 40px; }
+      .menu__grid-sort ul li:first-child {
+        border-left: none; }
+      .menu__grid-sort ul li:hover {
+        background: #ccc; }
+      .menu__grid-sort ul li a {
         align-items: center;
         color: #000;
         display: flex;
         flex-direction: row;
-        font-size: 11px;
+        font-size: 12px;
         justify-content: center;
         text-align: center;
         text-decoration: none;
         width: 100%; }
-        .grid-sort ul li a .img-size {
+        .menu__grid-sort ul li a .img-size {
+          max-height: 18px;
           padding-right: 7px; }
 
 .inner-rank {
@@ -1378,7 +1377,7 @@ h4 {
   flex-direction: column;
   grid-area: footer;
   justify-content: flex-end;
-  min-height: 100px;
+  height: 160px;
   width: 100%; }
 
 .inner-footer {

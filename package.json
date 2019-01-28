@@ -1,9 +1,10 @@
 {
   "name": "retracker",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "private": true,
   "homepage": "http://ionstate.com",
   "dependencies": {
+    "@types/react": "^16.7.21",
     "animated": "^0.2.2",
     "axios": "^0.18.0",
     "flow-bin": "^0.91.0",
@@ -24,7 +25,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.5",
+    "babel-loader": "8.0.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-flow": "^6.23.0",

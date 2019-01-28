@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 function Biography(props) {
   return (
@@ -16,11 +15,6 @@ function Biography(props) {
 Biography.defaultProps = {
   biography: 'This biography can be viewed at Wikipedia.org.',
   extended: ' '
-};
-
-Biography.propTypes = {
-  biography: PropTypes.string,
-  extended: PropTypes.string
 };
 
 export default Biography;

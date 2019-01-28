@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NewsFlow from './NewsFlow';
 import NewsStory from './NewsStory';
-import testdata from '../../data/testdata.json';
+import testdata from '../../../../data/testdata.json';
 
 class News extends Component {
   constructor(props) {

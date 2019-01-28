@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import LeaderList from './LeaderList';
 import searchIcon from './../../icons/search.svg';
 import gridIcon from './../../icons/grid.svg';
-import homeIcon from './../../icons/home.svg';
-import sendIcon from './../../icons/send.svg';
+//import homeIcon from './../../icons/home.svg';
+//import sendIcon from './../../icons/send.svg';
 
 class Sidebar extends Component {
   render() {
@@ -16,18 +15,18 @@ class Sidebar extends Component {
         </button>
         <ul className="sidebar-list">
           <li>
-            <a>Leader</a>
+            <a href="/">Leader</a>
           </li>
           <li>
-            <a>Topic</a>
+            <a href="/">Topic</a>
           </li>
           <li>
-            <a>Source</a>
+            <a href="/">Source</a>
           </li>
         </ul>
         <div className="sidebar-menu">
           <div className="sidebar-content">
-            <p>Topics concerning world leaders</p>
+            <p>Featured Topics Concerning Current World Leaders</p>
           </div>
         </div>
       </div>

@@ -185,6 +185,9 @@ h4
   display: none
   transition: .5s
 
+.title
+  text-align: center
+
 .leader-list
   border-top: 1px solid #999
   margin: 0
@@ -216,15 +219,12 @@ h4
       .copy
         padding: 0 0 0 15px
 
-.sidebar-open
+.menu
   background: #333
-  display: block
   grid-area: 'menu'
-  position: absolute
   height: 100%
-  max-width: 1120px
+  padding: 30px 0
   width: 100%
-  z-index: 9
 
 .leader-list
   .navlink-active
@@ -418,9 +418,9 @@ h4
 .featured
   ul
     display: grid
-    grid-gap: 8px
+    grid-gap: 15px
     grid-template-columns: repeat(auto-fit, minmax(max-content, 320px))
-    justify-content: space-evenly
+    justify-content: center
     height: auto
 
 .featured-layout
@@ -539,7 +539,7 @@ h4
   cursor: pointer
   display: block
   min-height: 24px
-  padding: 3px 5px
+  padding: 3px 0px
 
 .featured-page-link
   text-align: right
@@ -777,33 +777,30 @@ h4
   margin: 0 auto
   text-transform: uppercase
 
-.grid-item
+.menu__grid-item
   background: #EEE
   box-sizing: border-box
   display: flex
-  height: 140px
-  margin: 5px
-  padding: 10px
-  width: 140px
+  height: 120px
+  padding: 0px
+  width: 120px
   a
     display: block
     position: relative
     text-decoration: none
 
-
-.grid-list
-  max-width: 750px
+.menu__grid-list
+  max-width: 640px
   margin: 0 auto
 
-.grid-list-ul
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
-  list-style: none
-  margin: 10px auto
+.menu__grid-list-ul
+  display: grid
+  grid-gap: 10px
+  grid-template-columns: repeat(auto-fit, minmax(max-content, 120px))
+  margin: 0 auto
   padding: 0
 
-.grid-image
+.menu__grid-image
   width: 100%
   &:hover + .grid-copy
     background: rgba(34,34,34,.8)
@@ -815,30 +812,27 @@ h4
   background: rgba(51,51,51,.5)
   bottom: 0
   color: #EEE
-  font-size: 12px
+  font-size: 11px
   min-width: 120px
-  padding: 2px 0
+  padding: 4px 0
   position: absolute
   text-align: center
   transition: .1s
-  
   &:hover
-    background: rgba(34,34,34,.8)
+    background: rgba(34,34,34,.85)
     color: #FFF
-    margin-top: -53px
-    padding: 5px 0
   span
     display: block
     width: 100%
 
 
-.grid-sort
-  background: #EEE
+.menu__grid-sort
   display: flex
   flex-direction: column
   justify-content: space-between
   margin: 0 auto
-  max-width: 740px
+  max-width: 640px
+  padding: 0px 0 20px
   span
     align-items: center
     background-color: #EEE
@@ -857,30 +851,32 @@ h4
     width: 100%
     li
       align-items: center
-      background: $paragraph
-      border-left: 1px solid #DDD
+      background: #e3e3e3
+      border-left: 1px solid #AAA
       color: #000
       cursor: pointer
       display: flex
       flex: 1
       font-size: 13px
       font-weight: bold
-      height: 50px
+      height: 40px
+      &:first-child
+        border-left: none
       &:hover
-        background: #EEE
+        background: #ccc
       a
         align-items: center
         color: #000
         display: flex
         flex-direction: row
-        font-size: 11px
+        font-size: 12px
         justify-content: center
         text-align: center
         text-decoration: none
         width: 100%
         .img-size
+          max-height: 18px
           padding-right: 7px
-
 
 .inner-rank
   animation: fade-in-top 0.4s ease forwards
@@ -1414,7 +1410,7 @@ h4
   flex-direction: column
   grid-area: footer
   justify-content: flex-end
-  min-height: 100px
+  height: 160px
   width: 100%
 
 .inner-footer

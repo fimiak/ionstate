@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import Biography from './Biography';
-import CountryData from '.././vitals/CountryData';
-import data from '../.././data/data.json';
-import DataSheets from '.././vitals/DataSheets';
-import News from '.././news/News';
+import CountryData from './vitals/CountryData';
+import data from '../../.././data/data.json';
+import DataSheets from './vitals/DataSheets';
+import News from './news/News';
 import Others from './others/Others';
-import Ad from '.././ads/Ad';
-import Schedule from '.././schedule/Schedule';
 
 const list = [];
 for (let i = 0; i < data.data.length; i++) {
@@ -49,7 +47,7 @@ class Main extends Component {
                       <img
                         className="top-leader"
                         alt={this.state.nation.leader}
-                        src={require(`../.././images/thumbs/${this.state.nation.thumb}`)}
+                        src={require(`../../.././images/thumbs/${this.state.nation.thumb}`)}
                       />
                     </div>
                     <div className="top-title">{this.state.nation.leader}</div>
@@ -58,7 +56,7 @@ class Main extends Component {
                     <img
                       className="fade-in-bottom"
                       alt={this.state.nation.name}
-                      src={require(`../.././images/flags/${this.state.nation.flag}`)}
+                      src={require(`../../.././images/flags/${this.state.nation.flag}`)}
                     />
                   </div>
                 </div>
@@ -95,10 +93,6 @@ class Main extends Component {
 
             <div id="others">
               <Others props={this.props.params} id={0} setNation={this.props.setNation} />
-            </div>
-
-            <div className="inner-ad">
-              <Ad />
             </div>
           </div>
         </div>

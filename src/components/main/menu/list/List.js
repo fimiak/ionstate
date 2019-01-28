@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import GridList from '.././home/grid/GridList';
-import NavLink from '.././NavLink';
+import GridList from './GridList';
+import NavLink from '../../.././NavLink';
 // SVGs
-import barIcon from '../../icons/bar-chart.svg';
-import list from '../../icons/list.svg';
-import trendIcon from '../../icons/trending-up.svg';
-import typeIcon from '../../icons/type.svg';
+import barIcon from '../../../../icons/bar-chart.svg';
+import list from '../../../../icons/list.svg';
+import trendIcon from '../../../../icons/trending-up.svg';
+import typeIcon from '../../../../icons/type.svg';
 
 class List extends Component {
   constructor(props) {
@@ -68,9 +68,8 @@ class List extends Component {
 
   render() {
     return (
-      <div>
-        <div className="grid-sort">
-          <span>Sort List</span>
+      <div className="menu">
+        <div className="menu__grid-sort">
           <ul>
             <li>
               <NavLink to="/list" onClick={this.orderByCountry}>
