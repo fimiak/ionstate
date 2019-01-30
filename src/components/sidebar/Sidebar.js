@@ -1,34 +1,33 @@
 import React, { Component } from 'react';
-import searchIcon from './../../icons/search.svg';
-import gridIcon from './../../icons/grid.svg';
-//import homeIcon from './../../icons/home.svg';
-//import sendIcon from './../../icons/send.svg';
+//import NavLink from '.././NavLink';
+import { NavLink } from 'react-router-dom';
 
 class Sidebar extends Component {
   render() {
     return (
       <div className="sidebar-inner">
-        <button className="sidebar-button" onClick={() => this.handleClick()}>
-          <div className="search-menu">
-            <img className="open-menu" src={searchIcon} alt="" /> Search
-          </div>
-        </button>
         <ul className="sidebar-list">
           <li>
-            <a href="/">Leader</a>
+            <NavLink exact to="/" activeClassName="active">
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href="/">Topic</a>
+            <NavLink to="/menu" activeClassName="active">
+              Leaders
+            </NavLink>
           </li>
           <li>
-            <a href="/">Source</a>
+            <NavLink to="/usa" activeClassName="active">
+              Topics
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" activeClassName="active">
+              Contact
+            </NavLink>
           </li>
         </ul>
-        <div className="sidebar-menu">
-          <div className="sidebar-content">
-            <p>Featured Topics Concerning Current World Leaders</p>
-          </div>
-        </div>
       </div>
     );
   }

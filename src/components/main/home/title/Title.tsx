@@ -1,7 +1,13 @@
 import React from 'react';
 
 function Title() {
-  return <h1 className="title">IONSTATE - Daily Tracking of World Leaders</h1>;
+  return (
+    <div>
+      <h1 className="title">
+        IONSTATE <span>Daily news updates focused on world leaders</span>
+      </h1>
+    </div>
+  );
 }
 
 export default Title;

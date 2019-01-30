@@ -90,10 +90,10 @@ class List extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/list" onClick={this.orderByName}>
+              <button onClick={this.orderByName}>
                 <img className="img-size" src={typeIcon} alt="" />
                 A-Z List
-              </NavLink>
+              </button>
             </li>
           </ul>
         </div>

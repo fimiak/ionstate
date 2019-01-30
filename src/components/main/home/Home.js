@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//import ElectionCalWrap from '.././home/elections/ElectionCalWrap';
 import Featured from '.././home/featured/Featured';
 import Title from '.././home/title/Title';
 
@@ -13,7 +14,24 @@ class Home extends Component {
               headline: {
                 main: 'Loading'
               },
+              keywords: [
+                {
+                  isMajor: 'N',
+                  rank: 1,
+                  name: 'glocations',
+                  value: 'Belarus'
+                },
+                {
+                  isMajor: 'N',
+                  rank: 1,
+                  name: 'persons',
+                  value: 'Lukashenko'
+                }
+              ],
               leader: '5b7f07a3fb6fc0183b3fc1a1',
+              byline: {
+                original: 'By REUTERS'
+              },
               multimedia: [
                 {
                   url: 'testdata/test2.jpg'
@@ -30,6 +48,16 @@ class Home extends Component {
             }
           ]
         }
+      }
+    ],
+    nations: [
+      {
+        2018: [
+          {
+            election: 'Zimbabwe',
+            date: '7/29/2018'
+          }
+        ]
       }
     ]
   };
@@ -54,7 +82,7 @@ class Home extends Component {
     }
     return (
       <div className="home">
-        <div className="inner-content">
+        <div className="home__content">
           <div className="home-featured">
             <Title />
             <Featured startSlice={0} selection={selection} {...this.props} {...this.state} />

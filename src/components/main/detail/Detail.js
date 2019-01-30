@@ -11,7 +11,8 @@ for (let i = 0; i < data.data.length; i++) {
   // Assign data.data[i] to 'country' key.
   list[data.data[i].country] = data.data[i];
 }
-class Main extends Component {
+
+class Detail extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,29 +39,28 @@ class Main extends Component {
     return (
       <div className="contentBox">
         <div className="content">
-          <div className="inner-content">
+          <div className="detail">
             <div id="top-content" className="top-content">
               <div className="top-nav">
                 <div className="top-nav-leader">
-                  <div className="top-banner fade-in-bottom">
+                  <div className="detail__banner ">
                     <div className="top-icon">
                       <img
-                        className="top-leader"
+                        className="detail__image-top"
                         alt={this.state.nation.leader}
                         src={require(`../../.././images/thumbs/${this.state.nation.thumb}`)}
                       />
                     </div>
                     <div className="top-title">{this.state.nation.leader}</div>
                   </div>
-                  <div className="top-flag">
+                  <div className="detail__image-flag">
                     <img
-                      className="fade-in-bottom"
                       alt={this.state.nation.name}
                       src={require(`../../.././images/flags/${this.state.nation.flag}`)}
                     />
                   </div>
                 </div>
-                <div className="content-box-links fade-in-bottom">
+                <div className="content-box-links">
                   <a href="#news">News</a>
                   <a href="#bio">Bio</a>
                   <a href="#country-data">Resources</a>
@@ -68,11 +68,11 @@ class Main extends Component {
               </div>
             </div>
 
-            <div className="top-split fade-in-top datasheets" id="datasheets">
+            <div className="top-split datasheets" id="datasheets">
               <DataSheets props={this.state.params} nation={this.state.nation} />
             </div>
 
-            <div className="top-split fade-in-top">
+            <div className="top-split">
               <div id="news" className="news">
                 <News
                   props={this.state.params}
@@ -101,4 +101,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Detail;

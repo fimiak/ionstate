@@ -32,7 +32,7 @@ class GridList extends Component {
     ));
 
     this.setState({
-      list: listItems.slice(0)
+      list: listItems.slice(0, 15)
     });
   };
 

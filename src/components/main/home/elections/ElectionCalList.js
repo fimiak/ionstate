@@ -4,7 +4,6 @@ import moment from 'moment';
 class ElectionCalList extends React.Component {
   constructor(props) {
     super(props);
-
     this.listItems = this.listItems.bind(this);
   }
 

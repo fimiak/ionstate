@@ -1,43 +1,24 @@
-/*********************************************************/
 /************************ FONT-FACE **********************/
-
 @import url('https://fonts.googleapis.com/css?family=Kanit|Raleway|Titillium+Web:400,700,900')
 
-/*********************** KEYFRAMES ***********************/
-
-@keyframes fade-in-top 
-  from
-    opacity: 0
-    transform: translateY(15px)
-  to
-    opacity: 1
-    transform: translateY(0)
-
-@keyframes fade-in-bottom
-  from
-    opacity: 0
-    transform: translateY(-15px)
-  to
-    opacity: 1
-    transform: translateY(0)
-
-/*********************** KEYFRAMES ***********************/
-
 /*********************** VARIABLES ***********************/
-
 $paragraph: #ECE8DD
 $header: #D7D0C8
-$primary: #ECE8DD
-$secondary: #E94949
-$highlight: #E94949
-$gradient: linear-gradient(to right, #fff, #fff)
+$primary-one: hsl(43, 89%, 70%) // YELLOW OCHRE
+$primary-two: hsl(48, 94%, 68%)
+$primary-three: hsl(44, 92%, 63%)
+$neutral-one: hsl(40, 23%, 97%) // WARM GRAYS
+$neutral-two: hsl(43, 13%, 90%)
+$neutral-three: hsl(40, 15%, 80%)
+$neutral-four: hsl(41, 8%, 61%)
+$neutral-five: hsl(41, 8%, 48%)
+$neutral-six: hsl(37, 11%, 28%)
+$neutral-seven: hsl(42, 15%, 13%)
+$highlight-one: hsl(83, 64%, 42%) // NO COLOR YET
+$highlight-two: hsl(83, 70%, 34%)
 $box-shadow-very-low: 0 8px 30px rgba(50,50,93,.1),0 2px 10px rgba(0,0,0,.07)
-$box-shadow-low: 0 10px 30px rgba(50,50,93,.1), 0 4px 15px rgba(0,0,0,.07)
-$box-shadow-high: 0 18px 35px rgba(50,50,93,.1), 0 8px 15px rgba(0,0,0,.07)
 
-/*********************************************************/
 /********************* MOBILE STYLES *********************/
-/*********************************************************/
 
 html, 
 body,
@@ -71,7 +52,7 @@ button
     border: 1px solid #777
 
 body
-  background: #f3f3f3
+  background: $neutral-two
   display: flex
 
 ul
@@ -96,28 +77,17 @@ h4
   text-align: center
 
 .container
-  border-top: 2px solid $highlight
-  box-shadow: $box-shadow-very-low
+  border-top: 3px solid $primary-two
   display: grid
   grid-template-areas: "header" "main" "footer"
   margin: 0 auto
-  max-width: 960px
 
 .sidebar
-  background: #222
   display: none
+  color: #000
   grid-area: sidebar
   height: 100%
-
-.sidebar-content
-  width: 50px
-  p
-    align-items: center
-    color: #eee
-    display: flex
-    font-weight: bold
-    justify-content: space-between
-    padding: 0 10px
+  margin-top: 30px
 
 .sidebar-header
   align-content: center
@@ -137,17 +107,20 @@ h4
 .sidebar-list
   margin: 0
   li
-    border-bottom: 1px solid #666
-    &:hover
-      background: #333
-      a
-        color: #FFF
+    padding: 0 10px
     a
       align-items: center
-      color: #EEE
+      color: #000
       display: flex
-      font-size: 11px
+      font-size: 12px
       height: 30px
+      padding: 0 15px
+      &:hover
+        border-radius: 5px
+        text-decoration: underline
+    a.active
+      background: $neutral-three
+      border-radius: 5px
 
 .globeIcon
   height: 24px
@@ -155,17 +128,20 @@ h4
 
 .header
   align-items: center
-  background: #222
+  background: $neutral-one
   display: flex
   font-style: italic
   font-weight: 900
   grid-area: header
   height: 36px
-  justify-content: center
   overflow: hidden
   width: 100%
   a
-    color: $highlight
+    align-items: center
+    color: $primary-three
+    display: flex
+    height: 100%
+    padding: 0 15px
     text-transform: uppercase
 
 .show
@@ -180,13 +156,29 @@ h4
   display: block
   background: #0f0
 
+.main
+  border-radius: 5px
+  background: $neutral-one
+  box-shadow: $box-shadow-very-low
+  margin: 30px 15px
+  max-width: 1120px
+
 .sidelink-text
   visibility: hidden
   display: none
   transition: .5s
 
 .title
+  background: $primary-one
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+  color: #000
+  font-size: 1.0rem
+  padding: 36px 0
+  margin: 0
   text-align: center
+  span
+    font-weight: 400
 
 .leader-list
   border-top: 1px solid #999
@@ -220,8 +212,9 @@ h4
         padding: 0 0 0 15px
 
 .menu
-  background: #333
-  grid-area: 'menu'
+  background: $neutral-seven
+  border-radius: 5px
+  grid-area: menu
   height: 100%
   padding: 30px 0
   width: 100%
@@ -261,7 +254,6 @@ h4
   background: #222
   border: 0
   border-radius: 0
-  box-sizing: border-box
   color: #888
   cursor: pointer
   display: flex
@@ -281,7 +273,6 @@ h4
     flex-direction: column
     text-decoration: none
   .open-menu
-    box-sizing: border-box
     margin: 2px
     transition: 150ms
     width: 18px
@@ -289,25 +280,11 @@ h4
     align-items: center
     display: flex
     flex-direction: column
-
-.icon-search
-  stroke: #FF0000
-
-.App-intro
-  background: #FFFFFF
-  flex: 1
-  height: 100%
-  transition: 0.2s /* Must match App-header */
-  overflow-y: auto
-  position: relative
-  transition-delay: 0.4s /* Must match App-header */
  
 .top-nav
-  color: #333
   display: flex
   flex-direction: column
   justify-content: space-between
-  margin: 0 auto
   width: 100%
   .active
     background: rgba(0,0,0,1)
@@ -339,10 +316,10 @@ h4
   text-align: left
   width: 60px
 
-.top-leader
+.detail__image-top
   animation: fade-in-bottom ease 0.4s forwards
   animation-delay: 0.4s
-  opacity: 0
+  border-top-left-radius: 5px
   height: 60px
   max-height: 60px
 
@@ -353,15 +330,14 @@ h4
   margin: 0
   align-text: center
 
-.top-flag
+.detail__image-flag
   background: #fff
   height: 60px
   position: relative
   img
     animation-delay: .8s
-    opacity: 0
-    border-left: 1px solid #DDD
-    box-sizing: border-box
+    border-left: 1px solid $neutral-two
+    border-top-right-radius: 5px
     float: right
     height: 100%
     max-width: 120px
@@ -372,7 +348,6 @@ h4
   align-items: center
   background: #FBFBFB
   border-bottom: 1px solid #EEE
-  box-sizing: border-box
   cursor: default
   justify-content: center
   display: flex
@@ -394,9 +369,9 @@ h4
   position: relative
   width: 100%
 
-.top-banner
+.detail__banner
   align-items: center
-  background: #fff
+  border-top-left-radius: 5px
   display: flex
   flex-direction: row
   flex-grow: 1
@@ -422,6 +397,7 @@ h4
     grid-template-columns: repeat(auto-fit, minmax(max-content, 320px))
     justify-content: center
     height: auto
+    padding: 0 15px
 
 .featured-layout
   animation: fade-in-top .3s ease forwards
@@ -429,15 +405,12 @@ h4
   background: #FFF
   display: flex
   flex-direction: column
-  box-sizing: border-box
   margin: 0 auto
   padding: 10px
-  opacity: 0
   width: 100%
 
 .featured-details
   background: #D3D3D3
-  box-sizing: border-box
   display: flex
   flex-direction: column
   flex-grow: 1
@@ -494,6 +467,8 @@ h4
   min-width: 50px
 
 .news-item
+  box-shadow: 0 2px 6px rgba(50, 50, 93, 0.1), 0 2px 10px rgba(0, 0, 0, 0.07)
+  border-radius: 5px
   display: flex
   flex-direction: row
   font-size: 12px
@@ -502,44 +477,43 @@ h4
   width: 330px
   min-width: 120px
   a
-    align-items: center
     color: #333
     cursor: pointer
     display: flex
-    flex-direction: column
-    text-align: center
     justify-content: space-between
     text-decoration: none
     position: relative
+    height: 100%
     min-width: 62px
   img
     background: #CCC
+    border-top-left-radius: 5px
+    border-bottom-left-radius: 5px
     height: 100%
-    height: 100px
+    width: 165px
   div
     flex: 1
 
 .news-item-detail
   display: flex
   flex-direction: column
-  font-size: 11px
+  font-size: 10px
   font-style: italic
   justify-content: space-between
-  padding: 2px 5px
+  padding: 0px 10px 5px
   text-align: right
 
 .news-item-header
-  background: #EFEFEF
+  border-top-right-radius: 5px
   font-weight: bold
-  padding: 3px 5px
+  padding: 5px 5px
   text-align: center
 
 .news-item-content
-  box-sizing: border-box
   cursor: pointer
   display: block
   min-height: 24px
-  padding: 3px 0px
+  padding: 0 10px 5px
 
 .featured-page-link
   text-align: right
@@ -579,7 +553,6 @@ h4
 
 .content-box-links
   animation-delay: 0.6s
-  opacity: 0
   align-items: center
   background: #fff
   display: flex
@@ -602,8 +575,14 @@ h4
   flex-direction: column
   width: 100%
 
-.inner-content
+.home__content
   margin: 0 auto
+  max-width: 960px
+  width: 100%
+
+.detail
+  margin: 0 auto
+  width: 100%
 
 .img-highlight
   align-items: center
@@ -616,6 +595,7 @@ h4
     position: relative
     text-align: center
     .img-highlight-image
+      border-radius: 8px
       position: relative
       z-index: 1
       height: 279px
@@ -653,7 +633,6 @@ h4
   .home-overlay
     background-color: rgba(34,34,34,0.85)
     bottom: 0
-    box-sizing: border-box
     color: #DDD
     font-size: 18px
     font-weight: 700
@@ -676,7 +655,6 @@ h4
 
 .inner-home
   background: #F8F8F8
-  box-sizing: border-box
   margin: 15px auto 0
   padding: 15px 15px
   width: 100%
@@ -779,7 +757,6 @@ h4
 
 .menu__grid-item
   background: #EEE
-  box-sizing: border-box
   display: flex
   height: 120px
   padding: 0px
@@ -851,7 +828,7 @@ h4
     width: 100%
     li
       align-items: center
-      background: #e3e3e3
+      background: #d3d3d3
       border-left: 1px solid #AAA
       color: #000
       cursor: pointer
@@ -884,7 +861,6 @@ h4
   background: $paragraph
   max-width: 800px
   margin: 0 auto 15px
-  opacity: 0
   width: 100%
 
 .rank
@@ -924,7 +900,6 @@ h4
       .rank-headline
         background: #ffffff
         box-shadow: $box-shadow-very-low
-        box-sizing: border-box
         display: block
         font-size: 14px
         font-weight: 900
@@ -938,10 +913,8 @@ h4
         position: absolute
         bottom: 5px
       &:hover .rank-headline
-        box-shadow: $box-shadow-low
         transform: translateY(-2px)
       &:active .rank-headline
-        box-shadow: $box-shadow-very-low
         transform: translateY(0)
     .rank-item-head
       background: $header
@@ -968,7 +941,6 @@ h4
     animation-delay: 0.5s
     display: flex
     flex-wrap: wrap
-    opacity: 0
     margin: 15px auto 0
     max-width: 800px
     padding: 0 15px
@@ -1049,7 +1021,6 @@ h4
   background: #f6f6f6
   max-width: 900px
   margin: 0 auto 25px
-  opacity: 0
   padding: 5px 0 0
   iframe
     margin: 0 auto
@@ -1141,10 +1112,9 @@ h4
 .top-split
   display: flex
   animation-delay: 1s
-  opacity: 0
 
 .datasheets-inner
-  background: #f6f6f6
+  background: $neutral-one
   display: flex
   flex-direction: column
   justify-content: space-between
@@ -1235,7 +1205,6 @@ h4
   max-width: 800px
   height: 100%
   transition: .1s
-  opacity: 0
   width: 100%
 
 #overlay
@@ -1402,7 +1371,7 @@ h4
 
 .footer
   align-items: center
-  background: #222
+  background: $neutral-seven
   border-left: 0
   box-sizing: border-box
   color: $paragraph
@@ -1706,7 +1675,7 @@ img.othersArrow
 
 /*********************************************************/
 /*********************************************************/
-/********************* DESKTOP STYLES *********************/
+/******************** DESKTOP STYLES *********************/
 /*********************************************************/
 /*********************************************************/
 
@@ -1714,35 +1683,31 @@ img.othersArrow
 @media (min-width: 960px) 
 
   .container
-    background: #FFF
     display: grid
     grid-template-areas: "header header" "sidebar main" "footer footer"
-    grid-template-columns: 160px auto
+    grid-template-columns: 12.5% auto
     margin: 0 auto
-    max-width: 1280px
 
   .sidebar
     display: block
-    min-width: 160px
 
   .sidebar-content
     display: block
 
+  .main
+    margin: 30px 15px 30px 0
+
   .header
     height: 50px
-    a
-      color: $highlight
-      text-transform: uppercase
+
+  .home__content
+    max-width: 1120px
 
   .datasheets-inner
-    flex-direction: row
+    flex-direction: row-reverse
 
   .data-container
     justify-content: flex-start
-
-  .inner-content
-    box-sizing: border-box
-    margin: 30px 0
 
   .grid-sort
     flex-direction: row
