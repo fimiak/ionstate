@@ -16,5 +16,5 @@
     "jsx": "preserve"
   },
   "include": ["src"],
-  "exclude": ["src/assetsTransformer.js", "src/api/*.js", "src/test/*.js"]
+  "exclude": ["src/assetsTransformer.js", "src/api/*.js", "src/test/*.js", "src/server/*.js"]
 }

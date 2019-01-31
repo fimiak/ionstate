@@ -84,7 +84,7 @@ class Home extends Component {
       <div className="home">
         <div className="home__content">
           <div className="home-featured">
-            <Title />
+            <Title title="IONSTATE:" subtitle="The biggest daily news and topics concerning today's world leaders" />
             <Featured startSlice={0} selection={selection} {...this.props} {...this.state} />
           </div>
         </div>

@@ -3,8 +3,8 @@ import Biography from './Biography';
 import CountryData from './vitals/CountryData';
 import data from '../../.././data/data.json';
 import DataSheets from './vitals/DataSheets';
-import News from './news/News';
-import Others from './others/Others';
+import Title from '.././home/title/Title';
+//import News from './news/News';
 
 const list = [];
 for (let i = 0; i < data.data.length; i++) {
@@ -28,7 +28,7 @@ class Detail extends Component {
 
   topnavColor() {
     document
-      .getElementsByClassName('top-title')[0]
+      .getElementsByClassName('title')[0]
       .setAttribute(
         'style',
         `border-image: linear-gradient(to right, ${this.state.nation['flag-colors']});border-image-slice: 1;`
@@ -38,49 +38,21 @@ class Detail extends Component {
   render() {
     return (
       <div className="contentBox">
+        <Title title={this.state.nation.leader} />
         <div className="content">
           <div className="detail">
             <div id="top-content" className="top-content">
               <div className="top-nav">
-                <div className="top-nav-leader">
-                  <div className="detail__banner ">
-                    <div className="top-icon">
-                      <img
-                        className="detail__image-top"
-                        alt={this.state.nation.leader}
-                        src={require(`../../.././images/thumbs/${this.state.nation.thumb}`)}
-                      />
-                    </div>
-                    <div className="top-title">{this.state.nation.leader}</div>
-                  </div>
-                  <div className="detail__image-flag">
-                    <img
-                      alt={this.state.nation.name}
-                      src={require(`../../.././images/flags/${this.state.nation.flag}`)}
-                    />
-                  </div>
-                </div>
                 <div className="content-box-links">
-                  <a href="#news">News</a>
-                  <a href="#bio">Bio</a>
-                  <a href="#country-data">Resources</a>
+                  <a href="/">News</a>
+                  <a href="#bio">Biography</a>
+                  <a href="#country-data">Country Details</a>
                 </div>
               </div>
             </div>
 
             <div className="top-split datasheets" id="datasheets">
               <DataSheets props={this.state.params} nation={this.state.nation} />
-            </div>
-
-            <div className="top-split">
-              <div id="news" className="news">
-                <News
-                  props={this.state.params}
-                  nation={this.state.nation}
-                  newsToggle={this.state.newsToggle}
-                  {...this.props}
-                />
-              </div>
             </div>
 
             <div id="bio" className="biography">
@@ -90,10 +62,6 @@ class Detail extends Component {
             <div id="country-data">
               <CountryData nation={this.state.nation} />
             </div>
-
-            <div id="others">
-              <Others props={this.props.params} id={0} setNation={this.props.setNation} />
-            </div>
           </div>
         </div>
       </div>
@@ -102,3 +70,23 @@ class Detail extends Component {
 }
 
 export default Detail;
+
+/*
+<div className="top-nav-leader">
+                  <div className="detail__banner ">
+                    <div className="top-icon">
+                      <img
+                        className="detail__image-top"
+                        alt={this.state.nation.leader}
+                        src={require(`../../.././images/thumbs/${this.state.nation.thumb}`)}
+                      />
+                    </div>
+                  </div>
+                  <div className="detail__image-flag">
+                    <img
+                      alt={this.state.nation.name}
+                      src={require(`../../.././images/flags/${this.state.nation.flag}`)}
+                    />
+                  </div>
+                </div>
+*/

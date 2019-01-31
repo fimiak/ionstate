@@ -3,8 +3,9 @@ import React from 'react';
 function Biography(props) {
   return (
     <div className="biography">
-      <h4>Biography</h4>
+      <div className="page-divider" />
       <div className="biography-text">
+        <h4>Biography</h4>
         <p>{props.biography}</p>
         <p>{props.extended}</p>
       </div>
@@ -13,7 +14,7 @@ function Biography(props) {
 }
 
 Biography.defaultProps = {
-  biography: 'This biography can be viewed at Wikipedia.org.',
+  biography: 'More about this subject may be researched at Wikipedia.org.',
   extended: ' '
 };
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavLink from '../../../NavLink';
+import { NavLink } from 'react-router-dom';
 
 class GridList extends Component {
   constructor(props) {
@@ -21,8 +21,9 @@ class GridList extends Component {
     const listItems = this.props.data.map(data => (
       <li key={data.order} className="menu__grid-item">
         <NavLink to={data.country} onClick={() => this.props.setNation(data.country)}>
-          <img className="menu__grid-image" src={require(`../../../.././images/thumbs/${data.thumb}`)} alt="" />
-          <div className="copy grid-copy">
+          <img className="menu__grid-image" src={require(`../../../../images/thumbs/${data.thumb}`)} alt="" />
+          <div className="menu__grid-overlay" />
+          <div className="menu__grid-text">
             <span>
               {data.leader} <br /> {data.name}
             </span>

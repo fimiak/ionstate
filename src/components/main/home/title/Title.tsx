@@ -1,12 +1,10 @@
 import React from 'react';
 
-function Title() {
+function Title(props: any) {
   return (
-    <div>
-      <h1 className="title">
-        IONSTATE <span>Daily news updates focused on world leaders</span>
-      </h1>
-    </div>
+    <h1 className="title">
+      {props.title} <span>{props.subtitle}</span>
+    </h1>
   );
 }
 

@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import GridList from './GridList';
-import NavLink from '../../.././NavLink';
-// SVGs
+import Title from '../.././home/title/Title';
 import barIcon from '../../../../icons/bar-chart.svg';
-import list from '../../../../icons/list.svg';
+import listIcon from '../../../../icons/list.svg';
 import trendIcon from '../../../../icons/trending-up.svg';
-import typeIcon from '../../../../icons/type.svg';
 
 class List extends Component {
   constructor(props) {
     super(props);
+
     this.orderBy = this.props.data.data.slice(0);
     this.orderedList = this.orderBy.sort((a, b) => {
       const x = a.name.toLowerCase();
@@ -17,28 +16,15 @@ class List extends Component {
       return x < y ? -1 : x > y ? 1 : 0;
     });
 
-    this.order = () => {
-      for (let i = 0; i < this.orderedList.length; i += 1) {
-        this.orderedList[i].order = i;
-      }
-
-      this.order(); // Add key id/order to newly ordered lists
+    this.state = {
+      orderBy: 'country'
     };
   }
 
   orderByGdp = () => {
     this.orderedList.sort((a, b) => b.gdp - a.gdp);
-    this.order();
     this.setState(() => ({
       orderBy: 'gdp'
-    }));
-  };
-
-  orderByGrowth = () => {
-    this.orderedList.sort((a, b) => b.gdpgrowth - a.gdpgrowth);
-    this.order();
-    this.setState(() => ({
-      orderBy: 'growth'
     }));
   };
 
@@ -48,7 +34,6 @@ class List extends Component {
       const y = b.search.toLowerCase();
       return x < y ? -1 : x > y ? 1 : 0;
     });
-    this.order();
     this.setState(() => ({
       orderBy: 'name'
     }));
@@ -60,7 +45,7 @@ class List extends Component {
       const y = b.name.toLowerCase();
       return x < y ? -1 : x > y ? 1 : 0;
     });
-    this.order();
+
     this.setState(() => ({
       orderBy: 'country'
     }));
@@ -69,31 +54,20 @@ class List extends Component {
   render() {
     return (
       <div className="menu">
+        <Title title="World Leader Detail List" />
         <div className="menu__grid-sort">
           <ul>
-            <li>
-              <NavLink to="/list" onClick={this.orderByCountry}>
-                <img className="img-size" src={list} alt="" />
-                Country
-              </NavLink>
+            <li className={this.state.orderBy === 'country' ? 'active' : ''} onClick={this.orderByCountry}>
+              <img src={listIcon} alt="" />
+              Country [A-Z]
             </li>
-            <li>
-              <NavLink to="/list" onClick={this.orderByGdp}>
-                <img className="img-size" src={barIcon} alt="" />
-                GDP
-              </NavLink>
+            <li className={this.state.orderBy === 'gdp' ? 'active' : ''} onClick={this.orderByGdp}>
+              <img src={trendIcon} alt="" />
+              GDP Rank
             </li>
-            <li>
-              <NavLink to="/list" onClick={this.orderByGrowth}>
-                <img className="img-size" src={trendIcon} alt="" />
-                GDP Growth
-              </NavLink>
-            </li>
-            <li>
-              <button onClick={this.orderByName}>
-                <img className="img-size" src={typeIcon} alt="" />
-                A-Z List
-              </button>
+            <li className={this.state.orderBy === 'name' ? 'active' : ''} onClick={this.orderByName}>
+              <img src={barIcon} alt="" />
+              Leader [A-Z]
             </li>
           </ul>
         </div>

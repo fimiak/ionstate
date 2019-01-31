@@ -27,13 +27,15 @@ function CountryData(props) {
       <span>{val[1]}</span>
     </li>
   ));
-  console.log(Object.entries(countryMapFiltered));
   return (
     <div className="country-detail">
-      <h4> {props.nation.name} </h4>
+      <div className="page-divider" />
       <div className="country-data">
         <div className="country-list">
-          <ul className="country-entries">{countryEntries}</ul>
+          <ul className="country-entries">
+            <li className="country__table-title">{props.nation.name}</li>
+            {countryEntries}
+          </ul>
           <div className="country-map">
             <img src={require(`../../../.././images/maps/${props.nation.map}`)} alt="Map" />
           </div>

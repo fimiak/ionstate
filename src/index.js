@@ -4,9 +4,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Header from './components/header/Header';
-import Contact from './components/contact/Contact';
+import Contact from './components/main/contact/Contact';
 import HomeContainer from './components/main/home/HomeContainer';
-//import List from './components/list/List';
 import ListContainer from './components/main/menu/list/ListContainer';
 
 //import NotFound from './components/NotFound';
