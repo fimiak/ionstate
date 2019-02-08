@@ -6,7 +6,7 @@ function Biography(props) {
       <div className="page-divider" />
       <div className="biography-text">
         <h4>Biography</h4>
-        <p>{props.biography}</p>
+        <p>{props.biography ? props.biography : 'Biography available at http://www.wikipedia.org'}</p>
         <p>{props.extended}</p>
       </div>
     </div>

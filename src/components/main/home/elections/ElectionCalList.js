@@ -11,42 +11,27 @@ class ElectionCalList extends React.Component {
     this.listItems();
   }
 
-  componentWillReceiveProps() {
-    this.listItems();
-  }
-
-  listItems(bool) {
-    const list = this.props.nations.map((nation, index) => {
-      let time = moment(nation.elections);
-      return time < Date.now() ? (
-        <li key={index}>
-          {nation.name}
-          <span>{time ? time.format('MMM DD, YYYY') : null}</span>
-        </li>
-      ) : null;
+  listItems = size => {
+    let list = this.props.data.data.map((data, index) => {
+      let election = data.elections.map((election, i) => {
+        let time = moment(new Date(election * 1000).toISOString());
+        return (
+          <li className="election__list-item" key={Math.floor(Math.random() * 10000)}>
+            <img className="election__list-flag" src={require(`../../../.././images/flags/${data.flag}`)} alt="" />
+            <span>{time.format('MMM Do, YYYY')}</span>
+          </li>
+        );
+      });
+      return election[0]; // One election per country
     });
-
-    const future = this.props.nations.map((nation, index) => {
-      let time = moment(nation.elections);
-      return time > Date.now() ? (
-        <li key={index}>
-          {nation.name}
-          <span>{time ? time.format('MM/DD/YY') : null}</span>
-        </li>
-      ) : null;
-    });
-    return bool ? list : future;
-  }
+    return list.slice(0, 10);
+  };
 
   render() {
     return (
-      <div className="election-cal-container">
-        <ul className="election-cal-list">
-          <p className="item-header election-item">Recent</p>
-          {this.listItems(true)}
-          <p className="item-header election-item">Upcoming</p>
-          {this.listItems(false)}
-        </ul>
+      <div className="election__container">
+        <h1 className="item-header">Upcoming Elections</h1>
+        <ul className="election__list">{this.listItems()}</ul>
       </div>
     );
   }

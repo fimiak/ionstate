@@ -54,7 +54,7 @@ class List extends Component {
   render() {
     return (
       <div className="menu">
-        <Title title="World Leader Detail List" />
+        <Title title="Leaders In Depth" />
         <div className="menu__grid-sort">
           <ul>
             <li className={this.state.orderBy === 'country' ? 'active' : ''} onClick={this.orderByCountry}>

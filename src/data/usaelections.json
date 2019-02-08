@@ -1,0 +1,20 @@
+{
+  "_id": {
+    "$oid": "5c5b36f6fb6fc06f4f572296"
+  },
+  "name": "The United States of America",
+  "elections": [
+    {
+      "id": "Presidential",
+      "date": "1604433600"
+    },
+    {
+      "id": "Midterm",
+      "date": "1667937600"
+    },
+    {
+      "id": "Presidential",
+      "date": "1730836800"
+    }
+  ]
+}

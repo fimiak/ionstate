@@ -1,16 +1,24 @@
 import React from 'react';
+import Title from '../.././main/home/title/Title';
 
 function Contact() {
   return (
     <div className="contact">
+      <Title title="Contact Us" />
       <div className="contact-details">
-        <h1>Contact Us</h1>
+        <h4>
+          Ionstate is a demonstration product, and is not intended for public use. Please send suggestions to the email
+          below.
+        </h4>
         <p>
-          <a href="mailto:admin@ionstate.com">admin@ionstate.com</a>
+          Email: <a href="mailto:admin@ionstate.com">admin@ionstate.com</a>
         </p>
         <p>
-          <a href="http://www.ionstate.com">http://www.ionstate.com</a>
+          Website: <a href="http://www.ionstate.com">http://www.ionstate.com</a>
         </p>
+        <span>
+          NYTimes API: <a href="https://developer.nytimes.com/">https://developer.nytimes.com/</a>
+        </span>
       </div>
     </div>
   );

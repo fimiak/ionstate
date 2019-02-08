@@ -7,7 +7,7 @@
       "biography-extended": "Trump turned his attention to politics, and in 2015 he announced his candidacy for president of the United States on the Republican ticket. After winning a majority of the primaries and caucuses, Trump became the official Republican candidate for president on July 19, 2016. That November, Trump was elected the 45th President of the United States.",
       "name": "United States of America",
       "image": "trump.jpg",
-      "thumb":"trump.jpg",
+      "thumb": "trump.jpg",
       "banner": "trump-int.jpg",
       "map": "us.svg",
       "birth-date": "June 14, 1946",
@@ -19,14 +19,7 @@
       "deputy-title": "Vice President",
       "deputy-leader": "Mike Pence",
       "twitter": "realDonaldTrump",
-      "elections": {
-          "2018": {
-              "date": "November 2018"
-          },
-          "2020": {
-              "date": "November 2020"
-        }
-      },
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Republican Party",
       "previous-leader": "Barack Obama",
       "previous-leader-party": "Democratic Party",
@@ -68,14 +61,7 @@
       "deputy-title": "Chancellor of the Exchequer",
       "deputy-leader": "Philip Hammand",
       "twitter": "theresa_may",
-      "elections": {
-          "2018": {
-              "date": "N/A"
-          },
-          "2020": {
-              "date": "N/A"
-          }
-      },
+      "elections": ["1651708800"],
       "party": "Conservative Party",
       "previous-leader": "David Cameron",
       "previous-leader-party": "Conservative Party",
@@ -101,7 +87,7 @@
     {
       "id": 2,
       "country": "mexico",
-      "biography": "President Enrique Peña Nieto was born on July 20, 1966, in Atlacomulco, Mexico. Interested in politics from the time he was a boy, Peña Nieto quickly climbed the ranks of power and at the age of 39 was elected governor of the State of Mexico. In 2012, Peña Nieto won the Mexican presidency with 38 percent of the vote, though his administration has been marked by the country's violent drug trade, a property and other scandals. His approval ratings among the citizens of Mexico have declined during his time in office.",
+      "biography": "Born in the small village of Tepetitán, in the south-eastern state of Tabasco, López Obrador graduated from the National Autonomous University of Mexico in 1986 following a hiatus from his studies to participate in politics. He began his political career in 1976 as a member of the Institutional Revolutionary Party (PRI) in Tabasco and eventually became the party's state leader. López Obrador was a candidate for the third time in the 2018 presidential election, representing Juntos Haremos Historia, a coalition of the left-wing Labor Party, right-wing Social Encounter Party, and MORENA. This time, he won in a landslide victory, taking 53 percent of the vote.",
       "name": "Mexico",
       "image": "nieto.jpg",
       "thumb": "nieto.jpg",
@@ -112,23 +98,16 @@
       "flag": "mx.svg",
       "flag-colors": "#006847, #FFF, #CE1126",
       "leader-title": "President",
-      "leader": "Enrique Peña Nieto",
+      "leader": "Andrés Manuel López Obrador",
       "twitter": "epn",
-      "elections": {
-          "2018": {
-              "date": "December 1, 2018"
-          },
-          "2020": {
-              "date": "November 3, 2024"
-          }
-      },
-      "party": "Institutional Revolutionary",
-      "previous-leader": "Felipe Calderon",
-      "previous-leader-party": "National Action",
-      "term-start": "December 1, 2012",
-      "term-end": "November 30, 2018",
+      "elections": ["1719792000"],
+      "party": "PRD",
+      "previous-leader": "Pena Nieto",
+      "previous-leader-party": "Institutional Revolutionary",
+      "term-start": "December 1, 2018",
+      "term-end": "November 31, 2024",
       "capitol": "los+pinos,ciudad+de+mexico,distrito+federal",
-      "search": "nieto, pena",
+      "search": "obrador, andres",
       "population": "127,540,423",
       "popgrowth": "0.7%",
       "pop2050": "163,754,000",
@@ -142,7 +121,7 @@
       "energy": "7%",
       "debt": "73.8% of GDP",
       "webpage": "http://en.presidencia.gob.mx/",
-      "wikipedia": "https://en.wikipedia.org/wiki/Enrique_Pe%C3%B1a_Nieto"
+      "wikipedia": "https://en.wikipedia.org/wiki/Andr%C3%A9s_Manuel_L%C3%B3pez_Obrador"
     },
     {
       "id": 3,
@@ -161,14 +140,7 @@
       "leader-title": "President",
       "leader": "Emmanuel Macron",
       "twitter": "EmmanuelMacron",
-      "elections": {
-          "2018": {
-              "date": "May, 2021"
-          },
-          "2020": {
-              "date": "May, 2026"
-          }
-      },
+      "elections": ["1649376000"],
       "party": "En Marche!",
       "previous-leader": "Francois Hollande",
       "previous-leader-party": "Socialist Party",
@@ -207,14 +179,7 @@
       "leader-title": "Chancellor",
       "leader": "Angela Merkel",
       "twitter": "AngelaMerkeICDU",
-      "elections": {
-          "2018": {
-              "date": "September 24, 2017"
-          },
-          "2020": {
-              "date": "September, 2021"
-        }
-      },
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Christian Democratic Union",
       "previous-leader": "Gerhard Schroder",
       "previous-leader-party": "Social Democratic Party",
@@ -253,16 +218,10 @@
       "leader-title": "Prime Minister",
       "leader": "Justin Trudeau",
       "twitter": "JustinTrudeau",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "deputy-title": "Deputy Prime Minister",
       "deputy-leader": "Vacant",
-      "elections": {
-          "2018": {
-              "date": "October, 2019"
-          },
-          "2020": {
-              "date": "October, 2023"
-        }
-      },
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Liberal",
       "previous-leader": "Stephen Harper",
       "previous-leader-party": "Conservative",
@@ -301,16 +260,9 @@
       "leader-title": "President",
       "leader": "Vladimir Putin",
       "twitter": "PutinRF_Eng",
+      "elections": ["1710460800"],
       "deputy-title": "Prime Minister",
       "deputy-leader": "Dmitry Medvedev",
-      "elections": {
-          "2018": {
-              "date": "March 11, 2018"
-          },
-          "2020": {
-              "date": "March 11, 2024"
-        }
-      },
       "party": "United Russia",
       "previous-leader": "Dmitry Medvedev",
       "previous-leader-party": "Democratic Party",
@@ -350,16 +302,9 @@
       "leader-title": "President",
       "leader": "Xi Jinping",
       "twitter": "ChinaEUMission",
+      "elections": ["1668513600"],
       "deputy-title": "Premier",
       "deputy-leader": "Li Keqiang",
-      "elections": {
-          "2018": {
-              "date": "March, 2017"
-          },
-          "2020": {
-              "date": "March 11, 2022"
-        }
-      },
       "party": "Communist Party",
       "previous-leader": "Hu Jintao",
       "previous-leader-party": "Communist Party of China",
@@ -398,16 +343,9 @@
       "leader-title": "Prime Minister",
       "leader": "Shinzo Abe",
       "twitter": "AbeShinzo",
+      "elections": ["1634904000"],
       "deputy-title": "Deputy Prime Minister",
       "deputy-leader": "Taro Aso",
-      "elections": {
-          "2018": {
-              "date": "March, 2017"
-          },
-          "2020": {
-              "date": "March 11, 2022"
-        }
-      },
       "party": "Liberal Democratic Party",
       "previous-leader": "Yoshihiko Noda",
       "previous-leader-party": "Liberal Democratic Party",
@@ -441,26 +379,19 @@
       "birth-date": "September 23, 1940",
       "age": "76",
       "flag": "br.svg",
-      "flag-colors": "#009B3A, #FEDF00, #002776", 
+      "flag-colors": "#009B3A, #FEDF00, #002776",
       "leader-title": "President",
-      "leader": "Michel Temer",
-      "twitter": "MichelTemer",
+      "leader": "Jair Bolsonaro",
+      "twitter": "jairbolsonaro",
+      "elections": ["1664712000"],
       "deputy-title": "Vice President",
       "deputy-leader": "None",
-      "elections": {
-          "2018": {
-              "date": "August, 2020"
-          },
-          "2020": {
-              "date": "August, 2024"
-        }
-      },
-      "party": "Brazilian Democratic Movement",
-      "previous-leader": "Dilma Rousseff",
+      "party": "PSL",
+      "previous-leader": "Michel Temer",
       "previous-leader-party": "Democratic Labour Party",
-      "term-start": "August 31, 2016",
+      "term-start": "January 1, 2019",
       "term-end": "N/A",
-      "search": "temer, michel",
+      "search": "bolsonaro, jair",
       "population": "209,288,278",
       "popgrowth": "0.7%",
       "pop2050": "238,270,000",
@@ -491,16 +422,10 @@
       "leader-title": "Prime Minister",
       "leader": "Narendra Modi",
       "twitter": "narendramodi",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "deputy-title": "President",
       "deputy-leader": "Pranab Mukherjee",
-      "elections": {
-          "2018": {
-              "date": "August, 2020"
-          },
-          "2020": {
-              "date": "August, 2024"
-        }
-      },
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Bharatiya Janata Party",
       "previous-leader": "Manmohan Singh",
       "previous-leader-party": "Indian National Congress",
@@ -537,6 +462,7 @@
       "leader-title": "Prime Minister",
       "leader": "Malcolm Turnbull",
       "twitter": "TurnbullMalcolm",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Liberal",
       "previous-leader": "Tony Abbott",
       "previous-leader-party": "",
@@ -573,6 +499,7 @@
       "leader-title": "European Council President",
       "leader": "Donald Tusk",
       "twitter": "donaldtusk",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "None",
       "previous-leader": "",
       "previous-leader-party": "",
@@ -608,6 +535,7 @@
       "leader-title": "President",
       "leader": "Mauricio Macri",
       "twitter": "mauriciomacri",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Republican Proposal",
       "previous-leader": "",
       "previous-leader-party": "",
@@ -644,6 +572,7 @@
       "leader-title": "President",
       "leader": "Joko Widodo",
       "twitter": "jokowi",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Democratic Party of Struggle",
       "previous-leader": "S. Yudhoyono",
       "previous-leader-party": "",
@@ -680,6 +609,7 @@
       "leader-title": "Prime Minister",
       "leader": "Paolo Gentiloni",
       "twitter": "PaoloGentiloni",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Democratic Party",
       "previous-leader": "Matteo Renzi",
       "previous-leader-party": "",
@@ -715,7 +645,8 @@
       "flag-colors": "#FFFFFF,#C70000,#3D5897,#FFFFFF",
       "leader-title": "President",
       "leader": "Moon Jae-In",
-      "twitter": "moonriver365",      
+      "twitter": "moonriver365",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Democratic",
       "previous-leader": "Hwang Kyo-ahn",
       "previous-leader-party": "",
@@ -736,7 +667,7 @@
       "debt": "73.8% of GDP",
       "webpage": "",
       "wikipedia": "https://en.wikipedia.org/wiki/Moon_Jae-in"
-    },    
+    },
     {
       "id": 17,
       "country": "saudiarabia",
@@ -751,7 +682,8 @@
       "flag-colors": "#199D00,#FFFFFF,#199D00",
       "leader-title": "King of Saudi Arabia",
       "leader": "King Salman",
-      "twitter": "KingSalman",      
+      "twitter": "KingSalman",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "House of Saud",
       "previous-leader": "King Abdullah",
       "previous-leader-party": "",
@@ -772,7 +704,7 @@
       "debt": "73.8% of GDP",
       "webpage": "",
       "wikipedia": "https://en.wikipedia.org/wiki/Salman_of_Saudi_Arabia"
-    },    
+    },
     {
       "id": 18,
       "country": "turkey",
@@ -787,7 +719,8 @@
       "flag-colors": "#F31930,#FFFFFF,#F31930",
       "leader-title": "Prime Minister",
       "leader": "Recep Erdogan",
-      "twitter": "RT_Erdogan",      
+      "twitter": "RT_Erdogan",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Justice and Development",
       "previous-leader": "Abdullah Gul",
       "previous-leader-party": "",
@@ -808,7 +741,7 @@
       "debt": "73.8% of GDP",
       "webpage": "",
       "wikipedia": "https://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan"
-    },    
+    },
     {
       "id": 19,
       "country": "southafrica",
@@ -824,6 +757,7 @@
       "leader-title": "President",
       "leader": "Jacob Zuma",
       "twitter": "SAPresident",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "African National Congress",
       "previous-leader": "K. Motlanthe",
       "previous-leader-party": "",
@@ -860,6 +794,7 @@
       "leader-title": "President",
       "leader": "Khalifa Al Nahyan",
       "twitter": "uaeembassyus",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "House of Al Nahyan",
       "previous-leader": "Maktoum Rashid Al Maktoum",
       "previous-leader-party": "",
@@ -895,7 +830,8 @@
       "flag-colors": "#CE1126,#FFFFFF,#000000",
       "leader-title": "President",
       "leader": "Abdel Fattah el-Sisi",
-      "twitter": "mfaegypt",      
+      "twitter": "mfaegypt",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Independent",
       "previous-leader": "Adly Mansour",
       "previous-leader-party": "",
@@ -932,6 +868,7 @@
       "leader-title": "President",
       "leader": "Trần Đại Quang",
       "twitter": "mofavietnam",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Communist Party",
       "previous-leader": "Truong Tan Sang",
       "previous-leader-party": "",
@@ -960,7 +897,7 @@
       "image": "rouhani.jpg",
       "thumb": "rouhani.jpg",
       "banner": "may-int.jpg",
-      "map": "ir.svg",      
+      "map": "ir.svg",
       "birth-date": "November 12, 1948",
       "age": "68",
       "flag": "ir.svg",
@@ -968,6 +905,7 @@
       "leader-title": "President",
       "leader": "Hassan Rouhani",
       "twitter": "HassanRouhani",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Moderation and Development",
       "previous-leader": "M. Ahmadinejad",
       "previous-leader-party": "",
@@ -996,7 +934,7 @@
       "image": "buhari.jpg",
       "thumb": "buhari.jpg",
       "banner": "may-int.jpg",
-      "map": "ng.svg",      
+      "map": "ng.svg",
       "birth-date": "December 17, 1942",
       "age": "74",
       "flag": "ng.svg",
@@ -1004,6 +942,7 @@
       "leader-title": "President",
       "leader": "Muhammadu Buhari",
       "twitter": "MBuhari",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "All Progressives Congress",
       "previous-leader": "Shehu Shagari",
       "previous-leader-party": "",
@@ -1040,6 +979,7 @@
       "leader-title": "President",
       "leader": "Mamnoon Hussain",
       "twitter": "pid_gov",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Pakistan Muslim League",
       "previous-leader": "Asif Ali Zardari",
       "previous-leader-party": "",
@@ -1076,6 +1016,7 @@
       "leader-title": "Prime Minister",
       "leader": "Prayut Chan-o-cha",
       "twitter": "mfathai_pr_en",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Independent",
       "previous-leader": "N. Boonsongpaisan",
       "previous-leader-party": "",
@@ -1112,6 +1053,7 @@
       "leader-title": "Prime Minister",
       "leader": "Mariano Rajoy",
       "twitter": "marianorajoy",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "People's Party",
       "previous-leader": "Jose Zapatero",
       "previous-leader-party": "",
@@ -1148,6 +1090,7 @@
       "leader-title": "President",
       "leader": "Andrzej Duda",
       "twitter": "AndrzejDuda",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Independent",
       "previous-leader": "B. Komorowski",
       "previous-leader-party": "",
@@ -1184,6 +1127,7 @@
       "leader-title": "Prime Minister",
       "leader": "Mark Rutte",
       "twitter": "markrutte",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Freedom and Democracy Party",
       "previous-leader": "Jan Balkenende",
       "previous-leader-party": "",
@@ -1220,6 +1164,7 @@
       "leader-title": "President",
       "leader": "Andrzej Duda",
       "twitter": "AndrzejDuda",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Independent",
       "previous-leader": "B. Komorowski",
       "previous-leader-party": "",
@@ -1256,6 +1201,7 @@
       "leader-title": "Prime Minister",
       "leader": "Mark Rutte",
       "twitter": "markrutte",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Freedom and Democracy Party",
       "previous-leader": "Jan Balkenende",
       "previous-leader-party": "",
@@ -1292,6 +1238,7 @@
       "leader-title": "President",
       "leader": "Andrzej Duda",
       "twitter": "AndrzejDuda",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Independent",
       "previous-leader": "B. Komorowski",
       "previous-leader-party": "",
@@ -1328,6 +1275,7 @@
       "leader-title": "Prime Minister",
       "leader": "Mark Rutte",
       "twitter": "markrutte",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Freedom and Democracy Party",
       "previous-leader": "Jan Balkenende",
       "previous-leader-party": "",
@@ -1364,6 +1312,7 @@
       "leader-title": "President",
       "leader": "Andrzej Duda",
       "twitter": "AndrzejDuda",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Independent",
       "previous-leader": "B. Komorowski",
       "previous-leader-party": "",
@@ -1400,6 +1349,7 @@
       "leader-title": "Prime Minister",
       "leader": "Mark Rutte",
       "twitter": "markrutte",
+      "elections": ["1604433600", "1667937600", "1730836800"],
       "party": "Freedom and Democracy Party",
       "previous-leader": "Jan Balkenende",
       "previous-leader-party": "",

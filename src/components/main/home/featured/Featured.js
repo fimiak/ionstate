@@ -4,11 +4,12 @@ class Featured extends Component {
   listItems(startSlice = 0) {
     let response = this.props.news[this.props.startSlice].response.docs;
     let i = 0;
-    while (i < 9) {
-      response.push(response[0]);
+    let reducedList = [];
+    while (i < 5) {
+      reducedList.push(response[i]);
       i++;
     }
-    const list = response.map((article, index) => {
+    const list = reducedList.map((article, index) => {
       let article_img = article.multimedia[1].url ? article.multimedia[1].url : '';
 
       //let person = article.keywords[0].name.find('glocation');
@@ -50,7 +51,7 @@ class Featured extends Component {
   render() {
     return (
       <div className="featured">
-        <ul>{this.listItems(this.props.startSlice).slice(0, -1)}</ul>
+        <ul>{this.listItems(this.props.startSlice)}</ul>
       </div>
     );
   }
