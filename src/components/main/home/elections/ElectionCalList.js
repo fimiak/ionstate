@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import moment from 'moment';
 
 class ElectionCalList extends React.Component {
@@ -17,8 +18,10 @@ class ElectionCalList extends React.Component {
         let time = moment(new Date(election * 1000).toISOString());
         return (
           <li className="election__list-item" key={Math.floor(Math.random() * 10000)}>
-            <img className="election__list-flag" src={require(`../../../.././images/flags/${data.flag}`)} alt="" />
-            <span>{time.format('MMM Do, YYYY')}</span>
+            <NavLink to={data.country} alt="">
+              <img className="election__list-flag" src={require(`../../../.././images/flags/${data.flag}`)} alt="" />
+              <span>{time.format('MMM Do, YYYY')}</span>
+            </NavLink>
           </li>
         );
       });

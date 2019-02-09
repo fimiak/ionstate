@@ -36,6 +36,7 @@ class Detail extends Component {
   }
 
   render() {
+    // Add fields for days until election, election date
     return (
       <div className="contentBox">
         <Title title={this.state.nation.leader} />
