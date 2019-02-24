@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ElectionCalWrap from '.././home/elections/ElectionCalWrap';
 import Featured from '.././home/featured/Featured';
+import Summits from '.././home/summits/Summits';
 import Title from '.././home/title/Title';
 
 class Home extends Component {
@@ -10,6 +11,10 @@ class Home extends Component {
     fetch('https://fast-journey-76120.herokuapp.com/api/news')
       .then(res => res.json())
       .then(news => this.setState({ news }));
+
+    fetch('https://fast-journey-76120.herokuapp.com/api/summits')
+      .then(res => res.json())
+      .then(summits => this.setState({ summits }));
   }
 
   render() {
@@ -34,8 +39,7 @@ class Home extends Component {
             <Title title="IONSTATE:" subtitle="The biggest daily news and topics concerning today's world leaders" />
             <ElectionCalWrap {...this.props} {...this.state} />
             <Featured startSlice={0} {...this.props} {...this.state} />
-            <h1 className="item-header">More Featured News</h1>
-            <Featured startSlice={3} {...this.props} {...this.state} />
+            <Summits {...this.props} {...this.state} />
           </div>
         </div>
       </div>

@@ -3,13 +3,14 @@ import moment from 'moment';
 
 class Summit extends React.Component {
   listItems() {
-    const list = this.props.summits.map((summit, index) => {
+    const listItems = this.props.summits ? this.props.summits : [];
+    const list = listItems.map((summit, index) => {
       let time = moment(summit.date);
       let summit_img = summit.img ? summit.img : 'summit.jpg';
       return (
         <li key={index}>
           <a href={summit.url}>
-            <img src={require(`../../images/${summit_img}`)} alt={summit.name} />
+            <img src={require(`../../../../images/${summit_img}`)} alt={summit.name} />
             <span>
               {summit.name} | {summit.location} <br />
               {time.format('MMM DD, YYYY')}
