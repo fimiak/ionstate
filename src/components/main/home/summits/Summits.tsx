@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import moment from 'moment';
 
-class Summit extends React.Component {
+interface ISummitProps {
+  date?: any;
+  img?: any;
+  location?: string;
+  name?: string;
+  url?: string;
+  summits?: string[];
+}
+
+interface ISummitState {}
+
+class Summit extends Component<ISummitProps, ISummitState> {
   listItems() {
-    const listItems = this.props.summits ? this.props.summits : [];
-    const list = listItems.map((summit, index) => {
+    const listItems: any[] = this.props.summits ? this.props.summits : [];
+    const list: any[] = listItems.map((summit, index) => {
       let time = moment(summit.date);
       let summit_img = summit.img ? summit.img : 'summit.jpg';
       return (
@@ -23,6 +34,7 @@ class Summit extends React.Component {
   }
 
   render() {
+    const { img, date, name, location } = this.props;
     return (
       <div>
         <h2 className="item-header">Summits</h2>

@@ -114,7 +114,7 @@ a {
   width: 100%; }
   .header a {
     align-items: center;
-    color: #f7c94a;
+    color: #000;
     display: flex;
     height: 100%;
     padding: 0 15px;
@@ -827,150 +827,6 @@ a {
     max-height: 1rem;
     padding-right: 5px; }
 
-.inner-rank {
-  animation: fade-in-top 0.4s ease forwards;
-  animation-delay: 0.6s;
-  background: #ECE8DD;
-  max-width: 800px;
-  margin: 0 auto 15px;
-  width: 100%; }
-
-.rank {
-  margin-top: 15px; }
-
-.rank-item {
-  display: flex;
-  padding: 0 15px;
-  margin: 0 auto 15px; }
-  .rank-item .rank-item-image {
-    max-height: 93px;
-    margin-right: 10px;
-    transition: 0.1s; }
-    .rank-item .rank-item-image img {
-      height: 93px;
-      width: 60px; }
-  .rank-item .rank-item-data {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column; }
-    .rank-item .rank-item-data .rank-head-name {
-      align-items: flex-end;
-      display: flex;
-      font-size: 14px;
-      justify-content: space-between;
-      flex-grow: 1; }
-      .rank-item .rank-item-data .rank-head-name span {
-        font-size: 12px;
-        justify-content: center; }
-    .rank-item .rank-item-data .rank-link {
-      position: relative;
-      margin: 0 5px; }
-      .rank-item .rank-item-data .rank-link .rank-image {
-        height: 132px;
-        width: 220px;
-        padding-bottom: 15px; }
-      .rank-item .rank-item-data .rank-link .rank-headline {
-        background: #ffffff;
-        box-shadow: 0 8px 30px rgba(50, 50, 93, 0.1), 0 2px 10px rgba(0, 0, 0, 0.07);
-        display: block;
-        font-size: 14px;
-        font-weight: 900;
-        left: 20px;
-        line-height: 13px;
-        max-width: 180px;
-        min-height: 56px;
-        max-height: 80px;
-        overflow: hidden;
-        padding: 10px;
-        position: absolute;
-        bottom: 5px; }
-      .rank-item .rank-item-data .rank-link:hover .rank-headline {
-        transform: translateY(-2px); }
-      .rank-item .rank-item-data .rank-link:active .rank-headline {
-        transform: translateY(0); }
-    .rank-item .rank-item-data .rank-item-head {
-      background: #D7D0C8;
-      display: flex;
-      justify-content: space-between;
-      padding: 5px 10px; }
-    .rank-item .rank-item-data .rank-item-articles {
-      box-sizing: border-box;
-      flex-grow: 1;
-      padding: 10px 5px;
-      text-align: left;
-      width: 100%; }
-      .rank-item .rank-item-data .rank-item-articles a {
-        color: #333; }
-
-.inner-week {
-  background: #ECE8DD;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto; }
-  .inner-week .week {
-    animation: fade-in-top 0.3s ease forwards;
-    animation-delay: 0.5s;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 15px auto 0;
-    max-width: 800px;
-    padding: 0 15px; }
-    .inner-week .week .week-box {
-      align-items: center;
-      box-sizing: border-box;
-      display: flex;
-      height: 88px;
-      flex-direction: column;
-      overflow: hidden;
-      margin: 0px auto 15px;
-      max-width: 384px;
-      position: relative;
-      width: 100%; }
-      .inner-week .week .week-box .week-title {
-        border: 1px solid #D4D0C6;
-        display: flex;
-        flex-direction: column;
-        height: 88px;
-        justify-content: space-between;
-        overflow: hidden;
-        width: 100%; }
-        .inner-week .week .week-box .week-title .week-day {
-          align-items: center;
-          background: #D4D0C6;
-          color: #000;
-          display: flex;
-          height: 36px;
-          min-height: 36px;
-          padding: 0 5px;
-          justify-content: center; }
-      .inner-week .week .week-box .week-details {
-        background: #ECE8DD;
-        display: flex;
-        flex-grow: 1;
-        align-items: flex-end;
-        width: 100%;
-        cursor: pointer;
-        overflow: hidden; }
-        .inner-week .week .week-box .week-details a {
-          align-items: flex-end;
-          cursor: default;
-          display: flex;
-          height: 100%;
-          text-decoration: none;
-          width: 100%; }
-          .inner-week .week .week-box .week-details a img {
-            height: 88px;
-            width: 128px;
-            margin-right: 5px;
-            min-width: 128px; }
-          .inner-week .week .week-box .week-details a .week-content {
-            background: #f3f3f3;
-            font-size: 14px;
-            text-align: left;
-            color: #000;
-            flex-grow: 1;
-            padding: 0 5px; }
-
 .inner-datasheets {
   width: auto;
   display: flex;
@@ -1497,9 +1353,7 @@ img.othersArrow {
   width: 22px; }
 
 /******************************************************** */
-/******************************************************** */
 /******************** DESKTOP STYLES ******************** */
-/******************************************************** */
 /******************************************************** */
 @media (min-width: 960px) {
   .container {
