@@ -27,7 +27,7 @@ class ElectionCalList extends React.Component {
       });
       return election[0]; // One election per country
     });
-    return list.slice(0, 10);
+    return list.slice(0, 9);
   };
 
   render() {
