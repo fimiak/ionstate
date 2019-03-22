@@ -404,7 +404,7 @@ a {
 
 .news-item {
   box-shadow: 0 2px 6px rgba(50, 50, 93, 0.1), 0 2px 10px rgba(0, 0, 0, 0.07);
-  border-radius: 5px;
+  border-radius: 2px;
   display: flex;
   flex-direction: column;
   font-size: 12px;
@@ -424,8 +424,8 @@ a {
     min-width: 62px; }
   .news-item img {
     background: #CCC;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
     min-height: 40px;
     width: 190px; }
 
@@ -606,27 +606,41 @@ a {
     margin: 0 auto; }
 
 .summits-list {
+  align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 10px auto;
-  padding: 0 5px; }
+  margin: 10px auto 0;
+  padding: 0 10px; }
   .summits-list li {
+    background: #e9e7e2;
     display: flex;
+    flex-direction: column;
     font-size: 12px;
-    padding: 0 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 330px;
     text-align: right; }
     .summits-list li img {
-      width: 212.5px;
-      max-height: 106px; }
+      width: 310px;
+      max-height: 156px; }
     .summits-list li a {
+      align-items: center;
       color: #000;
       display: flex;
-      flex-direction: column; }
-      .summits-list li a span {
-        margin-bottom: 5px;
-        padding: 0 2px; }
+      flex-direction: column;
+      text-decoration: underline; }
+      .summits-list li a p {
+        font-size: 0.75rem;
+        font-weight: bold;
+        line-height: 20px;
+        margin: 0;
+        padding: 8px;
+        width: 100%; }
+        .summits-list li a p span {
+          display: block;
+          width: 100%; }
       .summits-list li a:hover {
         color: #f7c94a;
         text-decoration: underline; }
@@ -1277,7 +1291,6 @@ a {
   margin: 10px; }
 
 .country-entries {
-  background: #EEE;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -1293,6 +1306,8 @@ a {
     .country-entries li:nth-child(2n+2) {
       background: #f9f8f6; }
   .country-entries .country__table-title {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     display: flex;
     font-weight: bold;
     justify-content: center;
@@ -1455,6 +1470,16 @@ img.othersArrow {
       margin-right: 10px; }
 
   .summits-list {
-    flex-direction: row; } }
+    flex-direction: row; }
+    .summits-list li {
+      flex-basis: 50%;
+      flex-grow: 1;
+      max-width: none; }
+      .summits-list li a {
+        flex-direction: row; }
+        .summits-list li a img {
+          max-height: 140px; }
+        .summits-list li a span {
+          text-align: left; } }
 
 /*# sourceMappingURL=app.css.map */

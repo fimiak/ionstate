@@ -22,10 +22,11 @@ class Summit extends Component<ISummitProps, ISummitState> {
         <li key={index}>
           <a href={summit.url}>
             <img src={require(`../../../../images/${summit_img}`)} alt={summit.name} />
-            <span>
-              {summit.name} | {summit.location} <br />
-              {time.format('MMM DD, YYYY')}
-            </span>
+            <p>
+              <span>{summit.name}</span>
+              <span>{summit.location}</span>
+              <span>{time.format('MMM DD, YYYY')}</span>
+            </p>
           </a>
         </li>
       );

@@ -8,13 +8,13 @@ class Home extends Component {
   state = {};
 
   componentDidMount() {
-    fetch('https://fast-journey-76120.herokuapp.com/api/news')
-      .then(res => res.json())
-      .then(news => this.setState({ news }));
-
     fetch('https://fast-journey-76120.herokuapp.com/api/summits')
       .then(res => res.json())
       .then(summits => this.setState({ summits }));
+
+    fetch('https://fast-journey-76120.herokuapp.com/api/news')
+      .then(res => res.json())
+      .then(news => this.setState({ news }));
   }
 
   render() {
