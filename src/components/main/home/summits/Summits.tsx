@@ -17,11 +17,11 @@ class Summit extends Component<ISummitProps, ISummitState> {
     const listItems: any[] = this.props.summits ? this.props.summits : [];
     const list: any[] = listItems.map((summit, index) => {
       let time = moment(summit.date);
-      let summit_img = summit.img ? summit.img : 'summit.jpg';
+      let summit_img = summit.img ? summit.img : 'loading.jpg';
       return (
         <li key={index}>
           <a href={summit.url}>
-            <img src={require(`../../../../images/${summit_img}`)} alt={summit.name} />
+            <img src="./images/summit.jpg" alt={summit.name} />
             <p>
               <span>{summit.name}</span>
               <span>{summit.location}</span>
@@ -31,9 +31,9 @@ class Summit extends Component<ISummitProps, ISummitState> {
         </li>
       );
     });
-    return list.slice(1);
+    return list.slice(0);
   }
-
+  // {summit.img === true ? require(`../../../../images/${summit_img}`) : ''}
   render() {
     const { img, date, name, location } = this.props;
     return (

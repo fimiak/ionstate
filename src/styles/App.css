@@ -66,7 +66,7 @@ a {
   color: #000;
   grid-area: sidebar;
   height: 100%;
-  margin-top: 30px; }
+  margin-top: 45px; }
 
 .sidebar-header {
   align-content: center;
@@ -114,7 +114,7 @@ a {
   width: 100%; }
   .header a {
     align-items: center;
-    color: #000;
+    color: #4f4b43;
     display: flex;
     height: 100%;
     padding: 0 15px;
@@ -144,13 +144,15 @@ a {
   border-top-right-radius: 5px;
   border: 0;
   border-bottom: 3px solid #fadb61;
-  color: #000;
+  color: #4f4b43;
   font-size: 1rem;
-  padding: 36px 0;
-  margin-bottom: 0;
+  font-weight: 300;
+  padding: 30px 0;
+  margin: 0;
   text-align: center;
   width: 100%; }
   .title span {
+    font-size: 0.9rem;
     font-weight: 400; }
 
 .leader-list {
@@ -592,9 +594,9 @@ a {
   width: 100%;
   max-width: 900px; }
 
-.home-image {
+.footer-image {
   opacity: 0.7;
-  margin: -30px auto 0;
+  margin: 0px auto 0;
   max-width: 120px; }
 
 .summits {
@@ -658,7 +660,7 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(max-content, 100px));
   justify-content: center;
   margin: 0;
-  padding: 10px; }
+  padding: 30px; }
 
 .election__list-item {
   align-items: center;
@@ -725,7 +727,7 @@ a {
   display: flex;
   font-size: 12px;
   font-weight: 900;
-  height: 50px;
+  height: 60px;
   justify-content: center;
   margin: 0 auto;
   text-transform: uppercase; }
@@ -908,6 +910,7 @@ a {
       background: #fff; }
   .data-container .detail__table-title {
     display: flex;
+    font-size: 0.9rem;
     font-weight: bold;
     justify-content: center;
     padding: 12px 0; }
@@ -1081,15 +1084,19 @@ a {
   width: 100%; }
 
 .inner-footer {
-  display: flex;
   color: #f7c94a;
+  display: flex;
+  flex-direction: row;
   font-size: 11px;
-  width: 100%;
+  justify-content: space-between;
   max-width: 900px;
   padding: 0 10px;
-  text-align: right;
-  justify-content: flex-end;
-  flex-direction: column; }
+  width: 100%;
+  text-align: right; }
+  .inner-footer a {
+    color: #f7d06e; }
+    .inner-footer a:hover {
+      color: #ddd; }
 
 .input-email {
   background: #333;
@@ -1389,7 +1396,7 @@ img.othersArrow {
     display: block; }
 
   .main {
-    margin: 30px 15px 30px 0; }
+    margin: 45px 15px 45px 0; }
 
   .header {
     height: 50px; }

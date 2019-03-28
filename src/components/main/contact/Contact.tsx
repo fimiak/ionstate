@@ -7,8 +7,8 @@ function Contact() {
       <Title title="Contact Us" />
       <div className="contact-details">
         <h4>
-          Ionstate is a demonstration product, and is not intended for public use. Please send suggestions to the email
-          below.
+          Ionstate is a demonstration product, and is not intended for public use. Please send any suggestions to the
+          email address below.
         </h4>
         <p>
           Email: <a href="mailto:admin@ionstate.com">admin@ionstate.com</a>
