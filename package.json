@@ -6,7 +6,7 @@
   "dependencies": {
     "@types/react": "^16.8.23",
     "animated": "^0.2.2",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "flow-bin": "^0.91.0",
     "flow-typed": "^2.5.2",
     "moment": "^2.22.2",
